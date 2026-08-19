@@ -20,11 +20,23 @@ Benvinguts al **Portal de Suport i Base de Coneixement** de l'agrupament escolta
 
     Directori de refugis de l'IBANAT i Consell de Mallorca, àrees recreatives, capacitats i normativa de foc.
 
+-   :bus: **[Transport Públic TIB & Tren](mallorca/transport.md)**
+
+    ---
+
+    Guia de línies d'autobús TIB, trens SFM, metro i el tren de Sóller amb connexions a inicis de rutes escoltes.
+
 -   :scout: **[Agrupaments de Mallorca](mallorca/agrupaments.md)**
 
     ---
 
     Directori centralitzat dels Agrupaments Escoltes i Guies (MEGM, EGM, ASDE) a pobles i barris de Palma.
+
+-   :clipboard: **[Full de Ruta (20 Punts)](full_de_ruta_20_punts.md)**
+
+    ---
+
+    Pla d'acció de 20 punts en 4 fases per a la digitalització, permisos i suport integral a l'agrupament escolta.
 
 -   :earth_africa: **[Repositori Internacional](repositori_internacional/index.md)**
 
@@ -32,7 +44,7 @@ Benvinguts al **Portal de Suport i Base de Coneixement** de l'agrupament escolta
 
     Recull de marcs pedagògics, manuals de seguretat (BSA, SGDF, Scouting Nederland, WOSM) i bones pràctiques globals.
 
--   :clipboard: **[Procediments SOP](sop/procediments.md)**
+-   :warning: **[Procediments SOP](sop/procediments.md)**
 
     ---
 
