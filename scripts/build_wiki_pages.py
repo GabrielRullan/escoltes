@@ -617,9 +617,11 @@ Benvinguts al cercador interactiu de la base de dades d'excursions. Podeu filtra
             </select>
         </div>
         <div>
-            <label style="font-weight: bold; font-size: 0.85em;">🔗 Recurs / Enllaç Extern:</label>
+            <label style="font-weight: bold; font-size: 0.85em;">🔗 Recurs / Enllaç / Seguretat:</label>
             <select id="filter-plataforma" onchange="applyRouteFilters()" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc; background-color: #f0f7f4; font-weight: bold;">
                 <option value="">Tots els recursos</option>
+                <option value="aigua">💧 Amb Font / Punt d'Aigua</option>
+                <option value="privat">⚠️ Passos per Finca Privada</option>
                 <option value="wikiloc">💚 Amb Track de Wikiloc</option>
                 <option value="turismepetit">👶 Amb Guia Turisme Petit</option>
                 <option value="both">🌟 Amb Wikiloc i Turisme Petit</option>
@@ -628,6 +630,7 @@ Benvinguts al cercador interactiu de la base de dades d'excursions. Podeu filtra
     </div>
     <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
         <input type="text" id="filter-search" oninput="applyRouteFilters()" placeholder="🔎 Cercar per nom, paratge o paraula clau..." style="flex: 1; min-width: 220px; padding: 8px 12px; border-radius: 6px; border: 1px solid #ccc;" />
+        <button onclick="quickFilter('aigua')" style="padding: 8px 14px; background-color: #0288d1; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.85em; font-weight: bold;">💧 Amb Font</button>
         <button onclick="quickFilter('wikiloc')" style="padding: 8px 14px; background-color: #2e7d32; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.85em; font-weight: bold;">💚 Només Wikiloc</button>
         <button onclick="quickFilter('turismepetit')" style="padding: 8px 14px; background-color: #e65100; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.85em; font-weight: bold;">👶 Només Turisme Petit</button>
         <button onclick="resetFilters()" style="padding: 8px 16px; background-color: #00897b; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Netejar Filtres</button>
@@ -748,6 +751,10 @@ function applyRouteFilters() {{
             matchPlat = !!r.turismepetit_url;
         }} else if (plat === 'both') {{
             matchPlat = !!r.wikiloc_url && !!r.turismepetit_url;
+        }} else if (plat === 'aigua') {{
+            matchPlat = r.punts_aigua && r.punts_aigua.length > 0 && !r.punts_aigua.some(a => a.toLowerCase().includes('sense') || a.toLowerCase().includes('no hi ha'));
+        }} else if (plat === 'privat') {{
+            matchPlat = r.passos_finca_privada && r.passos_finca_privada.length > 0 && !r.passos_finca_privada.some(p => p.toLowerCase().includes('cap'));
         }}
         
         return matchMun && matchZon && matchDif && matchBra && matchTxt && matchPlat;
