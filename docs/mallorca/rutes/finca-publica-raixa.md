@@ -110,3 +110,18 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
 | :--- | :--- | :---: | :--- |
 | **AEG Nuredduna** | Bunyola / Palmanyola | **2.6 km** | [Veure Casal](../agrupaments/aeg-nuredduna.md) |
 | **AEG Son Sardina** | Palma | **4.0 km** | [Veure Casal](../agrupaments/aeg-son-sardina.md) |
+
+---
+
+## 💬 Experiències i Valoracions dels Agrupaments Escoltes
+
+<div style="background-color: var(--md-code-bg-color, #f8f9fa); border: 1px solid #e0e0e0; padding: 18px; border-radius: 10px; margin-top: 16px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+        <div>
+            <h3 style="margin: 0; font-size: 1.05em; color: #555;">Encara no hi ha cap experiència registrada per a aquesta ruta.</h3>
+            <p style="margin: 4px 0 0 0; font-size: 0.85em; color: #666;">Heu fet aquesta ruta amb la vostra unitat? Sigueu els primers a deixar consells per a altres agrupaments!</p>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScoutsMallorcaRutes/viewform" target="_blank" style="padding: 8px 16px; background-color: #00897b; color: white; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85em;">📝 Enviar la primera experiència 🔗</a>
+    </div>
+</div>
+

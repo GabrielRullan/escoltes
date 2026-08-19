@@ -1,0 +1,66 @@
+[
+  {
+    "ruta_slug": "es-salt-des-freu-orient",
+    "agrupament": "AEG Eladi Homs",
+    "branca": "Llops/Daines",
+    "puntuacio": 5,
+    "data": "Novembre 2025",
+    "comentari": "Ruta fantàstica per fer a la tardor. El bosc d'alzines ofereix molta ombra i el camí és fàcil de seguir. Si ha plogut els dies anteriors, el Salt des Freu porta molta aigua i és molt espectacular!"
+  },
+  {
+    "ruta_slug": "es-salt-des-freu-orient",
+    "agrupament": "AEG Jaume I",
+    "branca": "Pioners/Rangers",
+    "puntuacio": 4,
+    "data": "Octubre 2025",
+    "comentari": "Molt bona opció per combinar amb pernoctació o parada de dinar. Recomanam dur calçat de recanvi per si s'ha de creuar el torrent."
+  },
+  {
+    "ruta_slug": "ses-fonts-ufanes-campanet",
+    "agrupament": "AEG Soca-Arrel",
+    "branca": "Castors/Fures",
+    "puntuacio": 5,
+    "data": "Desembre 2025",
+    "comentari": "Idoni per als més petits. Camí pla, ample i molt ben senyalitzat dins la finca pública de Gabellí Petit."
+  },
+  {
+    "ruta_slug": "castell-d-alaro",
+    "agrupament": "AEG Ramon Llull",
+    "branca": "Pioners/Rangers",
+    "puntuacio": 5,
+    "data": "Gener 2026",
+    "comentari": "Pujada clàssica i imprescindible. Les vistes des del castell són fantàstiques. Es pot fer nit a l'Hostatgeria del Castell d'Alaró si es reserva amb temps."
+  },
+  {
+    "ruta_slug": "puig-de-galatzo-font-des-pi",
+    "agrupament": "AEG Reina Constança",
+    "branca": "Rovers/Rutes",
+    "puntuacio": 5,
+    "data": "Febrer 2026",
+    "comentari": "Pujada exigent però molt agraïda. El tram final del cim requereix una petita grimpada, recomanat només per a branques grans."
+  },
+  {
+    "ruta_slug": "torrent-de-pareis-escorca-sa-calobra",
+    "agrupament": "GS Myotragus 684",
+    "branca": "Rovers/Rutes",
+    "puntuacio": 5,
+    "data": "Maig 2025",
+    "comentari": "Excursió molt tècnica i d'alta dificultat. S'ha de mirar molt bé la previsió meteorològica i que el torrent estigui ben eixut. Dur cordes de seguretat i molta aigua."
+  },
+  {
+    "ruta_slug": "betlem-a-playa-es-calo",
+    "agrupament": "AEG Sa Marjal",
+    "branca": "Llops/Daines",
+    "puntuacio": 5,
+    "data": "Abril 2025",
+    "comentari": "Ruta litoral preciosa a la Colònia de Sant Pere / Artà. Es pot fer en família o amb Llops. Platja des Caló és un redol perfecte per dinar."
+  },
+  {
+    "ruta_slug": "finca-publica-planicia-banyalbufar",
+    "agrupament": "AEG Verge de Lluc",
+    "branca": "Pioners/Rangers",
+    "puntuacio": 4,
+    "data": "Tardor 2025",
+    "comentari": "Finca pública de l'IBANAT molt completa amb albellons, aljubs i cases senyorials. Bona ombra i pistes amples."
+  }
+]

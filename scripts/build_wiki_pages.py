@@ -257,6 +257,49 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
         for dist, agr in agrupaments_amb_dist[:2]:
             md += f"| **{agr['nom']}** | {agr['municipi']} | **{dist:.1f} km** | [Veure Casal](../agrupaments/{agr['slug']}.md) |\n"
 
+        # --- SECCIÓ D'EXPERIÈNCIES I VALORACIONS DELS AGRUPAMENTS ---
+        exps = rut.get("experiencies", [])
+        md += """
+---
+
+## 💬 Experiències i Valoracions dels Agrupaments Escoltes
+
+<div style="background-color: var(--md-code-bg-color, #f8f9fa); border: 1px solid #e0e0e0; padding: 18px; border-radius: 10px; margin-top: 16px;">
+"""
+        if exps:
+            avg_score = sum([e.get("puntuacio", 5) for e in exps]) / len(exps)
+            stars = "⭐" * int(round(avg_score))
+            md += f"""    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; border-bottom: 1px solid #e0e0e0; padding-bottom: 12px;">
+        <div>
+            <h3 style="margin: 0; font-size: 1.15em; color: #00897b;">Valoració Mitjana: {stars} {avg_score:.1f} / 5</h3>
+            <p style="margin: 4px 0 0 0; font-size: 0.85em; color: #666;">Basat en <b>{len(exps)} experiències</b> compartides per caps escoltes.</p>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScoutsMallorcaRutes/viewform" target="_blank" style="padding: 8px 16px; background-color: #00897b; color: white; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85em; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📝 Compartir la meva experiència i consells 🔗</a>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+"""
+            for exp in exps:
+                exp_stars = "⭐" * exp.get("puntuacio", 5)
+                md += f"""        <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; background-color: #ffffff;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;">
+                <span style="font-weight: bold; color: #333; font-size: 0.9em;">⚜️ {exp['agrupament']} <span style="font-weight: normal; color: #666;">({exp['branca']})</span></span>
+                <span style="font-size: 0.8em; color: #f57f17; font-weight: bold;">{exp_stars} ({exp['data']})</span>
+            </div>
+            <p style="margin: 0; font-size: 0.85em; color: #444; line-height: 1.4;"><i>"{exp['comentari']}"</i></p>
+        </div>
+"""
+            md += "    </div>\n"
+        else:
+            md += """    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+        <div>
+            <h3 style="margin: 0; font-size: 1.05em; color: #555;">Encara no hi ha cap experiència registrada per a aquesta ruta.</h3>
+            <p style="margin: 4px 0 0 0; font-size: 0.85em; color: #666;">Heu fet aquesta ruta amb la vostra unitat? Sigueu els primers a deixar consells per a altres agrupaments!</p>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScoutsMallorcaRutes/viewform" target="_blank" style="padding: 8px 16px; background-color: #00897b; color: white; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85em;">📝 Enviar la primera experiència 🔗</a>
+    </div>
+"""
+        md += "</div>\n\n"
+
         file_path = f"docs/mallorca/rutes/{rut['slug']}.md"
         with open(file_path, "w", encoding="utf-8") as f:
             f.write(md)
@@ -618,9 +661,10 @@ Benvinguts al cercador interactiu de la base de dades d'excursions. Podeu filtra
             </select>
         </div>
         <div>
-            <label style="font-weight: bold; font-size: 0.85em;">🔗 Recurs / Enllaç Extern:</label>
+            <label style="font-weight: bold; font-size: 0.85em;">🔗 Recurs / Enllaç / Comentaris:</label>
             <select id="filter-plataforma" onchange="applyRouteFilters()" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc; background-color: #f0f7f4; font-weight: bold;">
                 <option value="">Tots els recursos</option>
+                <option value="comentaris">💬 Amb Experiències d'Agrupaments</option>
                 <option value="wikiloc">💚 Amb Track de Wikiloc</option>
                 <option value="turismepetit">👶 Amb Guia Turisme Petit</option>
                 <option value="both">🌟 Amb Wikiloc i Turisme Petit</option>
@@ -630,6 +674,7 @@ Benvinguts al cercador interactiu de la base de dades d'excursions. Podeu filtra
     </div>
     <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
         <input type="text" id="filter-search" oninput="applyRouteFilters()" placeholder="🔎 Cercar per nom, paratge o paraula clau..." style="flex: 1; min-width: 220px; padding: 8px 12px; border-radius: 6px; border: 1px solid #ccc;" />
+        <button onclick="quickFilter('comentaris')" style="padding: 8px 14px; background-color: #6a1b9a; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.85em; font-weight: bold;">💬 Amb Experiències</button>
         <button onclick="quickFilter('wikiloc')" style="padding: 8px 14px; background-color: #2e7d32; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.85em; font-weight: bold;">💚 Només Wikiloc</button>
         <button onclick="quickFilter('turismepetit')" style="padding: 8px 14px; background-color: #e65100; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.85em; font-weight: bold;">👶 Només Turisme Petit</button>
         <button onclick="resetFilters()" style="padding: 8px 16px; background-color: #00897b; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Netejar Filtres</button>
@@ -692,10 +737,12 @@ function renderRoutes(routesToRender) {{
 
         const tpBtn = r.turismepetit_url ? `<a href="${{r.turismepetit_url}}" target="_blank" style="display: inline-block; padding: 6px 12px; background-color: #e65100; color: white; text-decoration: none; border-radius: 4px; font-size: 0.85em; font-weight: bold;">👶 Turisme Petit 🔗</a>` : '';
 
+        const expBadge = (r.experiencies && r.experiencies.length > 0) ? `<span style="background-color: #6a1b9a; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.75em; font-weight: bold; margin-left: 6px;">💬 ${{r.experiencies.length}} experiències</span>` : '';
+
         card.innerHTML = `
             <div>
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
-                    <h3 style="margin: 0 0 6px 0; font-size: 1.05em;"><a href="../rutes/${{r.slug}}/" style="color: var(--md-typeset-a-color, #00897b); text-decoration: none;">${{r.nom}}</a></h3>
+                    <h3 style="margin: 0 0 6px 0; font-size: 1.05em;"><a href="../rutes/${{r.slug}}/" style="color: var(--md-typeset-a-color, #00897b); text-decoration: none;">${{r.nom}}</a> ${{expBadge}}</h3>
                     <span style="background-color: ${{badgeColor}}; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.75em; font-weight: bold; whitespace: nowrap;">${{r.dificultat}}</span>
                 </div>
                 <p style="font-size: 0.85em; color: #666; margin: 4px 0 8px 0;">📍 <b>${{r.municipi || 'Mallorca'}}</b> (${{r.zona || 'Tramuntana'}})</p>
@@ -752,6 +799,8 @@ function applyRouteFilters() {{
             matchPlat = !!r.wikiloc_url && !!r.turismepetit_url;
         }} else if (plat === 'privat') {{
             matchPlat = r.passos_finca_privada && r.passos_finca_privada.length > 0 && !r.passos_finca_privada.some(p => p.toLowerCase().includes('cap'));
+        }} else if (plat === 'comentaris') {{
+            matchPlat = r.experiencies && r.experiencies.length > 0;
         }}
         
         return matchMun && matchZon && matchDif && matchBra && matchTxt && matchPlat;
@@ -788,8 +837,18 @@ def main():
     refugis = load_json("data/acampada_mallorca.json")
     rutes = load_json("data/rutes_mallorca.json")
     transport_data = load_json("data/transport_mallorca.json")
+    experiencies = load_json("data/experiencies_rutes.json")
     
-    print("Incloent TOTS els trens de Mallorca (SFM T1, T2, T3, Metro M1/M2 i Sóller) a la guia i rutes...")
+    exp_map = {}
+    for exp in experiencies:
+        slug = exp.get("ruta_slug")
+        if slug:
+            exp_map.setdefault(slug, []).append(exp)
+            
+    for rut in rutes:
+        rut["experiencies"] = exp_map.get(rut["slug"], [])
+
+    print("Incloent TOTS els trens i experiencies d'agrupaments a la guia i rutes...")
     build_individual_route_pages(rutes, refugis, agrupaments, transport_data)
     build_individual_acampada_pages(refugis, rutes, agrupaments, transport_data)
     build_individual_agrupament_pages(agrupaments, refugis, rutes, transport_data)
@@ -798,7 +857,7 @@ def main():
     build_acampada_overview(refugis)
     build_rutes_overview(rutes)
     build_transport_overview_page(transport_data)
-    print("Secció de Trens de Mallorca actualitzada amb èxit!")
+    print("Base de dades d'experiencies i rutes actualitzada amb èxit!")
 
 if __name__ == "__main__":
     main()

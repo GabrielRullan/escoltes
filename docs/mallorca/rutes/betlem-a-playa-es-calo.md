@@ -120,3 +120,27 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
 | :--- | :--- | :---: | :--- |
 | **AEG Sa Marjal** | Sa Pobla | **26.0 km** | [Veure Casal](../agrupaments/aeg-sa-marjal.md) |
 | **AEG Pedra Viva** | Binissalem | **42.1 km** | [Veure Casal](../agrupaments/aeg-pedra-viva.md) |
+
+---
+
+## 💬 Experiències i Valoracions dels Agrupaments Escoltes
+
+<div style="background-color: var(--md-code-bg-color, #f8f9fa); border: 1px solid #e0e0e0; padding: 18px; border-radius: 10px; margin-top: 16px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; border-bottom: 1px solid #e0e0e0; padding-bottom: 12px;">
+        <div>
+            <h3 style="margin: 0; font-size: 1.15em; color: #00897b;">Valoració Mitjana: ⭐⭐⭐⭐⭐ 5.0 / 5</h3>
+            <p style="margin: 4px 0 0 0; font-size: 0.85em; color: #666;">Basat en <b>1 experiències</b> compartides per caps escoltes.</p>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScoutsMallorcaRutes/viewform" target="_blank" style="padding: 8px 16px; background-color: #00897b; color: white; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85em; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">📝 Compartir la meva experiència i consells 🔗</a>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; background-color: #ffffff;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;">
+                <span style="font-weight: bold; color: #333; font-size: 0.9em;">⚜️ AEG Sa Marjal <span style="font-weight: normal; color: #666;">(Llops/Daines)</span></span>
+                <span style="font-size: 0.8em; color: #f57f17; font-weight: bold;">⭐⭐⭐⭐⭐ (Abril 2025)</span>
+            </div>
+            <p style="margin: 0; font-size: 0.85em; color: #444; line-height: 1.4;"><i>"Ruta litoral preciosa a la Colònia de Sant Pere / Artà. Es pot fer en família o amb Llops. Platja des Caló és un redol perfecte per dinar."</i></p>
+        </div>
+    </div>
+</div>
+
