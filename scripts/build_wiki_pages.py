@@ -537,7 +537,7 @@ Directori general dels **Agrupaments Escoltes i Guies (AEG)** de Mallorca. Feu c
 def build_acampada_overview(refugis):
     md = """# Zones d'Acampada, Àrees Recreatives i Refugis a Mallorca
 
-Directori centralitzat d'infraestructures per a l'acampada i l'aixopluc escolta. Prem sobre el nom de qualsevol refugi per obrir la seva **fitxa detallada, mapa OpenStreetMap i rutes accessibles a peu (<= 2.0 km)**.
+Directori centralitzat d'infraestructures per a l'acampada i l'aixopluc escolta. Prem sobre el nom de qualsevol refugi per obrir la seva **fitxa detallada, mapa OpenStreetMap, aigua potable, serveis i rutes accessibles a peu (<= 2.0 km)**.
 
 > [!WARNING]
 > Recordeu que entre l'**1 de maig i el 15 d'octubre** està totalment prohibit fer foc a l'aire lliure (IBANAT).
@@ -546,11 +546,12 @@ Directori centralitzat d'infraestructures per a l'acampada i l'aixopluc escolta.
 
 ## ⛺ Llista de Refugis i Terrenys
 
-| Nom del Refugi / Terreny | Titularitat | Municipi | Capacitat | Fitxa Completa i Mapa |
-| :--- | :--- | :--- | :---: | :--- |
+| Nom del Refugi / Terreny | Titularitat | Municipi | Capacitat | Aigua i Serveis Disponibles | Fitxa Completa i Mapa |
+| :--- | :--- | :--- | :---: | :--- | :--- |
 """
     for r in refugis:
-        md += f"| **{r['nom']}** | {r['titularitat']} | {r['municipi']} | **{r['capacitat']} pers.** | [Veure Fitxa i Mapa 🔗](acampada/{r['slug']}.md) |\n"
+        serveis_summary = ", ".join(r.get("serveis", [])[:3])
+        md += f"| **{r['nom']}** | {r['titularitat']} | {r['municipi']} | **{r['capacitat']} pers.** | 💧 {serveis_summary} | [Veure Fitxa i Mapa 🔗](acampada/{r['slug']}.md) |\n"
 
     with open("docs/mallorca/acampada_i_refugis.md", "w", encoding="utf-8") as f:
         f.write(md)
@@ -570,7 +571,7 @@ def build_rutes_overview(rutes):
 
     md = f"""# 🥾 Cercador i Índex de Rutes de Senderisme a Mallorca
 
-Benvinguts al cercador interactiu de la base de dades d'excursions. Podeu filtrar les **{len(rutes)} rutes catalogades** per **Municipi**, **Zona**, **Dificultat** o **Branca Escolta**, i veure la posició exacte dels inicis de ruta al mapa interactiu.
+Benvinguts al cercador interactiu de la base de dades d'excursions. Podeu filtrar les **{len(rutes)} rutes catalogades** per **Municipi**, **Zona**, **Dificultat**, **Branca Escolta** o **Recursos de Wikiloc / Turisme Petit**, i veure la posició exacte dels inicis de ruta al mapa interactiu.
 
 ---
 
@@ -617,20 +618,18 @@ Benvinguts al cercador interactiu de la base de dades d'excursions. Podeu filtra
             </select>
         </div>
         <div>
-            <label style="font-weight: bold; font-size: 0.85em;">🔗 Recurs / Enllaç / Seguretat:</label>
+            <label style="font-weight: bold; font-size: 0.85em;">🔗 Recurs / Enllaç Extern:</label>
             <select id="filter-plataforma" onchange="applyRouteFilters()" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc; background-color: #f0f7f4; font-weight: bold;">
                 <option value="">Tots els recursos</option>
-                <option value="aigua">💧 Amb Font / Punt d'Aigua</option>
-                <option value="privat">⚠️ Passos per Finca Privada</option>
                 <option value="wikiloc">💚 Amb Track de Wikiloc</option>
                 <option value="turismepetit">👶 Amb Guia Turisme Petit</option>
                 <option value="both">🌟 Amb Wikiloc i Turisme Petit</option>
+                <option value="privat">⚠️ Passos per Finca Privada</option>
             </select>
         </div>
     </div>
     <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
         <input type="text" id="filter-search" oninput="applyRouteFilters()" placeholder="🔎 Cercar per nom, paratge o paraula clau..." style="flex: 1; min-width: 220px; padding: 8px 12px; border-radius: 6px; border: 1px solid #ccc;" />
-        <button onclick="quickFilter('aigua')" style="padding: 8px 14px; background-color: #0288d1; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.85em; font-weight: bold;">💧 Amb Font</button>
         <button onclick="quickFilter('wikiloc')" style="padding: 8px 14px; background-color: #2e7d32; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.85em; font-weight: bold;">💚 Només Wikiloc</button>
         <button onclick="quickFilter('turismepetit')" style="padding: 8px 14px; background-color: #e65100; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.85em; font-weight: bold;">👶 Només Turisme Petit</button>
         <button onclick="resetFilters()" style="padding: 8px 16px; background-color: #00897b; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Netejar Filtres</button>
@@ -751,8 +750,6 @@ function applyRouteFilters() {{
             matchPlat = !!r.turismepetit_url;
         }} else if (plat === 'both') {{
             matchPlat = !!r.wikiloc_url && !!r.turismepetit_url;
-        }} else if (plat === 'aigua') {{
-            matchPlat = r.punts_aigua && r.punts_aigua.length > 0 && !r.punts_aigua.some(a => a.toLowerCase().includes('sense') || a.toLowerCase().includes('no hi ha'));
         }} else if (plat === 'privat') {{
             matchPlat = r.passos_finca_privada && r.passos_finca_privada.length > 0 && !r.passos_finca_privada.some(p => p.toLowerCase().includes('cap'));
         }}
