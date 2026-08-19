@@ -133,10 +133,10 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
     <div style="display: flex; flex-direction: column; gap: 12px;">
         <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; background-color: #ffffff;">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;">
-                <span style="font-weight: bold; color: #333; font-size: 0.9em;">⚜️ GS Myotragus 684 <span style="font-weight: normal; color: #666;">(Rovers/Rutes)</span></span>
-                <span style="font-size: 0.8em; color: #f57f17; font-weight: bold;">⭐⭐⭐⭐⭐ (Maig 2025)</span>
+                <span style="font-weight: bold; color: #333; font-size: 0.9em;">⚜️ [PROVA / DEMO] GS Myotragus 684 <span style="font-weight: normal; color: #666;">(Rovers/Rutes)</span></span>
+                <span style="font-size: 0.8em; color: #f57f17; font-weight: bold;">⭐⭐⭐⭐⭐ (Maig 2025 (Exemple))</span>
             </div>
-            <p style="margin: 0; font-size: 0.85em; color: #444; line-height: 1.4;"><i>"Excursió molt tècnica i d'alta dificultat. S'ha de mirar molt bé la previsió meteorològica i que el torrent estigui ben eixut. Dur cordes de seguretat i molta aigua."</i></p>
+            <p style="margin: 0; font-size: 0.85em; color: #444; line-height: 1.4;"><i>"[EXEMPLE DE PROVA] Ressenya de demostració. Excursió molt tècnica i d'alta dificultat. Cal comprovar la previsió del temps."</i></p>
         </div>
     </div>
 </div>

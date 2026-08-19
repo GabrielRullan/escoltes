@@ -135,17 +135,17 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
     <div style="display: flex; flex-direction: column; gap: 12px;">
         <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; background-color: #ffffff;">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;">
-                <span style="font-weight: bold; color: #333; font-size: 0.9em;">⚜️ AEG Eladi Homs <span style="font-weight: normal; color: #666;">(Llops/Daines)</span></span>
-                <span style="font-size: 0.8em; color: #f57f17; font-weight: bold;">⭐⭐⭐⭐⭐ (Novembre 2025)</span>
+                <span style="font-weight: bold; color: #333; font-size: 0.9em;">⚜️ [PROVA / DEMO] AEG Eladi Homs <span style="font-weight: normal; color: #666;">(Llops/Daines)</span></span>
+                <span style="font-size: 0.8em; color: #f57f17; font-weight: bold;">⭐⭐⭐⭐⭐ (Novembre 2025 (Exemple))</span>
             </div>
-            <p style="margin: 0; font-size: 0.85em; color: #444; line-height: 1.4;"><i>"Ruta fantàstica per fer a la tardor. El bosc d'alzines ofereix molta ombra i el camí és fàcil de seguir. Si ha plogut els dies anteriors, el Salt des Freu porta molta aigua i és molt espectacular!"</i></p>
+            <p style="margin: 0; font-size: 0.85em; color: #444; line-height: 1.4;"><i>"[EXEMPLE DE PROVA] Ruta de mostra per provar la interfície. El bosc d'alzines ofereix molta ombra i el camí és fàcil de seguir. Si ha plogut els dies anteriors, el Salt des Freu porta molta aigua."</i></p>
         </div>
         <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; background-color: #ffffff;">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;">
-                <span style="font-weight: bold; color: #333; font-size: 0.9em;">⚜️ AEG Jaume I <span style="font-weight: normal; color: #666;">(Pioners/Rangers)</span></span>
-                <span style="font-size: 0.8em; color: #f57f17; font-weight: bold;">⭐⭐⭐⭐ (Octubre 2025)</span>
+                <span style="font-weight: bold; color: #333; font-size: 0.9em;">⚜️ [PROVA / DEMO] AEG Jaume I <span style="font-weight: normal; color: #666;">(Pioners/Rangers)</span></span>
+                <span style="font-size: 0.8em; color: #f57f17; font-weight: bold;">⭐⭐⭐⭐ (Octubre 2025 (Exemple))</span>
             </div>
-            <p style="margin: 0; font-size: 0.85em; color: #444; line-height: 1.4;"><i>"Molt bona opció per combinar amb pernoctació o parada de dinar. Recomanam dur calçat de recanvi per si s'ha de creuar el torrent."</i></p>
+            <p style="margin: 0; font-size: 0.85em; color: #444; line-height: 1.4;"><i>"[EXEMPLE DE PROVA] Comentari de mostra per testar el sistema de ressenyes d'agrupaments. Recomanam dur calçat de recanvi per si s'ha de creuar el torrent."</i></p>
         </div>
     </div>
 </div>

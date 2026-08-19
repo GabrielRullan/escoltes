@@ -136,10 +136,10 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
     <div style="display: flex; flex-direction: column; gap: 12px;">
         <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px; background-color: #ffffff;">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;">
-                <span style="font-weight: bold; color: #333; font-size: 0.9em;">⚜️ AEG Verge de Lluc <span style="font-weight: normal; color: #666;">(Pioners/Rangers)</span></span>
-                <span style="font-size: 0.8em; color: #f57f17; font-weight: bold;">⭐⭐⭐⭐ (Tardor 2025)</span>
+                <span style="font-weight: bold; color: #333; font-size: 0.9em;">⚜️ [PROVA / DEMO] AEG Verge de Lluc <span style="font-weight: normal; color: #666;">(Pioners/Rangers)</span></span>
+                <span style="font-size: 0.8em; color: #f57f17; font-weight: bold;">⭐⭐⭐⭐ (Tardor 2025 (Exemple))</span>
             </div>
-            <p style="margin: 0; font-size: 0.85em; color: #444; line-height: 1.4;"><i>"Finca pública de l'IBANAT molt completa amb albellons, aljubs i cases senyorials. Bona ombra i pistes amples."</i></p>
+            <p style="margin: 0; font-size: 0.85em; color: #444; line-height: 1.4;"><i>"[EXEMPLE DE PROVA] Text d'exemple per comprovar els badges de branques i la valoració mitjana."</i></p>
         </div>
     </div>
 </div>
