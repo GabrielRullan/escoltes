@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_avenc_de_son_pou, 400);
 | **Dificultat Tècnica** | **Fàcil - Moderada** |
 | **Durada Estimada** | **2h 45min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Avenc%20de%20Son%20Pou%20%28Coanegra%20/%20Santa%20Maria%29)** |
 
 ---
 

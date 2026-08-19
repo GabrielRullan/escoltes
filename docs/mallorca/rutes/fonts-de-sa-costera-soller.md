@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_fonts_de_sa_costera_soller, 400);
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **4h 00min** |
 | **Unitats Recomanades** | **Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Ruta%20de%20les%20Fonts%20de%20sa%20Costera%20%28S%C3%B3ller%20-%20Cala%20Tuent%29)** |
 
 ---
 

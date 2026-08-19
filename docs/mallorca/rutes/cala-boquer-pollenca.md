@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_cala_boquer_pollenca, 400);
 | **Dificultat Tècnica** | **Fàcil** |
 | **Durada Estimada** | **2h 00min** |
 | **Unitats Recomanades** | **Castors/Fures, Llops/Daines, Pioners/Rangers** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Cala%20Boquer%20i%20Vall%20de%20Boquer%20%28Pollen%C3%A7a%29)** |
 
 ---
 

@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_castell_d_alaro, 400);
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **3h 00min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Excursi%C3%B3%20al%20Castell%20d%27Alar%C3%B3%20%28des%20d%27Orient%20o%20Es%20Verger%29)** |
 
 ---
 

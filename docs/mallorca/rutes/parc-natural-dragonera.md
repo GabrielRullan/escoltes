@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_parc_natural_dragonera, 400);
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **3h 00min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Parc%20Natural%20de%20sa%20Dragonera%20%28Cala%20Lled%C3%B3%20-%20Far%20Vell%29)** |
 
 ---
 

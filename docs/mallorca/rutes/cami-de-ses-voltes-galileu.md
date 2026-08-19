@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_cami_de_ses_voltes_galileu, 400);
 | **Dificultat Tècnica** | **Moderada - Exigent** |
 | **Durada Estimada** | **3h 45min** |
 | **Unitats Recomanades** | **Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Cam%C3%AD%20de%20ses%20Voltes%20d%27en%20Galileu%20%28Lluc%29)** |
 
 ---
 

@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_coma_de_binifaldo_puig_tomir, 400);
 | **Dificultat Tècnica** | **Exigent** |
 | **Durada Estimada** | **4h 30min** |
 | **Unitats Recomanades** | **Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Ascensi%C3%B3%20al%20Puig%20Tomir%20%28des%20de%20Binifald%C3%B3%29)** |
 
 ---
 

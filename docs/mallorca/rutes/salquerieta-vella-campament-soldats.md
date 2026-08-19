@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_salquerieta_vella_campament_soldats, 400);
 | **Dificultat Tècnica** | **Fàcil - Moderada** |
 | **Durada Estimada** | **2h 30min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=S%27Alqueria%20Vella%20al%20Campament%20dels%20Soldats%20%28Art%C3%A0%29)** |
 
 ---
 

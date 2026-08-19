@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_puig_de_ses_basses_fornalutx, 400);
 | **Dificultat Tècnica** | **Moderada - Exigent** |
 | **Durada Estimada** | **4h 45min** |
 | **Unitats Recomanades** | **Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Fornalutx%20al%20Coll%20de%20sa%20B%C3%A0litx%20i%20Cala%20Tuent)** |
 
 ---
 

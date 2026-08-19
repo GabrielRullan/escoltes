@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_muela_de_sesclop, 400);
 | **Dificultat Tècnica** | **Exigent** |
 | **Durada Estimada** | **5h 00min** |
 | **Unitats Recomanades** | **Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Muela%20de%20s%27Esclop%20%28des%20de%20sa%20Vinya%20de%20Galatz%C3%B3%29)** |
 
 ---
 

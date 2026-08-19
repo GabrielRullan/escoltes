@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_gr221_etapa_2_la_trapa_estellencs, 400);
 | **Dificultat Tècnica** | **Exigent** |
 | **Durada Estimada** | **5h 45min** |
 | **Unitats Recomanades** | **Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=GR-221%20Etapa%202%3A%20La%20Trapa%20a%20Estellencs)** |
 
 ---
 

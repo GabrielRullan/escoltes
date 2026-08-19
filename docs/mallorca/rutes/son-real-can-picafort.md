@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_son_real_can_picafort, 400);
 | **Dificultat Tècnica** | **Molt Fàcil** |
 | **Durada Estimada** | **2h 30min** |
 | **Unitats Recomanades** | **Castors/Fures, Llops/Daines, Pioners/Rangers** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Ruta%20Litoral%20de%20la%20Finca%20P%C3%BAblica%20de%20Son%20Real)** |
 
 ---
 

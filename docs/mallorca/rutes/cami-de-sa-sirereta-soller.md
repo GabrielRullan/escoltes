@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_cami_de_sa_sirereta_soller, 400);
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **2h 45min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Cam%C3%AD%20de%20sa%20Sirereta%20i%20Cova%20de%20ses%20Albellons%20%28S%C3%B3ller%29)** |
 
 ---
 

@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_es_salt_des_freu_orient, 400);
 | **Dificultat Tècnica** | **Molt Fàcil** |
 | **Durada Estimada** | **1h 45min** |
 | **Unitats Recomanades** | **Castors/Fures, Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Es%20Salt%20des%20Freu%20%28Orient%20/%20Bunyola%29)** |
 
 ---
 

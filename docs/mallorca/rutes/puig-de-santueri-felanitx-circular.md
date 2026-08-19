@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_puig_de_santueri_felanitx_circular, 400);
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **2h 30min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Volta%20al%20Puig%20de%20Santueri%20i%20Castell%20de%20Santueri)** |
 
 ---
 

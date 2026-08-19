@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_penya_de_sa_foradada_puigpunyent, 400);
 | **Dificultat Tècnica** | **Fàcil** |
 | **Durada Estimada** | **2h 00min** |
 | **Unitats Recomanades** | **Castors/Fures, Llops/Daines** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Penya%20de%20les%20S%C3%ADnies%20i%20Reserva%20de%20Puigpunyent)** |
 
 ---
 

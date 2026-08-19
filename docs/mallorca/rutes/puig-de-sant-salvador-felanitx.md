@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_puig_de_sant_salvador_felanitx, 400);
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **2h 45min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Puig%20de%20Sant%20Salvador%20%28Felanitx%29)** |
 
 ---
 

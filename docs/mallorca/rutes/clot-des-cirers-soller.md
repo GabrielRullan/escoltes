@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_clot_des_cirers_soller, 400);
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **3h 45min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Clot%20des%20Cirers%20des%20del%20Port%20de%20S%C3%B3ller)** |
 
 ---
 

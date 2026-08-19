@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_gr221_etapa_6_soller_tossals_verds, 400);
 | **Dificultat Tècnica** | **Exigent** |
 | **Durada Estimada** | **5h 30min** |
 | **Unitats Recomanades** | **Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=GR-221%20Etapa%206%3A%20S%C3%B3ller%20a%20Tossals%20Verds)** |
 
 ---
 

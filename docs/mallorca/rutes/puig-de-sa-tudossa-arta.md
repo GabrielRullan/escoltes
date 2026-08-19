@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_puig_de_sa_tudossa_arta, 400);
 | **Dificultat Tècnica** | **Moderada - Exigent** |
 | **Durada Estimada** | **4h 15min** |
 | **Unitats Recomanades** | **Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Puig%20de%20sa%20Tudossa%20i%20Talaia%20de%20Moreia%20%28Art%C3%A0%29)** |
 
 ---
 

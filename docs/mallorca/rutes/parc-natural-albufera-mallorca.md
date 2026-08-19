@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_parc_natural_albufera_mallorca, 400);
 | **Dificultat Tècnica** | **Molt Fàcil** |
 | **Durada Estimada** | **2h 00min** |
 | **Unitats Recomanades** | **Castors/Fures, Llops/Daines, Pioners/Rangers** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Parc%20Natural%20de%20s%27Albufera%20de%20Mallorca)** |
 
 ---
 

@@ -1,6 +1,7 @@
 import os
 import json
 import math
+import urllib.parse
 
 def haversine_km(lat1, lon1, lat2, lon2):
     """Calcula la distància en quilòmetres entre dues coordenades (fórmula de Haversine)."""
@@ -147,6 +148,13 @@ def build_individual_route_pages(rutes, refugis, agrupaments, transport_data):
         interes_str = ", ".join(rut["punts_interes"])
         passos_str = ", ".join(rut["passos_finca_privada"])
         
+        wikiloc_url = rut.get("wikiloc_url")
+        if wikiloc_url:
+            wikiloc_str = f"[💚 Obrir Track Oficial a Wikiloc 🔗]({wikiloc_url})"
+        else:
+            search_query = urllib.parse.quote(rut['nom'])
+            wikiloc_str = f"[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q={search_query})"
+
         md = f"""# 🏔️ {rut['nom']}
 
 {rut['descripcio']}
@@ -170,6 +178,7 @@ def build_individual_route_pages(rutes, refugis, agrupaments, transport_data):
 | **Dificultat Tècnica** | **{rut['dificultat']}** |
 | **Durada Estimada** | **{rut['durada_estimada']}** |
 | **Unitats Recomanades** | **{unitats_str}** |
+| **Track a Wikiloc** | **{wikiloc_str}** |
 
 ---
 
@@ -663,6 +672,8 @@ function renderRoutes(routesToRender) {{
         const badgeColor = getBadgeColor(r.dificultat);
         const unitatsStr = r.apte_unitats ? r.apte_unitats.join(', ') : '';
         
+        const wikilocUrl = r.wikiloc_url ? r.wikiloc_url : `https://www.wikiloc.com/wikiloc/map.do?q=${{encodeURIComponent(r.nom)}}`;
+
         card.innerHTML = `
             <div>
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
@@ -673,7 +684,8 @@ function renderRoutes(routesToRender) {{
                 <p style="font-size: 0.85em; margin: 4px 0;">📏 <b>${{r.distancia_km}} km</b> | 📈 <b>+${{r.desnivell_positiu_m}}m</b> | ⏱️ <b>${{r.durada_estimada}}</b></p>
                 <p style="font-size: 0.8em; color: #555; margin: 4px 0;">⚜️ <i>${{unitatsStr}}</i></p>
             </div>
-            <div style="margin-top: 12px; text-align: right;">
+            <div style="margin-top: 12px; display: flex; justify-content: flex-end; gap: 8px; flex-wrap: wrap;">
+                <a href="${{wikilocUrl}}" target="_blank" style="display: inline-block; padding: 6px 12px; background-color: #2e7d32; color: white; text-decoration: none; border-radius: 4px; font-size: 0.85em; font-weight: bold;">💚 Wikiloc 🔗</a>
                 <a href="../rutes/${{r.slug}}/" style="display: inline-block; padding: 6px 12px; background-color: #00897b; color: white; text-decoration: none; border-radius: 4px; font-size: 0.85em; font-weight: bold;">Veure Fitxa i Mapa 🔗</a>
             </div>
         `;

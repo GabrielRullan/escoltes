@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_gr221_etapa_3_estellencs_esporles, 400);
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **5h 15min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=GR-221%20Etapa%203%3A%20Estellencs%20a%20Esporles)** |
 
 ---
 

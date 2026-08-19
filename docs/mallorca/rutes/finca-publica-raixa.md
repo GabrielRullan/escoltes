@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_finca_publica_raixa, 400);
 | **Dificultat Tècnica** | **Fàcil** |
 | **Durada Estimada** | **1h 15min** |
 | **Unitats Recomanades** | **Castors/Fures, Llops/Daines** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Tomb%20per%20la%20Finca%20P%C3%BAblica%20de%20Raixa)** |
 
 ---
 

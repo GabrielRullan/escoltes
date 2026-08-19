@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_torrent_de_pareis, 400);
 | **Dificultat Tècnica** | **Molt Exigent / Tècnica** |
 | **Durada Estimada** | **5h 00min** |
 | **Unitats Recomanades** | **Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Torrent%20de%20Pareis%20%28Nom%C3%A9s%20estiu%20/%20temps%20sec%29)** |
 
 ---
 

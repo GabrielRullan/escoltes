@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_puig_des_teix_espolres, 400);
 | **Dificultat Tècnica** | **Fàcil - Moderada** |
 | **Durada Estimada** | **2h 45min** |
 | **Unitats Recomanades** | **Castors/Fures, Llops/Daines, Pioners/Rangers** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Esporles%20a%20Banyalbufar%20pel%20Cam%C3%AD%20des%20Correu)** |
 
 ---
 

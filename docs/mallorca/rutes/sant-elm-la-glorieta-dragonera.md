@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_sant_elm_la_glorieta_dragonera, 400);
 | **Dificultat Tècnica** | **Fàcil** |
 | **Durada Estimada** | **2h 00min** |
 | **Unitats Recomanades** | **Castors/Fures, Llops/Daines** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Cala%20en%20Basset%20i%20Torre%20de%20sa%20Salve%20des%20de%20Sant%20Elm)** |
 
 ---
 

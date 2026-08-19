@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_ses_fonts_ufanes_campanet, 400);
 | **Dificultat Tècnica** | **Molt Fàcil** |
 | **Durada Estimada** | **1h 15min** |
 | **Unitats Recomanades** | **Castors/Fures, Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Ses%20Fonts%20Ufanes%20%28Campanet%29)** |
 
 ---
 

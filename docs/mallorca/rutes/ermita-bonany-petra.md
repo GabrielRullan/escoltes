@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_ermita_bonany_petra, 400);
 | **Dificultat Tècnica** | **Fàcil** |
 | **Durada Estimada** | **2h 15min** |
 | **Unitats Recomanades** | **Castors/Fures, Llops/Daines** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Pujada%20a%20l%27Ermita%20de%20Bonany%20des%20de%20Petra)** |
 
 ---
 

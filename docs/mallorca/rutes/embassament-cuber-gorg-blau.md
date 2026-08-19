@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_embassament_cuber_gorg_blau, 400);
 | **Dificultat Tècnica** | **Molt Fàcil** |
 | **Durada Estimada** | **1h 45min** |
 | **Unitats Recomanades** | **Castors/Fures, Llops/Daines** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Volta%20a%20l%27Embassament%20de%20C%C3%BAber%20i%20Font%20de%20s%27Ametler)** |
 
 ---
 

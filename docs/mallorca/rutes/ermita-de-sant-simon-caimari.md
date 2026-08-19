@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_ermita_de_sant_simon_caimari, 400);
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **2h 45min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Caimari%20al%20Coll%20de%20sa%20Batalla%20pel%20Cam%C3%AD%20Vell%20de%20Lluc)** |
 
 ---
 

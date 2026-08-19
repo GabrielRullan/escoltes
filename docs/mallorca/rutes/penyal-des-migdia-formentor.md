@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_penyal_des_migdia_formentor, 400);
 | **Dificultat Tècnica** | **Fàcil - Moderada** |
 | **Durada Estimada** | **2h 30min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Cami%20del%20Far%20de%20Formentor%20a%20Cala%20Murta%20%28Pollen%C3%A7a%29)** |
 
 ---
 

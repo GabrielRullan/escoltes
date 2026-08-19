@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_penya_rotja_alcudia, 400);
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **2h 45min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Penya%20Rotja%20i%20Ermita%20de%20la%20Vict%C3%B2ria%20%28Alc%C3%BAdia%29)** |
 
 ---
 

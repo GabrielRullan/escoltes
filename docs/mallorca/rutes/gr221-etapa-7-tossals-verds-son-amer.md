@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_gr221_etapa_7_tossals_verds_son_amer, 400);
 | **Dificultat Tècnica** | **Exigent** |
 | **Durada Estimada** | **5h 45min** |
 | **Unitats Recomanades** | **Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=GR-221%20Etapa%207%3A%20Tossals%20Verds%20a%20Son%20Amer%20%28Lluc%29)** |
 
 ---
 

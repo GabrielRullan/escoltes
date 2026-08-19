@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_coll_de_sa_gramola_ses_basses, 400);
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **2h 45min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Coll%20de%20sa%20Gramola%20al%20Puig%20de%20sa%20Monja%20%28Andratx%29)** |
 
 ---
 

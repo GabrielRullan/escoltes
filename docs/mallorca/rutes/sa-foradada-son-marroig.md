@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_sa_foradada_son_marroig, 400);
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **2h 45min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Sa%20Foradada%20des%20de%20Son%20Marroig%20%28Dei%C3%A0%29)** |
 
 ---
 

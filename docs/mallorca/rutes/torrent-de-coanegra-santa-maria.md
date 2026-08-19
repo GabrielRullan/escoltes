@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_torrent_de_coanegra_santa_maria, 400);
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **3h 15min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Torrent%20de%20Coanegra%20i%20Salt%20des%20Freu%20de%20Coanegra)** |
 
 ---
 

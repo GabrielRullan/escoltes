@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_cami_des_rafal_deia, 400);
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **2h 30min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Cam%C3%AD%20des%20Rafal%20i%20Cova%20de%20sa%20Cauba%20%28Dei%C3%A0%29)** |
 
 ---
 

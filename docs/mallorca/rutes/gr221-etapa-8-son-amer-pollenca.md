@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_gr221_etapa_8_son_amer_pollenca, 400);
 | **Dificultat Tècnica** | **Fàcil - Moderada** |
 | **Durada Estimada** | **4h 45min** |
 | **Unitats Recomanades** | **Castors/Fures, Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=GR-221%20Etapa%208%3A%20Son%20Amer%20a%20Pollen%C3%A7a)** |
 
 ---
 

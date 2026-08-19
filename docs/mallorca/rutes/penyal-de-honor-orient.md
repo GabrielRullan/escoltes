@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_penyal_de_honor_orient, 400);
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **4h 00min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Orient%20a%20sa%20Coma%20de%20Santa%20Maria%20pel%20Pas%20de%20s%27Escaleta)** |
 
 ---
 

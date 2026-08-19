@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_ermita_trinitat_valldemossa, 400);
 | **Dificultat Tècnica** | **Fàcil** |
 | **Durada Estimada** | **2h 15min** |
 | **Unitats Recomanades** | **Castors/Fures, Llops/Daines, Pioners/Rangers** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Ermita%20de%20la%20Trinitat%20i%20Miradors%20de%20Valldemossa)** |
 
 ---
 

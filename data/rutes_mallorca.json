@@ -2213,5 +2213,61 @@
     "lat": 39.778,
     "lon": 2.902,
     "descripcio": "Subida tradicional des del poble de la oliva Caimari cap a les portes de Lluc."
+  },
+  {
+    "slug": "torrent-de-pareis-escorca-sa-calobra",
+    "nom": "Torrent De Pareis Escorca Sa Calobra",
+    "municipi": "Mallorca",
+    "zona": "Serra de Tramuntana",
+    "distancia_km": 8.5,
+    "desnivell_positiu_m": 350,
+    "dificultat": "Moderada",
+    "durada_estimada": "3h 30min",
+    "apte_unitats": [
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rovers/Rutes"
+    ],
+    "punts_aigua": [
+      "Consultar punts de recàrrega"
+    ],
+    "passos_finca_privada": [
+      "Consultar senyalització i camins habilitats"
+    ],
+    "punts_interes": [
+      "Torrent De Pareis Escorca Sa Calobra"
+    ],
+    "consells_seguretat": "Portar aigua suficient, calçat de muntanya i consultar la previsió del temps abans de sortir.",
+    "descripcio": "Ruta d'excursió extreta de Wikiloc ([Veure Track Oficial a Wikiloc](https://es.wikiloc.com/rutas-senderismo/torrent-de-pareis-escorca-sa-calobra-2194812)).",
+    "wikiloc_url": "https://es.wikiloc.com/rutas-senderismo/torrent-de-pareis-escorca-sa-calobra-2194812",
+    "lat": 39.65,
+    "lon": 2.9,
+    "track_coordinates": [
+      [
+        39.65,
+        2.9
+      ],
+      [
+        39.655,
+        2.905
+      ]
+    ],
+    "itinerari_passos": [
+      {
+        "pas": 1,
+        "nom": "Inici de la ruta (Wikiloc)",
+        "desc": "Sortida des del punt inicial indicat al track de Wikiloc (https://es.wikiloc.com/rutas-senderismo/torrent-de-pareis-escorca-sa-calobra-2194812)."
+      },
+      {
+        "pas": 2,
+        "nom": "Tram principal del recorregut",
+        "desc": "Seguiment de la sendera i fites sobre el terreny."
+      },
+      {
+        "pas": 3,
+        "nom": "Punt d'arribada",
+        "desc": "Final de la ruta o retorn al punt d'origen."
+      }
+    ]
   }
 ]

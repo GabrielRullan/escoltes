@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_puig_de_na_francesa_bunyola, 400);
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **3h 00min** |
 | **Unitats Recomanades** | **Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Puig%20de%20na%20Francessa%20%28Bunyola%29)** |
 
 ---
 

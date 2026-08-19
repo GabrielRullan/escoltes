@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_fita_del_ram_maristella, 400);
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **3h 30min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Fita%20del%20Ram%20i%20Ermita%20de%20Maristel%C2%B7la%20%28Esporles%29)** |
 
 ---
 

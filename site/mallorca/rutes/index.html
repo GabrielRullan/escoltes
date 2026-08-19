@@ -863,6 +863,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../sop/draft_afegir_ruta_wikiloc/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SOP Ingestió Rutes Wikiloc
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../draft_plantilla_ruta_i_acampada/" class="md-nav__link">
         
   
@@ -1102,6 +1130,8 @@ function renderRoutes(routesToRender) {
         const badgeColor = getBadgeColor(r.dificultat);
         const unitatsStr = r.apte_unitats ? r.apte_unitats.join(', ') : '';
 
+        const wikilocUrl = r.wikiloc_url ? r.wikiloc_url : `https://www.wikiloc.com/wikiloc/map.do?q=${encodeURIComponent(r.nom)}`;
+
         card.innerHTML = `
             <div>
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
@@ -1112,7 +1142,8 @@ function renderRoutes(routesToRender) {
                 <p style="font-size: 0.85em; margin: 4px 0;">📏 <b>${r.distancia_km} km</b> | 📈 <b>+${r.desnivell_positiu_m}m</b> | ⏱️ <b>${r.durada_estimada}</b></p>
                 <p style="font-size: 0.8em; color: #555; margin: 4px 0;">⚜️ <i>${unitatsStr}</i></p>
             </div>
-            <div style="margin-top: 12px; text-align: right;">
+            <div style="margin-top: 12px; display: flex; justify-content: flex-end; gap: 8px; flex-wrap: wrap;">
+                <a href="${wikilocUrl}" target="_blank" style="display: inline-block; padding: 6px 12px; background-color: #2e7d32; color: white; text-decoration: none; border-radius: 4px; font-size: 0.85em; font-weight: bold;">💚 Wikiloc 🔗</a>
                 <a href="../rutes/${r.slug}/" style="display: inline-block; padding: 6px 12px; background-color: #00897b; color: white; text-decoration: none; border-radius: 4px; font-size: 0.85em; font-weight: bold;">Veure Fitxa i Mapa 🔗</a>
             </div>
         `;

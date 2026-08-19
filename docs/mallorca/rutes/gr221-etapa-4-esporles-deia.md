@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_gr221_etapa_4_esporles_deia, 400);
 | **Dificultat Tècnica** | **Exigent** |
 | **Durada Estimada** | **6h 45min** |
 | **Unitats Recomanades** | **Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=GR-221%20Etapa%204%3A%20Esporles%20a%20Dei%C3%A0)** |
 
 ---
 

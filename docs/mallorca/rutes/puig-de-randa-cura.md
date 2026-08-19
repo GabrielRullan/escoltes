@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_puig_de_randa_cura, 400);
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **3h 00min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Puig%20de%20Randa%20i%20Santuari%20de%20Cura%20%28Algaida%29)** |
 
 ---
 

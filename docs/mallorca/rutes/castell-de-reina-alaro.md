@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_castell_de_reina_alaro, 400);
 | **Dificultat Tècnica** | **Exigent** |
 | **Durada Estimada** | **4h 30min** |
 | **Unitats Recomanades** | **Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Pas%20des%20Llop%20i%20Cova%20de%20sa%20Campana%20%28Alar%C3%B3%20/%20Escorca%29)** |
 
 ---
 

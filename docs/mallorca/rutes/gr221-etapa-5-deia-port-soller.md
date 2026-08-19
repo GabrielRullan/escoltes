@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_gr221_etapa_5_deia_port_soller, 400);
 | **Dificultat Tècnica** | **Fàcil - Moderada** |
 | **Durada Estimada** | **3h 30min** |
 | **Unitats Recomanades** | **Castors/Fures, Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=GR-221%20Etapa%205%3A%20Dei%C3%A0%20al%20Port%20de%20S%C3%B3ller)** |
 
 ---
 

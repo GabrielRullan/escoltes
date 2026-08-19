@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_gr221_etapa_1_port_andratx_trapa, 400);
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **4h 30min** |
 | **Unitats Recomanades** | **Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=GR-221%20Etapa%201%3A%20Port%20d%27Andratx%20a%20La%20Trapa)** |
 
 ---
 

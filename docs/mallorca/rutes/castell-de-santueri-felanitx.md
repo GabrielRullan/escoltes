@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_castell_de_santueri_felanitx, 400);
 | **Dificultat Tècnica** | **Fàcil - Moderada** |
 | **Durada Estimada** | **2h 15min** |
 | **Unitats Recomanades** | **Castors/Fures, Llops/Daines, Pioners/Rangers** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Castell%20de%20Santueri%20%28Felanitx%29)** |
 
 ---
 

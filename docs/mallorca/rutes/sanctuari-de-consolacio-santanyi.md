@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_sanctuari_de_consolacio_santanyi, 400);
 | **Dificultat Tècnica** | **Molt Fàcil** |
 | **Durada Estimada** | **1h 15min** |
 | **Unitats Recomanades** | **Castors/Fures, Llops/Daines** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Puig%20de%20Consolaci%C3%B3%20%28Santany%C3%AD%20/%20s%27Alqueria%20Blanca%29)** |
 
 ---
 

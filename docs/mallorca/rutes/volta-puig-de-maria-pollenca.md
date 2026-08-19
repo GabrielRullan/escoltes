@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_volta_puig_de_maria_pollenca, 400);
 | **Dificultat Tècnica** | **Fàcil** |
 | **Durada Estimada** | **1h 45min** |
 | **Unitats Recomanades** | **Castors/Fures, Llops/Daines, Pioners/Rangers** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Volta%20al%20Puig%20de%20Maria%20%28Pollen%C3%A7a%29)** |
 
 ---
 

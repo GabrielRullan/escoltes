@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_cala_varques_manacor, 400);
 | **Dificultat Tècnica** | **Fàcil** |
 | **Durada Estimada** | **2h 00min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Cala%20Varques%20des%20de%20les%20Coves%20del%20Pirata%20%28Manacor%29)** |
 
 ---
 

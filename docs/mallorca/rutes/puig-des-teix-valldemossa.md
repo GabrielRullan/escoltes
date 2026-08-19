@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_puig_des_teix_valldemossa, 400);
 | **Dificultat Tècnica** | **Exigent** |
 | **Durada Estimada** | **5h 15min** |
 | **Unitats Recomanades** | **Pioners/Rangers, Rovers/Rutes** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Puig%20des%20Teix%20pel%20Cam%C3%AD%20de%20s%27Arxiduc%20%28Valldemossa%29)** |
 
 ---
 

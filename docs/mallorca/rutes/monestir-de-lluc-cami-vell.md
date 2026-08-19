@@ -63,6 +63,7 @@ setTimeout(initRouteTrackMap_monestir_de_lluc_cami_vell, 400);
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **4h 00min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Cam%C3%AD%20Vell%20de%20Pollen%C3%A7a%20a%20Lluc%20%28per%20la%20Font%20del%20Tomir%29)** |
 
 ---
 
