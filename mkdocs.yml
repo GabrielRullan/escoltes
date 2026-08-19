@@ -72,6 +72,7 @@ nav:
   - Repositori Internacional: repositori_internacional/index.md
   - Procediments i SOPs:
       - Procediments Generals: sop/procediments.md
+      - Compartir Experiència d'Excursió: sop/enviar_experiencia.md
       - Protocol d'Emergències 112 & IBANAT: sop/protocol_emergencies_i_ibanat.md
   - Propostes en Esborrany (draft_):
       - SOP Permisos i IBANAT: sop/draft_sop_permisos_ibanat.md
