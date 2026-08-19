@@ -46,7 +46,7 @@ Refugi rehabilitat al poble de Deià.
 | :--- | :---: | :---: | :---: | :--- |
 | **Puig des Teix pel Camí de s'Arxiduc (Valldemossa)** | 14.0 km | Exigent | **4.6 km** | [Veure Ruta](../rutes/puig-des-teix-valldemossa.md) |
 | **Ermita de la Trinitat i Miradors de Valldemossa** | 5.8 km | Fàcil | **4.6 km** | [Veure Ruta](../rutes/ermita-trinitat-valldemossa.md) |
-| **Clot des Cirers des del Port de Sóller** | 9.8 km | Moderada | **6.0 km** | [Veure Ruta](../rutes/clot-des-cirers-soller.md) |
+| **Mirador de ses Basses i Son Gual (Valldemossa)** | 6.8 km | Fàcil | **4.7 km** | [Veure Ruta](../rutes/mirador-de-ses-basses-son-gual-valldemossa.md) |
 
 ### ⚜️ Agrupaments Escoltes Més Propers
 | Agrupament / Casal | Municipi | Distància | Enllaç |

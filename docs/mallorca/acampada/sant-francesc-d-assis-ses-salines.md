@@ -40,6 +40,10 @@ Casa de colònies al sud de Mallorca per a trobades litorals.
 > [!NOTE]
 > **Sense inici directe a peu**: No hi ha rutes catalogades que comencin o passin a menys de 2.0 km d'aquest terreny. Per fer les excursions principals cal utilitzar transport.
 
+### 🚌 Excursions a la zona que requereixen transport (> 2.0 km)
+| Ruta | Distància Ruta | Dificultat | Distància des del refugi | Enllaç |
+| :--- | :---: | :---: | :---: | :--- |
+| **s'Estanyol a la Torre de s'Estalella (Llucmajor)** | 4.2 km | Molt Fàcil | **8.9 km** | [Veure Ruta](../rutes/estanyol-a-torre-estalella-llucmajor.md) |
 
 ### ⚜️ Agrupaments Escoltes Més Propers
 | Agrupament / Casal | Municipi | Distància | Enllaç |

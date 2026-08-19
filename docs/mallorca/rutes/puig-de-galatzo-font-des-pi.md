@@ -64,6 +64,7 @@ setTimeout(initRouteTrackMap_puig_de_galatzo_font_des_pi, 400);
 | **Durada Estimada** | **4h 45min** |
 | **Unitats Recomanades** | **Pioners/Rangers, Rovers/Rutes** |
 | **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Puig%20de%20Galatz%C3%B3%20%28des%20de%20la%20Font%20des%20Pi%29)** |
+| **Guia Turisme Petit** | **[👶 Veure Guia de Família a Turisme Petit 🔗](https://www.turismepetit.com/excursion/excursion-a-la-finca-publica-de-galatzo/)** |
 
 ---
 

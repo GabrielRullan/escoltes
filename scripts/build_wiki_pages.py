@@ -155,6 +155,9 @@ def build_individual_route_pages(rutes, refugis, agrupaments, transport_data):
             search_query = urllib.parse.quote(rut['nom'])
             wikiloc_str = f"[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q={search_query})"
 
+        turismepetit_url = rut.get("turismepetit_url")
+        turismepetit_row = f"| **Guia Turisme Petit** | **[👶 Veure Guia de Família a Turisme Petit 🔗]({turismepetit_url})** |\n" if turismepetit_url else ""
+
         md = f"""# 🏔️ {rut['nom']}
 
 {rut['descripcio']}
@@ -179,7 +182,7 @@ def build_individual_route_pages(rutes, refugis, agrupaments, transport_data):
 | **Durada Estimada** | **{rut['durada_estimada']}** |
 | **Unitats Recomanades** | **{unitats_str}** |
 | **Track a Wikiloc** | **{wikiloc_str}** |
-
+{turismepetit_row}
 ---
 
 """
@@ -674,6 +677,8 @@ function renderRoutes(routesToRender) {{
         
         const wikilocUrl = r.wikiloc_url ? r.wikiloc_url : `https://www.wikiloc.com/wikiloc/map.do?q=${{encodeURIComponent(r.nom)}}`;
 
+        const tpBtn = r.turismepetit_url ? `<a href="${{r.turismepetit_url}}" target="_blank" style="display: inline-block; padding: 6px 12px; background-color: #e65100; color: white; text-decoration: none; border-radius: 4px; font-size: 0.85em; font-weight: bold;">👶 Turisme Petit 🔗</a>` : '';
+
         card.innerHTML = `
             <div>
                 <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 8px;">
@@ -685,6 +690,7 @@ function renderRoutes(routesToRender) {{
                 <p style="font-size: 0.8em; color: #555; margin: 4px 0;">⚜️ <i>${{unitatsStr}}</i></p>
             </div>
             <div style="margin-top: 12px; display: flex; justify-content: flex-end; gap: 8px; flex-wrap: wrap;">
+                ${{tpBtn}}
                 <a href="${{wikilocUrl}}" target="_blank" style="display: inline-block; padding: 6px 12px; background-color: #2e7d32; color: white; text-decoration: none; border-radius: 4px; font-size: 0.85em; font-weight: bold;">💚 Wikiloc 🔗</a>
                 <a href="../rutes/${{r.slug}}/" style="display: inline-block; padding: 6px 12px; background-color: #00897b; color: white; text-decoration: none; border-radius: 4px; font-size: 0.85em; font-weight: bold;">Veure Fitxa i Mapa 🔗</a>
             </div>

@@ -45,8 +45,8 @@ Espai tradicional d'acampada escolta a l'alzinar de Maristel·la a Esporles.
 | Ruta | Distància Ruta | Dificultat | Distància des del refugi | Enllaç |
 | :--- | :---: | :---: | :---: | :--- |
 | **Penya de les Sínies i Reserva de Puigpunyent** | 5.0 km | Fàcil | **5.8 km** | [Veure Ruta](../rutes/penya-de-sa-foradada-puigpunyent.md) |
+| **Finca Pública de Planícia (Banyalbufar)** | 9.2 km | Moderada | **6.3 km** | [Veure Ruta](../rutes/finca-publica-planicia-banyalbufar.md) |
 | **Ermita de la Trinitat i Miradors de Valldemossa** | 5.8 km | Fàcil | **7.0 km** | [Veure Ruta](../rutes/ermita-trinitat-valldemossa.md) |
-| **Puig des Teix pel Camí de s'Arxiduc (Valldemossa)** | 14.0 km | Exigent | **7.2 km** | [Veure Ruta](../rutes/puig-des-teix-valldemossa.md) |
 
 ### ⚜️ Agrupaments Escoltes Més Propers
 | Agrupament / Casal | Municipi | Distància | Enllaç |

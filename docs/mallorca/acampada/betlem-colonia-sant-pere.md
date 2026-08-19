@@ -36,10 +36,9 @@ Instal·lació d'acampada a la pineda de Betlem davant la badia d me d'Alcúdia.
 ## 📍 Relació Realista de Rutes i Excursions
 
 ### 🥾 Rutes directament accessibles a peu des del refugi (<= 2.0 km)
-
-> [!NOTE]
-> **Sense inici directe a peu**: No hi ha rutes catalogades que comencin o passin a menys de 2.0 km d'aquest terreny. Per fer les excursions principals cal utilitzar transport.
-
+| Ruta | Distància Ruta | Dificultat | Distància al Refugi | Enllaç |
+| :--- | :---: | :---: | :---: | :--- |
+| **Excursió de Betlem a Platja des Caló (Artà)** | 7.0 km | Molt Fàcil | **1.11 km** (🟢 A peu) | [Veure Ruta](../rutes/betlem-a-playa-es-calo.md) |
 ### 🚌 Excursions a la zona que requereixen transport (> 2.0 km)
 | Ruta | Distància Ruta | Dificultat | Distància des del refugi | Enllaç |
 | :--- | :---: | :---: | :---: | :--- |

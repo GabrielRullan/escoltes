@@ -43,6 +43,7 @@ Refugi a la finca arqueològica i litoral de Son Real.
 | Ruta | Distància Ruta | Dificultat | Distància des del refugi | Enllaç |
 | :--- | :---: | :---: | :---: | :--- |
 | **Parc Natural de s'Albufera de Mallorca** | 6.2 km | Molt Fàcil | **7.7 km** | [Veure Ruta](../rutes/parc-natural-albufera-mallorca.md) |
+| **Excursió de Betlem a Platja des Caló (Artà)** | 7.0 km | Molt Fàcil | **11.8 km** | [Veure Ruta](../rutes/betlem-a-playa-es-calo.md) |
 
 ### ⚜️ Agrupaments Escoltes Més Propers
 | Agrupament / Casal | Municipi | Distància | Enllaç |

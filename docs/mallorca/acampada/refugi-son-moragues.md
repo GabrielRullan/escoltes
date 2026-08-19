@@ -39,6 +39,7 @@ Refugi d'alta muntanya al puig des Teix amb zona d'acampada.
 | Ruta | Distància Ruta | Dificultat | Distància al Refugi | Enllaç |
 | :--- | :---: | :---: | :---: | :--- |
 | **Puig des Teix pel Camí de s'Arxiduc (Valldemossa)** | 14.0 km | Exigent | **0.42 km** (🟢 A peu) | [Veure Ruta](../rutes/puig-des-teix-valldemossa.md) |
+| **Mirador de ses Basses i Son Gual (Valldemossa)** | 6.8 km | Fàcil | **0.54 km** (🟢 A peu) | [Veure Ruta](../rutes/mirador-de-ses-basses-son-gual-valldemossa.md) |
 | **Ermita de la Trinitat i Miradors de Valldemossa** | 5.8 km | Fàcil | **1.41 km** (🟢 A peu) | [Veure Ruta](../rutes/ermita-trinitat-valldemossa.md) |
 ### 🚌 Excursions a la zona que requereixen transport (> 2.0 km)
 | Ruta | Distància Ruta | Dificultat | Distància des del refugi | Enllaç |

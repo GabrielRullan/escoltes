@@ -44,8 +44,8 @@ Refugi d'alta muntanya a Ternelles (Pollença).
 | Ruta | Distància Ruta | Dificultat | Distància des del refugi | Enllaç |
 | :--- | :---: | :---: | :---: | :--- |
 | **Volta al Puig de Maria (Pollença)** | 4.5 km | Fàcil | **2.4 km** | [Veure Ruta](../rutes/volta-puig-de-maria-pollenca.md) |
+| **Coves Blanques (Cala Sant Vicenç / Pollença)** | 5.4 km | Fàcil | **5.5 km** | [Veure Ruta](../rutes/coves-blanques-pollenca.md) |
 | **Camí Vell de Pollença a Lluc (per la Font del Tomir)** | 12.5 km | Moderada | **6.5 km** | [Veure Ruta](../rutes/monestir-de-lluc-cami-vell.md) |
-| **Cala Boquer i Vall de Boquer (Pollença)** | 5.5 km | Fàcil | **7.4 km** | [Veure Ruta](../rutes/cala-boquer-pollenca.md) |
 
 ### ⚜️ Agrupaments Escoltes Més Propers
 | Agrupament / Casal | Municipi | Distància | Enllaç |

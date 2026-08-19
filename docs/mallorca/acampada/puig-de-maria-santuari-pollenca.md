@@ -42,9 +42,9 @@ Refugi i hospederia al cim del Puig de Maria de Pollença.
 ### 🚌 Excursions a la zona que requereixen transport (> 2.0 km)
 | Ruta | Distància Ruta | Dificultat | Distància des del refugi | Enllaç |
 | :--- | :---: | :---: | :---: | :--- |
+| **Coves Blanques (Cala Sant Vicenç / Pollença)** | 5.4 km | Fàcil | **6.1 km** | [Veure Ruta](../rutes/coves-blanques-pollenca.md) |
 | **Camí Vell de Pollença a Lluc (per la Font del Tomir)** | 12.5 km | Moderada | **6.7 km** | [Veure Ruta](../rutes/monestir-de-lluc-cami-vell.md) |
 | **Cala Boquer i Vall de Boquer (Pollença)** | 5.5 km | Fàcil | **7.1 km** | [Veure Ruta](../rutes/cala-boquer-pollenca.md) |
-| **Ses Fonts Ufanes (Campanet)** | 3.8 km | Molt Fàcil | **10.5 km** | [Veure Ruta](../rutes/ses-fonts-ufanes-campanet.md) |
 
 ### ⚜️ Agrupaments Escoltes Més Propers
 | Agrupament / Casal | Municipi | Distància | Enllaç |

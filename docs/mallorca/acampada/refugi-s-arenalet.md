@@ -39,6 +39,7 @@ Un dels refugis marítims més emblemàtics de Mallorca.
 | Ruta | Distància Ruta | Dificultat | Distància al Refugi | Enllaç |
 | :--- | :---: | :---: | :---: | :--- |
 | **Puig de sa Tudossa i Talaia de Moreia (Artà)** | 11.2 km | Moderada - Exigent | **0.57 km** (🟢 A peu) | [Veure Ruta](../rutes/puig-de-sa-tudossa-arta.md) |
+| **Excursió de Betlem a Platja des Caló (Artà)** | 7.0 km | Molt Fàcil | **2.00 km** (🟢 A peu) | [Veure Ruta](../rutes/betlem-a-playa-es-calo.md) |
 ### 🚌 Excursions a la zona que requereixen transport (> 2.0 km)
 | Ruta | Distància Ruta | Dificultat | Distància des del refugi | Enllaç |
 | :--- | :---: | :---: | :---: | :--- |

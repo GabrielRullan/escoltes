@@ -39,6 +39,7 @@ Refugi rehabilitat a la finca d'Albarca.
 | Ruta | Distància Ruta | Dificultat | Distància al Refugi | Enllaç |
 | :--- | :---: | :---: | :---: | :--- |
 | **Puig de sa Tudossa i Talaia de Moreia (Artà)** | 11.2 km | Moderada - Exigent | **0.86 km** (🟢 A peu) | [Veure Ruta](../rutes/puig-de-sa-tudossa-arta.md) |
+| **Excursió de Betlem a Platja des Caló (Artà)** | 7.0 km | Molt Fàcil | **1.15 km** (🟢 A peu) | [Veure Ruta](../rutes/betlem-a-playa-es-calo.md) |
 | **S'Alqueria Vella al Campament dels Soldats (Artà)** | 7.0 km | Fàcil - Moderada | **1.58 km** (🟢 A peu) | [Veure Ruta](../rutes/salquerieta-vella-campament-soldats.md) |
 
 ### ⚜️ Agrupaments Escoltes Més Propers

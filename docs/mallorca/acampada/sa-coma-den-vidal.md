@@ -44,7 +44,7 @@ Refugi del GR-221 a la Tramuntana sud amb opció d'acampada en tendes.
 | :--- | :---: | :---: | :---: | :--- |
 | **Puig de Galatzó (des de la Font des Pi)** | 11.2 km | Exigent | **2.7 km** | [Veure Ruta](../rutes/puig-de-galatzo-font-des-pi.md) |
 | **Muela de s'Esclop (des de sa Vinya de Galatzó)** | 12.8 km | Exigent | **4.5 km** | [Veure Ruta](../rutes/muela-de-sesclop.md) |
-| **Coll de sa Gramola al Puig de sa Monja (Andratx)** | 7.5 km | Moderada | **6.0 km** | [Veure Ruta](../rutes/coll-de-sa-gramola-ses-basses.md) |
+| **Finca Pública de Planícia (Banyalbufar)** | 9.2 km | Moderada | **5.8 km** | [Veure Ruta](../rutes/finca-publica-planicia-banyalbufar.md) |
 
 ### ⚜️ Agrupaments Escoltes Més Propers
 | Agrupament / Casal | Municipi | Distància | Enllaç |

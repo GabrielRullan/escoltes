@@ -36,10 +36,9 @@ Instal·lació de lleure litoral a s'Estanyol de Migjorn.
 ## 📍 Relació Realista de Rutes i Excursions
 
 ### 🥾 Rutes directament accessibles a peu des del refugi (<= 2.0 km)
-
-> [!NOTE]
-> **Sense inici directe a peu**: No hi ha rutes catalogades que comencin o passin a menys de 2.0 km d'aquest terreny. Per fer les excursions principals cal utilitzar transport.
-
+| Ruta | Distància Ruta | Dificultat | Distància al Refugi | Enllaç |
+| :--- | :---: | :---: | :---: | :--- |
+| **s'Estanyol a la Torre de s'Estalella (Llucmajor)** | 4.2 km | Molt Fàcil | **1.45 km** (🟢 A peu) | [Veure Ruta](../rutes/estanyol-a-torre-estalella-llucmajor.md) |
 
 ### ⚜️ Agrupaments Escoltes Més Propers
 | Agrupament / Casal | Municipi | Distància | Enllaç |
