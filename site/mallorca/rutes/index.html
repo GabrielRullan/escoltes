@@ -1044,7 +1044,7 @@
 <hr />
 <h2 id="cercador-i-filtres-dexcursions">🔍 Cercador i Filtres d'Excursions</h2>
 <div style="background-color: var(--md-code-bg-color, #f8f9fa); padding: 18px; border-radius: 10px; border: 1px solid #e0e0e0; margin-bottom: 24px;">
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 12px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 12px;">
         <div>
             <label style="font-weight: bold; font-size: 0.85em;">📍 Municipi / Poble:</label>
             <select id="filter-municipi" onchange="applyRouteFilters()" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc;">
@@ -1073,9 +1073,20 @@
                 <option value="Castors/Fures">Castors/Fures</option><option value="Llops/Daines">Llops/Daines</option><option value="Pioners/Rangers">Pioners/Rangers</option><option value="Rovers/Rutes">Rovers/Rutes</option>
             </select>
         </div>
+        <div>
+            <label style="font-weight: bold; font-size: 0.85em;">🔗 Recurs / Enllaç Extern:</label>
+            <select id="filter-plataforma" onchange="applyRouteFilters()" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc; background-color: #f0f7f4; font-weight: bold;">
+                <option value="">Tots els recursos</option>
+                <option value="wikiloc">💚 Amb Track de Wikiloc</option>
+                <option value="turismepetit">👶 Amb Guia Turisme Petit</option>
+                <option value="both">🌟 Amb Wikiloc i Turisme Petit</option>
+            </select>
+        </div>
     </div>
-    <div style="display: flex; gap: 10px; align-items: center;">
-        <input type="text" id="filter-search" oninput="applyRouteFilters()" placeholder="🔎 Cercar per nom, paratge o paraula clau..." style="flex: 1; padding: 8px 12px; border-radius: 6px; border: 1px solid #ccc;" />
+    <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+        <input type="text" id="filter-search" oninput="applyRouteFilters()" placeholder="🔎 Cercar per nom, paratge o paraula clau..." style="flex: 1; min-width: 220px; padding: 8px 12px; border-radius: 6px; border: 1px solid #ccc;" />
+        <button onclick="quickFilter('wikiloc')" style="padding: 8px 14px; background-color: #2e7d32; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.85em; font-weight: bold;">💚 Només Wikiloc</button>
+        <button onclick="quickFilter('turismepetit')" style="padding: 8px 14px; background-color: #e65100; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.85em; font-weight: bold;">👶 Només Turisme Petit</button>
         <button onclick="resetFilters()" style="padding: 8px 16px; background-color: #00897b; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Netejar Filtres</button>
     </div>
     <div id="filter-counter" style="margin-top: 10px; font-weight: bold; color: #00897b;">
@@ -1175,6 +1186,7 @@ function applyRouteFilters() {
     const zon = document.getElementById('filter-zona').value.toLowerCase();
     const dif = document.getElementById('filter-dificultat').value.toLowerCase();
     const bra = document.getElementById('filter-branca').value.toLowerCase();
+    const plat = document.getElementById('filter-plataforma').value;
     const txt = document.getElementById('filter-search').value.toLowerCase();
 
     const filtered = allRoutes.filter(r => {
@@ -1184,10 +1196,24 @@ function applyRouteFilters() {
         const matchBra = !bra || (r.apte_unitats && r.apte_unitats.some(u => u.toLowerCase().includes(bra)));
         const matchTxt = !txt || (r.nom.toLowerCase().includes(txt) || (r.descripcio && r.descripcio.toLowerCase().includes(txt)) || (r.municipi && r.municipi.toLowerCase().includes(txt)));
 
-        return matchMun && matchZon && matchDif && matchBra && matchTxt;
+        let matchPlat = true;
+        if (plat === 'wikiloc') {
+            matchPlat = !!r.wikiloc_url;
+        } else if (plat === 'turismepetit') {
+            matchPlat = !!r.turismepetit_url;
+        } else if (plat === 'both') {
+            matchPlat = !!r.wikiloc_url && !!r.turismepetit_url;
+        }
+
+        return matchMun && matchZon && matchDif && matchBra && matchTxt && matchPlat;
     });
 
     renderRoutes(filtered);
+}
+
+function quickFilter(platType) {
+    document.getElementById('filter-plataforma').value = platType;
+    applyRouteFilters();
 }
 
 function resetFilters() {
@@ -1195,6 +1221,7 @@ function resetFilters() {
     document.getElementById('filter-zona').value = '';
     document.getElementById('filter-dificultat').value = '';
     document.getElementById('filter-branca').value = '';
+    document.getElementById('filter-plataforma').value = '';
     document.getElementById('filter-search').value = '';
     applyRouteFilters();
 }
