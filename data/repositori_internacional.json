@@ -1,0 +1,141 @@
+[
+  {
+    "organitzacio": "Minyons Escoltes i Guies de Catalunya (MEG)",
+    "pais": "Catalunya, Espanya",
+    "idioma": "Català",
+    "model_educatiu": "Escoltisme confessionat/obert, pedagogia del projecte per 5 branques (Castors/Llops/Rangers/Pioners/Rovers).",
+    "recursos_compartits": [
+      {
+        "titol": "Projecte Educatiu de MEG",
+        "descripcio": "Marc de valors, educació per a la democràcia, natura i espiritualitat."
+      },
+      {
+        "titol": "Protocol de Protecció a la Infància i Adolescència",
+        "descripcio": "Codi de conducta, prevenció d'abusos, canals de denúncia i resolució de conflictes."
+      },
+      {
+        "titol": "Guia de Campaments i Seguretat al Medi Natural",
+        "descripcio": "Protocols d'acampada, ràtio de monitors (1/10 o 1/8 segons edat), permisos amb la Generalitat de Catalunya."
+      }
+    ],
+    "web_recursos": "https://www.escoltesiguies.cat/"
+  },
+  {
+    "organitzacio": "Scouts et Guides de France (SGDF) / Scoutisme Français",
+    "pais": "França",
+    "idioma": "Francès",
+    "model_educatiu": "Pedagogia de l'autonomia per edats (Farfadets, Louveteaux/Jeannettes, Scouts/Guides, Pionniers/Caravelles, Compagnons).",
+    "recursos_compartits": [
+      {
+        "titol": "Le Projet Éducatif SGDF",
+        "descripcio": "Desenvolupament integral de la persona, vida en equip (sistema de patrulles), compromís social i medi ambient."
+      },
+      {
+        "titol": "Guide de Sécurité en Camp et Activités",
+        "descripcio": "Procediments operatius estàndard de seguretat en muntanya, rius i construccions de fusta (pioneering)."
+      },
+      {
+        "titol": "Fiches Pédagogiques de Branche",
+        "descripcio": "Fitxers de jocs, tècniques escoltes, tallers de cuina i animació."
+      }
+    ],
+    "web_recursos": "https://www.sgdf.fr/"
+  },
+  {
+    "organitzacio": "Scouting Nederland",
+    "pais": "Països Baixos",
+    "idioma": "Neerlandès / Anglès",
+    "model_educatiu": "Scout-in-gids, enfocament pràctic en la natura, navegació en aigua (Beavers, Cubs, Scouts, Explorers, Rovers).",
+    "recursos_compartits": [
+      {
+        "titol": "Veilig Scouting (Seguretat en l'Escoltisme)",
+        "descripcio": "Polítiques de reducció de riscos, seguretat en la navegació aquàtica, inspecció de locals i terrenys d'acampada."
+      },
+      {
+        "titol": "Spelvisie & Insigne Systeem",
+        "descripcio": "Sistema d'insígnies de progrés flexible centrat en competències pràctiques i treball en equip."
+      },
+      {
+        "titol": "Scout Center Quality System",
+        "descripcio": "Estàndards de gestió de camps escoltes ecològics i autosostenibles."
+      }
+    ],
+    "web_recursos": "https://www.scouting.nl/"
+  },
+  {
+    "organitzacio": "Scouts de España (ASDE)",
+    "pais": "Espanya",
+    "idioma": "Castellà",
+    "model_educatiu": "Escoltisme laic, federatiu, centrat en la ciutadania activa i el desenvolupament sostenible (Castores, Lobatos, Scouts, Escultas, Rovers).",
+    "recursos_compartits": [
+      {
+        "titol": "Manual de Prevención de Riesgos en Actividades Escultores",
+        "descripcio": "Protocol d'avaluació de riscos, assegurances, primers auxilis i actuació en emergències."
+      },
+      {
+        "titol": "Política de Salvaguarda e Infancia",
+        "descripcio": "Normativa estricta d'interacció amb minors i codi deontològic dels educadors."
+      },
+      {
+        "titol": "Publicacions de Projectes Educatius de Grup",
+        "descripcio": "Plantilles per a la redacció del Projecte Educatiu de Grup (PEG) i el Projecte Anual d'Activitats (PAA)."
+      }
+    ],
+    "web_recursos": "https://scout.es/"
+  },
+  {
+    "organitzacio": "Scouting America / Boy Scouts of America (BSA)",
+    "pais": "Estats Units",
+    "idioma": "Anglès",
+    "model_educatiu": "Patrol Method (Sistema de Patrulles), Youth-led organization, Merit Badges system, Eagle Scout rank.",
+    "recursos_compartits": [
+      {
+        "titol": "Guide to Safe Scouting",
+        "descripcio": "Manual de referència mundial en seguretat: regles d'acampada, activitats aquàtiques, escalada, eines tallants i gestió Mètode de Protecció."
+      },
+      {
+        "titol": "Youth Protection Training (YPT)",
+        "descripcio": "Regla de 2 adult@s obligatoris en tot moment ('Two-Deep Leadership'), prohibició de contacte 1 a 1."
+      },
+      {
+        "titol": "Patrol Leader & Senior Patrol Leader Handbooks",
+        "descripcio": "Manuals per a la capacitació del lideratge juvenil en l'organització d'actituds i campaments."
+      }
+    ],
+    "web_recursos": "https://www.scouting.org/"
+  },
+  {
+    "organitzacio": "Scouts Canada",
+    "pais": "Canadà",
+    "idioma": "Anglès / Francès",
+    "model_educatiu": "Canadian Path, Outdoor Adventure Skills (OAS), Youth-led Scouting.",
+    "recursos_compartits": [
+      {
+        "titol": "Two-Scouter Rule & Safety First Policies",
+        "descripcio": "Estàndards de supervisió adulta i verificació d'antecedents per a tot el personal voluntari."
+      },
+      {
+        "titol": "Outdoor Adventure Skills Framework",
+        "descripcio": "Matriu de competències a l'aire lliure (Camping, Trail, Paddling, Winter Skills, First Aid)."
+      }
+    ],
+    "web_recursos": "https://www.scouts.ca/"
+  },
+  {
+    "organitzacio": "WOSM (World Organization of the Scout Movement)",
+    "pais": "Internacional",
+    "idioma": "Anglès / Francès / Castellà",
+    "model_educatiu": "The Scout Method (7 Elements: Llei i Promesa, Aprendre fent, Sistema de Patrulles, Marc Simbòlic, Progrés Personal, Natura, Suport Adult).",
+    "recursos_compartits": [
+      {
+        "titol": "Safe from Harm Policy",
+        "descripcio": "Estàndard global de protecció d'infants i joves a l'escoltisme mundial."
+      },
+      {
+        "titol": "Scouts for SDGs & Earth Tribe",
+        "descripcio": "Iniciatives globals per a la sostenibilitat ambiental, acció climàtica i desenvolupament comunitari."
+      }
+    ],
+    "web_recursos": "https://www.scout.org/"
+  }
+]

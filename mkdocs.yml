@@ -1,0 +1,73 @@
+site_name: Wiki Escolta Mallorca & Repositori Internacional
+site_description: Base de coneixement, base de dades de rutes, terrenys d'acampada i repositori pedagògic escolta.
+site_author: Equip de Suport del Grup Escolta
+site_url: https://gabrielrullan.github.io/escoltes/
+repo_url: https://github.com/GabrielRullan/escoltes
+repo_name: GabrielRullan/escoltes
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: ca
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: emerald
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Canviar a mode fosc
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: emerald
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Canviar a mode clar
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - md_in_html
+
+nav:
+  - Inici: index.md
+  - Full de Ruta (20 Punts): full_de_ruta_20_punts.md
+  - Escoltisme a Mallorca:
+      - Cercador de Rutes (47+ Itineraris): mallorca/rutes.md
+      - Directori d'Acampada i Refugis (43 Terrenys): mallorca/acampada_i_refugis.md
+      - Agrupaments i Casals: mallorca/agrupaments.md
+      - Guia de Transport TIB & Tren: mallorca/transport.md
+  - Repositori Internacional: repositori_internacional/index.md
+  - Procediments i SOPs: sop/procediments.md
+  - Propostes en Esborrany (draft_):
+      - SOP Permisos i IBANAT: sop/draft_sop_permisos_ibanat.md
+      - Llista de Comprovació de Seguretat: sop/draft_llista_comprovacio_excursio.md
+      - Plantilla de Rutes i Acampada: mallorca/draft_plantilla_ruta_i_acampada.md
+      - Cançoner Escolta Base: repositori_internacional/draft_canconer_escolta_base.md
+
