@@ -4,7 +4,18 @@ Heu fet una excursió o acampada amb la vostra unitat? Compartiu els vostres con
 
 ---
 
-## 📩 Opció 1: Enviar per Correu o WhatsApp
+## ⚡ Opció 1: Enviar Directament en Temps Real amb Firebase (Recomanat)
+
+Ara podeu publicar la vostra ressenya i consells **directament des de qualsevol fitxa de ruta d'excursió**:
+
+1. Cerca la ruta que heu fet al [Cercador de Rutes](../mallorca/rutes.md).
+2. A la secció inferior de la fitxa de la ruta (*💬 Experiències i Valoracions dels Agrupaments Escoltes*), prem el botó **➕ Afegir la meva experiència 🔥**.
+3. Omple l'agrupament, branca, data, puntuació i comentaris.
+4. Prem **🚀 Publicar a Firebase** i la vostra ressenya apareixerà immediatament en temps real per a tots els usuaris!
+
+---
+
+## 📩 Opció 2: Enviar per Correu electrònic
 
 Podeu enviar la vostra experiència directament copiant i omplint les dades següents:
 
@@ -18,14 +29,9 @@ Podeu enviar la vostra experiència directament copiant i omplint les dades seg�
 
 ---
 
-## 🐙 Opció 2: Creació Directa a GitHub
+## 🐙 Opció 3: Creació Directa a GitHub
 
 Si teniu compte de GitHub, podeu publicar la vostra ressenya obrint un issue ràpid:
 
 👉 **[➕ Crear una nova Experiència a GitHub](https://github.com/GabrielRullan/escoltes/issues/new?title=Nova+Experi%C3%A8ncia+d%27Excursi%C3%B3)**
 
----
-
-## 📋 Opció 3: Formulari de Google (En configuració)
-
-Si teniu un Formulari de Google actiu per al vostre agrupament, podeu configurar l'enllaç a `scripts/build_wiki_pages.py`.
