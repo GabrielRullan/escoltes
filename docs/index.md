@@ -32,24 +32,6 @@ Benvinguts al **Portal de Suport i Base de Coneixement** de l'agrupament escolta
 
     Directori centralitzat dels Agrupaments Escoltes i Guies (MEGM, EGM, ASDE) a pobles i barris de Palma.
 
--   :clipboard: **[Full de Ruta (20 Punts)](full_de_ruta_20_punts.md)**
-
-    ---
-
-    Pla d'acció de 20 punts en 4 fases per a la digitalització, permisos i suport integral a l'agrupament escolta.
-
--   :earth_africa: **[Repositori Internacional](repositori_internacional/index.md)**
-
-    ---
-
-    Recull de marcs pedagògics, manuals de seguretat (BSA, SGDF, Scouting Nederland, WOSM) i bones pràctiques globals.
-
--   :warning: **[Procediments SOP](sop/procediments.md)**
-
-    ---
-
-    Cronograma obligatori de planificació d'excursions (T-60, T-30, T-15, T-7) i gestió de riscos.
-
 </div>
 
 ---

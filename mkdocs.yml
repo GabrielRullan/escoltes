@@ -1,5 +1,5 @@
-site_name: Wiki Escolta Mallorca & Repositori Internacional
-site_description: Base de coneixement, base de dades de rutes, terrenys d'acampada i repositori pedagògic escolta.
+site_name: Portal Escolta de Mallorca
+site_description: Base de dades de rutes, terrenys d'acampada, refugis, agrupaments i transport públic a Mallorca.
 site_author: Equip de Suport del Grup Escolta
 site_url: https://gabrielrullan.github.io/escoltes/
 repo_url: https://github.com/GabrielRullan/escoltes
@@ -57,27 +57,10 @@ markdown_extensions:
 
 nav:
   - Inici: index.md
-  - Full de Ruta (20 Punts): full_de_ruta_20_punts.md
-  - Pla de Treball per Fases:
-      - Visió General de les Fases: fases/index.md
-      - Fase 1 (Auditar i Abast): fases/fase1.md
-      - Fase 2 (Eines i Taxonomia): fases/fase2.md
-      - Fase 3 (Omplir Base de Coneixement): fases/fase3.md
-      - Fase 4 (Coordinació Regional i Permisos): fases/fase4.md
   - Escoltisme a Mallorca:
       - Cercador de Rutes (65+ Itineraris): mallorca/rutes.md
       - Directori d'Acampada i Refugis (43 Terrenys): mallorca/acampada_i_refugis.md
       - Agrupaments i Casals: mallorca/agrupaments.md
       - Guia de Transport TIB & Tren: mallorca/transport.md
-  - Repositori Internacional: repositori_internacional/index.md
-  - Procediments i SOPs:
-      - Procediments Generals: sop/procediments.md
-      - Compartir Experiència d'Excursió: sop/enviar_experiencia.md
-      - Protocol d'Emergències 112 & IBANAT: sop/protocol_emergencies_i_ibanat.md
-  - Propostes en Esborrany (draft_):
-      - SOP Permisos i IBANAT: sop/draft_sop_permisos_ibanat.md
-      - Llista de Comprovació de Seguretat: sop/draft_llista_comprovacio_excursio.md
-      - SOP Ingestió Rutes Wikiloc: sop/draft_afegir_ruta_wikiloc.md
-      - Plantilla de Rutes i Acampada: mallorca/draft_plantilla_ruta_i_acampada.md
-      - Cançoner Escolta Base: repositori_internacional/draft_canconer_escolta_base.md
+
 
