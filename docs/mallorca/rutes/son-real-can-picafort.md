@@ -390,7 +390,7 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
                 const db = firebase.firestore();
                 await db.collection("experiencies").add(newExp);
                 statusMsg.style.color = '#2e7d32';
-                statusMsg.innerText = '✅ Comentari enviat amb èxit! Està pendent d'autorització per part de l'administrador per ser visible públicament.';
+                statusMsg.innerText = "✅ Comentari enviat amb èxit! Està pendent d'autorització per part de l'administrador per ser visible públicament.";
             } else {
                 throw new Error("Firebase Firestore no està disponible.");
             }

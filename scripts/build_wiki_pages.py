@@ -394,7 +394,7 @@ def get_firebase_experiences_section_html(rut, agrupaments):
                 const db = firebase.firestore();
                 await db.collection("experiencies").add(newExp);
                 statusMsg.style.color = '#2e7d32';
-                statusMsg.innerText = '✅ Comentari enviat amb èxit! Està pendent d\'autorització per part de l\'administrador per ser visible públicament.';
+                statusMsg.innerText = "✅ Comentari enviat amb èxit! Està pendent d'autorització per part de l'administrador per ser visible públicament.";
             }} else {{
                 throw new Error("Firebase Firestore no està disponible.");
             }}
