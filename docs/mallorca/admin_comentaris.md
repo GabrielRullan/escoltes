@@ -1,8 +1,9 @@
 # 🛡️ Administració i Moderació de Comentaris de Rutes
 
-Benvinguts al panell de moderació dels Escoltes de Mallorca. Aquí els administradors poden revisar, autoritzar o esborrar els comentaris i ressenyes d'excursions enviats pels usuaris i agrupaments.
+Benvinguts al panell de moderació dels Escoltes de Mallorca. Aquí els administradors i responsables poden revisar, autoritzar o esborrar els comentaris i ressenyes d'excursions enviats pels agrupaments.
 
-> ℹ️ **Nota de Seguretat i Moderació**: Tots els comentaris nous s'enregistren a Firebase amb l'estat pendents d'autorització (`authorized: false`). Només apareixeran a la web pública quan hagin estat aprovats des d'aquest panell.
+!!! info "Panell de Moderació i Seguretat Escolta"
+    Tots els comentaris nous s'enregistren per defecte amb l'estat pendent d'autorització (`authorized: false`). Només apareixeran a la web pública de la ruta quan hagin estat aprovats des d'aquest panell.
 
 ---
 
@@ -13,11 +14,11 @@ Benvinguts al panell de moderació dels Escoltes de Mallorca. Aquí els administ
 
     <!-- Secció 1: Comentaris Pendents -->
     <div style="background-color: #fff8e1; border: 2px solid #ffa000; border-radius: 12px; padding: 20px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 8px;">
             <h2 style="margin: 0; color: #b78103; font-size: 1.3em;">⏳ Comentaris Pendents d'Autorització</h2>
             <span id="pending-count-badge" style="background-color: #ffa000; color: white; padding: 4px 12px; border-radius: 20px; font-weight: bold; font-size: 0.9em;">0 pendents</span>
         </div>
-        <p style="margin-top: 0; color: #666; font-size: 0.9em;">Aquests comentaris no són visibles directament a la pàgina de la ruta fins que no premis <b>Aprovar</b>.</p>
+        <p style="margin-top: 0; color: #666; font-size: 0.9em;">Aquests comentaris no són visibles a la fitxa pública de l'excursió fins que no premis <b>Aprovar</b>.</p>
 
         <div id="pending-comments-list" style="display: flex; flex-direction: column; gap: 14px; margin-top: 16px;">
             <p style="color: #888; font-style: italic;">🔄 Carregant comentaris pendents de Firebase...</p>
@@ -26,7 +27,7 @@ Benvinguts al panell de moderació dels Escoltes de Mallorca. Aquí els administ
 
     <!-- Secció 2: Comentaris Autoritzats -->
     <div style="background-color: #f0f7f4; border: 1px solid #00897b; border-radius: 12px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 8px;">
             <h2 style="margin: 0; color: #00897b; font-size: 1.3em;">✅ Comentaris Autoritzats Públicament</h2>
             <span id="approved-count-badge" style="background-color: #00897b; color: white; padding: 4px 12px; border-radius: 20px; font-weight: bold; font-size: 0.9em;">0 aprovats</span>
         </div>
@@ -49,6 +50,24 @@ Benvinguts al panell de moderació dels Escoltes de Mallorca. Aquí els administ
         firebase.initializeApp(firebaseConfig);
     }
 
+    function escapeHtml(text) {
+        if (!text) return '';
+        return String(text)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+    function sortDesc(items) {
+        return items.sort((a, b) => {
+            const timeA = a.createdAt?.seconds ? a.createdAt.seconds * 1000 : (new Date(a.createdAt || a.data || 0).getTime() || 0);
+            const timeB = b.createdAt?.seconds ? b.createdAt.seconds * 1000 : (new Date(b.createdAt || b.data || 0).getTime() || 0);
+            return timeB - timeA;
+        });
+    }
+
     window.initAdminComments = function() {
         if (typeof firebase === 'undefined' || !firebase.firestore) {
             console.error("Firebase Firestore no està disponible.");
@@ -57,7 +76,6 @@ Benvinguts al panell de moderació dels Escoltes de Mallorca. Aquí els administ
 
         const db = firebase.firestore();
 
-        // 1. Escuchar comentarios PENDIENTES (authorized == false o not true)
         db.collection("experiencies").onSnapshot((snapshot) => {
             const pendingList = [];
             const approvedList = [];
@@ -72,10 +90,15 @@ Benvinguts al panell de moderació dels Escoltes de Mallorca. Aquí els administ
                 }
             });
 
+            sortDesc(pendingList);
+            sortDesc(approvedList);
+
             renderPendingComments(pendingList);
             renderApprovedComments(approvedList);
         }, (err) => {
             console.error("Error carregar comentaris Firestore:", err);
+            const pCont = document.getElementById('pending-comments-list');
+            if (pCont) pCont.innerHTML = `<p style="color: #d32f2f;">❌ Error en connectar amb Firestore: ${escapeHtml(err.message)}</p>`;
         });
     };
 
@@ -131,32 +154,37 @@ Benvinguts al panell de moderació dels Escoltes de Mallorca. Aquí els administ
 
         let html = '';
         items.forEach(item => {
-            const stars = "⭐".repeat(Number(item.puntuacio) || 5);
-            const route = item.ruta_slug || 'Ruta Desconeguda';
-            const name = item.nom || 'Anònim';
-            const email = item.email ? ` (<a href="mailto:${item.email}">${item.email}</a>)` : '';
-            const group = item.agrupament || 'Sense Agrupament';
-            const unit = item.branca ? ` | Branca: ${item.branca}` : '';
-            const comment = item.comentari || '';
-            const date = item.data || 'Sense data';
+            const safeScore = Math.max(1, Math.min(5, Math.round(Number(item.puntuacio) || 5)));
+            const stars = "⭐".repeat(safeScore);
+            const rawRoute = item.ruta_slug || '';
+            const routeDisplay = rawRoute ? `<a href="../rutes/${encodeURIComponent(rawRoute)}/" target="_blank" style="color: #d84315; text-decoration: underline; font-weight: bold;">📍 Ruta: ${escapeHtml(rawRoute)} ↗</a>` : '<span style="color: #888;">📍 Ruta Desconeguda</span>';
+            const name = escapeHtml(item.nom || 'Anònim');
+            const emailHtml = item.email ? ` (<a href="mailto:${encodeURI(item.email)}" style="color: #00897b;">${escapeHtml(item.email)}</a>)` : '';
+            const group = escapeHtml(item.agrupament || 'Sense Agrupament');
+            const unit = item.branca ? ` | Branca: ${escapeHtml(item.branca)}` : '';
+            const comment = escapeHtml(item.comentari || '');
+            let dateStr = escapeHtml(item.data || '');
+            if (item.createdAt && item.createdAt.toDate) {
+                dateStr += (dateStr ? ' · ' : '') + item.createdAt.toDate().toLocaleDateString('ca-ES');
+            }
 
             html += `
                 <div style="background: white; border: 1px solid #ffe082; border-radius: 8px; padding: 14px; box-shadow: 0 2px 4px rgba(0,0,0,0.04);">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;">
                         <div>
-                            <span style="font-weight: bold; color: #d84315; font-size: 1.05em;">📍 Ruta: ${route}</span>
-                            <div style="font-size: 0.9em; color: #333; margin-top: 2px;">
-                                👤 <b>${name}</b>${email} | ⚜️ <b>${group}</b>${unit}
+                            <div>${routeDisplay}</div>
+                            <div style="font-size: 0.9em; color: #333; margin-top: 4px;">
+                                👤 <b>${name}</b>${emailHtml} | ⚜️ <b>${group}</b>${unit}
                             </div>
                         </div>
-                        <span style="color: #f57f17; font-weight: bold; font-size: 0.9em;">${stars} (${date})</span>
+                        <span style="color: #f57f17; font-weight: bold; font-size: 0.9em;">${stars} ${dateStr ? `(${dateStr})` : ''}</span>
                     </div>
                     <p style="background: #fffde7; padding: 10px; border-radius: 6px; border-left: 4px solid #ffb300; margin: 8px 0 12px 0; font-size: 0.95em; line-height: 1.4;">
                         "${comment}"
                     </p>
                     <div style="display: flex; justify-content: flex-end; gap: 10px;">
-                        <button onclick="deleteComment('${item.id}')" style="padding: 6px 14px; background-color: #d32f2f; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.85em;">🗑️ Esborrar</button>
-                        <button onclick="approveComment('${item.id}')" style="padding: 6px 18px; background-color: #2e7d32; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.85em;">✅ Aprovar / Autoritzar</button>
+                        <button onclick="deleteComment('${escapeHtml(item.id)}')" style="padding: 6px 14px; background-color: #d32f2f; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.85em;">🗑️ Esborrar</button>
+                        <button onclick="approveComment('${escapeHtml(item.id)}')" style="padding: 6px 18px; background-color: #2e7d32; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.85em;">✅ Aprovar / Autoritzar</button>
                     </div>
                 </div>
             `;
@@ -178,32 +206,37 @@ Benvinguts al panell de moderació dels Escoltes de Mallorca. Aquí els administ
 
         let html = '';
         items.forEach(item => {
-            const stars = "⭐".repeat(Number(item.puntuacio) || 5);
-            const route = item.ruta_slug || 'Ruta Desconeguda';
-            const name = item.nom || 'Anònim';
-            const email = item.email ? ` (${item.email})` : '';
-            const group = item.agrupament || 'Sense Agrupament';
-            const unit = item.branca ? ` | Branca: ${item.branca}` : '';
-            const comment = item.comentari || '';
-            const date = item.data || 'Sense data';
+            const safeScore = Math.max(1, Math.min(5, Math.round(Number(item.puntuacio) || 5)));
+            const stars = "⭐".repeat(safeScore);
+            const rawRoute = item.ruta_slug || '';
+            const routeDisplay = rawRoute ? `<a href="../rutes/${encodeURIComponent(rawRoute)}/" target="_blank" style="color: #00897b; text-decoration: underline; font-weight: bold;">📍 Ruta: ${escapeHtml(rawRoute)} ↗</a>` : '<span style="color: #888;">📍 Ruta Desconeguda</span>';
+            const name = escapeHtml(item.nom || 'Anònim');
+            const emailHtml = item.email ? ` (${escapeHtml(item.email)})` : '';
+            const group = escapeHtml(item.agrupament || 'Sense Agrupament');
+            const unit = item.branca ? ` | Branca: ${escapeHtml(item.branca)}` : '';
+            const comment = escapeHtml(item.comentari || '');
+            let dateStr = escapeHtml(item.data || '');
+            if (item.createdAt && item.createdAt.toDate) {
+                dateStr += (dateStr ? ' · ' : '') + item.createdAt.toDate().toLocaleDateString('ca-ES');
+            }
 
             html += `
                 <div style="background: white; border: 1px solid #b2dfdb; border-radius: 8px; padding: 14px; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
                     <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;">
                         <div>
-                            <span style="font-weight: bold; color: #00897b; font-size: 1.0em;">📍 Ruta: ${route}</span>
-                            <div style="font-size: 0.88em; color: #444; margin-top: 2px;">
-                                👤 <b>${name}</b>${email} | ⚜️ <b>${group}</b>${unit}
+                            <div>${routeDisplay}</div>
+                            <div style="font-size: 0.88em; color: #444; margin-top: 4px;">
+                                👤 <b>${name}</b>${emailHtml} | ⚜️ <b>${group}</b>${unit}
                             </div>
                         </div>
-                        <span style="color: #f57f17; font-weight: bold; font-size: 0.88em;">${stars} (${date})</span>
+                        <span style="color: #f57f17; font-weight: bold; font-size: 0.88em;">${stars} ${dateStr ? `(${dateStr})` : ''}</span>
                     </div>
                     <p style="margin: 6px 0 10px 0; font-size: 0.92em; color: #333; line-height: 1.4;">
                         "${comment}"
                     </p>
                     <div style="display: flex; justify-content: flex-end; gap: 10px;">
-                        <button onclick="revokeComment('${item.id}')" style="padding: 5px 12px; background-color: #ef6c00; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.8em;">⚠️ Desautoritzar</button>
-                        <button onclick="deleteComment('${item.id}')" style="padding: 5px 12px; background-color: #c62828; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.8em;">🗑️ Esborrar</button>
+                        <button onclick="revokeComment('${escapeHtml(item.id)}')" style="padding: 5px 12px; background-color: #ef6c00; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.8em;">⚠️ Desautoritzar</button>
+                        <button onclick="deleteComment('${escapeHtml(item.id)}')" style="padding: 5px 12px; background-color: #c62828; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.8em;">🗑️ Esborrar</button>
                     </div>
                 </div>
             `;
@@ -215,6 +248,12 @@ Benvinguts al panell de moderació dels Escoltes de Mallorca. Aquí els administ
         document.addEventListener('DOMContentLoaded', window.initAdminComments);
     } else {
         window.initAdminComments();
+    }
+
+    if (typeof document$ !== 'undefined') {
+        document$.subscribe(function() {
+            window.initAdminComments();
+        });
     }
 })();
 </script>

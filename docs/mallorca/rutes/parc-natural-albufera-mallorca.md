@@ -109,6 +109,9 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
 ### ⚜️ Agrupaments Escoltes Més Propers (Suport Logístic i Emergència)
 | Agrupament / Casal | Municipi | Distància | Enllaç |
 | :--- | :--- | :---: | :--- |
+| **AEG Sa Marjal** | Sa Pobla | **8.4 km** | [Veure Casal](../agrupaments/aeg-sa-marjal.md) |
+| **AEG Pedra Viva** | Binissalem | **26.1 km** | [Veure Casal](../agrupaments/aeg-pedra-viva.md) |
+
 ---
 
 ## 💬 Experiències i Valoracions dels Agrupaments Escoltes
@@ -227,6 +230,16 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
         firebase.initializeApp(firebaseConfig);
     }
 
+    function escapeHtml(text) {
+        if (!text) return '';
+        return String(text)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
     window.toggleExpForm = function() {
         const form = document.getElementById('exp-form-container');
         const btn = document.getElementById('toggle-exp-form-btn');
@@ -268,13 +281,13 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
         
         let html = '';
         exps.forEach(exp => {
-            const score = Number(exp.puntuacio) || 5;
+            const score = Math.max(1, Math.min(5, Math.round(Number(exp.puntuacio) || 5)));
             const expStars = "⭐".repeat(score);
-            const authorName = exp.nom ? `👤 ${exp.nom} - ` : '';
-            const agrName = exp.agrupament || 'Agrupament Escolta';
-            const brancaName = exp.branca ? ` (${exp.branca})` : '';
-            const dataStr = exp.data || '';
-            const comentariText = exp.comentari || '';
+            const authorName = exp.nom ? `👤 ${escapeHtml(exp.nom)} - ` : '';
+            const agrName = escapeHtml(exp.agrupament || 'Agrupament Escolta');
+            const brancaName = exp.branca ? ` (${escapeHtml(exp.branca)})` : '';
+            const dataStr = escapeHtml(exp.data || '');
+            const comentariText = escapeHtml(exp.comentari || '');
             
             html += `
                 <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 14px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
@@ -299,11 +312,13 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
                 const db = firebase.firestore();
                 db.collection("experiencies")
                   .where("ruta_slug", "==", routeSlug)
-                  .where("authorized", "==", true)
                   .onSnapshot((snapshot) => {
                       const fetched = [];
                       snapshot.forEach(doc => {
-                          fetched.push(doc.data());
+                          const data = doc.data();
+                          if (data.authorized === true || data.authorized === undefined) {
+                              fetched.push(data);
+                          }
                       });
                       
                       const combined = [...fetched];
@@ -382,8 +397,7 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
                 statusMsg.style.color = '#2e7d32';
                 statusMsg.innerText = '✅ Comentari enviat amb èxit! Està pendent d'autorització per part de l'administrador per ser visible públicament.';
             } else {
-                statusMsg.style.color = '#2e7d32';
-                statusMsg.innerText = '✅ Comentari enviat! Està pendent d'autorització per l'administrador.';
+                throw new Error("Firebase Firestore no està disponible.");
             }
             
             document.getElementById('exp-nom').value = '';
@@ -397,11 +411,8 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
             }, 3000);
         } catch (error) {
             console.error("Error al enviar a Firebase:", error);
-            statusMsg.style.color = '#e65100';
-            statusMsg.innerText = '✅ Comentari gravat localment. Està pendent d'autorització per l'administrador.';
-            submitBtn.disabled = false;
-        }
-    };
+            statusMsg.style.color = '#d32f2f';
+            statusMsg.innerText = '❌ Error en enviar el comentari: Si us plau, comprova la teva connexió.';
             submitBtn.disabled = false;
         }
     };
@@ -410,6 +421,12 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
         document.addEventListener('DOMContentLoaded', window.initFirebaseExperiences);
     } else {
         window.initFirebaseExperiences();
+    }
+
+    if (typeof document$ !== 'undefined') {
+        document$.subscribe(function() {
+            window.initFirebaseExperiences();
+        });
     }
 })();
 </script>
