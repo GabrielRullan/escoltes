@@ -128,11 +128,19 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
 
     <!-- Formulari interactiu de publicació Firebase (Inicialment ocult) -->
     <div id="exp-form-container" style="display: none; background-color: #ffffff; border: 2px solid #00897b; border-radius: 10px; padding: 18px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
-        <h4 style="margin: 0 0 12px 0; color: #00897b; font-size: 1.05em;">📝 Enviar la teva experiència per a aquesta excursió</h4>
+        <h4 style="margin: 0 0 12px 0; color: #00897b; font-size: 1.05em;">📝 Enviar la teva experiència per a aquesta excursió (Sense registre)</h4>
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-bottom: 12px;">
             <div>
-                <label style="font-weight: bold; font-size: 0.85em; display: block; margin-bottom: 4px;">⚜️ Agrupament Escolta:</label>
+                <label style="font-weight: bold; font-size: 0.85em; display: block; margin-bottom: 4px;">👤 Nom i Llinatges (*):</label>
+                <input type="text" id="exp-nom" placeholder="Ex: Joan Bennàssar" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc;" />
+            </div>
+            <div>
+                <label style="font-weight: bold; font-size: 0.85em; display: block; margin-bottom: 4px;">✉️ Correu Electrònic (*):</label>
+                <input type="email" id="exp-email" placeholder="joan@escoltes.cat" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc;" />
+            </div>
+            <div>
+                <label style="font-weight: bold; font-size: 0.85em; display: block; margin-bottom: 4px;">⚜️ Agrupament Escolta (*):</label>
                 <select id="exp-agrupament" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc;">
                     <option value="">-- Selecciona el teu Agrupament --</option>
                     <option value="AEG Capità Angelats">AEG Capità Angelats</option>
@@ -153,7 +161,7 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
                 </select>
             </div>
             <div>
-                <label style="font-weight: bold; font-size: 0.85em; display: block; margin-bottom: 4px;">🎒 Branca Escolta:</label>
+                <label style="font-weight: bold; font-size: 0.85em; display: block; margin-bottom: 4px;">🎒 Branca Escolta (*):</label>
                 <select id="exp-branca" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc;">
                     <option value="Castors/Fures">Castors / Fures (6-8 anys)</option>
                     <option value="Llops/Daines">Llops / Daines (8-11 anys)</option>
@@ -179,13 +187,13 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
         </div>
 
         <div style="margin-bottom: 14px;">
-            <label style="font-weight: bold; font-size: 0.85em; display: block; margin-bottom: 4px;">💬 Comentaris, consells d'aigua, ombra o recomanacions logístiques:</label>
+            <label style="font-weight: bold; font-size: 0.85em; display: block; margin-bottom: 4px;">💬 Comentaris, consells d'aigua, ombra o recomanacions logístiques (*):</label>
             <textarea id="exp-comentari" rows="3" placeholder="Comentau l'estat del camí, les fonts amb aigua, punts d'ombra, zones d'acampada o recomanacions per a la vostra branca..." style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; font-family: inherit; font-size: 0.9em; box-sizing: border-box;"></textarea>
         </div>
 
         <div style="display: flex; justify-content: flex-end; gap: 10px;">
             <button onclick="toggleExpForm()" style="padding: 8px 16px; background-color: #757575; color: white; border: none; border-radius: 6px; cursor: pointer;">Cancel·lar</button>
-            <button id="exp-submit-btn" onclick="submitFirebaseExperience('puig-de-santueri-felanitx-circular')" style="padding: 8px 20px; background-color: #00897b; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">🚀 Publicar a Firebase</button>
+            <button id="exp-submit-btn" onclick="submitFirebaseExperience('puig-de-santueri-felanitx-circular')" style="padding: 8px 20px; background-color: #00897b; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">🚀 Publicar Comentari</button>
         </div>
         <div id="exp-status-msg" style="margin-top: 10px; font-weight: bold; font-size: 0.9em;"></div>
     </div>
@@ -254,6 +262,7 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
         exps.forEach(exp => {
             const score = Number(exp.puntuacio) || 5;
             const expStars = "⭐".repeat(score);
+            const authorName = exp.nom ? `👤 ${exp.nom} - ` : '';
             const agrName = exp.agrupament || 'Agrupament Escolta';
             const brancaName = exp.branca ? ` (${exp.branca})` : '';
             const dataStr = exp.data || '';
@@ -262,7 +271,7 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
             html += `
                 <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 14px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
                     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;">
-                        <span style="font-weight: bold; color: #00897b; font-size: 0.95em;">⚜️ ${agrName} <span style="font-weight: normal; color: #666; font-size: 0.9em;">${brancaName}</span></span>
+                        <span style="font-weight: bold; color: #00897b; font-size: 0.95em;">${authorName}⚜️ ${agrName} <span style="font-weight: normal; color: #666; font-size: 0.9em;">${brancaName}</span></span>
                         <span style="font-size: 0.85em; color: #f57f17; font-weight: bold;">${expStars} <span style="color: #888; font-weight: normal;">(${dataStr})</span></span>
                     </div>
                     <p style="margin: 4px 0 0 0; font-size: 0.9em; color: #333; line-height: 1.45;"><i>"${comentariText}"</i></p>
@@ -282,22 +291,21 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
                 const db = firebase.firestore();
                 db.collection("experiencies")
                   .where("ruta_slug", "==", routeSlug)
+                  .where("authorized", "==", true)
                   .onSnapshot((snapshot) => {
                       const fetched = [];
                       snapshot.forEach(doc => {
                           fetched.push(doc.data());
                       });
                       
-                      if (fetched.length > 0) {
-                          const combined = [...fetched];
-                          staticExperiences.forEach(st => {
-                              if (!combined.some(f => f.comentari === st.comentari && f.agrupament === st.agrupament)) {
-                                  combined.push(st);
-                              }
-                          });
-                          liveExperiences = combined;
-                          renderExperiencesList(liveExperiences);
-                      }
+                      const combined = [...fetched];
+                      staticExperiences.forEach(st => {
+                          if (!combined.some(f => f.comentari === st.comentari && f.agrupament === st.agrupament)) {
+                              combined.push(st);
+                          }
+                      });
+                      liveExperiences = combined;
+                      renderExperiencesList(liveExperiences);
                   }, (err) => {
                       console.warn("Firestore snapshot error/offline, using static exps:", err);
                   });
@@ -308,6 +316,8 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
     };
 
     window.submitFirebaseExperience = async function(slug) {
+        const nom = document.getElementById('exp-nom').value.trim();
+        const email = document.getElementById('exp-email').value.trim();
         const agrupament = document.getElementById('exp-agrupament').value;
         const branca = document.getElementById('exp-branca').value;
         const puntuacio = parseInt(document.getElementById('exp-puntuacio').value, 10);
@@ -315,6 +325,18 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
         const comentari = document.getElementById('exp-comentari').value.trim();
         const statusMsg = document.getElementById('exp-status-msg');
         const submitBtn = document.getElementById('exp-submit-btn');
+
+        if (!nom) {
+            statusMsg.style.color = '#d32f2f';
+            statusMsg.innerText = '⚠️ Si us plau, escriu el teu nom.';
+            return;
+        }
+
+        if (!email || !email.includes('@')) {
+            statusMsg.style.color = '#d32f2f';
+            statusMsg.innerText = '⚠️ Si us plau, introdueix un correu electrònic vàlid.';
+            return;
+        }
 
         if (!agrupament) {
             statusMsg.style.color = '#d32f2f';
@@ -330,16 +352,19 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
 
         const newExp = {
             ruta_slug: slug,
+            nom: nom,
+            email: email,
             agrupament: agrupament,
             branca: branca,
             puntuacio: puntuacio,
             data: dataVal,
             comentari: comentari,
+            authorized: false,
             createdAt: (typeof firebase !== 'undefined' && firebase.firestore) ? firebase.firestore.FieldValue.serverTimestamp() : new Date().toISOString()
         };
 
         statusMsg.style.color = '#00897b';
-        statusMsg.innerText = '⏳ Publicant experiència a Firebase...';
+        statusMsg.innerText = '⏳ Enviant comentari a Firebase...';
         submitBtn.disabled = true;
 
         try {
@@ -347,27 +372,28 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
                 const db = firebase.firestore();
                 await db.collection("experiencies").add(newExp);
                 statusMsg.style.color = '#2e7d32';
-                statusMsg.innerText = '✅ Experiència publicada amb èxit en temps real a Firebase!';
+                statusMsg.innerText = '✅ Comentari enviat amb èxit! Està pendent d'autorització per part de l'administrador per ser visible públicament.';
             } else {
-                liveExperiences.unshift(newExp);
-                renderExperiencesList(liveExperiences);
                 statusMsg.style.color = '#2e7d32';
-                statusMsg.innerText = '✅ Experiència afegida localment!';
+                statusMsg.innerText = '✅ Comentari enviat! Està pendent d'autorització per l'administrador.';
             }
             
+            document.getElementById('exp-nom').value = '';
+            document.getElementById('exp-email').value = '';
             document.getElementById('exp-comentari').value = '';
             document.getElementById('exp-data').value = '';
             setTimeout(() => {
                 toggleExpForm();
                 statusMsg.innerText = '';
                 submitBtn.disabled = false;
-            }, 1800);
+            }, 3000);
         } catch (error) {
-            console.error("Error al publicar a Firebase:", error);
-            liveExperiences.unshift(newExp);
-            renderExperiencesList(liveExperiences);
+            console.error("Error al enviar a Firebase:", error);
             statusMsg.style.color = '#e65100';
-            statusMsg.innerText = '✅ Experiència gravada localment (sense connexió directa a Firebase).';
+            statusMsg.innerText = '✅ Comentari gravat localment. Està pendent d'autorització per l'administrador.';
+            submitBtn.disabled = false;
+        }
+    };
             submitBtn.disabled = false;
         }
     };

@@ -39,7 +39,7 @@ def build_wiki():
     subprocess.run([sys.executable, "scripts/build_wiki_pages.py"], check=True)
     
     print("\n=== Compilant MkDocs (Validacio de construccio) ===")
-    result = subprocess.run(["mkdocs", "build"], capture_output=True, text=True, encoding="utf-8", errors="replace")
+    result = subprocess.run([sys.executable, "-m", "mkdocs", "build"], capture_output=True, text=True, encoding="utf-8", errors="replace")
     if result.returncode == 0:
         print("[OK] El Wiki s'ha compilat satisfactoriament a /site!")
     else:
