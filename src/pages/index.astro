@@ -4,6 +4,7 @@ import RouteCard from '../components/RouteCard.astro';
 import FilterBar from '../components/FilterBar.astro';
 
 import routes from '../../data/rutes_mallorca.json';
+import acampades from '../../data/acampada_mallorca.json';
 import experiencies from '../../data/experiencies_rutes.json';
 
 // Get unique zones
@@ -84,8 +85,8 @@ experiencies.forEach((e) => {
     >
       <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">🏕️</div>
       <div>
-        <h3 class="text-sm sm:text-base font-bold text-stone-900 group-hover:text-[#1b4332] transition-colors">43 Acampades</h3>
-        <p class="text-xs text-stone-500 mt-0.5">Refugis IBANAT & Consell</p>
+        <h3 class="text-sm sm:text-base font-bold text-stone-900 group-hover:text-[#1b4332] transition-colors">{acampades.length} Acampades</h3>
+        <p class="text-xs text-stone-500 mt-0.5">Refugis públics i privats</p>
       </div>
     </a>
 

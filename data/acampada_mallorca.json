@@ -972,5 +972,54 @@
     "lat": 39.768,
     "lon": 2.715,
     "descripcio": "Casa de colònies tradicional a la Vall de Sóller."
+  },
+  {
+    "slug": "cas-garriguer-comuna-bunyola",
+    "nom": "Refugi de Cas Garriguer (Comuna de Bunyola)",
+    "categoria": "Refugi de Muntanya / Comuna",
+    "municipi": "Bunyola",
+    "titularitat": "Ajuntament de Bunyola",
+    "contacte": "971 61 30 07 (Ajuntament de Bunyola)",
+    "web": "https://ajbunyola.net/",
+    "observacions": "Refugi forestal rústic municipal situat al cor de Sa Comuna de Bunyola (àrea recreativa de Cas Garriguer). Sala única amb llar de foc / xemeneia tradicional. No disposa d'electricitat ni d'aigua corrent: cal dur provisions d'aigua potable suficients i sac de dormir. Durant l'època d'alt risc d'incendi a l'estiu l'accés rodat per la pista forestal pot estar restringit.",
+    "capacitat": 15,
+    "serveis": [
+      "Refugi rústic de pedra",
+      "Llar de foc / xemeneia",
+      "Taules a l'àrea recreativa",
+      "Bosc d'alzinar i pins",
+      "Sense electricitat ni aigua corrent (dur aigua)"
+    ],
+    "permis_antelacio": "Reserva prèvia i tràmit d'instància a l'Ajuntament de Bunyola",
+    "restriccio_foc": "Foc autoritzat exclusivament a la llar de foc interior en temporada permesa; prohibit foc exterior maig-octubre.",
+    "acces_emergencia": "Pista forestal asfaltada/terra des de Bunyola poble fins a Cas Garriguer",
+    "lat": 39.7108,
+    "lon": 2.7284,
+    "descripcio": "Refugi forestal rústic de l'Ajuntament de Bunyola situat a l'àrea recreativa de Cas Garriguer, en ple bosc de Sa Comuna."
+  },
+  {
+    "slug": "cases-des-bosc-massanella",
+    "nom": "Refugi Sa Caseta des Bosc (Finca Massanella)",
+    "categoria": "Refugi de Muntanya Privat",
+    "municipi": "Mancor de la Vall",
+    "titularitat": "Gestió Privada (Finca Massanella)",
+    "contacte": "613 40 31 38 (Reserves WhatsApp) / 665 82 35 73 / info@puigdemassanella.com",
+    "web": "https://www.puigdemassanella.com/Refugio/",
+    "observacions": "Refugi privat de muntanya tradicional als peus del Puig de Massanella (Finca Massanella). Capacitat per a 20 persones repartides en 3 habitacions (una de 8 places i dues de 6 places). Disposa de cuina equipada (nevera, cuina de gas, estris de cuina), llar de foc, menjador, 4 lavabos amb dutxes d'aigua calenta i barbacoa exterior amb forn de llenya. Imprescindible dur sac de dormir. Desconnexió garantida: no hi ha cobertura telefònica mòbil a la zona. Cal reserva prèvia obligatòria.",
+    "capacitat": 20,
+    "serveis": [
+      "3 habitacions (8 i 6 places)",
+      "Cuina equipada (gas, nevera, estris)",
+      "Llar de foc",
+      "4 lavabos i dutxes aigua calenta",
+      "Barbacoa i forn de llenya",
+      "Sense cobertura mòbil (desconnexió)"
+    ],
+    "permis_antelacio": "Reserva prèvia per WhatsApp o telèfon al 613 40 31 38",
+    "restriccio_foc": "Foc permès a la llar de foc interior i barbacoa autoritzada; atenció a alertes d'incendi a l'estiu.",
+    "acces_emergencia": "Camí de Mancor de la Vall a Caimari km 1,5, pista de la Canaleta i Coll de sa Línia",
+    "lat": 39.757,
+    "lon": 2.868,
+    "descripcio": "Refugi de muntanya tradicional a la finca privada de Massanella, amb cuina equipada, dutxes d'aigua calenta i accés directe al cim de Massanella."
   }
 ]

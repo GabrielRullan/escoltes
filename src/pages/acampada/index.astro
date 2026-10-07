@@ -20,7 +20,7 @@ const matchAemet = (mun: string) => {
 
 <Layout
   title="Refugis i Zones d'Acampada a Mallorca - Guia Escolta"
-  description="Guia completa de les 43 zones d'acampada i refugis legals a Mallorca (IBANAT, Consell de Mallorca). Capacitat, accés d'emergència i reserves."
+  description={`Guia completa dels ${acampades.length} espais d'acampada i refugis a Mallorca (IBANAT, Consell de Mallorca, municipals i privats). Capacitat, accés d'emergència i reserves.`}
 >
   <div class="mb-8">
     <div class="flex items-center gap-2 text-xs text-stone-500 mb-2">
@@ -33,7 +33,7 @@ const matchAemet = (mun: string) => {
       🏕️ Refugis i Zones d'Acampada a Mallorca
     </h1>
     <p class="text-sm sm:text-base text-stone-600 max-w-3xl leading-relaxed">
-      Directori de 43 espais públics i d'ús regulat (IBANAT i Consell de Mallorca) per a sortides de cap de setmana, acampades i campaments d'estiu escoltes.
+      Directori de {acampades.length} espais d'acampada, albergs i refugis de muntanya (públics i privats) per a sortides de cap de setmana, acampades i campaments d'estiu escoltes.
     </p>
   </div>
 
