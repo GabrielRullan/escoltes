@@ -100,8 +100,8 @@ const matchAemet = (mun: string) => {
       >
         <div>
           <div class="flex items-start justify-between gap-2 mb-3">
-            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-700">
-              📍 {item.municipi}
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl text-xs font-bold bg-stone-100 text-stone-800 border border-stone-200">
+              📍 <strong>On es troba:</strong> {item.municipi}
             </span>
             <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold bg-[#1b4332]/10 text-[#1b4332]">
               {item.titularitat}
@@ -116,7 +116,24 @@ const matchAemet = (mun: string) => {
             {item.descripcio || item.observacions}
           </p>
 
-          <div class="space-y-1.5 text-xs text-stone-700 mb-4 bg-stone-50 p-3 rounded-xl border border-stone-100">
+          <div class="space-y-2 text-xs text-stone-700 mb-4 bg-stone-50 p-3.5 rounded-xl border border-stone-100">
+            {item.lat && item.lon && (
+              <div class="flex items-center justify-between text-[11px] pb-1.5 border-b border-stone-200/60">
+                <span class="flex items-center gap-1 text-stone-600">
+                  <span>🗺️</span>
+                  <span><strong>Ubicació cartogràfica:</strong> {item.municipi}</span>
+                </span>
+                <a
+                  href={`https://www.openstreetmap.org/?mlat=${item.lat}&mlon=${item.lon}#map=15/${item.lat}/${item.lon}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-semibold text-[#1b4332] hover:underline"
+                  title="Obre la ubicació exacta a OpenStreetMap"
+                >
+                  Veure al mapa ↗
+                </a>
+              </div>
+            )}
             {item.capacitat && (
               <div class="flex items-center gap-1.5">
                 <span>👥</span>
