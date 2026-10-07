@@ -1,20 +1,21 @@
 # Portal de Suport del Grup Escolta - Mallorca
 
-[![Deploy Wiki to GitHub Pages](https://github.com/GabrielRullan/escoltes/actions/workflows/deploy_wiki.yml/badge.svg)](https://github.com/GabrielRullan/escoltes/actions/workflows/deploy_wiki.yml)
+[![Deploy to Firebase Hosting](https://github.com/GabrielRullan/escoltes/actions/workflows/deploy_firebase.yml/badge.svg)](https://github.com/GabrielRullan/escoltes/actions/workflows/deploy_firebase.yml)
 
-🌐 **Wiki Publicada (GitHub Pages)**: [https://gabrielrullan.github.io/escoltes/](https://gabrielrullan.github.io/escoltes/)
+🌐 **Portal Oficial Web (Firebase Hosting)**: [https://escoltes-mallorca.web.app/](https://escoltes-mallorca.web.app/)
 
 Benvingut al projecte del Portal de Suport del Grup Escolta! Aquest repositori està dedicat a la creació d'eines, organització de documentació i planificació d'activitats per donar suport a un agrupament escolta a Mallorca (Illes Balears, Espanya).
 
-### 🌐 Portal Web HTML (Publicat a GitHub Pages)
+### 🌐 Portal Web HTML (Astro + Tailwind CSS)
 
-| Secció Web | Enllaç a la Web (GitHub Pages) | Fitxer Font Markdown |
+| Secció Web | Enllaç a la Web (Producció) | Descripció |
 |---|---|---|
-| 🏠 **Pàgina Principal (Home)** | [gabrielrullan.github.io/escoltes/](https://gabrielrullan.github.io/escoltes/) | [`docs/index.md`](docs/index.md) |
-| 🥾 **Cercador de Rutes (65+ Itineraris)** | [Rutes i Senderisme a Mallorca](https://gabrielrullan.github.io/escoltes/mallorca/rutes/) | [`docs/mallorca/rutes.md`](docs/mallorca/rutes.md) |
-| 🏕️ **Acampada i Refugis (43 Terrenys)** | [Directori d'Acampada](https://gabrielrullan.github.io/escoltes/mallorca/acampada_i_refugis/) | [`docs/mallorca/acampada_i_refugis.md`](docs/mallorca/acampada_i_refugis.md) |
-| 🚌 **Transport Públic TIB & Tren** | [Guia de Transport](https://gabrielrullan.github.io/escoltes/mallorca/transport/) | [`docs/mallorca/transport.md`](docs/mallorca/transport.md) |
-| ⚜️ **Agrupaments Escoltes** | [Directori d'Agrupaments](https://gabrielrullan.github.io/escoltes/mallorca/agrupaments/) | [`docs/mallorca/agrupaments.md`](docs/mallorca/agrupaments.md) |
+| 🏠 **Pàgina Principal (Home)** | [escoltes-mallorca.web.app/](https://escoltes-mallorca.web.app/) | Portada del portal escolta |
+| 🥾 **Cercador de Rutes** | [Rutes i Senderisme a Mallorca](https://escoltes-mallorca.web.app/rutes/) | 65+ rutes adaptades per edats |
+| 🏕️ **Acampada i Refugis** | [Directori d'Acampada](https://escoltes-mallorca.web.app/acampada/) | 45 refugis i zones d'acampada (públics i privats) |
+| 🌤️ **Previsió Meteorològica** | [Meteo AEMET](https://escoltes-mallorca.web.app/previsio/) | Previsió dels 53 municipis de Mallorca |
+| 🚌 **Transport Públic TIB & Tren** | [Guia de Transport](https://escoltes-mallorca.web.app/transport/) | Xarxa TIB i línies d'accés |
+| ⚜️ **Agrupaments Escoltes** | [Directori d'Agrupaments](https://escoltes-mallorca.web.app/agrupaments/) | Directori d'agrupaments escoltes |
 
 ### 📝 Documentació Interna (Exclusivament en `.md` al Repositori)
 
