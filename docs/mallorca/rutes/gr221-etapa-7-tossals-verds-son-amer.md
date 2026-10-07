@@ -62,7 +62,7 @@ setTimeout(initRouteTrackMap_gr221_etapa_7_tossals_verds_son_amer, 400);
 | **Desnivell Positiu** | **+830 m** |
 | **Dificultat Tècnica** | **Exigent** |
 | **Durada Estimada** | **5h 45min** |
-| **Unitats Recomanades** | **Pioners/Rangers, Rovers/Rutes** |
+| **Unitats Recomanades** | **Pioners/Rangers, Rutes i guies** |
 | **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/find.do?q=GR-221%20Etapa%207%3A%20Tossals%20Verds%20a%20Son%20Amer%20%28Lluc%29)** |
 
 ---
@@ -195,7 +195,7 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
                     <option value="Llops/Daines">Llops / Daines (8-11 anys)</option>
                     <option value="Rangers/Guies">Rangers / Guies o Pioners (11-14 anys)</option>
                     <option value="Pioners/Caravel·les">Pioners / Caravel·les o Rutes (14-17 anys)</option>
-                    <option value="Rovers/Rutes">Rovers / Rutes (17-19 anys)</option>
+                    <option value="Rutes i guies">Rutes i guies (17-19 anys)</option>
                     <option value="Caps/Equip de Suport">Caps / Responsables / Suport</option>
                 </select>
             </div>

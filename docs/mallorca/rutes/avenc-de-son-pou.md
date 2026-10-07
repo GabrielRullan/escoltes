@@ -62,7 +62,7 @@ setTimeout(initRouteTrackMap_avenc_de_son_pou, 400);
 | **Desnivell Positiu** | **+180 m** |
 | **Dificultat Tècnica** | **Fàcil - Moderada** |
 | **Durada Estimada** | **2h 45min** |
-| **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
+| **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers, Rutes i guies** |
 | **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/find.do?q=Avenc%20de%20Son%20Pou%20%28Coanegra%20/%20Santa%20Maria%29)** |
 
 ---
@@ -185,7 +185,7 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
                     <option value="Llops/Daines">Llops / Daines (8-11 anys)</option>
                     <option value="Rangers/Guies">Rangers / Guies o Pioners (11-14 anys)</option>
                     <option value="Pioners/Caravel·les">Pioners / Caravel·les o Rutes (14-17 anys)</option>
-                    <option value="Rovers/Rutes">Rovers / Rutes (17-19 anys)</option>
+                    <option value="Rutes i guies">Rutes i guies (17-19 anys)</option>
                     <option value="Caps/Equip de Suport">Caps / Responsables / Suport</option>
                 </select>
             </div>

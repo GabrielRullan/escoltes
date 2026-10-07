@@ -62,7 +62,7 @@ setTimeout(initRouteTrackMap_es_salt_des_freu_orient, 400);
 | **Desnivell Positiu** | **+120 m** |
 | **Dificultat Tècnica** | **Molt Fàcil** |
 | **Durada Estimada** | **1h 45min** |
-| **Unitats Recomanades** | **Ferrerets, Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
+| **Unitats Recomanades** | **Ferrerets, Llops/Daines, Pioners/Rangers, Rutes i guies** |
 | **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/find.do?q=Es%20Salt%20des%20Freu%20%28Orient%20/%20Bunyola%29)** |
 
 ---
@@ -195,7 +195,7 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
                     <option value="Llops/Daines">Llops / Daines (8-11 anys)</option>
                     <option value="Rangers/Guies">Rangers / Guies o Pioners (11-14 anys)</option>
                     <option value="Pioners/Caravel·les">Pioners / Caravel·les o Rutes (14-17 anys)</option>
-                    <option value="Rovers/Rutes">Rovers / Rutes (17-19 anys)</option>
+                    <option value="Rutes i guies">Rutes i guies (17-19 anys)</option>
                     <option value="Caps/Equip de Suport">Caps / Responsables / Suport</option>
                 </select>
             </div>

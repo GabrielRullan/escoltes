@@ -62,7 +62,7 @@ setTimeout(initRouteTrackMap_parc_natural_mondrago, 400);
 | **Desnivell Positiu** | **+40 m** |
 | **Dificultat Tècnica** | **Molt Fàcil** |
 | **Durada Estimada** | **2h 00min** |
-| **Unitats Recomanades** | **Ferrerets, Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
+| **Unitats Recomanades** | **Ferrerets, Llops/Daines, Pioners/Rangers, Rutes i guies** |
 | **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/find.do?q=Parc%20Natural%20de%20Mondrag%C3%B3%20%28Santany%C3%AD%29)** |
 
 ---
@@ -189,7 +189,7 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
                     <option value="Llops/Daines">Llops / Daines (8-11 anys)</option>
                     <option value="Rangers/Guies">Rangers / Guies o Pioners (11-14 anys)</option>
                     <option value="Pioners/Caravel·les">Pioners / Caravel·les o Rutes (14-17 anys)</option>
-                    <option value="Rovers/Rutes">Rovers / Rutes (17-19 anys)</option>
+                    <option value="Rutes i guies">Rutes i guies (17-19 anys)</option>
                     <option value="Caps/Equip de Suport">Caps / Responsables / Suport</option>
                 </select>
             </div>

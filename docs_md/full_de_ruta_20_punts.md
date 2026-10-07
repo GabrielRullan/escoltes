@@ -47,7 +47,7 @@ Aquest document estableix el **Pla Director de Millora Estratègica en 20 Punts*
 ## ⚜️ Pilar III: Marc Pedagogic i Coneixement Escolta (Punts 9–12)
 
 ### 9. 📘 Quaderns de Progressió i Pedagogia per Branques
-- **Objectiu**: Integrar les guies educatives específiques per a cada branca: **Castors/Fures** (6-8), **Llops/Daines** (8-11), **Pioners/Rangers** (11-14) i **Rovers/Rutes** (14-18).
+- **Objectiu**: Integrar les guies educatives específiques per a cada branca: **Castors/Fures** (6-8), **Llops/Daines** (8-11), **Pioners/Rangers** (11-14) i **Rutes i guies** (14-18).
 - **Impacte**: Proporciona als caps idees de jocs, tallers, dinàmiques de reflexió i rituus adaptats a cada etapa del desenvolupament juvenil.
 
 ### 10. 🌿 Fitxes d'Identificació de Natura Balear (Flora, Fauna i Geologia)

@@ -74,11 +74,11 @@ def scrape_wikiloc_url(url):
     slug = create_slug(title)
     
     # Determinar unitats recomanades
-    apte_unitats = ["Pioners/Rangers", "Rovers/Rutes"]
+    apte_unitats = ["Pioners/Rangers", "Rutes i guies"]
     if dist_km <= 6 and ele_m <= 250:
-        apte_unitats = ["Ferrerets", "Llops/Daines", "Pioners/Rangers", "Rovers/Rutes"]
+        apte_unitats = ["Ferrerets", "Llops/Daines", "Pioners/Rangers", "Rutes i guies"]
     elif dist_km <= 10 and ele_m <= 450:
-        apte_unitats = ["Llops/Daines", "Pioners/Rangers", "Rovers/Rutes"]
+        apte_unitats = ["Llops/Daines", "Pioners/Rangers", "Rutes i guies"]
         
     route_data = {
         "slug": slug,

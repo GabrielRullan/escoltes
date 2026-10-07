@@ -62,7 +62,7 @@ setTimeout(initRouteTrackMap_puig_des_teix_valldemossa, 400);
 | **Desnivell Positiu** | **+810 m** |
 | **Dificultat Tècnica** | **Exigent** |
 | **Durada Estimada** | **5h 15min** |
-| **Unitats Recomanades** | **Pioners/Rangers, Rovers/Rutes** |
+| **Unitats Recomanades** | **Pioners/Rangers, Rutes i guies** |
 | **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/find.do?q=Puig%20des%20Teix%20pel%20Cam%C3%AD%20de%20s%27Arxiduc%20%28Valldemossa%29)** |
 
 ---
@@ -184,7 +184,7 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
                     <option value="Llops/Daines">Llops / Daines (8-11 anys)</option>
                     <option value="Rangers/Guies">Rangers / Guies o Pioners (11-14 anys)</option>
                     <option value="Pioners/Caravel·les">Pioners / Caravel·les o Rutes (14-17 anys)</option>
-                    <option value="Rovers/Rutes">Rovers / Rutes (17-19 anys)</option>
+                    <option value="Rutes i guies">Rutes i guies (17-19 anys)</option>
                     <option value="Caps/Equip de Suport">Caps / Responsables / Suport</option>
                 </select>
             </div>

@@ -14,7 +14,7 @@ def get_mallorca_routes_data():
             "passos_finca_privada": ["Finca de la Trapa (Grup Balear d'Ornitologia - GOB)"],
             "punts_interes": ["Monestir de la Trapa", "Cala en Basset", "Vistes a sa Dragonera"],
             "consells_seguretat": "Tram sense ombra a l'estiu. Aigua obligatòria mínim 2L per escolta.",
-            "apte_unitats": ["Pioners/Rangers", "Rovers/Rutes"],
+            "apte_unitats": ["Pioners/Rangers", "Rutes i guies"],
             "lat": 39.5785, "lon": 2.3550,
             "descripcio": "Primera etapa del GR-221 que connecta Port d'Andratx i Sant Elm amb el Monestir de la Trapa."
         },
@@ -29,7 +29,7 @@ def get_mallorca_routes_data():
             "passos_finca_privada": ["Camí de Castelló (passos de pedra en sec habilitats)"],
             "punts_interes": ["Tafona de Can Boi", "Capella de Castelló", "Far de Muleta"],
             "consells_seguretat": "Ideal per a branques joves (Ferrerets, Llops). Camí molt ben senyalitzat.",
-            "apte_unitats": ["Llops/Daines", "Pioners/Rangers", "Rovers/Rutes"],
+            "apte_unitats": ["Llops/Daines", "Pioners/Rangers", "Rutes i guies"],
             "lat": 39.7491, "lon": 2.6483,
             "descripcio": "Etapa costanera assequible i d'alt valor patrimonial entre Deià i el Port de Sóller, passant pel Refugi de Muleta i Can Boi."
         },
@@ -44,7 +44,7 @@ def get_mallorca_routes_data():
             "passos_finca_privada": ["Finca de l'Ofre (respectar estrictament el camí marcat)"],
             "punts_interes": ["Barranc de Biniaraix", "Coll de l'Ofre", "Embassament de Cúber"],
             "consells_seguretat": "Fort desnivell inicial pel monument del Barranc de Biniaraix. En pluja, el torrent va molt carregat.",
-            "apte_unitats": ["Pioners/Rangers", "Rovers/Rutes"],
+            "apte_unitats": ["Pioners/Rangers", "Rutes i guies"],
             "lat": 39.7663, "lon": 2.7153,
             "descripcio": "Espectacular etapa de muntanya que remunta el Barranc de Biniaraix, passa per Cúber i culmina al Refugi de Tossals Verds."
         },
@@ -59,7 +59,7 @@ def get_mallorca_routes_data():
             "passos_finca_privada": ["Coll des Coloms / Prat de Cúber"],
             "punts_interes": ["Coll de les Cases de la Neu", "Puig de Massanella (desviació)", "Lluc"],
             "consells_seguretat": "Coll alt exposat a vent i boira a l'hivern. Equipament tècnic i calçat de muntanya obligatori.",
-            "apte_unitats": ["Pioners/Rangers", "Rovers/Rutes"],
+            "apte_unitats": ["Pioners/Rangers", "Rutes i guies"],
             "lat": 39.7583, "lon": 2.8222,
             "descripcio": "L'etapa reina del GR-221 que travessa el cor de la serra de Tramuntana des de Tossals Verds fins al santuari de Lluc."
         },
@@ -89,7 +89,7 @@ def get_mallorca_routes_data():
             "passos_finca_privada": ["Camí del Castell"],
             "punts_interes": ["Castell d'Alaró", "Hospederia", "Vistes panoràmiques del Pla i la Serra"],
             "consells_seguretat": "Compte amb les pedres resbaladisses en dies de pluja.",
-            "apte_unitats": ["Llops/Daines", "Pioners/Rangers", "Rovers/Rutes"],
+            "apte_unitats": ["Llops/Daines", "Pioners/Rangers", "Rutes i guies"],
             "lat": 39.7025, "lon": 2.7915,
             "descripcio": "Excursió clàssica de l'escoltisme mallorquí cap a la fortalesa rocosa del Castell d'Alaró."
         },
@@ -104,7 +104,7 @@ def get_mallorca_routes_data():
             "passos_finca_privada": ["Entre d'Escorca"],
             "punts_interes": ["Entreforc", "Cova des Romagueral", "Sa Calobra"],
             "consells_seguretat": "PROHIBIT amb qualsevol risc de pluja (risc de riada mortal). Destresa, cordes de seguretat i 3L d'aigua obligatoris. Només Rovers/Caps.",
-            "apte_unitats": ["Rovers/Rutes"],
+            "apte_unitats": ["Rutes i guies"],
             "lat": 39.8260, "lon": 2.8460,
             "descripcio": "La travessa de cañón més famosa de la Mediterrània. Extrema precaució i preparació tècnica."
         }

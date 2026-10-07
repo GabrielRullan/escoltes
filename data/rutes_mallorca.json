@@ -10,7 +10,7 @@
     "durada_estimada": "4h 30min",
     "apte_unitats": [
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "punts_aigua": [
       "Port d'Andratx (abans de sortir)",
@@ -82,7 +82,7 @@
     "durada_estimada": "5h 45min",
     "apte_unitats": [
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "punts_aigua": [
       "Font de ses Fontanelles",
@@ -154,7 +154,7 @@
     "apte_unitats": [
       "Llops/Daines",
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "punts_aigua": [
       "Font de sa Coma (Banyalbufar)",
@@ -225,7 +225,7 @@
     "durada_estimada": "6h 45min",
     "apte_unitats": [
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "punts_aigua": [
       "Esporles vila",
@@ -300,7 +300,7 @@
       "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "punts_aigua": [
       "Deià (Can Boi)",
@@ -373,7 +373,7 @@
     "durada_estimada": "5h 30min",
     "apte_unitats": [
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "punts_aigua": [
       "Biniaraix",
@@ -446,7 +446,7 @@
     "durada_estimada": "5h 45min",
     "apte_unitats": [
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "punts_aigua": [
       "Refugi Tossals Verds",
@@ -522,7 +522,7 @@
       "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "punts_aigua": [
       "Son Amer",
@@ -597,7 +597,7 @@
       "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "punts_aigua": [
       "Font de Cals Reis (Orient)"
@@ -659,7 +659,7 @@
       "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "punts_aigua": [
       "Centre de Visitors de Gabellí Petit"
@@ -732,7 +732,7 @@
     "consells_seguretat": "Camí en ziga-zaga empedrat. Calçat de muntanya fort necessari.",
     "apte_unitats": [
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "lat": 39.814,
     "lon": 2.875,
@@ -751,7 +751,7 @@
       "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "punts_aigua": [
       "Centre d'Informació del Parc Natural (sa Font de n'Alis)"
@@ -946,7 +946,7 @@
     "consells_seguretat": "Tram final de grimpa rocosa. Prohibit en boira espessa o gel.",
     "apte_unitats": [
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "lat": 39.621,
     "lon": 2.478,
@@ -977,7 +977,7 @@
     "consells_seguretat": "Orientació complexa si hi ha boira.",
     "apte_unitats": [
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "lat": 39.598,
     "lon": 2.451,
@@ -1009,7 +1009,7 @@
     "apte_unitats": [
       "Llops/Daines",
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "lat": 39.664,
     "lon": 2.569,
@@ -1039,7 +1039,7 @@
     "apte_unitats": [
       "Llops/Daines",
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "lat": 39.751,
     "lon": 2.628,
@@ -1100,7 +1100,7 @@
     "apte_unitats": [
       "Llops/Daines",
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "lat": 39.675,
     "lon": 2.768,
@@ -1131,7 +1131,7 @@
     "apte_unitats": [
       "Llops/Daines",
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "lat": 39.699,
     "lon": 2.705,
@@ -1162,7 +1162,7 @@
     "apte_unitats": [
       "Llops/Daines",
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "lat": 39.584,
     "lon": 2.318,
@@ -1194,7 +1194,7 @@
     "apte_unitats": [
       "Llops/Daines",
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "lat": 39.528,
     "lon": 2.926,
@@ -1226,7 +1226,7 @@
     "apte_unitats": [
       "Llops/Daines",
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "lat": 39.458,
     "lon": 3.186,
@@ -1287,7 +1287,7 @@
     "consells_seguretat": "Ruta lineal. Cal organitzar el retorn amb barca o autocar des de Cala Tuent.",
     "apte_unitats": [
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "lat": 39.785,
     "lon": 2.735,
@@ -1317,7 +1317,7 @@
     "consells_seguretat": "Permís d'accés obligatori per a la Muntanya del Voltor. Vent fort a la carena.",
     "apte_unitats": [
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "lat": 39.712,
     "lon": 2.625,
@@ -1380,7 +1380,7 @@
     "apte_unitats": [
       "Llops/Daines",
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "lat": 39.7025,
     "lon": 2.7915,
@@ -1410,7 +1410,7 @@
     ],
     "consells_seguretat": "PROHIBIT amb qualsevol risc de pluja (risc de riada mortal). Destresa, cordes de seguretat i 3L d'aigua obligatoris. Només Rovers/Caps.",
     "apte_unitats": [
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "lat": 39.826,
     "lon": 2.846,
@@ -1531,7 +1531,7 @@
     "apte_unitats": [
       "Llops/Daines",
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "lat": 39.948,
     "lon": 3.178,
@@ -1619,7 +1619,7 @@
     "consells_seguretat": "Cadena de seguretat al Pas des Regatxo. Atenció amb vent o pluja.",
     "apte_unitats": [
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "lat": 39.8311,
     "lon": 2.8988,
@@ -1649,7 +1649,7 @@
     "consells_seguretat": "Preveure el transport de tornada des de Cala Tuent o Port de Sóller.",
     "apte_unitats": [
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "lat": 39.782,
     "lon": 2.741,
@@ -1706,7 +1706,7 @@
     ],
     "consells_seguretat": "Ruta per a caps i Rovers experimentats.",
     "apte_unitats": [
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "lat": 39.728,
     "lon": 2.812,
@@ -1794,7 +1794,7 @@
     "consells_seguretat": "Pujada directa amb fort pendent.",
     "apte_unitats": [
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "lat": 39.691,
     "lon": 2.712,
@@ -2092,7 +2092,7 @@
     "consells_seguretat": "Molt exposat al vent del nord (Tramuntana).",
     "apte_unitats": [
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "lat": 39.748,
     "lon": 3.349,
@@ -2229,7 +2229,7 @@
     "apte_unitats": [
       "Llops/Daines",
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "punts_aigua": [
       "Consultar punts de recàrrega"
@@ -2286,7 +2286,7 @@
       "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "punts_aigua": [
       "Llogaret de Betlem"
@@ -2349,7 +2349,7 @@
       "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "punts_aigua": [
       "Vila de Valldemossa"
@@ -2412,7 +2412,7 @@
       "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "punts_aigua": [
       "Poble de s'Estanyol de Migjorn"
@@ -2475,7 +2475,7 @@
       "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "punts_aigua": [
       "Cala Sant Vicenç"
@@ -2537,7 +2537,7 @@
     "apte_unitats": [
       "Llops/Daines",
       "Pioners/Rangers",
-      "Rovers/Rutes"
+      "Rutes i guies"
     ],
     "punts_aigua": [
       "Font de Planícia",

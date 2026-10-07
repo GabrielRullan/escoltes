@@ -54,7 +54,7 @@ L'script converteix la ruta de Wikiloc al format estàndard del repositori:
   "desnivell_positiu_m": 120,
   "dificultat": "Molt Fàcil",
   "durada_estimada": "1h 45min",
-  "apte_unitats": ["Castors/Fures", "Llops/Daines", "Pioners/Rangers", "Rovers/Rutes"],
+  "apte_unitats": ["Castors/Fures", "Llops/Daines", "Pioners/Rangers", "Rutes i guies"],
   "wikiloc_url": "https://es.wikiloc.com/rutas-senderismo/es-salt-des-freu-orient-4291823",
   "lat": 39.7210,
   "lon": 2.7680

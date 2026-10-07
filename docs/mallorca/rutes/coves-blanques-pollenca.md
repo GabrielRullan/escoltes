@@ -62,7 +62,7 @@ setTimeout(initRouteTrackMap_coves_blanques_pollenca, 400);
 | **Desnivell Positiu** | **+150 m** |
 | **Dificultat Tècnica** | **Fàcil** |
 | **Durada Estimada** | **2h 00min** |
-| **Unitats Recomanades** | **Ferrerets, Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
+| **Unitats Recomanades** | **Ferrerets, Llops/Daines, Pioners/Rangers, Rutes i guies** |
 | **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/find.do?q=Coves%20Blanques%20%28Cala%20Sant%20Vicen%C3%A7%20/%20Pollen%C3%A7a%29)** |
 | **Guia Turisme Petit** | **[👶 Veure Guia de Família a Turisme Petit 🔗](https://www.turismepetit.com/excursion/excursion-a-las-coves-blanques-en-pollenca/)** |
 
@@ -197,7 +197,7 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
                     <option value="Llops/Daines">Llops / Daines (8-11 anys)</option>
                     <option value="Rangers/Guies">Rangers / Guies o Pioners (11-14 anys)</option>
                     <option value="Pioners/Caravel·les">Pioners / Caravel·les o Rutes (14-17 anys)</option>
-                    <option value="Rovers/Rutes">Rovers / Rutes (17-19 anys)</option>
+                    <option value="Rutes i guies">Rutes i guies (17-19 anys)</option>
                     <option value="Caps/Equip de Suport">Caps / Responsables / Suport</option>
                 </select>
             </div>

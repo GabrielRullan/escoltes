@@ -62,7 +62,7 @@ setTimeout(initRouteTrackMap_muela_de_sesclop, 400);
 | **Desnivell Positiu** | **+690 m** |
 | **Dificultat Tècnica** | **Exigent** |
 | **Durada Estimada** | **5h 00min** |
-| **Unitats Recomanades** | **Pioners/Rangers, Rovers/Rutes** |
+| **Unitats Recomanades** | **Pioners/Rangers, Rutes i guies** |
 | **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/find.do?q=Muela%20de%20s%27Esclop%20%28des%20de%20sa%20Vinya%20de%20Galatz%C3%B3%29)** |
 
 ---
@@ -186,7 +186,7 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
                     <option value="Llops/Daines">Llops / Daines (8-11 anys)</option>
                     <option value="Rangers/Guies">Rangers / Guies o Pioners (11-14 anys)</option>
                     <option value="Pioners/Caravel·les">Pioners / Caravel·les o Rutes (14-17 anys)</option>
-                    <option value="Rovers/Rutes">Rovers / Rutes (17-19 anys)</option>
+                    <option value="Rutes i guies">Rutes i guies (17-19 anys)</option>
                     <option value="Caps/Equip de Suport">Caps / Responsables / Suport</option>
                 </select>
             </div>

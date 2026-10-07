@@ -62,7 +62,7 @@ setTimeout(initRouteTrackMap_gr221_etapa_5_deia_port_soller, 400);
 | **Desnivell Positiu** | **+310 m** |
 | **Dificultat Tècnica** | **Fàcil - Moderada** |
 | **Durada Estimada** | **3h 30min** |
-| **Unitats Recomanades** | **Ferrerets, Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
+| **Unitats Recomanades** | **Ferrerets, Llops/Daines, Pioners/Rangers, Rutes i guies** |
 | **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/find.do?q=GR-221%20Etapa%205%3A%20Dei%C3%A0%20al%20Port%20de%20S%C3%B3ller)** |
 
 ---
@@ -199,7 +199,7 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
                     <option value="Llops/Daines">Llops / Daines (8-11 anys)</option>
                     <option value="Rangers/Guies">Rangers / Guies o Pioners (11-14 anys)</option>
                     <option value="Pioners/Caravel·les">Pioners / Caravel·les o Rutes (14-17 anys)</option>
-                    <option value="Rovers/Rutes">Rovers / Rutes (17-19 anys)</option>
+                    <option value="Rutes i guies">Rutes i guies (17-19 anys)</option>
                     <option value="Caps/Equip de Suport">Caps / Responsables / Suport</option>
                 </select>
             </div>

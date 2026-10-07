@@ -62,7 +62,7 @@ setTimeout(initRouteTrackMap_castell_de_reina_alaro, 400);
 | **Desnivell Positiu** | **+590 m** |
 | **Dificultat Tècnica** | **Exigent** |
 | **Durada Estimada** | **4h 30min** |
-| **Unitats Recomanades** | **Rovers/Rutes** |
+| **Unitats Recomanades** | **Rutes i guies** |
 | **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/find.do?q=Pas%20des%20Llop%20i%20Cova%20de%20sa%20Campana%20%28Alar%C3%B3%20/%20Escorca%29)** |
 
 ---
@@ -185,7 +185,7 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
                     <option value="Llops/Daines">Llops / Daines (8-11 anys)</option>
                     <option value="Rangers/Guies">Rangers / Guies o Pioners (11-14 anys)</option>
                     <option value="Pioners/Caravel·les">Pioners / Caravel·les o Rutes (14-17 anys)</option>
-                    <option value="Rovers/Rutes">Rovers / Rutes (17-19 anys)</option>
+                    <option value="Rutes i guies">Rutes i guies (17-19 anys)</option>
                     <option value="Caps/Equip de Suport">Caps / Responsables / Suport</option>
                 </select>
             </div>

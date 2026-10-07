@@ -62,7 +62,7 @@ setTimeout(initRouteTrackMap_torrent_de_pareis_escorca_sa_calobra, 400);
 | **Desnivell Positiu** | **+350 m** |
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **3h 30min** |
-| **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
+| **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers, Rutes i guies** |
 | **Track a Wikiloc** | **[💚 Obrir Track Oficial a Wikiloc 🔗](https://es.wikiloc.com/rutas-senderismo/torrent-de-pareis-escorca-sa-calobra-2194812)** |
 
 ---
@@ -193,7 +193,7 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
                     <option value="Llops/Daines">Llops / Daines (8-11 anys)</option>
                     <option value="Rangers/Guies">Rangers / Guies o Pioners (11-14 anys)</option>
                     <option value="Pioners/Caravel·les">Pioners / Caravel·les o Rutes (14-17 anys)</option>
-                    <option value="Rovers/Rutes">Rovers / Rutes (17-19 anys)</option>
+                    <option value="Rutes i guies">Rutes i guies (17-19 anys)</option>
                     <option value="Caps/Equip de Suport">Caps / Responsables / Suport</option>
                 </select>
             </div>
@@ -236,7 +236,7 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
 (function() {
     const routeSlug = "torrent-de-pareis-escorca-sa-calobra";
     const routeName = "Torrent De Pareis Escorca Sa Calobra";
-    const staticExperiences = [{"ruta_slug": "torrent-de-pareis-escorca-sa-calobra", "agrupament": "[PROVA / DEMO] GS Myotragus 684", "puntuacio": 5, "data": "Maig 2025 (Exemple)", "comentari": "[EXEMPLE DE PROVA] Ressenya de demostració. Excursió molt tècnica i d'alta dificultat. Cal comprovar la previsió del temps.", "unitat": "Rovers/Rutes"}];
+    const staticExperiences = [{"ruta_slug": "torrent-de-pareis-escorca-sa-calobra", "agrupament": "[PROVA / DEMO] GS Myotragus 684", "puntuacio": 5, "data": "Maig 2025 (Exemple)", "comentari": "[EXEMPLE DE PROVA] Ressenya de demostració. Excursió molt tècnica i d'alta dificultat. Cal comprovar la previsió del temps.", "unitat": "Rutes i guies"}];
 
     function escapeHtml(text) {
         if (!text) return '';

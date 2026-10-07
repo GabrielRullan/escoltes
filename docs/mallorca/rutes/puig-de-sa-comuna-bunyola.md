@@ -62,7 +62,7 @@ setTimeout(initRouteTrackMap_puig_de_sa_comuna_bunyola, 400);
 | **Desnivell Positiu** | **+560 m** |
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **3h 45min** |
-| **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
+| **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers, Rutes i guies** |
 | **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/find.do?q=Puig%20de%20sa%20Comuna%20de%20Bunyola%20%28per%20Penya%20d%27en%20Honor%29)** |
 
 ---
@@ -185,7 +185,7 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
                     <option value="Llops/Daines">Llops / Daines (8-11 anys)</option>
                     <option value="Rangers/Guies">Rangers / Guies o Pioners (11-14 anys)</option>
                     <option value="Pioners/Caravel·les">Pioners / Caravel·les o Rutes (14-17 anys)</option>
-                    <option value="Rovers/Rutes">Rovers / Rutes (17-19 anys)</option>
+                    <option value="Rutes i guies">Rutes i guies (17-19 anys)</option>
                     <option value="Caps/Equip de Suport">Caps / Responsables / Suport</option>
                 </select>
             </div>
