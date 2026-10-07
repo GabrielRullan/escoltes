@@ -73,17 +73,16 @@ const matchAemet = (mun: string) => {
       </div>
 
       <div>
-        <label for="municipiAcampadaFilter" class="block text-[11px] font-bold text-stone-600 uppercase tracking-wider mb-1">
-          Municipi
+        <label for="gestioTypeFilter" class="block text-[11px] font-bold text-stone-600 uppercase tracking-wider mb-1">
+          Règim de la finca / espai
         </label>
         <select
-          id="municipiAcampadaFilter"
-          class="w-full text-xs sm:text-sm px-3 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] outline-hidden"
+          id="gestioTypeFilter"
+          class="w-full text-xs sm:text-sm px-3 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] outline-hidden font-medium"
         >
-          <option value="">Tots els municipis</option>
-          {municipis.map((m) => (
-            <option value={m.toLowerCase()}>{m}</option>
-          ))}
+          <option value="">🏛️ Tots els règims (Públics i Privats)</option>
+          <option value="publica">🏛️ Finques Públiques / Administració</option>
+          <option value="privada">🌳 Gestió Privada / Entitats / Eclesiàstic</option>
         </select>
       </div>
     </div>
@@ -91,22 +90,31 @@ const matchAemet = (mun: string) => {
 
   <!-- Campsites Grid -->
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="acampadaGrid">
-    {acampades.map((item) => (
-      <div
-        class="acampada-card bg-white rounded-2xl border border-stone-200 hover:border-[#1b4332]/40 shadow-xs hover:shadow-md transition-all p-6 flex flex-col justify-between"
-        data-nom={item.nom.toLowerCase()}
-        data-municipi={item.municipi.toLowerCase()}
-        data-titularitat={item.titularitat.toLowerCase()}
-      >
-        <div>
-          <div class="flex items-start justify-between gap-2 mb-3">
-            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl text-xs font-bold bg-stone-100 text-stone-800 border border-stone-200">
-              📍 <strong>On es troba:</strong> {item.municipi}
-            </span>
-            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold bg-[#1b4332]/10 text-[#1b4332]">
-              {item.titularitat}
-            </span>
-          </div>
+    {acampades.map((item) => {
+      const titLower = (item.titularitat || '').toLowerCase();
+      const isPublic = ['ibanat', 'consell', 'ajuntament', 'govern', 'ibjove', 'parc natural'].some((k) => titLower.includes(k));
+      const regimClass = isPublic ? 'publica' : 'privada';
+
+      return (
+        <div
+          class="acampada-card bg-white rounded-2xl border border-stone-200 hover:border-[#1b4332]/40 shadow-xs hover:shadow-md transition-all p-6 flex flex-col justify-between"
+          data-nom={item.nom.toLowerCase()}
+          data-municipi={item.municipi.toLowerCase()}
+          data-titularitat={item.titularitat.toLowerCase()}
+          data-regim={regimClass}
+        >
+          <div>
+            <div class="flex items-start justify-between gap-2 mb-3 flex-wrap">
+              <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl text-xs font-bold bg-stone-100 text-stone-800 border border-stone-200">
+                📍 <strong>On es troba:</strong> {item.municipi}
+              </span>
+              <span class={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-bold ${
+                isPublic ? 'bg-emerald-100 text-[#1b4332] border border-emerald-200' : 'bg-amber-100 text-amber-900 border border-amber-200'
+              }`}>
+                <span>{isPublic ? '🏛️' : '🌳'}</span>
+                <span>{item.titularitat}</span>
+              </span>
+            </div>
 
           <h3 class="text-lg font-bold text-stone-900 mb-2">
             {item.nom}
@@ -196,7 +204,8 @@ const matchAemet = (mun: string) => {
           )}
         </div>
       </div>
-    ))}
+      );
+    })}
   </div>
 </Layout>
 
@@ -204,24 +213,25 @@ const matchAemet = (mun: string) => {
   function setupAcampadaFilter() {
     const sInput = document.getElementById('searchAcampada') as HTMLInputElement | null;
     const tFilter = document.getElementById('titularitatFilter') as HTMLSelectElement | null;
-    const mFilter = document.getElementById('municipiAcampadaFilter') as HTMLSelectElement | null;
+    const gFilter = document.getElementById('gestioTypeFilter') as HTMLSelectElement | null;
 
     function run() {
       const q = (sInput?.value || '').toLowerCase().trim();
       const t = (tFilter?.value || '').toLowerCase();
-      const m = (mFilter?.value || '').toLowerCase();
+      const g = (gFilter?.value || '').toLowerCase();
 
       const cards = document.querySelectorAll<HTMLElement>('.acampada-card');
       cards.forEach((card) => {
         const nom = card.dataset.nom || '';
         const municipi = card.dataset.municipi || '';
         const titularitat = card.dataset.titularitat || '';
+        const regim = card.dataset.regim || '';
 
         const mQ = !q || nom.includes(q) || municipi.includes(q);
         const mT = !t || titularitat.includes(t);
-        const mM = !m || municipi.includes(m);
+        const mG = !g || regim === g;
 
-        if (mQ && mT && mM) {
+        if (mQ && mT && mG) {
           card.style.display = '';
         } else {
           card.style.display = 'none';
@@ -229,7 +239,7 @@ const matchAemet = (mun: string) => {
       });
     }
 
-    [sInput, tFilter, mFilter].forEach((el) => {
+    [sInput, tFilter, gFilter].forEach((el) => {
       if (el) {
         el.addEventListener('input', run);
         el.addEventListener('change', run);

@@ -98,6 +98,19 @@ const getDifficultyColor = (diff: string) => {
 };
 
 const hasWater = route.punts_aigua && route.punts_aigua.length > 0;
+
+// Land ownership distinction (Public Estate / Protected Natural Park vs Private Estate passage)
+const combinedText = `${route.nom} ${route.descripcio || ''} ${(route.passos_finca_privada || []).join(' ')}`.toLowerCase();
+const isPublicEstate = [
+  'finca pública', 'finca publica', 'parc natural', 'paratge natural',
+  'comuna de', 'bosc de la comuna', 'raixa', 'planícia', 'planicia',
+  'galatzó', 'galatzo', 'son real', "s'albufera", 'albufera', 'mondragó', 'mondrago', 'dragonera'
+].some((k) => combinedText.includes(k));
+
+const hasPrivateGate = (route.passos_finca_privada || []).some((p) => {
+  const pl = p.toLowerCase();
+  return pl.includes('privad') || pl.includes('permís') || pl.includes('permis') || pl.includes('tancat') || pl.includes('barrera');
+});
 ---
 
 <a
@@ -112,6 +125,7 @@ const hasWater = route.punts_aigua && route.punts_aigua.length > 0;
   data-wikiloc={route.wikiloc_url ? 'true' : 'false'}
   data-turismepetit={route.turismepetit_url ? 'true' : 'false'}
   data-aigua={hasWater ? 'true' : 'false'}
+  data-titularitat={isPublicEstate ? 'publica' : hasPrivateGate ? 'privada' : 'mixta'}
 >
   <!-- Photo Header with Gradient & Badges Overlay -->
   <div
@@ -137,11 +151,22 @@ const hasWater = route.punts_aigua && route.punts_aigua.length > 0;
 
     <!-- Top Floating Badges -->
     <div class="absolute top-3 left-3 right-3 flex items-center justify-between gap-2 pointer-events-none z-10">
-      <span class={`px-3 py-1 rounded-full text-[11px] font-bold shadow-md tracking-wide uppercase ${getDifficultyColor(route.dificultat)}`}>
-        {route.dificultat}
-      </span>
+      <div class="flex items-center gap-1.5 flex-wrap">
+        <span class={`px-2.5 py-0.5 rounded-full text-[11px] font-bold shadow-md tracking-wide uppercase ${getDifficultyColor(route.dificultat)}`}>
+          {route.dificultat}
+        </span>
+        {isPublicEstate ? (
+          <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-emerald-700/90 text-white shadow-sm flex items-center gap-1">
+            🏛️ Finca Pública / Parc
+          </span>
+        ) : hasPrivateGate ? (
+          <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-amber-600/90 text-white shadow-sm flex items-center gap-1">
+            🚪 Pas Privat / Barreres
+          </span>
+        ) : null}
+      </div>
 
-      <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-black/60 backdrop-blur-md text-white/95 border border-white/20 shadow-sm flex items-center gap-1">
+      <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-black/60 backdrop-blur-md text-white/95 border border-white/20 shadow-sm flex items-center gap-1 shrink-0">
         <span>{photo.icon}</span>
         <span>{photo.label}</span>
       </span>

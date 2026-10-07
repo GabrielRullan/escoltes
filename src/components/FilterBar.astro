@@ -106,6 +106,17 @@ const { zones = [], totalRoutes = 0 } = Astro.props;
 
       <button
         type="button"
+        id="togglePublic"
+        class="filter-pill px-3 py-1.5 rounded-lg border border-stone-300 bg-stone-50 hover:bg-stone-100 text-stone-700 font-medium transition flex items-center gap-1.5"
+        data-active="false"
+        title="Rutes íntegrament en finques públiques (IBANAT, Consell de Mallorca, Parcs Naturals)"
+      >
+        <span>🏛️</span>
+        <span>Finques Públiques / Parcs</span>
+      </button>
+
+      <button
+        type="button"
         id="toggleGps"
         class="filter-pill px-3 py-1.5 rounded-lg border border-stone-300 bg-stone-50 hover:bg-stone-100 text-stone-700 font-medium transition flex items-center gap-1.5"
         data-active="false"
@@ -142,12 +153,14 @@ const { zones = [], totalRoutes = 0 } = Astro.props;
     const difficultyFilter = document.getElementById('difficultyFilter') as HTMLSelectElement | null;
     const zoneFilter = document.getElementById('zoneFilter') as HTMLSelectElement | null;
     const toggleWater = document.getElementById('toggleWater') as HTMLButtonElement | null;
+    const togglePublic = document.getElementById('togglePublic') as HTMLButtonElement | null;
     const toggleGps = document.getElementById('toggleGps') as HTMLButtonElement | null;
     const toggleFamily = document.getElementById('toggleFamily') as HTMLButtonElement | null;
     const resetBtn = document.getElementById('resetFilters') as HTMLButtonElement | null;
     const visibleCountEl = document.getElementById('visibleCount');
 
     let filterWater = false;
+    let filterPublic = false;
     let filterGps = false;
     let filterFamily = false;
 
@@ -168,6 +181,14 @@ const { zones = [], totalRoutes = 0 } = Astro.props;
       toggleWater.addEventListener('click', () => {
         filterWater = !filterWater;
         togglePill(toggleWater, filterWater);
+        applyFilters();
+      });
+    }
+
+    if (togglePublic) {
+      togglePublic.addEventListener('click', () => {
+        filterPublic = !filterPublic;
+        togglePill(togglePublic, filterPublic);
         applyFilters();
       });
     }
@@ -195,9 +216,11 @@ const { zones = [], totalRoutes = 0 } = Astro.props;
         if (difficultyFilter) difficultyFilter.value = '';
         if (zoneFilter) zoneFilter.value = '';
         filterWater = false;
+        filterPublic = false;
         filterGps = false;
         filterFamily = false;
         togglePill(toggleWater, false);
+        togglePill(togglePublic, false);
         togglePill(toggleGps, false);
         togglePill(toggleFamily, false);
         applyFilters();
@@ -222,6 +245,7 @@ const { zones = [], totalRoutes = 0 } = Astro.props;
         const hasWikiloc = card.dataset.wikiloc === 'true';
         const hasTurisme = card.dataset.turismepetit === 'true';
         const hasAigua = card.dataset.aigua === 'true';
+        const titularitat = card.dataset.titularitat || '';
 
         // 1. Text search
         const matchText = !q || nom.includes(q) || municipi.includes(q) || zona.includes(q);
@@ -247,10 +271,11 @@ const { zones = [], totalRoutes = 0 } = Astro.props;
 
         // 5. Toggles
         const matchWater = !filterWater || hasAigua;
+        const matchPublic = !filterPublic || titularitat === 'publica';
         const matchGps = !filterGps || hasWikiloc;
         const matchFamily = !filterFamily || hasTurisme;
 
-        if (matchText && matchUnit && matchDiff && matchZone && matchWater && matchGps && matchFamily) {
+        if (matchText && matchUnit && matchDiff && matchZone && matchWater && matchPublic && matchGps && matchFamily) {
           card.style.display = '';
           visible++;
         } else {
