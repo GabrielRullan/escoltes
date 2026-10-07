@@ -1,0 +1,334 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import AlertBanner from '../../components/AlertBanner.astro';
+import municipisData from '../../../data/municipis_amb_recursos.json';
+import aemetBalears from '../../../data/aemet_municipis_balears.json';
+
+const totalMallorca = municipisData.length;
+const totalAmbRecursos = municipisData.filter((m) => m.total_recursos > 0).length;
+const totalRutes = municipisData.reduce((acc, m) => acc + m.rutes.length, 0);
+const totalAcampades = municipisData.reduce((acc, m) => acc + m.acampades.length, 0);
+
+const menorca = aemetBalears.filter((m) => m.illa === 'Menorca');
+const pitiuses = aemetBalears.filter((m) => m.illa === 'Eivissa / Formentera');
+---
+
+<Layout
+  title="Previsió Meteorològica AEMET per Municipi - Escoltes de Mallorca"
+  description="Consulta la previsió meteorològica oficial de l'AEMET a tots els municipis de Mallorca i les Illes Balears enllaçada directament amb les rutes escoltes i zones d'acampada."
+>
+  <!-- Page Header -->
+  <div class="mb-8">
+    <div class="flex items-center gap-2 text-xs text-stone-500 mb-2">
+      <a href="/" class="hover:underline">Inici</a>
+      <span>›</span>
+      <span class="text-stone-800 font-semibold">Previsió Meteorològica</span>
+    </div>
+
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div>
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-stone-900 mb-2">
+          🌤️ Previsió Meteorològica AEMET per Municipi
+        </h1>
+        <p class="text-sm sm:text-base text-stone-600 max-w-3xl leading-relaxed">
+          Consulta oficial de l'Agència Estatal de Meteorologia (AEMET) connectada amb les rutes escoltes i zones d'acampada/refugis de cada municipi per planificar sortides segures a Mallorca.
+        </p>
+      </div>
+
+      <a
+        href="https://www.aemet.es/ca/eltiempo/prediccion/avisos?w=mye&k=bal"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="shrink-0 inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs sm:text-sm shadow-xs transition"
+      >
+        <span>⚠️ Mapa d'Avisos AEMET Balears</span>
+        <span>↗</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Metric Strip -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-8">
+    <div class="bg-white p-4 rounded-2xl border border-stone-200 shadow-xs">
+      <span class="block text-[11px] font-bold text-stone-500 uppercase tracking-wider">Municipis Mallorca</span>
+      <span class="text-2xl font-black text-stone-900">{totalMallorca}</span>
+    </div>
+    <div class="bg-white p-4 rounded-2xl border border-stone-200 shadow-xs">
+      <span class="block text-[11px] font-bold text-stone-500 uppercase tracking-wider">Amb activitat escolta</span>
+      <span class="text-2xl font-black text-[#1b4332]">{totalAmbRecursos}</span>
+    </div>
+    <div class="bg-white p-4 rounded-2xl border border-stone-200 shadow-xs">
+      <span class="block text-[11px] font-bold text-stone-500 uppercase tracking-wider">Rutes enllaçades</span>
+      <span class="text-2xl font-black text-stone-900">{totalRutes}</span>
+    </div>
+    <div class="bg-white p-4 rounded-2xl border border-stone-200 shadow-xs">
+      <span class="block text-[11px] font-bold text-stone-500 uppercase tracking-wider">Refugis & Acampada</span>
+      <span class="text-2xl font-black text-stone-900">{totalAcampades}</span>
+    </div>
+  </div>
+
+  <AlertBanner />
+
+  <!-- Search & Filter Controls -->
+  <div class="bg-white rounded-2xl border border-stone-200 p-5 sm:p-6 shadow-xs mb-8">
+    <div class="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center justify-between">
+      <div class="flex-1 relative">
+        <label for="searchMunicipi" class="block text-[11px] font-bold text-stone-600 uppercase tracking-wider mb-1">
+          Cerca per municipi
+        </label>
+        <input
+          type="search"
+          id="searchMunicipi"
+          placeholder="Ex: Escorca, Sóller, Artà, Palma, Bunyola..."
+          class="w-full text-xs sm:text-sm px-4 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] focus:border-transparent outline-hidden"
+        />
+      </div>
+
+      <div class="sm:w-64">
+        <label for="filterRecursos" class="block text-[11px] font-bold text-stone-600 uppercase tracking-wider mb-1">
+          Filtra per disponibilitat
+        </label>
+        <select
+          id="filterRecursos"
+          class="w-full text-xs sm:text-sm px-3 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] outline-hidden"
+        >
+          <option value="all">Tots els municipis (53)</option>
+          <option value="with_resources" selected>Només amb rutes o acampada ({totalAmbRecursos})</option>
+          <option value="with_routes">Només amb rutes</option>
+          <option value="with_campsites">Només amb refugis/acampada</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mallorca Municipalities List / Cards -->
+  <div class="space-y-4 mb-12" id="municipisContainer">
+    {municipisData.map((m) => (
+      <div
+        class="municipi-card bg-white rounded-2xl border border-stone-200 hover:border-[#1b4332]/40 p-5 sm:p-6 shadow-xs transition-all"
+        data-nom={m.municipi_cat.toLowerCase()}
+        data-recursos={m.total_recursos}
+        data-rutes={m.rutes.length}
+        data-acampades={m.acampades.length}
+      >
+        <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+          
+          <!-- Municipality Info & Badge -->
+          <div class="min-w-0 flex-1">
+            <div class="flex items-center gap-3 mb-2 flex-wrap">
+              <h2 class="text-xl sm:text-2xl font-black text-stone-900 tracking-tight">
+                {m.municipi_cat}
+              </h2>
+              <span class="text-xs px-2.5 py-0.5 rounded-full font-bold bg-stone-100 text-stone-600 border border-stone-200">
+                INE {m.codi_ine}
+              </span>
+              {m.total_recursos > 0 ? (
+                <span class="text-xs px-2.5 py-0.5 rounded-full font-bold bg-[#1b4332]/10 text-[#1b4332] border border-[#1b4332]/20">
+                  {m.rutes.length} rutes · {m.acampades.length} espais d'acampada
+                </span>
+              ) : (
+                <span class="text-xs px-2.5 py-0.5 rounded-full font-medium bg-stone-50 text-stone-400 border border-stone-200">
+                  Sense rutes catalogades
+                </span>
+              )}
+            </div>
+
+            <!-- Linked Resources Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4 pt-4 border-t border-stone-100">
+              
+              <!-- Linked Routes -->
+              <div>
+                <span class="block text-xs font-bold uppercase tracking-wider text-stone-500 mb-2 flex items-center gap-1.5">
+                  <span>🥾 Rutes escoltes</span>
+                  <span class="text-[11px] font-bold text-stone-700 bg-stone-100 px-1.5 py-0.2 rounded">
+                    {m.rutes.length}
+                  </span>
+                </span>
+                {m.rutes.length > 0 ? (
+                  <ul class="space-y-1.5">
+                    {m.rutes.map((r) => (
+                      <li class="text-xs flex items-center justify-between gap-2 p-1.5 rounded-lg hover:bg-stone-50">
+                        <a
+                          href={`/rutes/${r.slug}`}
+                          class="font-semibold text-stone-900 hover:text-[#1b4332] hover:underline truncate"
+                        >
+                          {r.nom}
+                        </a>
+                        <span class="shrink-0 text-[11px] text-stone-500 font-medium">
+                          {r.distancia_km} km · {r.dificultat}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p class="text-xs text-stone-400 italic">Cap ruta registrada en aquest terme municipal.</p>
+                )}
+              </div>
+
+              <!-- Linked Campsites -->
+              <div>
+                <span class="block text-xs font-bold uppercase tracking-wider text-stone-500 mb-2 flex items-center gap-1.5">
+                  <span>🏕️ Refugis & Acampada</span>
+                  <span class="text-[11px] font-bold text-stone-700 bg-stone-100 px-1.5 py-0.2 rounded">
+                    {m.acampades.length}
+                  </span>
+                </span>
+                {m.acampades.length > 0 ? (
+                  <ul class="space-y-1.5">
+                    {m.acampades.map((a) => (
+                      <li class="text-xs flex items-center justify-between gap-2 p-1.5 rounded-lg hover:bg-stone-50">
+                        <span class="font-semibold text-stone-900 truncate">
+                          {a.nom}
+                        </span>
+                        <div class="shrink-0 flex items-center gap-1.5">
+                          <span class="text-[11px] font-medium text-stone-500 bg-stone-100 px-1.5 py-0.5 rounded">
+                            {a.titularitat}
+                          </span>
+                          {a.web && (
+                            <a
+                              href={a.web}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="text-[#1b4332] font-bold hover:underline"
+                              title="Web / Reserva oficial"
+                            >
+                              ↗
+                            </a>
+                          )}
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p class="text-xs text-stone-400 italic">Cap refugi o zona d'acampada catalogada.</p>
+                )}
+              </div>
+
+            </div>
+          </div>
+
+          <!-- AEMET Call to Action Button -->
+          <div class="shrink-0 flex flex-col sm:items-end justify-start gap-2 pt-2 md:pt-0">
+            <a
+              href={m.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-white font-bold text-xs sm:text-sm shadow-xs hover:shadow-md transition-all whitespace-nowrap"
+              title={`Visualitza la previsió oficial de l'AEMET a ${m.municipi_cat}`}
+            >
+              <span>🌤️ Visualitza a l'AEMET</span>
+              <span class="text-xs">↗</span>
+            </a>
+            <span class="text-[11px] text-stone-400 text-center sm:text-right">
+              Previsió oficial 7 dies
+            </span>
+          </div>
+
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Other Balearic Islands (Menorca & Pitiüses) Accordion / Reference -->
+  <div class="bg-stone-50 rounded-3xl border border-stone-200 p-6 sm:p-8 mb-12">
+    <h3 class="text-lg font-bold text-stone-900 mb-2 flex items-center gap-2">
+      <span>🌊 Altres Illes Balears (Menorca, Eivissa i Formentera)</span>
+    </h3>
+    <p class="text-xs sm:text-sm text-stone-600 mb-6">
+      Previsions de l'AEMET per a sortides interilles i campaments d'estiu a les Pitiüses i Menorca:
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      
+      <!-- Menorca -->
+      <div class="bg-white p-5 rounded-2xl border border-stone-200">
+        <h4 class="text-sm font-bold text-stone-800 mb-3 flex items-center justify-between">
+          <span>Menorca (8 municipis)</span>
+          <span class="text-xs text-stone-500">AEMET directa</span>
+        </h4>
+        <div class="flex flex-wrap gap-2">
+          {menorca.map((m) => (
+            <a
+              href={m.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1 text-xs px-2.5 py-1.5 rounded-lg bg-stone-50 hover:bg-amber-50 hover:text-amber-900 border border-stone-200 transition font-medium text-stone-700"
+            >
+              <span>🌤️ {m.municipi}</span>
+              <span class="text-[10px] text-stone-400">↗</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- Pitiüses -->
+      <div class="bg-white p-5 rounded-2xl border border-stone-200">
+        <h4 class="text-sm font-bold text-stone-800 mb-3 flex items-center justify-between">
+          <span>Eivissa i Formentera (6 municipis)</span>
+          <span class="text-xs text-stone-500">AEMET directa</span>
+        </h4>
+        <div class="flex flex-wrap gap-2">
+          {pitiuses.map((m) => (
+            <a
+              href={m.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1 text-xs px-2.5 py-1.5 rounded-lg bg-stone-50 hover:bg-amber-50 hover:text-amber-900 border border-stone-200 transition font-medium text-stone-700"
+            >
+              <span>🌤️ {m.municipi}</span>
+              <span class="text-[10px] text-stone-400">↗</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</Layout>
+
+<script>
+  function setupFilters() {
+    const searchInput = document.getElementById('searchMunicipi') as HTMLInputElement | null;
+    const filterSelect = document.getElementById('filterRecursos') as HTMLSelectElement | null;
+    const cards = document.querySelectorAll<HTMLElement>('.municipi-card');
+
+    function applyFilter() {
+      const q = (searchInput?.value || '').toLowerCase().trim();
+      const filterMode = filterSelect?.value || 'with_resources';
+
+      cards.forEach((card) => {
+        const nom = card.dataset.nom || '';
+        const recursos = parseInt(card.dataset.recursos || '0', 10);
+        const rutes = parseInt(card.dataset.rutes || '0', 10);
+        const acampades = parseInt(card.dataset.acampades || '0', 10);
+
+        let matchesSearch = nom.includes(q);
+        let matchesFilter = true;
+
+        if (filterMode === 'with_resources') {
+          matchesFilter = recursos > 0;
+        } else if (filterMode === 'with_routes') {
+          matchesFilter = rutes > 0;
+        } else if (filterMode === 'with_campsites') {
+          matchesFilter = acampades > 0;
+        }
+
+        if (matchesSearch && matchesFilter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    searchInput?.addEventListener('input', applyFilter);
+    filterSelect?.addEventListener('change', applyFilter);
+
+    // Initial filter run to show municipalities with resources by default
+    applyFilter();
+  }
+
+  setupFilters();
+  document.addEventListener('astro:page-load', setupFilters);
+</script>

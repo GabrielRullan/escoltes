@@ -1,0 +1,294 @@
+---
+interface Props {
+  zones: string[];
+  totalRoutes: number;
+}
+
+const { zones = [], totalRoutes = 0 } = Astro.props;
+---
+
+<div class="bg-white rounded-2xl border border-stone-200 p-5 sm:p-6 shadow-xs mb-8" id="cercador-rutes">
+  <div class="flex items-center justify-between flex-wrap gap-2 mb-4">
+    <h2 class="text-base sm:text-lg font-bold text-stone-900 flex items-center gap-2">
+      <span>🔍 Cercador i filtres d'excursions</span>
+    </h2>
+    <div class="flex items-center gap-3 ml-auto">
+      <span class="text-xs font-semibold text-stone-500" id="routeCountBadge">
+        Mostrant <strong class="text-[#1b4332]" id="visibleCount">{totalRoutes}</strong> de {totalRoutes} rutes
+      </span>
+      <div class="hidden sm:inline-flex items-center bg-stone-100 rounded-lg p-0.5 border border-stone-200">
+        <button type="button" id="btnViewGrid" class="px-2.5 py-1 rounded text-xs font-bold bg-white text-stone-900 shadow-xs" title="Vista en targetes">🖼️ Targetes</button>
+        <button type="button" id="btnViewList" class="px-2.5 py-1 rounded text-xs font-medium text-stone-500 hover:text-stone-900" title="Vista en llista">📄 Llista</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="space-y-4">
+    <!-- Search text input -->
+    <div class="relative">
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Cerca per nom de ruta, municipi, poble o punt d'interès (ex: Orient, Lluc, Galatzó)..."
+        class="w-full pl-11 pr-4 py-3 rounded-xl border border-stone-300 bg-stone-50/50 text-sm focus:bg-white focus:ring-2 focus:ring-[#1b4332] focus:border-[#1b4332] outline-hidden transition"
+      />
+      <div class="absolute left-3.5 top-3.5 text-stone-400 text-base">
+        🔍
+      </div>
+    </div>
+
+    <!-- Filters Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <!-- Unit filter -->
+      <div>
+        <label for="unitFilter" class="block text-[11px] font-bold text-stone-600 uppercase tracking-wider mb-1">
+          Unitat Escolta
+        </label>
+        <select
+          id="unitFilter"
+          class="w-full text-xs sm:text-sm px-3 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] outline-hidden"
+        >
+          <option value="">⚜️ Totes les unitats</option>
+          <option value="ferreret">Ferrerets (6-8 anys)</option>
+          <option value="llop">Llops i Daines (8-11 anys)</option>
+          <option value="pioner">Pioners / Ràngers (11-14 anys)</option>
+          <option value="rover">Rovers / Rutes (14-19 anys)</option>
+        </select>
+      </div>
+
+      <!-- Difficulty filter -->
+      <div>
+        <label for="difficultyFilter" class="block text-[11px] font-bold text-stone-600 uppercase tracking-wider mb-1">
+          Dificultat tècnica
+        </label>
+        <select
+          id="difficultyFilter"
+          class="w-full text-xs sm:text-sm px-3 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] outline-hidden"
+        >
+          <option value="">🟢 Totes les dificultats</option>
+          <option value="molt fàcil">Molt Fàcil</option>
+          <option value="fàcil">Fàcil</option>
+          <option value="moderada">Moderada</option>
+          <option value="difícil">Difícil</option>
+        </select>
+      </div>
+
+      <!-- Zone filter -->
+      <div>
+        <label for="zoneFilter" class="block text-[11px] font-bold text-stone-600 uppercase tracking-wider mb-1">
+          Zona o Comarca
+        </label>
+        <select
+          id="zoneFilter"
+          class="w-full text-xs sm:text-sm px-3 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] outline-hidden"
+        >
+          <option value="">⛰️ Totes les comarques</option>
+          {zones.map((z) => (
+            <option value={z.toLowerCase()}>{z}</option>
+          ))}
+        </select>
+      </div>
+    </div>
+
+    <!-- Quick Toggle Pills -->
+    <div class="flex flex-wrap items-center gap-2 pt-1 text-xs">
+      <span class="text-stone-500 font-semibold mr-1">Filtres ràpids:</span>
+      
+      <button
+        type="button"
+        id="toggleWater"
+        class="filter-pill px-3 py-1.5 rounded-lg border border-stone-300 bg-stone-50 hover:bg-stone-100 text-stone-700 font-medium transition flex items-center gap-1.5"
+        data-active="false"
+      >
+        <span>💧</span>
+        <span>Amb aigua potable</span>
+      </button>
+
+      <button
+        type="button"
+        id="toggleGps"
+        class="filter-pill px-3 py-1.5 rounded-lg border border-stone-300 bg-stone-50 hover:bg-stone-100 text-stone-700 font-medium transition flex items-center gap-1.5"
+        data-active="false"
+      >
+        <span>🗺️</span>
+        <span>Track Wikiloc</span>
+      </button>
+
+      <button
+        type="button"
+        id="toggleFamily"
+        class="filter-pill px-3 py-1.5 rounded-lg border border-stone-300 bg-stone-50 hover:bg-stone-100 text-stone-700 font-medium transition flex items-center gap-1.5"
+        data-active="false"
+      >
+        <span>👨‍👩‍👧‍👦</span>
+        <span>Turisme Petit</span>
+      </button>
+
+      <button
+        type="button"
+        id="resetFilters"
+        class="ml-auto text-xs text-stone-500 hover:text-red-600 underline font-medium transition"
+      >
+        Netejar filtres
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function setupFilters() {
+    const searchInput = document.getElementById('searchInput') as HTMLInputElement | null;
+    const unitFilter = document.getElementById('unitFilter') as HTMLSelectElement | null;
+    const difficultyFilter = document.getElementById('difficultyFilter') as HTMLSelectElement | null;
+    const zoneFilter = document.getElementById('zoneFilter') as HTMLSelectElement | null;
+    const toggleWater = document.getElementById('toggleWater') as HTMLButtonElement | null;
+    const toggleGps = document.getElementById('toggleGps') as HTMLButtonElement | null;
+    const toggleFamily = document.getElementById('toggleFamily') as HTMLButtonElement | null;
+    const resetBtn = document.getElementById('resetFilters') as HTMLButtonElement | null;
+    const visibleCountEl = document.getElementById('visibleCount');
+
+    let filterWater = false;
+    let filterGps = false;
+    let filterFamily = false;
+
+    function togglePill(btn: HTMLButtonElement | null, state: boolean) {
+      if (!btn) return;
+      if (state) {
+        btn.classList.remove('bg-stone-50', 'text-stone-700', 'border-stone-300');
+        btn.classList.add('bg-[#1b4332]', 'text-white', 'border-[#1b4332]');
+        btn.setAttribute('data-active', 'true');
+      } else {
+        btn.classList.remove('bg-[#1b4332]', 'text-white', 'border-[#1b4332]');
+        btn.classList.add('bg-stone-50', 'text-stone-700', 'border-stone-300');
+        btn.setAttribute('data-active', 'false');
+      }
+    }
+
+    if (toggleWater) {
+      toggleWater.addEventListener('click', () => {
+        filterWater = !filterWater;
+        togglePill(toggleWater, filterWater);
+        applyFilters();
+      });
+    }
+
+    if (toggleGps) {
+      toggleGps.addEventListener('click', () => {
+        filterGps = !filterGps;
+        togglePill(toggleGps, filterGps);
+        applyFilters();
+      });
+    }
+
+    if (toggleFamily) {
+      toggleFamily.addEventListener('click', () => {
+        filterFamily = !filterFamily;
+        togglePill(toggleFamily, filterFamily);
+        applyFilters();
+      });
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        if (searchInput) searchInput.value = '';
+        if (unitFilter) unitFilter.value = '';
+        if (difficultyFilter) difficultyFilter.value = '';
+        if (zoneFilter) zoneFilter.value = '';
+        filterWater = false;
+        filterGps = false;
+        filterFamily = false;
+        togglePill(toggleWater, false);
+        togglePill(toggleGps, false);
+        togglePill(toggleFamily, false);
+        applyFilters();
+      });
+    }
+
+    function applyFilters() {
+      const q = (searchInput?.value || '').toLowerCase().trim();
+      const u = (unitFilter?.value || '').toLowerCase();
+      const d = (difficultyFilter?.value || '').toLowerCase();
+      const z = (zoneFilter?.value || '').toLowerCase();
+
+      const cards = document.querySelectorAll<HTMLElement>('.route-card');
+      let visible = 0;
+
+      cards.forEach((card) => {
+        const nom = card.dataset.nom || '';
+        const municipi = card.dataset.municipi || '';
+        const zona = card.dataset.zona || '';
+        const dificultat = card.dataset.dificultat || '';
+        const unitatsRaw = card.dataset.unitats || '[]';
+        const hasWikiloc = card.dataset.wikiloc === 'true';
+        const hasTurisme = card.dataset.turismepetit === 'true';
+        const hasAigua = card.dataset.aigua === 'true';
+
+        // 1. Text search
+        const matchText = !q || nom.includes(q) || municipi.includes(q) || zona.includes(q);
+
+        // 2. Unit search
+        let matchUnit = true;
+        if (u) {
+          const uNorm = unitatsRaw.toLowerCase();
+          matchUnit = uNorm.includes(u);
+        }
+
+        // 3. Difficulty
+        let matchDiff = true;
+        if (d) {
+          matchDiff = dificultat.includes(d);
+        }
+
+        // 4. Zone
+        let matchZone = true;
+        if (z) {
+          matchZone = zona.includes(z);
+        }
+
+        // 5. Toggles
+        const matchWater = !filterWater || hasAigua;
+        const matchGps = !filterGps || hasWikiloc;
+        const matchFamily = !filterFamily || hasTurisme;
+
+        if (matchText && matchUnit && matchDiff && matchZone && matchWater && matchGps && matchFamily) {
+          card.style.display = '';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (visibleCountEl) {
+        visibleCountEl.textContent = String(visible);
+      }
+    }
+
+    [searchInput, unitFilter, difficultyFilter, zoneFilter].forEach((el) => {
+      if (el) {
+        el.addEventListener('input', applyFilters);
+        el.addEventListener('change', applyFilters);
+      }
+    });
+
+    const btnGrid = document.getElementById('btnViewGrid');
+    const btnList = document.getElementById('btnViewList');
+    const routesGrid = document.getElementById('routesGrid');
+
+    if (btnGrid && btnList && routesGrid) {
+      btnGrid.addEventListener('click', () => {
+        routesGrid.classList.remove('list-view-active');
+        btnGrid.className = 'px-2.5 py-1 rounded text-xs font-bold bg-white text-stone-900 shadow-xs';
+        btnList.className = 'px-2.5 py-1 rounded text-xs font-medium text-stone-500 hover:text-stone-900';
+      });
+
+      btnList.addEventListener('click', () => {
+        routesGrid.classList.add('list-view-active');
+        btnList.className = 'px-2.5 py-1 rounded text-xs font-bold bg-white text-stone-900 shadow-xs';
+        btnGrid.className = 'px-2.5 py-1 rounded text-xs font-medium text-stone-500 hover:text-stone-900';
+      });
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', setupFilters);
+  setupFilters();
+</script>

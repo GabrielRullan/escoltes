@@ -1,0 +1,605 @@
+[
+  {
+    "municipi": "Alaró",
+    "nom_oficial_aemet": "Alaró",
+    "codi_ine": "07001",
+    "slug": "alaro-id07001",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/alaro-id07001",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07001.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Alcúdia",
+    "nom_oficial_aemet": "Alcúdia",
+    "codi_ine": "07003",
+    "slug": "alcudia-id07003",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/alcudia-id07003",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07003.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Algaida",
+    "nom_oficial_aemet": "Algaida",
+    "codi_ine": "07004",
+    "slug": "algaida-id07004",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/algaida-id07004",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07004.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Andratx",
+    "nom_oficial_aemet": "Andratx",
+    "codi_ine": "07005",
+    "slug": "andratx-id07005",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/andratx-id07005",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07005.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Ariany",
+    "nom_oficial_aemet": "Ariany",
+    "codi_ine": "07901",
+    "slug": "ariany-id07901",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/ariany-id07901",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07901.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Artà",
+    "nom_oficial_aemet": "Artà",
+    "codi_ine": "07006",
+    "slug": "arta-id07006",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/arta-id07006",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07006.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Banyalbufar",
+    "nom_oficial_aemet": "Banyalbufar",
+    "codi_ine": "07007",
+    "slug": "banyalbufar-id07007",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/banyalbufar-id07007",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07007.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Binissalem",
+    "nom_oficial_aemet": "Binissalem",
+    "codi_ine": "07008",
+    "slug": "binissalem-id07008",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/binissalem-id07008",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07008.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Bunyola",
+    "nom_oficial_aemet": "Bunyola",
+    "codi_ine": "07010",
+    "slug": "bunyola-id07010",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/bunyola-id07010",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07010.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Búger",
+    "nom_oficial_aemet": "Búger",
+    "codi_ine": "07009",
+    "slug": "buger-id07009",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/buger-id07009",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07009.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Calvià",
+    "nom_oficial_aemet": "Calvià",
+    "codi_ine": "07011",
+    "slug": "calvia-id07011",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/calvia-id07011",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07011.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Campanet",
+    "nom_oficial_aemet": "Campanet",
+    "codi_ine": "07012",
+    "slug": "campanet-id07012",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/campanet-id07012",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07012.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Campos",
+    "nom_oficial_aemet": "Campos",
+    "codi_ine": "07013",
+    "slug": "campos-id07013",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/campos-id07013",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07013.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Capdepera",
+    "nom_oficial_aemet": "Capdepera",
+    "codi_ine": "07014",
+    "slug": "capdepera-id07014",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/capdepera-id07014",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07014.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Consell",
+    "nom_oficial_aemet": "Consell",
+    "codi_ine": "07016",
+    "slug": "consell-id07016",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/consell-id07016",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07016.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Costitx",
+    "nom_oficial_aemet": "Costitx",
+    "codi_ine": "07017",
+    "slug": "costitx-id07017",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/costitx-id07017",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07017.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Deià",
+    "nom_oficial_aemet": "Deià",
+    "codi_ine": "07018",
+    "slug": "deia-id07018",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/deia-id07018",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07018.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Escorca",
+    "nom_oficial_aemet": "Escorca",
+    "codi_ine": "07019",
+    "slug": "escorca-lluc-id07019",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/escorca-lluc-id07019",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07019.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Esporles",
+    "nom_oficial_aemet": "Esporles",
+    "codi_ine": "07020",
+    "slug": "esporles-id07020",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/esporles-id07020",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07020.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Estellencs",
+    "nom_oficial_aemet": "Estellencs",
+    "codi_ine": "07021",
+    "slug": "estellencs-id07021",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/estellencs-id07021",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07021.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Felanitx",
+    "nom_oficial_aemet": "Felanitx",
+    "codi_ine": "07022",
+    "slug": "felanitx-id07022",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/felanitx-id07022",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07022.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Fornalutx",
+    "nom_oficial_aemet": "Fornalutx",
+    "codi_ine": "07025",
+    "slug": "fornalutx-id07025",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/fornalutx-id07025",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07025.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Inca",
+    "nom_oficial_aemet": "Inca",
+    "codi_ine": "07027",
+    "slug": "inca-id07027",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/inca-id07027",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07027.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Lloret de Vistalegre",
+    "nom_oficial_aemet": "Lloret de Vistalegre",
+    "codi_ine": "07028",
+    "slug": "lloret-de-vistalegre-id07028",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/lloret-de-vistalegre-id07028",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07028.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Lloseta",
+    "nom_oficial_aemet": "Lloseta",
+    "codi_ine": "07029",
+    "slug": "lloseta-id07029",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/lloseta-id07029",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07029.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Llubí",
+    "nom_oficial_aemet": "Llubí",
+    "codi_ine": "07030",
+    "slug": "llubi-id07030",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/llubi-id07030",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07030.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Llucmajor",
+    "nom_oficial_aemet": "Llucmajor",
+    "codi_ine": "07031",
+    "slug": "llucmajor-id07031",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/llucmajor-id07031",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07031.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Manacor",
+    "nom_oficial_aemet": "Manacor",
+    "codi_ine": "07033",
+    "slug": "manacor-id07033",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/manacor-id07033",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07033.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Mancor de la Vall",
+    "nom_oficial_aemet": "Mancor de la Vall",
+    "codi_ine": "07034",
+    "slug": "mancor-de-la-vall-id07034",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/mancor-de-la-vall-id07034",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07034.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Maria de la Salut",
+    "nom_oficial_aemet": "Maria de la Salut",
+    "codi_ine": "07035",
+    "slug": "maria-de-la-salut-id07035",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/maria-de-la-salut-id07035",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07035.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Marratxí",
+    "nom_oficial_aemet": "Marratxí",
+    "codi_ine": "07036",
+    "slug": "marratxi-cabaneta-la-id07036",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/marratxi-cabaneta-la-id07036",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07036.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Montuïri",
+    "nom_oficial_aemet": "Montuïri",
+    "codi_ine": "07038",
+    "slug": "montuiri-id07038",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/montuiri-id07038",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07038.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Muro",
+    "nom_oficial_aemet": "Muro",
+    "codi_ine": "07039",
+    "slug": "muro-id07039",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/muro-id07039",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07039.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Palma",
+    "nom_oficial_aemet": "Palma",
+    "codi_ine": "07040",
+    "slug": "palma-id07040",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/palma-id07040",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07040.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Petra",
+    "nom_oficial_aemet": "Petra",
+    "codi_ine": "07041",
+    "slug": "petra-id07041",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/petra-id07041",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07041.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Pollença",
+    "nom_oficial_aemet": "Pollença",
+    "codi_ine": "07042",
+    "slug": "pollenca-id07042",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/pollenca-id07042",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07042.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Porreres",
+    "nom_oficial_aemet": "Porreres",
+    "codi_ine": "07043",
+    "slug": "porreres-id07043",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/porreres-id07043",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07043.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Puigpunyent",
+    "nom_oficial_aemet": "Puigpunyent",
+    "codi_ine": "07045",
+    "slug": "puigpunyent-id07045",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/puigpunyent-id07045",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07045.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Sa Pobla",
+    "nom_oficial_aemet": "Pobla, Sa",
+    "codi_ine": "07044",
+    "slug": "pobla-sa-id07044",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/pobla-sa-id07044",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07044.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Sant Joan",
+    "nom_oficial_aemet": "Sant Joan",
+    "codi_ine": "07049",
+    "slug": "sant-joan-id07049",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/sant-joan-id07049",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07049.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Sant Llorenç des Cardassar",
+    "nom_oficial_aemet": "Sant Llorenç des Cardassar",
+    "codi_ine": "07051",
+    "slug": "sant-llorenc-des-cardassar-id07051",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/sant-llorenc-des-cardassar-id07051",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07051.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Santa Eugènia",
+    "nom_oficial_aemet": "Santa Eugènia",
+    "codi_ine": "07053",
+    "slug": "santa-eugenia-id07053",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/santa-eugenia-id07053",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07053.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Santa Margalida",
+    "nom_oficial_aemet": "Santa Margalida",
+    "codi_ine": "07055",
+    "slug": "santa-margalida-id07055",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/santa-margalida-id07055",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07055.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Santa Maria del Camí",
+    "nom_oficial_aemet": "Santa María del Camí",
+    "codi_ine": "07056",
+    "slug": "santa-maria-del-cami-id07056",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/santa-maria-del-cami-id07056",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07056.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Santanyí",
+    "nom_oficial_aemet": "Santanyí",
+    "codi_ine": "07057",
+    "slug": "santanyi-id07057",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/santanyi-id07057",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07057.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Selva",
+    "nom_oficial_aemet": "Selva",
+    "codi_ine": "07058",
+    "slug": "selva-id07058",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/selva-id07058",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07058.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Sencelles",
+    "nom_oficial_aemet": "Sencelles",
+    "codi_ine": "07047",
+    "slug": "sencelles-id07047",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/sencelles-id07047",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07047.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Ses Salines",
+    "nom_oficial_aemet": "Salines, ses",
+    "codi_ine": "07059",
+    "slug": "salines-ses-id07059",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/salines-ses-id07059",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07059.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Sineu",
+    "nom_oficial_aemet": "Sineu",
+    "codi_ine": "07060",
+    "slug": "sineu-id07060",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/sineu-id07060",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07060.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Son Servera",
+    "nom_oficial_aemet": "Son Servera",
+    "codi_ine": "07062",
+    "slug": "son-servera-id07062",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/son-servera-id07062",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07062.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Sóller",
+    "nom_oficial_aemet": "Sóller",
+    "codi_ine": "07061",
+    "slug": "soller-id07061",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/soller-id07061",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07061.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Valldemossa",
+    "nom_oficial_aemet": "Valldemossa",
+    "codi_ine": "07063",
+    "slug": "valldemossa-id07063",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/valldemossa-id07063",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07063.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Vilafranca de Bonany",
+    "nom_oficial_aemet": "Vilafranca de Bonany",
+    "codi_ine": "07065",
+    "slug": "vilafranca-de-bonany-id07065",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/vilafranca-de-bonany-id07065",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07065.xml",
+    "illa": "Mallorca"
+  },
+  {
+    "municipi": "Eivissa",
+    "nom_oficial_aemet": "Eivissa",
+    "codi_ine": "07026",
+    "slug": "eivissa-id07026",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/eivissa-id07026",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07026.xml",
+    "illa": "Eivissa / Formentera"
+  },
+  {
+    "municipi": "Formentera",
+    "nom_oficial_aemet": "Formentera",
+    "codi_ine": "07024",
+    "slug": "formentera-san-francisco-javier-id07024",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/formentera-san-francisco-javier-id07024",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07024.xml",
+    "illa": "Eivissa / Formentera"
+  },
+  {
+    "municipi": "Sant Antoni de Portmany",
+    "nom_oficial_aemet": "Sant Antoni de Portmany",
+    "codi_ine": "07046",
+    "slug": "sant-antoni-de-portmany-id07046",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/sant-antoni-de-portmany-id07046",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07046.xml",
+    "illa": "Eivissa / Formentera"
+  },
+  {
+    "municipi": "Sant Joan de Labritja",
+    "nom_oficial_aemet": "Sant Joan de Labritja",
+    "codi_ine": "07050",
+    "slug": "sant-joan-de-labritja-id07050",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/sant-joan-de-labritja-id07050",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07050.xml",
+    "illa": "Eivissa / Formentera"
+  },
+  {
+    "municipi": "Sant Josep de sa Talaia",
+    "nom_oficial_aemet": "Sant Josep de sa Talaia",
+    "codi_ine": "07048",
+    "slug": "sant-josep-de-sa-talaia-id07048",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/sant-josep-de-sa-talaia-id07048",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07048.xml",
+    "illa": "Eivissa / Formentera"
+  },
+  {
+    "municipi": "Santa Eulària des Riu",
+    "nom_oficial_aemet": "Santa Eulària des Riu",
+    "codi_ine": "07054",
+    "slug": "santa-eularia-des-riu-id07054",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/santa-eularia-des-riu-id07054",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07054.xml",
+    "illa": "Eivissa / Formentera"
+  },
+  {
+    "municipi": "Alaior",
+    "nom_oficial_aemet": "Alaior",
+    "codi_ine": "07002",
+    "slug": "alaior-id07002",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/alaior-id07002",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07002.xml",
+    "illa": "Menorca"
+  },
+  {
+    "municipi": "Ciutadella de Menorca",
+    "nom_oficial_aemet": "Ciutadella de Menorca",
+    "codi_ine": "07015",
+    "slug": "ciutadella-de-menorca-id07015",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/ciutadella-de-menorca-id07015",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07015.xml",
+    "illa": "Menorca"
+  },
+  {
+    "municipi": "Es Castell",
+    "nom_oficial_aemet": "Castell, es",
+    "codi_ine": "07064",
+    "slug": "castell-es-id07064",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/castell-es-id07064",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07064.xml",
+    "illa": "Menorca"
+  },
+  {
+    "municipi": "Es Mercadal",
+    "nom_oficial_aemet": "Mercadal, Es",
+    "codi_ine": "07037",
+    "slug": "mercadal-es-id07037",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/mercadal-es-id07037",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07037.xml",
+    "illa": "Menorca"
+  },
+  {
+    "municipi": "Es Migjorn Gran",
+    "nom_oficial_aemet": "Migjorn Gran, Es",
+    "codi_ine": "07902",
+    "slug": "migjorn-gran-es-id07902",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/migjorn-gran-es-id07902",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07902.xml",
+    "illa": "Menorca"
+  },
+  {
+    "municipi": "Ferreries",
+    "nom_oficial_aemet": "Ferreries",
+    "codi_ine": "07023",
+    "slug": "ferreries-id07023",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/ferreries-id07023",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07023.xml",
+    "illa": "Menorca"
+  },
+  {
+    "municipi": "Maó",
+    "nom_oficial_aemet": "Maó",
+    "codi_ine": "07032",
+    "slug": "mao-mahon-id07032",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/mao-mahon-id07032",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07032.xml",
+    "illa": "Menorca"
+  },
+  {
+    "municipi": "Sant Lluís",
+    "nom_oficial_aemet": "Sant Lluís",
+    "codi_ine": "07052",
+    "slug": "sant-lluis-id07052",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/sant-lluis-id07052",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07052.xml",
+    "illa": "Menorca"
+  }
+]

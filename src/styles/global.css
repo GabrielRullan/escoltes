@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tramuntana-primary: #1b4332;
+  --color-tramuntana-dark: #081c15;
+  --color-tramuntana-forest: #2d6a4f;
+  --color-tramuntana-emerald: #40916c;
+  --color-tramuntana-light: #52b788;
+  --color-tramuntana-mint: #74c69d;
+  --color-tramuntana-pale: #e8f5e9;
+
+  --color-scout-amber: #d97706;
+  --color-scout-red: #b91c1c;
+  --color-scout-emergency: #dc2626;
+
+  --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #f8fafc;
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Compact list view styling */
+.list-view-active {
+  grid-template-columns: 1fr !important;
+}
+.list-view-active .route-card {
+  flex-direction: row !important;
+}
+.list-view-active .route-card > div:first-child {
+  width: 260px !important;
+  height: auto !important;
+  min-height: 200px !important;
+  flex-shrink: 0 !important;
+}
+@media (max-width: 640px) {
+  .list-view-active .route-card {
+    flex-direction: column !important;
+  }
+  .list-view-active .route-card > div:first-child {
+    width: 100% !important;
+    height: 160px !important;
+    min-height: auto !important;
+  }
+}

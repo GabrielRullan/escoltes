@@ -1,0 +1,248 @@
+---
+interface Route {
+  slug: string;
+  nom: string;
+  municipi: string;
+  zona: string;
+  distancia_km: number;
+  desnivell_positiu_m: number;
+  dificultat: string;
+  durada_estimada: string;
+  apte_unitats: string[];
+  punts_aigua?: string[];
+  passos_finca_privada?: string[];
+  punts_interes?: string[];
+  consells_seguretat?: string;
+  descripcio: string;
+  wikiloc_url?: string;
+  turismepetit_url?: string;
+}
+
+interface Props {
+  route: Route;
+  experienceCount?: number;
+}
+
+const { route, experienceCount = 0 } = Astro.props;
+
+// Map route to watercolor drawing of the town if available, or fallback
+const townDrawings: Record<string, { url: string; label: string }> = {
+  alaro: { url: '/images/pobles/alaro.png', label: 'Alaró' },
+  alcudia: { url: '/images/pobles/alcudia.png', label: 'Alcúdia' },
+  algaida: { url: '/images/pobles/algaida.png', label: 'Algaida' },
+  andratx: { url: '/images/pobles/andratx.jpg', label: 'Andratx' },
+  arta: { url: '/images/pobles/arta.jpg', label: 'Artà' },
+  banyalbufar: { url: '/images/pobles/banyalbufar.png', label: 'Banyalbufar' },
+  bunyola: { url: '/images/pobles/bunyola.png', label: 'Bunyola' },
+  calvia: { url: '/images/pobles/calvia.png', label: 'Calvià' },
+  campanet: { url: '/images/pobles/campanet.png', label: 'Campanet' },
+  deia: { url: '/images/pobles/deia.png', label: 'Deià' },
+  escorca: { url: '/images/pobles/escorca.jpg', label: 'Escorca' },
+  esporles: { url: '/images/pobles/esporles.png', label: 'Esporles' },
+  estellencs: { url: '/images/pobles/estellencs.png', label: 'Estellencs' },
+  felanitx: { url: '/images/pobles/felanitx.png', label: 'Felanitx' },
+  fornalutx: { url: '/images/pobles/fornalutx.png', label: 'Fornalutx' },
+  lloret: { url: '/images/pobles/lloret_de_vistalegre.png', label: 'Lloret' },
+  llucmajor: { url: '/images/pobles/llucmajor.png', label: 'Llucmajor' },
+  manacor: { url: '/images/pobles/manacor.png', label: 'Manacor' },
+  montuiri: { url: '/images/pobles/montuiri.png', label: 'Montuïri' },
+  muro: { url: '/images/pobles/muro.png', label: 'Muro' },
+  palma: { url: '/images/pobles/palma.png', label: 'Palma' },
+  petra: { url: '/images/pobles/petra.png', label: 'Petra' },
+  pollenca: { url: '/images/pobles/pollenca.jpg', label: 'Pollença' },
+  puigpunyent: { url: '/images/pobles/puigpunyent.png', label: 'Puigpunyent' },
+  santanyi: { url: '/images/pobles/santanyi.png', label: 'Santanyí' },
+  santa_margalida: { url: '/images/pobles/santa_margalida.png', label: 'Santa Margalida' },
+  santa_maria: { url: '/images/pobles/santa_maria_del_cami.png', label: 'Santa Maria' },
+  pobla: { url: '/images/pobles/sa_pobla.png', label: 'Sa Pobla' },
+  selva: { url: '/images/pobles/selva.png', label: 'Selva' },
+  caimari: { url: '/images/pobles/selva.png', label: 'Caimari (Selva)' },
+  soller: { url: '/images/pobles/soller.jpg', label: 'Sóller' },
+  valldemossa: { url: '/images/pobles/valldemossa.png', label: 'Valldemossa' },
+};
+
+const getRoutePhoto = (slug: string, nom: string, municipi: string) => {
+  const m = (municipi || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const s = (slug + ' ' + nom).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+  for (const [key, item] of Object.entries(townDrawings)) {
+    if (m.includes(key) || s.includes(key)) {
+      return {
+        url: item.url,
+        label: `${item.label} (Dibuix)`,
+        icon: '🎨',
+        isDrawing: true,
+      };
+    }
+  }
+
+  // Fallback to general Tramuntana illustration
+  return {
+    url: '/images/pobles/tramuntana_general.jpg',
+    label: 'Mallorca (Dibuix)',
+    icon: '🎨',
+    isDrawing: true,
+  };
+};
+
+const photo = getRoutePhoto(route.slug, route.nom, route.municipi);
+
+// Styling for difficulty badge
+const getDifficultyColor = (diff: string) => {
+  const d = diff?.toLowerCase() || '';
+  if (d.includes('molt fàcil') || d.includes('molt facil')) return 'bg-emerald-600 text-white';
+  if (d.includes('fàcil') || d.includes('facil')) return 'bg-teal-600 text-white';
+  if (d.includes('moderad')) return 'bg-amber-600 text-white';
+  if (d.includes('difícil') || d.includes('dificil')) return 'bg-rose-600 text-white';
+  return 'bg-stone-700 text-white';
+};
+
+const hasWater = route.punts_aigua && route.punts_aigua.length > 0;
+---
+
+<a
+  href={`/rutes/${route.slug}`}
+  class="route-card group bg-white rounded-3xl border border-stone-200/90 hover:border-[#1b4332]/50 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden cursor-pointer no-underline text-inherit block"
+  data-slug={route.slug}
+  data-nom={route.nom.toLowerCase()}
+  data-municipi={route.municipi.toLowerCase()}
+  data-zona={route.zona.toLowerCase()}
+  data-dificultat={route.dificultat.toLowerCase()}
+  data-unitats={JSON.stringify(route.apte_unitats || [])}
+  data-wikiloc={route.wikiloc_url ? 'true' : 'false'}
+  data-turismepetit={route.turismepetit_url ? 'true' : 'false'}
+  data-aigua={hasWater ? 'true' : 'false'}
+>
+  <!-- Photo Header with Gradient & Badges Overlay -->
+  <div
+    class="relative h-48 sm:h-52 w-full overflow-hidden bg-stone-900 group/img"
+    title={photo.isDrawing ? 'Cercam voluntaris que comparteixin fotografies reals, de mentres hem posat dibuixos' : route.nom}
+  >
+    <img
+      src={photo.url}
+      alt={route.nom}
+      loading="lazy"
+      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out opacity-90 group-hover:opacity-100"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
+
+    <!-- Hover Notice for Drawings (User Request) -->
+    {photo.isDrawing && (
+      <div class="absolute inset-x-2 top-12 z-20 opacity-0 group-hover/img:opacity-100 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+        <div class="bg-black/85 backdrop-blur-md text-amber-200 text-[11px] font-semibold text-center px-3 py-1.5 rounded-xl border border-amber-300/40 shadow-lg">
+          💬 Cercam voluntaris que comparteixin fotografies reals, de mentres hem posat dibuixos
+        </div>
+      </div>
+    )}
+
+    <!-- Top Floating Badges -->
+    <div class="absolute top-3 left-3 right-3 flex items-center justify-between gap-2 pointer-events-none z-10">
+      <span class={`px-3 py-1 rounded-full text-[11px] font-bold shadow-md tracking-wide uppercase ${getDifficultyColor(route.dificultat)}`}>
+        {route.dificultat}
+      </span>
+
+      <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-black/60 backdrop-blur-md text-white/95 border border-white/20 shadow-sm flex items-center gap-1">
+        <span>{photo.icon}</span>
+        <span>{photo.label}</span>
+      </span>
+    </div>
+
+    <!-- Bottom Overlay on Image: Location & Experience Count -->
+    <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white/95 pointer-events-none z-10">
+      <span class="text-xs font-medium tracking-wide flex items-center gap-1 text-white/90 drop-shadow-sm">
+        📍 {route.municipi} · {route.zona}
+      </span>
+      {experienceCount > 0 && (
+        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-400 text-stone-950 shadow-sm">
+          ⭐ {experienceCount} {experienceCount === 1 ? 'opinió' : 'opinions'}
+        </span>
+      )}
+    </div>
+  </div>
+
+  <!-- Content Body -->
+  <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between">
+    <div>
+      <!-- Route Title -->
+      <h3 class="text-lg sm:text-xl font-bold text-stone-900 group-hover:text-[#1b4332] transition-colors leading-snug mb-2.5">
+        {route.nom}
+      </h3>
+
+      <!-- Clean Description (single line / 2 lines max) -->
+      <p class="text-xs sm:text-sm text-stone-600 line-clamp-2 leading-relaxed mb-4">
+        {route.descripcio}
+      </p>
+
+      <!-- Spacious Metrics Strip -->
+      <div class="flex items-center justify-around py-3 px-4 bg-stone-50 rounded-2xl border border-stone-100/90 text-stone-700 text-xs sm:text-sm mb-4">
+        <div class="flex items-center gap-1.5 font-semibold">
+          <span class="text-stone-400">🥾</span>
+          <span>{route.distancia_km} km</span>
+        </div>
+        <div class="w-px h-4 bg-stone-200"></div>
+        <div class="flex items-center gap-1.5 font-semibold">
+          <span class="text-stone-400">⛰️</span>
+          <span>+{route.desnivell_positiu_m} m</span>
+        </div>
+        <div class="w-px h-4 bg-stone-200"></div>
+        <div class="flex items-center gap-1.5 font-semibold">
+          <span class="text-stone-400">⏱️</span>
+          <span>{route.durada_estimada}</span>
+        </div>
+      </div>
+
+      <!-- Unit Pills (Subtle and clean) -->
+      <div class="flex flex-wrap items-center gap-1.5 mb-2">
+        {route.apte_unitats && route.apte_unitats.length > 0 ? (
+          route.apte_unitats.map((u) => {
+            const isFerrerets = u.toLowerCase().includes('ferreret');
+            const isLlops = u.toLowerCase().includes('llop') || u.toLowerCase().includes('daina');
+            const isPioners = u.toLowerCase().includes('pioner') || u.toLowerCase().includes('ranger');
+            const isRovers = u.toLowerCase().includes('rover') || u.toLowerCase().includes('rutes');
+            
+            let color = 'bg-stone-100 text-stone-700 border-stone-200';
+            if (isFerrerets) color = 'bg-orange-50 text-orange-800 border-orange-200';
+            else if (isLlops) color = 'bg-amber-50 text-amber-900 border-amber-200';
+            else if (isPioners) color = 'bg-blue-50 text-blue-900 border-blue-200';
+            else if (isRovers) color = 'bg-rose-50 text-rose-900 border-rose-200';
+
+            return (
+              <span class={`inline-flex items-center px-2 py-0.5 rounded-lg text-[11px] font-medium border ${color}`}>
+                ⚜️ {u}
+              </span>
+            );
+          })
+        ) : (
+          <span class="text-xs text-stone-500">Totes les unitats</span>
+        )}
+      </div>
+    </div>
+
+    <!-- Card Action Footer -->
+    <div class="pt-4 mt-2 border-t border-stone-100 flex items-center justify-between text-xs">
+      <div class="flex items-center gap-2">
+        {hasWater ? (
+          <span class="text-teal-700 font-medium flex items-center gap-1" title="Aigua potable disponible a la ruta">
+            💧 Aigua
+          </span>
+        ) : (
+          <span class="text-stone-400 font-medium flex items-center gap-1" title="Sense aigua en ruta">
+            ⚠️ Sense aigua
+          </span>
+        )}
+        {route.wikiloc_url && (
+          <span class="text-emerald-700 font-medium bg-emerald-50 px-2 py-0.5 rounded-md">
+            GPS Wikiloc
+          </span>
+        )}
+      </div>
+
+      <span
+        class="inline-flex items-center gap-1 text-xs font-bold text-[#1b4332] group-hover:text-[#2d6a4f] group-hover:translate-x-1 transition-all"
+      >
+        <span>Veure fitxa</span>
+        <span>→</span>
+      </span>
+    </div>
+  </div>
+</a>

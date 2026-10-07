@@ -76,7 +76,7 @@ def scrape_wikiloc_url(url):
     # Determinar unitats recomanades
     apte_unitats = ["Pioners/Rangers", "Rovers/Rutes"]
     if dist_km <= 6 and ele_m <= 250:
-        apte_unitats = ["Castors/Fures", "Llops/Daines", "Pioners/Rangers", "Rovers/Rutes"]
+        apte_unitats = ["Ferrerets", "Llops/Daines", "Pioners/Rangers", "Rovers/Rutes"]
     elif dist_km <= 10 and ele_m <= 450:
         apte_unitats = ["Llops/Daines", "Pioners/Rangers", "Rovers/Rutes"]
         

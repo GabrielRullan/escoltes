@@ -297,7 +297,7 @@
     "dificultat": "Fàcil - Moderada",
     "durada_estimada": "3h 30min",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers",
       "Rovers/Rutes"
@@ -519,7 +519,7 @@
     "dificultat": "Fàcil - Moderada",
     "durada_estimada": "4h 45min",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers",
       "Rovers/Rutes"
@@ -594,7 +594,7 @@
     "dificultat": "Molt Fàcil",
     "durada_estimada": "1h 45min",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers",
       "Rovers/Rutes"
@@ -656,7 +656,7 @@
     "dificultat": "Molt Fàcil",
     "durada_estimada": "1h 15min",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers",
       "Rovers/Rutes"
@@ -748,7 +748,7 @@
     "dificultat": "Molt Fàcil",
     "durada_estimada": "2h 00min",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers",
       "Rovers/Rutes"
@@ -824,7 +824,7 @@
     ],
     "consells_seguretat": "Prohibit circular fora dels itineraris senyalitzats. Silenci en els observatoris.",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers"
     ],
@@ -855,7 +855,7 @@
     ],
     "consells_seguretat": "Comprovar horaris d'obertura de la finca abans d'anar-hi.",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines"
     ],
     "lat": 39.648,
@@ -885,7 +885,7 @@
     ],
     "consells_seguretat": "Tancat de la finca: tancar sempre les meixantes.",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers"
     ],
@@ -1067,7 +1067,7 @@
     ],
     "consells_seguretat": "Respectar el silenci i la tranquil·litat dels ermitans.",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers"
     ],
@@ -1254,7 +1254,7 @@
     ],
     "consells_seguretat": "Comprovar horaris de visites del castell.",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers"
     ],
@@ -1344,9 +1344,9 @@
       "Illa des Porros",
       "Torres de defensa"
     ],
-    "consells_seguretat": "Ruta ideal per a senderisme arqueològic i Castors/Llops.",
+    "consells_seguretat": "Ruta ideal per a senderisme arqueològic i Ferrerets/Llops.",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers"
     ],
@@ -1438,9 +1438,9 @@
       "Santuari del segle XIV",
       "Vistes a la badia de Pollença i Alcúdia"
     ],
-    "consells_seguretat": "Excel·lent opció per a iniciació de Castors i Llops.",
+    "consells_seguretat": "Excel·lent opció per a iniciació de Ferrerets i Llops.",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers"
     ],
@@ -1468,9 +1468,9 @@
       "Bosc de la Tramuntana sud",
       "Salts d'aigua i vegetació"
     ],
-    "consells_seguretat": "Apte per a branques joves.",
+    "consells_seguretat": "Apte per a unitats dels més petits (Ferrerets, Llops).",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines"
     ],
     "lat": 39.623,
@@ -1499,7 +1499,7 @@
     ],
     "consells_seguretat": "Ideal per a eixides de dissabte horabaixa per a agrupaments de Palma.",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines"
     ],
     "lat": 39.563,
@@ -1559,7 +1559,7 @@
     ],
     "consells_seguretat": "Ruta serena de baixa dificultat.",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines"
     ],
     "lat": 39.578,
@@ -1732,9 +1732,9 @@
       "Torre de Cala en Basset (s. XVI)",
       "Vistes a la Dragonera"
     ],
-    "consells_seguretat": "Molt assequible per a Castors i Llops.",
+    "consells_seguretat": "Molt assequible per a Ferrerets i Llops.",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines"
     ],
     "lat": 39.581,
@@ -1853,7 +1853,7 @@
     ],
     "consells_seguretat": "Ruta lineal de fàcil orientació.",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers"
     ],
@@ -1882,9 +1882,9 @@
       "Puig Major al fons",
       "Rucs i ovelles de la finca"
     ],
-    "consells_seguretat": "Ruta plana d'alta muntanya ideal per a branques joves.",
+    "consells_seguretat": "Ruta plana d'alta muntanya ideal per a unitats dels més petits (Ferrerets, Llops).",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines"
     ],
     "lat": 39.7821,
@@ -2001,9 +2001,9 @@
       "Ermita de la Mare de Déu de Bonany (317m)",
       "Vistes a tot el Pla de Mallorca"
     ],
-    "consells_seguretat": "Ideal per a sortides d'un dia de Castors i Llops.",
+    "consells_seguretat": "Ideal per a sortides d'un dia de Ferrerets i Llops.",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines"
     ],
     "lat": 39.605,
@@ -2119,9 +2119,9 @@
       "Pineda de la Comuna",
       "Caseta de fusta de natura"
     ],
-    "consells_seguretat": "Ideal per a jocs de pista i Castors/Llops.",
+    "consells_seguretat": "Ideal per a jocs de pista i Ferrerets/Llops.",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines"
     ],
     "lat": 39.612,
@@ -2179,7 +2179,7 @@
     ],
     "consells_seguretat": "Ruta molt accessible.",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines"
     ],
     "lat": 39.378,
@@ -2220,7 +2220,7 @@
   {
     "slug": "torrent-de-pareis-escorca-sa-calobra",
     "nom": "Torrent De Pareis Escorca Sa Calobra",
-    "municipi": "Mallorca",
+    "municipi": "Escorca",
     "zona": "Serra de Tramuntana",
     "distancia_km": 8.5,
     "desnivell_positiu_m": 350,
@@ -2283,7 +2283,7 @@
     "dificultat": "Molt Fàcil",
     "durada_estimada": "2h 15min",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers",
       "Rovers/Rutes"
@@ -2299,7 +2299,7 @@
       "Llogaret de Betlem",
       "Vistes a la Badia d'Alcúdia"
     ],
-    "consells_seguretat": "Ruta molt accessible amb ombres parcials. Ideal per a la branca de Castors i Llops.",
+    "consells_seguretat": "Ruta molt accessible amb ombres parcials. Ideal per a la unitat de Ferrerets i Llops.",
     "descripcio": "Plàcida passejada litoral per la costa nord d'Artà que connecta les darreres cases de Betlem amb la platja verge i refugi de pescadors des Caló.",
     "turismepetit_url": "https://www.turismepetit.com/excursion/excursion-de-betlem-a-playa-es-calo/",
     "lat": 39.755,
@@ -2346,7 +2346,7 @@
     "dificultat": "Fàcil",
     "durada_estimada": "2h 30min",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers",
       "Rovers/Rutes"
@@ -2409,7 +2409,7 @@
     "dificultat": "Molt Fàcil",
     "durada_estimada": "1h 30min",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers",
       "Rovers/Rutes"
@@ -2472,7 +2472,7 @@
     "dificultat": "Fàcil",
     "durada_estimada": "2h 00min",
     "apte_unitats": [
-      "Castors/Fures",
+      "Ferrerets",
       "Llops/Daines",
       "Pioners/Rangers",
       "Rovers/Rutes"

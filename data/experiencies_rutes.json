@@ -2,65 +2,65 @@
   {
     "ruta_slug": "es-salt-des-freu-orient",
     "agrupament": "[PROVA / DEMO] AEG Eladi Homs",
-    "branca": "Llops/Daines",
     "puntuacio": 5,
     "data": "Novembre 2025 (Exemple)",
-    "comentari": "[EXEMPLE DE PROVA] Ruta de mostra per provar la interfície. El bosc d'alzines ofereix molta ombra i el camí és fàcil de seguir. Si ha plogut els dies anteriors, el Salt des Freu porta molta aigua."
+    "comentari": "[EXEMPLE DE PROVA] Ruta de mostra per provar la interfície. El bosc d'alzines ofereix molta ombra i el camí és fàcil de seguir. Si ha plogut els dies anteriors, el Salt des Freu porta molta aigua.",
+    "unitat": "Llops/Daines"
   },
   {
     "ruta_slug": "es-salt-des-freu-orient",
     "agrupament": "[PROVA / DEMO] AEG Jaume I",
-    "branca": "Pioners/Rangers",
     "puntuacio": 4,
     "data": "Octubre 2025 (Exemple)",
-    "comentari": "[EXEMPLE DE PROVA] Comentari de mostra per testar el sistema de ressenyes d'agrupaments. Recomanam dur calçat de recanvi per si s'ha de creuar el torrent."
+    "comentari": "[EXEMPLE DE PROVA] Comentari de mostra per testar el sistema de ressenyes d'agrupaments. Recomanam dur calçat de recanvi per si s'ha de creuar el torrent.",
+    "unitat": "Pioners/Rangers"
   },
   {
     "ruta_slug": "ses-fonts-ufanes-campanet",
     "agrupament": "[PROVA / DEMO] AEG Soca-Arrel",
-    "branca": "Castors/Fures",
     "puntuacio": 5,
     "data": "Desembre 2025 (Exemple)",
-    "comentari": "[EXEMPLE DE PROVA] Ressenya de prova per validar la maquetació visual. Idoni per als més petits. Camí pla, ample i molt ben senyalitzat."
+    "comentari": "[EXEMPLE DE PROVA] Ressenya de prova per validar la maquetació visual. Idoni per als més petits. Camí pla, ample i molt ben senyalitzat.",
+    "unitat": "Ferrerets"
   },
   {
     "ruta_slug": "castell-d-alaro",
     "agrupament": "[PROVA / DEMO] AEG Ramon Llull",
-    "branca": "Pioners/Rangers",
     "puntuacio": 5,
     "data": "Gener 2026 (Exemple)",
-    "comentari": "[EXEMPLE DE PROVA] Pujada de mostra per al test de les ressenyes escoltes. Les vistes des del castell són fantàstiques."
+    "comentari": "[EXEMPLE DE PROVA] Pujada de mostra per al test de les ressenyes escoltes. Les vistes des del castell són fantàstiques.",
+    "unitat": "Pioners/Rangers"
   },
   {
     "ruta_slug": "puig-de-galatzo-font-des-pi",
     "agrupament": "[PROVA / DEMO] AEG Reina Constança",
-    "branca": "Rovers/Rutes",
     "puntuacio": 5,
     "data": "Febrer 2026 (Exemple)",
-    "comentari": "[EXEMPLE DE PROVA] Entrada de prova de demostració del formulari. Pujada exigent però molt agraïda."
+    "comentari": "[EXEMPLE DE PROVA] Entrada de prova de demostració del formulari. Pujada exigent però molt agraïda.",
+    "unitat": "Rovers/Rutes"
   },
   {
     "ruta_slug": "torrent-de-pareis-escorca-sa-calobra",
     "agrupament": "[PROVA / DEMO] GS Myotragus 684",
-    "branca": "Rovers/Rutes",
     "puntuacio": 5,
     "data": "Maig 2025 (Exemple)",
-    "comentari": "[EXEMPLE DE PROVA] Ressenya de demostració. Excursió molt tècnica i d'alta dificultat. Cal comprovar la previsió del temps."
+    "comentari": "[EXEMPLE DE PROVA] Ressenya de demostració. Excursió molt tècnica i d'alta dificultat. Cal comprovar la previsió del temps.",
+    "unitat": "Rovers/Rutes"
   },
   {
     "ruta_slug": "betlem-a-playa-es-calo",
     "agrupament": "[PROVA / DEMO] AEG Sa Marjal",
-    "branca": "Llops/Daines",
     "puntuacio": 5,
     "data": "Abril 2025 (Exemple)",
-    "comentari": "[EXEMPLE DE PROVA] Comentari de prova del cercador. Ruta litoral preciosa a la Colònia de Sant Pere / Artà."
+    "comentari": "[EXEMPLE DE PROVA] Comentari de prova del cercador. Ruta litoral preciosa a la Colònia de Sant Pere / Artà.",
+    "unitat": "Llops/Daines"
   },
   {
     "ruta_slug": "finca-publica-planicia-banyalbufar",
     "agrupament": "[PROVA / DEMO] AEG Verge de Lluc",
-    "branca": "Pioners/Rangers",
     "puntuacio": 4,
     "data": "Tardor 2025 (Exemple)",
-    "comentari": "[EXEMPLE DE PROVA] Text d'exemple per comprovar els badges de branques i la valoració mitjana."
+    "comentari": "[EXEMPLE DE PROVA] Text d'exemple per comprovar els badges de unitats i la valoració mitjana.",
+    "unitat": "Pioners/Rangers"
   }
 ]

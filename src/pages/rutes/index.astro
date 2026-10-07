@@ -1,0 +1,43 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import RouteCard from '../../components/RouteCard.astro';
+import FilterBar from '../../components/FilterBar.astro';
+
+import routes from '../../../data/rutes_mallorca.json';
+import experiencies from '../../../data/experiencies_rutes.json';
+
+const zones = [...new Set(routes.map((r) => r.zona).filter(Boolean))].sort();
+
+const expCounts: Record<string, number> = {};
+experiencies.forEach((e) => {
+  expCounts[e.ruta_slug] = (expCounts[e.ruta_slug] || 0) + 1;
+});
+---
+
+<Layout
+  title="Catàleg d'excursions escoltes a Mallorca - 65+ rutes"
+  description="Catàleg complet de rutes escoltes a Mallorca: Serra de Tramuntana, Raiguer, Pla i Llevant. Amb desnivell, punts d'aigua i connexió TIB."
+>
+  <div class="mb-8">
+    <div class="flex items-center gap-2 text-xs text-stone-500 mb-2">
+      <a href="/" class="hover:underline">Inici</a>
+      <span>›</span>
+      <span class="text-stone-800 font-semibold">Rutes</span>
+    </div>
+
+    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-stone-900 mb-3">
+      🥾 Catàleg d'excursions escoltes a Mallorca
+    </h1>
+    <p class="text-sm sm:text-base text-stone-600 max-w-3xl leading-relaxed">
+      Més de 65 rutes catalogades i revisades per a agrupaments escoltes i guies. Filtra per edat / unitat, dificultat o zona per planificar la vostra propera sortida de camp.
+    </p>
+  </div>
+
+  <FilterBar zones={zones} totalRoutes={routes.length} />
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="routesGrid">
+    {routes.map((route) => (
+      <RouteCard route={route} experienceCount={expCounts[route.slug] || 0} />
+    ))}
+  </div>
+</Layout>

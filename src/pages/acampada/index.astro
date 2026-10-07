@@ -1,0 +1,221 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import AlertBanner from '../../components/AlertBanner.astro';
+import acampades from '../../../data/acampada_mallorca.json';
+import aemetMunicipis from '../../../data/aemet_municipis_balears.json';
+
+const titularitats = [...new Set(acampades.map((a) => a.titularitat).filter(Boolean))].sort();
+const municipis = [...new Set(acampades.map((a) => a.municipi).filter(Boolean))].sort();
+
+const matchAemet = (mun: string) => {
+  const mClean = (mun || '').toLowerCase();
+  return aemetMunicipis.find((m) => {
+    const mName = m.municipi.toLowerCase();
+    const mSlug = m.slug.toLowerCase().split('-id')[0];
+    return mClean.includes(mName) || mName.includes(mClean) || mClean.includes(mSlug);
+  }) || aemetMunicipis.find((m) => m.municipi.toLowerCase() === 'palma');
+};
+---
+
+<Layout
+  title="Refugis i Zones d'Acampada a Mallorca - Guia Escolta"
+  description="Guia completa de les 43 zones d'acampada i refugis legals a Mallorca (IBANAT, Consell de Mallorca). Capacitat, accés d'emergència i reserves."
+>
+  <div class="mb-8">
+    <div class="flex items-center gap-2 text-xs text-stone-500 mb-2">
+      <a href="/" class="hover:underline">Inici</a>
+      <span>›</span>
+      <span class="text-stone-800 font-semibold">Refugis i Acampada</span>
+    </div>
+
+    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-stone-900 mb-3">
+      🏕️ Refugis i Zones d'Acampada a Mallorca
+    </h1>
+    <p class="text-sm sm:text-base text-stone-600 max-w-3xl leading-relaxed">
+      Directori de 43 espais públics i d'ús regulat (IBANAT i Consell de Mallorca) per a sortides de cap de setmana, acampades i campaments d'estiu escoltes.
+    </p>
+  </div>
+
+  <AlertBanner />
+
+  <!-- Filter & Search Bar for Campsites -->
+  <div class="bg-white rounded-2xl border border-stone-200 p-5 sm:p-6 shadow-xs mb-8">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <div>
+        <label for="searchAcampada" class="block text-[11px] font-bold text-stone-600 uppercase tracking-wider mb-1">
+          Cerca per nom o paratge
+        </label>
+        <input
+          type="search"
+          id="searchAcampada"
+          placeholder="Ex: Tossals Verds, Binifaldó, Sa Comuna..."
+          class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-stone-300 bg-stone-50/50 focus:bg-white focus:ring-2 focus:ring-[#1b4332] outline-hidden"
+        />
+      </div>
+
+      <div>
+        <label for="titularitatFilter" class="block text-[11px] font-bold text-stone-600 uppercase tracking-wider mb-1">
+          Titularitat / Organisme
+        </label>
+        <select
+          id="titularitatFilter"
+          class="w-full text-xs sm:text-sm px-3 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] outline-hidden"
+        >
+          <option value="">Tots els organismes</option>
+          {titularitats.map((t) => (
+            <option value={t.toLowerCase()}>{t}</option>
+          ))}
+        </select>
+      </div>
+
+      <div>
+        <label for="municipiAcampadaFilter" class="block text-[11px] font-bold text-stone-600 uppercase tracking-wider mb-1">
+          Municipi
+        </label>
+        <select
+          id="municipiAcampadaFilter"
+          class="w-full text-xs sm:text-sm px-3 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] outline-hidden"
+        >
+          <option value="">Tots els municipis</option>
+          {municipis.map((m) => (
+            <option value={m.toLowerCase()}>{m}</option>
+          ))}
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Campsites Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="acampadaGrid">
+    {acampades.map((item) => (
+      <div
+        class="acampada-card bg-white rounded-2xl border border-stone-200 hover:border-[#1b4332]/40 shadow-xs hover:shadow-md transition-all p-6 flex flex-col justify-between"
+        data-nom={item.nom.toLowerCase()}
+        data-municipi={item.municipi.toLowerCase()}
+        data-titularitat={item.titularitat.toLowerCase()}
+      >
+        <div>
+          <div class="flex items-start justify-between gap-2 mb-3">
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-700">
+              📍 {item.municipi}
+            </span>
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold bg-[#1b4332]/10 text-[#1b4332]">
+              {item.titularitat}
+            </span>
+          </div>
+
+          <h3 class="text-lg font-bold text-stone-900 mb-2">
+            {item.nom}
+          </h3>
+
+          <p class="text-xs sm:text-sm text-stone-600 mb-4 line-clamp-3">
+            {item.descripcio || item.observacions}
+          </p>
+
+          <div class="space-y-1.5 text-xs text-stone-700 mb-4 bg-stone-50 p-3 rounded-xl border border-stone-100">
+            {item.capacitat && (
+              <div class="flex items-center gap-1.5">
+                <span>👥</span>
+                <span><strong>Capacitat:</strong> {item.capacitat}</span>
+              </div>
+            )}
+            {item.restriccio_foc && (
+              <div class="flex items-center gap-1.5 text-amber-800">
+                <span>🔥</span>
+                <span><strong>Foc:</strong> {item.restriccio_foc}</span>
+              </div>
+            )}
+            {item.acces_emergencia && (
+              <div class="flex items-center gap-1.5 text-red-800">
+                <span>🚑</span>
+                <span><strong>Accés 112:</strong> {item.acces_emergencia}</span>
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div class="pt-3 border-t border-stone-100 flex items-center justify-between flex-wrap gap-2">
+          <div class="flex items-center gap-2 flex-wrap">
+            {item.web ? (
+              <a
+                href={item.web}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 text-xs font-bold text-[#1b4332] hover:underline"
+              >
+                <span>Reserva / Web oficial</span>
+                <span>↗</span>
+              </a>
+            ) : (
+              <span class="text-xs text-stone-400">Reserva sota sol·licitud</span>
+            )}
+
+            {(() => {
+              const aemet = matchAemet(item.municipi);
+              if (!aemet) return null;
+              return (
+                <a
+                  href={aemet.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1 text-[11px] font-bold text-amber-800 hover:text-amber-950 bg-amber-50 hover:bg-amber-100 px-2 py-0.5 rounded-lg border border-amber-200 transition"
+                  title={`Previsió oficial AEMET per a ${aemet.municipi}`}
+                >
+                  <span>🌤️ Visualitza a AEMET</span>
+                  <span>↗</span>
+                </a>
+              );
+            })()}
+          </div>
+
+          {item.contacte && (
+            <span class="text-xs text-stone-500 font-medium">
+              📞 {item.contacte}
+            </span>
+          )}
+        </div>
+      </div>
+    ))}
+  </div>
+</Layout>
+
+<script>
+  function setupAcampadaFilter() {
+    const sInput = document.getElementById('searchAcampada') as HTMLInputElement | null;
+    const tFilter = document.getElementById('titularitatFilter') as HTMLSelectElement | null;
+    const mFilter = document.getElementById('municipiAcampadaFilter') as HTMLSelectElement | null;
+
+    function run() {
+      const q = (sInput?.value || '').toLowerCase().trim();
+      const t = (tFilter?.value || '').toLowerCase();
+      const m = (mFilter?.value || '').toLowerCase();
+
+      const cards = document.querySelectorAll<HTMLElement>('.acampada-card');
+      cards.forEach((card) => {
+        const nom = card.dataset.nom || '';
+        const municipi = card.dataset.municipi || '';
+        const titularitat = card.dataset.titularitat || '';
+
+        const mQ = !q || nom.includes(q) || municipi.includes(q);
+        const mT = !t || titularitat.includes(t);
+        const mM = !m || municipi.includes(m);
+
+        if (mQ && mT && mM) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    [sInput, tFilter, mFilter].forEach((el) => {
+      if (el) {
+        el.addEventListener('input', run);
+        el.addEventListener('change', run);
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', setupAcampadaFilter);
+  setupAcampadaFilter();
+</script>

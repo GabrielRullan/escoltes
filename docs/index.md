@@ -1,6 +1,6 @@
-# Portal i Wiki de Suport al Grup Escolta - Mallorca
+# 🧭 Portal d'Excursions per a Escoltes a Mallorca
 
-Benvinguts al **Portal de Suport i Base de Coneixement** de l'agrupament escolta. Aquesta plataforma centralitza eines, dades de rutes, zones d'acampada, repositoris internacionals i procediments operatius per facilitador la tasca dels caps i l'equip de suport.
+Benvinguts al **Portal d'Excursions per a Escoltes a Mallorca**. Aquesta plataforma centralitza eines, dades de rutes, zones d'acampada, transport públic i recomanacions per facilitar la tasca dels caps escoltes i l'equip de suport.
 
 ---
 

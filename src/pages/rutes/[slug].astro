@@ -1,0 +1,497 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ExperienceForm from '../../components/ExperienceForm.astro';
+
+import routes from '../../../data/rutes_mallorca.json';
+import agrupaments from '../../../data/agrupaments_mallorca.json';
+import transportData from '../../../data/transport_mallorca.json';
+import experiencies from '../../../data/experiencies_rutes.json';
+import aemetMunicipis from '../../../data/aemet_municipis_balears.json';
+
+export async function getStaticPaths() {
+  return routes.map((route) => ({
+    params: { slug: route.slug },
+    props: { route },
+  }));
+}
+
+const { route } = Astro.props;
+
+// Match AEMET municipality for weather forecast
+const rMunClean = (route.municipi || '').toLowerCase();
+const matchedAemet = aemetMunicipis.find((m) => {
+  const mName = m.municipi.toLowerCase();
+  const mSlug = m.slug.toLowerCase().split('-id')[0];
+  return rMunClean.includes(mName) || mName.includes(rMunClean) || rMunClean.includes(mSlug);
+}) || aemetMunicipis.find((m) => m.municipi.toLowerCase() === 'palma');
+
+// Haversine distance in km
+function haversineKm(lat1: number, lon1: number, lat2: number, lon2: number) {
+  const R = 6371;
+  const dLat = ((lat2 - lat1) * Math.PI) / 180;
+  const dLon = ((lon2 - lon1) * Math.PI) / 180;
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos((lat1 * Math.PI) / 180) *
+      Math.cos((lat2 * Math.PI) / 180) *
+      Math.sin(dLon / 2) *
+      Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return Math.round(R * c * 10) / 10;
+}
+
+// Nearby scout groups
+const nearbyAgrupaments = agrupaments
+  .map((ag) => ({
+    ...ag,
+    distancia: haversineKm(route.lat || 39.65, route.lon || 2.9, ag.lat || 39.65, ag.lon || 2.9),
+  }))
+  .sort((a, b) => a.distancia - b.distancia)
+  .slice(0, 3);
+
+// TIB Bus and SFM train lines
+const rMun = (route.municipi || '').toLowerCase();
+const rZon = (route.zona || '').toLowerCase();
+
+const matchedBusLines = (transportData.linies_bus || []).filter((b: any) => {
+  const coberts = (b.municipis_coberts || []).map((m: string) => m.toLowerCase());
+  return coberts.some((m: string) => rMun.includes(m) || rZon.includes(m));
+});
+
+const matchedTrainLines = (transportData.linies_tren || []).filter((t: any) => {
+  const coberts = (t.municipis_coberts || []).map((m: string) => m.toLowerCase());
+  return coberts.some((m: string) => rMun.includes(m));
+});
+
+// Experiences for this route
+const routeExperiences = experiencies.filter((e) => e.ruta_slug === route.slug);
+
+// Difficulty colors
+const getDifficultyColor = (diff: string) => {
+  const d = diff?.toLowerCase() || '';
+  if (d.includes('molt fàcil') || d.includes('molt facil')) return 'bg-emerald-100 text-emerald-800 border-emerald-300';
+  if (d.includes('fàcil') || d.includes('facil')) return 'bg-teal-100 text-teal-800 border-teal-300';
+  if (d.includes('moderad')) return 'bg-amber-100 text-amber-800 border-amber-300';
+  if (d.includes('difícil') || d.includes('dificil')) return 'bg-rose-100 text-rose-800 border-rose-300';
+  return 'bg-stone-100 text-stone-800 border-stone-300';
+};
+---
+
+<Layout
+  title={`${route.nom} - Ruta Escolta a Mallorca`}
+  description={route.descripcio}
+>
+  <!-- Breadcrumbs -->
+  <nav class="flex items-center gap-2 text-xs text-stone-500 mb-4 overflow-x-auto whitespace-nowrap">
+    <a href="/" class="hover:underline">Inici</a>
+    <span>›</span>
+    <a href="/rutes" class="hover:underline">Rutes</a>
+    <span>›</span>
+    <span class="text-stone-800 font-semibold truncate">{route.nom}</span>
+  </nav>
+
+  <!-- Route Header Card -->
+  <header class="bg-white rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-xs mb-8">
+    <div class="flex flex-wrap items-center gap-2 mb-3">
+      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-stone-100 text-stone-700 border border-stone-200">
+        📍 {route.municipi} · {route.zona}
+      </span>
+      <span class={`inline-flex items-center px-3 py-1 rounded-full text-xs font-bold border ${getDifficultyColor(route.dificultat)}`}>
+        Dificultat: {route.dificultat}
+      </span>
+    </div>
+
+    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-stone-900 leading-tight mb-4">
+      {route.nom}
+    </h1>
+
+    <p class="text-sm sm:text-base text-stone-700 leading-relaxed max-w-4xl mb-6">
+      {route.descripcio}
+    </p>
+
+    <!-- Key Metrics Strip -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 py-3 px-4 bg-stone-50 rounded-2xl border border-stone-100 text-center mb-6">
+      <div>
+        <span class="block text-[11px] uppercase font-bold tracking-wider text-stone-600">Distància</span>
+        <span class="text-base sm:text-lg font-bold text-stone-900">{route.distancia_km} km</span>
+      </div>
+      <div>
+        <span class="block text-[11px] uppercase font-bold tracking-wider text-stone-600">Desnivell</span>
+        <span class="text-base sm:text-lg font-bold text-stone-900">+{route.desnivell_positiu_m} m</span>
+      </div>
+      <div>
+        <span class="block text-[11px] uppercase font-bold tracking-wider text-stone-600">Temps estimat</span>
+        <span class="text-base sm:text-lg font-bold text-stone-900">{route.durada_estimada}</span>
+      </div>
+      <div>
+        <span class="block text-[11px] uppercase font-bold tracking-wider text-stone-600">Punts d'aigua</span>
+        <span class={`text-sm sm:text-base font-bold ${route.punts_aigua?.length ? 'text-teal-700' : 'text-amber-700'}`}>
+          {route.punts_aigua?.length ? '💧 Sí disponibles' : '⚠️ Sense aigua'}
+        </span>
+      </div>
+    </div>
+
+    <!-- Units Recommendation -->
+    <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-stone-100">
+      <span class="text-xs font-bold text-stone-600 mr-1">Unitats recomanades:</span>
+      {route.apte_unitats && route.apte_unitats.length > 0 ? (
+        route.apte_unitats.map((u) => {
+          const isFerrerets = u.toLowerCase().includes('ferreret');
+          const isLlops = u.toLowerCase().includes('llop') || u.toLowerCase().includes('daina');
+          const isPioners = u.toLowerCase().includes('pioner') || u.toLowerCase().includes('ranger');
+          const isRovers = u.toLowerCase().includes('rover') || u.toLowerCase().includes('rutes');
+          
+          let color = 'bg-stone-100 text-stone-800 border-stone-200';
+          if (isFerrerets) color = 'bg-orange-50 text-orange-800 border-orange-200';
+          else if (isLlops) color = 'bg-yellow-50 text-yellow-800 border-yellow-200';
+          else if (isPioners) color = 'bg-blue-50 text-blue-800 border-blue-200';
+          else if (isRovers) color = 'bg-red-50 text-red-800 border-red-200';
+
+          return (
+            <span class={`inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-semibold border ${color}`}>
+              ⚜️ {u}
+            </span>
+          );
+        })
+      ) : (
+        <span class="text-xs text-stone-600">Totes les unitats</span>
+      )}
+    </div>
+  </header>
+
+  <!-- Interactive Map with GPS Track -->
+  <section class="bg-white rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-xs mb-8">
+    <div class="flex items-center justify-between flex-wrap gap-3 mb-4">
+      <div>
+        <h2 class="text-xl sm:text-2xl font-bold text-stone-900 flex items-center gap-2">
+          <span>🗺️ Mapa interactiu i traçat GPS</span>
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-600 mt-0.5">
+          Recorregut cartogràfic sobre OpenStreetMap amb punts d'inici i final.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-2">
+        {matchedAemet && (
+          <a
+            href={matchedAemet.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-white font-bold text-xs shadow-xs transition"
+            title={`Consultar la previsió oficial de l'AEMET a ${matchedAemet.municipi}`}
+          >
+            <span>🌤️ Visualitza a l'AEMET ({matchedAemet.municipi})</span>
+            <span>↗</span>
+          </a>
+        )}
+        {route.wikiloc_url && (
+          <a
+            href={route.wikiloc_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-xs transition"
+          >
+            <span>📱 Track Wikiloc</span>
+            <span>↗</span>
+          </a>
+        )}
+        {route.turismepetit_url && (
+          <a
+            href={route.turismepetit_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-xs shadow-xs transition"
+          >
+            <span>👨‍👩‍👧 Turisme Petit</span>
+            <span>↗</span>
+          </a>
+        )}
+      </div>
+    </div>
+
+    <!-- Map container -->
+    <div
+      id="leafletRouteMap"
+      class="w-full h-80 sm:h-96 rounded-2xl border border-stone-200 shadow-inner z-10"
+      data-coords={JSON.stringify(route.track_coordinates || [[route.lat, route.lon]])}
+      data-lat={route.lat}
+      data-lon={route.lon}
+      data-nom={route.nom}
+    ></div>
+  </section>
+
+  <!-- Two Column Layout: Itinerary & Safety Details -->
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+    
+    <!-- Left Column (2 cols): Itinerary Steps & Description -->
+    <div class="lg:col-span-2 space-y-8">
+      
+      <!-- Itinerary Steps -->
+      {route.itinerari_passos && route.itinerari_passos.length > 0 && (
+        <section class="bg-white rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-xs">
+          <h2 class="text-xl font-bold text-stone-900 mb-4 flex items-center gap-2">
+            <span>🧭 Passos de l'itinerari</span>
+          </h2>
+          <ol class="space-y-3">
+            {route.itinerari_passos.map((pas: any, index: number) => {
+              const title = typeof pas === 'object' && pas !== null ? pas.nom : null;
+              const desc = typeof pas === 'object' && pas !== null ? (pas.desc || '') : String(pas);
+              return (
+                <li class="flex items-start gap-3 text-xs sm:text-sm text-stone-700">
+                  <span class="shrink-0 w-6 h-6 rounded-full bg-[#1b4332] text-white flex items-center justify-center font-bold text-xs mt-0.5">
+                    {index + 1}
+                  </span>
+                  <div class="pt-0.5 leading-relaxed">
+                    {title && <strong class="text-stone-900 block font-semibold">{title}</strong>}
+                    <span>{desc}</span>
+                  </div>
+                </li>
+              );
+            })}
+          </ol>
+        </section>
+      )}
+
+      <!-- Points of Interest -->
+      {route.punts_interes && route.punts_interes.length > 0 && (
+        <section class="bg-white rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-xs">
+          <h2 class="text-xl font-bold text-stone-900 mb-4 flex items-center gap-2">
+            <span>👁️ Punts d'interès i paisatge</span>
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            {route.punts_interes.map((punt: string) => (
+              <div class="flex items-center gap-2 p-2.5 rounded-xl bg-stone-50 border border-stone-100 text-xs sm:text-sm text-stone-800">
+                <span>📍</span>
+                <span class="font-medium">{punt}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <!-- Private Land & Gates -->
+      {route.passos_finca_privada && route.passos_finca_privada.length > 0 && (
+        <section class="bg-stone-50 rounded-3xl border border-stone-200 p-6 sm:p-8">
+          <h2 class="text-lg font-bold text-stone-900 mb-2 flex items-center gap-2">
+            <span>🚪 Passos per finques i servituds</span>
+          </h2>
+          <p class="text-xs text-stone-600 mb-4">
+            Recordau el lema escolta: no deixeu rastre, respecteu les propietats i <strong>tanqueu sempre totes les barreres</strong> al vostre pas per evitar que s'escapi el bestiar.
+          </p>
+          <ul class="space-y-2 text-xs sm:text-sm text-stone-700">
+            {route.passos_finca_privada.map((pas: string) => (
+              <li class="flex items-center gap-2">
+                <span class="text-stone-400">•</span>
+                <span>{pas}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+    </div>
+
+    <!-- Right Column (1 col): Field Utility, Transit & Nearby Groups -->
+    <div class="space-y-8">
+      
+      <!-- Water Points Card -->
+      <section class="bg-white rounded-3xl border border-stone-200 p-6 shadow-xs">
+        <h3 class="text-base font-bold text-stone-900 mb-3 flex items-center gap-2">
+          <span>💧 Punts d'aigua potable</span>
+        </h3>
+        {route.punts_aigua && route.punts_aigua.length > 0 ? (
+          <ul class="space-y-2 text-xs sm:text-sm text-stone-700">
+            {route.punts_aigua.map((a: string) => (
+              <li class="flex items-start gap-2 bg-teal-50 text-teal-900 p-2.5 rounded-xl border border-teal-100">
+                <span>🚰</span>
+                <span class="font-medium">{a}</span>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <div class="bg-amber-50 text-amber-900 p-3 rounded-xl border border-amber-200 text-xs leading-relaxed">
+            <strong>⚠️ Atenció:</strong> Aquesta ruta no disposa de fonts d'aigua potables al recorregut. Cada escolta ha de portar un mínim de 2,5 litres des de l'inici.
+          </div>
+        )}
+      </section>
+
+      <!-- Safety Advice Card -->
+      {route.consells_seguretat && (
+        <section class="bg-amber-50/60 rounded-3xl border border-amber-200 p-6">
+          <h3 class="text-base font-bold text-amber-950 mb-2 flex items-center gap-2">
+            <span>⚠️ Consells de seguretat</span>
+          </h3>
+          <p class="text-xs sm:text-sm text-amber-900 leading-relaxed">
+            {route.consells_seguretat}
+          </p>
+        </section>
+      )}
+
+      <!-- AEMET Weather Card -->
+      {matchedAemet && (
+        <section class="bg-gradient-to-br from-amber-500/10 via-white to-sky-500/10 rounded-3xl border border-amber-200/90 p-6 shadow-xs">
+          <div class="flex items-center justify-between gap-2 mb-2">
+            <h3 class="text-base font-bold text-stone-900 flex items-center gap-2">
+              <span>🌤️ Previsió meteorològica</span>
+            </h3>
+            <span class="text-[11px] font-bold text-amber-950 bg-amber-100/80 px-2.5 py-0.5 rounded-full border border-amber-200">
+              {matchedAemet.municipi}
+            </span>
+          </div>
+          <p class="text-xs text-stone-600 mb-4 leading-relaxed">
+            Consulta la previsió oficial de pluja, temperatura i avisos de l'Agència Estatal de Meteorologia per a aquest municipi abans d'iniciar la sortida.
+          </p>
+          <a
+            href={matchedAemet.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-amber-600 hover:bg-amber-700 active:bg-amber-800 text-white font-bold text-xs shadow-sm hover:shadow-md transition"
+          >
+            <span>🌤️ Visualitza a l'AEMET ({matchedAemet.municipi})</span>
+            <span>↗</span>
+          </a>
+        </section>
+      )}
+
+      <!-- Public Transit (TIB & SFM) -->
+      <section class="bg-white rounded-3xl border border-stone-200 p-6 shadow-xs">
+        <h3 class="text-base font-bold text-stone-900 mb-3 flex items-center gap-2">
+          <span>🚌 Transport públic recomanat</span>
+        </h3>
+        
+        {matchedBusLines.length > 0 || matchedTrainLines.length > 0 ? (
+          <div class="space-y-3">
+            {matchedBusLines.map((bus: any) => (
+              <div class="p-3 rounded-xl bg-stone-50 border border-stone-100 text-xs">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="font-bold text-[#1b4332] bg-[#1b4332]/10 px-2 py-0.5 rounded">
+                    Bus {bus.linia}
+                  </span>
+                  <a
+                    href={bus.link_horaris}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-sky-600 hover:underline font-semibold"
+                  >
+                    Horaris TIB ↗
+                  </a>
+                </div>
+                <p class="text-stone-700 font-medium">{bus.nom}</p>
+              </div>
+            ))}
+
+            {matchedTrainLines.map((train: any) => (
+              <div class="p-3 rounded-xl bg-stone-50 border border-stone-100 text-xs">
+                <div class="flex items-center justify-between mb-1">
+                  <span class="font-bold text-red-800 bg-red-100 px-2 py-0.5 rounded">
+                    Tren {train.codi}
+                  </span>
+                  <a
+                    href={train.link_horaris}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-sky-600 hover:underline font-semibold"
+                  >
+                    Horaris SFM ↗
+                  </a>
+                </div>
+                <p class="text-stone-700 font-medium">{train.nom}</p>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div class="text-xs text-stone-500">
+            <p>Consulta la xarxa comarcal del TIB per a {route.municipi}.</p>
+            <a href="https://www.tib.org/" target="_blank" class="inline-block mt-2 text-sky-600 font-bold hover:underline">
+              Cercador d'horaris a TIB.org ↗
+            </a>
+          </div>
+        )}
+      </section>
+
+      <!-- Nearby Scout Groups -->
+      <section class="bg-white rounded-3xl border border-stone-200 p-6 shadow-xs">
+        <h3 class="text-base font-bold text-stone-900 mb-1 flex items-center gap-2">
+          <span>⚜️ Agrupaments escoltes més propers</span>
+        </h3>
+        <p class="text-xs text-stone-500 mb-3">
+          Grups locals a qui consultar o contactar per a col·laboracions.
+        </p>
+
+        <div class="space-y-2.5">
+          {nearbyAgrupaments.map((ag) => (
+            <div class="p-3 rounded-xl bg-stone-50 border border-stone-100 flex items-center justify-between">
+              <div>
+                <span class="block text-xs font-bold text-stone-800">{ag.nom}</span>
+                <span class="block text-[11px] text-stone-500">{ag.municipi} · {ag.associacio}</span>
+              </div>
+              <span class="text-xs font-bold text-[#1b4332] bg-[#1b4332]/10 px-2 py-1 rounded-lg">
+                ~{ag.distancia} km
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+
+  <!-- Interactive Experience Review Form -->
+  <ExperienceForm
+    routeSlug={route.slug}
+    routeName={route.nom}
+    experiences={routeExperiences}
+  />
+
+</Layout>
+
+<script>
+  function initMap() {
+    const mapEl = document.getElementById('leafletRouteMap');
+    if (!mapEl || !(window as any).L) return;
+
+    const L = (window as any).L;
+    const coordsRaw = mapEl.dataset.coords;
+    const lat = parseFloat(mapEl.dataset.lat || '39.65');
+    const lon = parseFloat(mapEl.dataset.lon || '2.90');
+    const nom = mapEl.dataset.nom || 'Ruta';
+
+    let points: [number, number][] = [];
+    try {
+      points = JSON.parse(coordsRaw || '[]');
+    } catch {
+      points = [[lat, lon]];
+    }
+
+    const map = L.map('leafletRouteMap', {
+      scrollWheelZoom: false,
+    });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom: 18,
+    }).addTo(map);
+
+    if (points.length > 1) {
+      const polyline = L.polyline(points, {
+        color: '#1b4332',
+        weight: 5,
+        opacity: 0.9,
+        lineJoin: 'round',
+      }).addTo(map);
+
+      // Start & End markers
+      L.marker(points[0]).addTo(map).bindPopup(`<b>🚀 Punt d'Inici:</b> ${nom}`);
+      L.marker(points[points.length - 1]).addTo(map).bindPopup(`<b>🏁 Arribada / Destí:</b> ${nom}`);
+
+      map.fitBounds(polyline.getBounds(), { padding: [30, 30] });
+    } else {
+      map.setView([lat, lon], 14);
+      L.marker([lat, lon]).addTo(map).bindPopup(`<b>${nom}</b>`).openPopup();
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', initMap);
+  setTimeout(initMap, 300);
+</script>

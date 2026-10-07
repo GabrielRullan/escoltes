@@ -1,0 +1,284 @@
+---
+interface Experience {
+  ruta_slug: string;
+  agrupament: string;
+  puntuacio: number;
+  data: string;
+  comentari: string;
+  unitat: string;
+}
+
+interface Props {
+  routeSlug: string;
+  routeName: string;
+  experiences?: Experience[];
+}
+
+const { routeSlug, routeName, experiences = [] } = Astro.props;
+---
+
+<div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-xs my-8" id="experiencies-seccio">
+  
+  <div class="flex items-center justify-between flex-wrap gap-3 pb-6 border-b border-stone-200">
+    <div>
+      <h3 class="text-xl sm:text-2xl font-bold text-stone-900 flex items-center gap-2">
+        <span>⛺ Experiències escoltes a la ruta</span>
+      </h3>
+      <p class="text-xs sm:text-sm text-stone-500 mt-1">
+        Ressenyes i consells reals viscuts per agrupaments i unitats que han fet aquesta excursió.
+      </p>
+    </div>
+    
+    <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-[#1b4332]/10 text-[#1b4332]">
+      {experiences.length} {experiences.length === 1 ? 'experiència' : 'experiències'}
+    </span>
+  </div>
+
+  <!-- Existing reviews list -->
+  {experiences.length > 0 ? (
+    <div class="divide-y divide-stone-100 my-6 space-y-6">
+      {experiences.map((exp) => (
+        <div class="pt-6 first:pt-2">
+          <div class="flex items-start justify-between gap-2 mb-2">
+            <div>
+              <span class="font-bold text-stone-900 text-sm sm:text-base">⚜️ {exp.agrupament}</span>
+              <div class="flex items-center gap-2 text-xs text-stone-500 mt-0.5">
+                <span class="px-2 py-0.5 rounded bg-stone-100 font-medium text-stone-700">{exp.unitat}</span>
+                <span>·</span>
+                <span>📅 {exp.data}</span>
+              </div>
+            </div>
+            <div class="flex items-center text-amber-500 text-sm">
+              {'★'.repeat(exp.puntuacio)}
+              {'☆'.repeat(5 - exp.puntuacio)}
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-stone-700 leading-relaxed bg-stone-50 p-3.5 rounded-xl border border-stone-100">
+            {exp.comentari}
+          </p>
+        </div>
+      ))}
+    </div>
+  ) : (
+    <div class="text-center py-8 text-stone-500 text-sm">
+      <p>Encara no hi ha experiències enregistrades per a aquesta ruta.</p>
+      <p class="text-xs text-stone-400 mt-1">Sigues el primer agrupament a compartir la vostra vivència!</p>
+    </div>
+  )}
+
+  <!-- Submission Form -->
+  <div class="mt-8 pt-8 border-t border-stone-200">
+    <h4 class="text-lg font-bold text-stone-900 mb-2 flex items-center gap-2">
+      <span>✍️ Afegeix la vostra experiència escolta</span>
+    </h4>
+    <p class="text-xs text-stone-600 mb-6">
+      El vostre comentari s'enviarà a l'equip d'administració voluntari per ser revisat i afegit a la guia oficial de la ruta.
+    </p>
+
+    <form
+      action="https://formsubmit.co/escoltesmallorca@gmail.com"
+      method="POST"
+      class="space-y-4"
+      id="experienceForm"
+    >
+      <!-- FormSubmit Settings -->
+      <input type="hidden" name="_subject" value={`Nova experiència escolta a ${routeName}`} />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="ruta_slug" value={routeSlug} />
+      <input type="hidden" name="ruta_nom" value={routeName} />
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <!-- Scout Group selector -->
+        <div>
+          <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5" for="agrupament">
+            Agrupament Escolta *
+          </label>
+          <select
+            id="agrupament"
+            name="agrupament"
+            required
+            class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] focus:border-[#1b4332] outline-hidden transition"
+          >
+            <option value="">-- Selecciona el teu agrupament --</option>
+            <optgroup label="🏙️ Agrupaments de Palma de Mallorca">
+              <option value="AEG Aluet">AEG Aluet</option>
+              <option value="AEG Berenguer de Palou">AEG Berenguer de Palou</option>
+              <option value="AEG Eladi Homs">AEG Eladi Homs</option>
+              <option value="AEG Esclop">AEG Esclop</option>
+              <option value="AEG Jaume I">AEG Jaume I</option>
+              <option value="AEG Nuredduna">AEG Nuredduna</option>
+              <option value="AEG Rafal-Viver">AEG Rafal-Viver</option>
+              <option value="AEG Rosa dels Vents">AEG Rosa dels Vents</option>
+              <option value="AEG Sant Francesc">AEG Sant Francesc</option>
+              <option value="AEG Sant Jaume">AEG Sant Jaume</option>
+              <option value="AEG Verge de Lluc">AEG Verge de Lluc</option>
+            </optgroup>
+            <optgroup label="🏡 Agrupaments de Part Forana (Pobles)">
+              <option value="AEG Bellver">AEG Bellver</option>
+              <option value="AEG Capocorb (Llucmajor)">AEG Capocorb (Llucmajor)</option>
+              <option value="AEG Cinc Illes (Santa Margalida)">AEG Cinc Illes (Santa Margalida)</option>
+              <option value="AEG Es Solestat (Sineu)">AEG Es Solestat (Sineu)</option>
+              <option value="AEG Ferrerets">AEG Ferrerets</option>
+              <option value="AEG Flama (Marratxí)">AEG Flama (Marratxí)</option>
+              <option value="AEG Gabellí (Capdepera)">AEG Gabellí (Capdepera)</option>
+              <option value="AEG Guies de Mallorca">AEG Guies de Mallorca</option>
+              <option value="AEG Manacor">AEG Manacor</option>
+              <option value="AEG Montnegre">AEG Montnegre</option>
+              <option value="AEG Pere II (Inca)">AEG Pere II (Inca)</option>
+              <option value="AEG Pollença">AEG Pollença</option>
+              <option value="AEG Puig de Maria">AEG Puig de Maria</option>
+              <option value="AEG Sant Ignasi d'Inca">AEG Sant Ignasi d'Inca</option>
+              <option value="AEG Sa Marina">AEG Sa Marina</option>
+              <option value="AEG Santa Maria del Camí">AEG Santa Maria del Camí</option>
+              <option value="AEG Serra de Tramuntana">AEG Serra de Tramuntana</option>
+              <option value="AEG Tramuntana Sóller">AEG Tramuntana Sóller</option>
+            </optgroup>
+            <optgroup label="⛵ Altres Illes / Federacions">
+              <option value="Agrupament de Menorca">Agrupament de Menorca</option>
+              <option value="Agrupament d'Eivissa">Agrupament d'Eivissa</option>
+              <option value="Altre agrupament escolta / guia">Altre agrupament escolta / guia</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <!-- Custom group if not listed -->
+        <div>
+          <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5" for="agrupament_altre">
+            Si és un altre agrupament, especifica'l:
+          </label>
+          <input
+            type="text"
+            id="agrupament_altre"
+            name="agrupament_altre"
+            placeholder="Ex: AEG Ramon Llull"
+            class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] focus:border-[#1b4332] outline-hidden transition"
+          />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <!-- Scout Unit -->
+        <div>
+          <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5" for="unitat">
+            Unitat Escolta *
+          </label>
+          <select
+            id="unitat"
+            name="unitat"
+            required
+            class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] focus:border-[#1b4332] outline-hidden transition"
+          >
+            <option value="">-- Selecciona unitat --</option>
+            <option value="Ferrerets (6-8 anys)">Ferrerets (6-8 anys)</option>
+            <option value="Llops i Daines (8-11 anys)">Llops i Daines (8-11 anys)</option>
+            <option value="Ràngers i Esplets / Pioners (11-14 anys)">Ràngers i Esplets / Pioners (11-14 anys)</option>
+            <option value="Pioners i Caravel·les / Rutes (14-17 anys)">Pioners i Caravel·les / Rutes (14-17 anys)</option>
+            <option value="Truc / Rovers (17-19 anys)">Truc / Rovers (17-19 anys)</option>
+            <option value="Consell de Caps / Monitors">Consell de Caps / Monitors</option>
+            <option value="Tot l'Agrupament (Pas/Campament)">Tot l'Agrupament (Pas/Campament)</option>
+          </select>
+        </div>
+
+        <!-- Date / Season -->
+        <div>
+          <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5" for="data_visita">
+            Mes i Any de l'excursió *
+          </label>
+          <input
+            type="text"
+            id="data_visita"
+            name="data_visita"
+            required
+            placeholder="Ex: Març 2026"
+            class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] focus:border-[#1b4332] outline-hidden transition"
+          />
+        </div>
+
+        <!-- Star Rating -->
+        <div>
+          <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5" for="puntuacio">
+            Valoració de la ruta *
+          </label>
+          <select
+            id="puntuacio"
+            name="puntuacio"
+            required
+            class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] focus:border-[#1b4332] outline-hidden transition"
+          >
+            <option value="5">⭐⭐⭐⭐⭐ Excel·lent per a l'edat (5/5)</option>
+            <option value="4">⭐⭐⭐⭐ Molt bona (4/5)</option>
+            <option value="3">⭐⭐⭐ Acceptable amb precaucions (3/5)</option>
+            <option value="2">⭐⭐ Regular / Difícil per als infants (2/5)</option>
+            <option value="1">⭐ Desaconsellada per a escoltes (1/5)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Comments -->
+      <div>
+        <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5" for="comentari">
+          Consells de camp i comentaris per a altres agrupaments *
+        </label>
+        <textarea
+          id="comentari"
+          name="comentari"
+          rows="4"
+          required
+          placeholder="Com va anar la ruta? Hi ha punts d'aigua reals? Zono d'ombra per dinar? Dificultats en algun pas per als infants? Transport públic emprat..."
+          class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] focus:border-[#1b4332] outline-hidden transition resize-y"
+        ></textarea>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
+        <button
+          type="submit"
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#1b4332] hover:bg-[#2d6a4f] active:bg-[#081c15] text-white font-bold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all"
+        >
+          <span>📨 Enviar experiència per correu</span>
+        </button>
+
+        <button
+          type="button"
+          id="btnMailtoFallback"
+          class="text-xs text-stone-600 hover:text-stone-900 underline font-medium"
+        >
+          Obre directament el teu gestor de correu (mailto)
+        </button>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+<script>
+  const btnMailto = document.getElementById('btnMailtoFallback');
+  if (btnMailto) {
+    btnMailto.addEventListener('click', () => {
+      const agrEl = document.getElementById('agrupament') as HTMLSelectElement | null;
+      const agrAltreEl = document.getElementById('agrupament_altre') as HTMLInputElement | null;
+      const unitEl = document.getElementById('unitat') as HTMLSelectElement | null;
+      const dataEl = document.getElementById('data_visita') as HTMLInputElement | null;
+      const puntEl = document.getElementById('puntuacio') as HTMLSelectElement | null;
+      const comEl = document.getElementById('comentari') as HTMLTextAreaElement | null;
+
+      const agr = (agrAltreEl?.value.trim()) || (agrEl?.value) || 'No especificat';
+      const unit = unitEl?.value || 'No especificada';
+      const dataV = dataEl?.value || 'Data recent';
+      const puntuacio = puntEl?.value || '5';
+      const comentari = comEl?.value || '';
+
+      const subject = encodeURIComponent("Nova experiència escolta - Portal d'excursions Mallorca");
+      const body = encodeURIComponent(
+        `Agrupament: ${agr}\n` +
+        `Unitat: ${unit}\n` +
+        `Data: ${dataV}\n` +
+        `Puntuació: ${puntuacio}/5 estrelles\n\n` +
+        `Comentari i consells:\n${comentari}`
+      );
+
+      window.location.href = `mailto:escoltesmallorca@gmail.com,gabriel@data-partner.xyz?subject=${subject}&body=${body}`;
+    });
+  }
+</script>

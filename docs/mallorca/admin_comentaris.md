@@ -1,259 +1,103 @@
-# 🛡️ Administració i Moderació de Comentaris de Rutes
+# 🛡️ Guia d'Administració de Comentaris i Experiències
 
-Benvinguts al panell de moderació dels Escoltes de Mallorca. Aquí els administradors i responsables poden revisar, autoritzar o esborrar els comentaris i ressenyes d'excursions enviats pels agrupaments.
+Benvinguts al panell de coordinació dels Escoltes de Mallorca.
 
-!!! info "Panell de Moderació i Seguretat Escolta"
-    Tots els comentaris nous s'enregistren per defecte amb l'estat pendent d'autorització (`authorized: false`). Només apareixeran a la web pública de la ruta quan hagin estat aprovats des d'aquest panell.
+Per garantir la màxima fiabilitat, protecció antispam i seguretat de les dades, **els comentaris i experiències enviats des de qualsevol fitxa de ruta s'envien directament per correu electrònic a l'administrador (`escoltesmallorca@gmail.com`)**.
 
 ---
 
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+## 📬 Com funciona el flux de recepció i publicació
 
-<div id="admin-panel-container" style="margin-top: 20px;">
+1. **Un cap o agrupament envia la seva experiència:**
+   - Des de qualsevol de les 65+ fitxes de ruta, polsa *➕ Afegir la meva experiència*.
+   - Selecciona el seu **agrupament** (s'ofereixen tots els caus de Mallorca, Menorca, Pitiüses i exteriors), la **unitat** (**Ferrerets**, **Llops/Daines**, **Rangers/Guies**, etc.), la puntuació d'estrelles i els consells.
+   - El sistema envia automàticament les dades estructurades a la bústia de Gmail.
 
-    <!-- Secció 1: Comentaris Pendents -->
-    <div style="background-color: #fff8e1; border: 2px solid #ffa000; border-radius: 12px; padding: 20px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 8px;">
-            <h2 style="margin: 0; color: #b78103; font-size: 1.3em;">⏳ Comentaris Pendents d'Autorització</h2>
-            <span id="pending-count-badge" style="background-color: #ffa000; color: white; padding: 4px 12px; border-radius: 20px; font-weight: bold; font-size: 0.9em;">0 pendents</span>
-        </div>
-        <p style="margin-top: 0; color: #666; font-size: 0.9em;">Aquests comentaris no són visibles a la fitxa pública de l'excursió fins que no premis <b>Aprovar</b>.</p>
+2. **L'administrador rep el correu:**
+   Rebràs un correu amb aquest format:
+   ```yaml
+   Ruta: Ses Fonts Ufanes (Campanet) (ses-fonts-ufanes-campanet)
+   Autor: Joan Bennàssar (joan@escoltes.cat)
+   Agrupament: AEG Soca-Arrel
+   Unitat: Ferrerets
+   Valoració: 5 / 5 estrelles
+   Data de la sortida: Març 2026
+   Comentaris: "Camí pla, molt accessible per als més petits. Hi ha aigua corrent quan brollen les fonts."
+   ```
 
-        <div id="pending-comments-list" style="display: flex; flex-direction: column; gap: 14px; margin-top: 16px;">
-            <p style="color: #888; font-style: italic;">🔄 Carregant comentaris pendents de Firebase...</p>
-        </div>
+3. **Afegir la ressenya a la base de dades local:**
+   - Obre el fitxer `data/experiencies_rutes.json` i afegeix l'entrada a la llista:
+   ```json
+   {
+     "ruta_slug": "ses-fonts-ufanes-campanet",
+     "agrupament": "AEG Soca-Arrel",
+     "unitat": "Ferrerets",
+     "puntuacio": 5,
+     "data": "Març 2026",
+     "comentari": "Camí pla, molt accessible per als més petits. Hi ha aigua corrent quan brollen les fonts."
+   }
+   ```
+
+4. **Regenerar i publicar:**
+   Executa al terminal:
+   ```bash
+   python scripts/build_wiki_pages.py
+   mkdocs build
+   firebase deploy --only hosting
+   ```
+   La nova experiència quedarà compilada i visible públicament a la fitxa de la ruta per sempre.
+
+---
+
+## 📋 Generador ràpid de bloc JSON
+
+Enganxa les dades del correu aquí si vols generar ràpidament el fragment de codi per afegir a `data/experiencies_rutes.json`:
+
+<div style="background-color: var(--md-code-bg-color, #f8f9fa); border: 1px solid #ccc; border-radius: 8px; padding: 16px; margin: 16px 0;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-bottom: 10px;">
+        <input type="text" id="tool-slug" placeholder="Slug de la ruta (ex: ses-fonts-ufanes-campanet)" style="padding: 8px; border-radius: 6px; border: 1px solid #ccc;" />
+        <input type="text" id="tool-agr" placeholder="Agrupament (ex: AEG Soca-Arrel)" style="padding: 8px; border-radius: 6px; border: 1px solid #ccc;" />
+        <input type="text" id="tool-uni" placeholder="Unitat (ex: Ferrerets, Llops/Daines)" style="padding: 8px; border-radius: 6px; border: 1px solid #ccc;" />
+        <input type="number" id="tool-pts" min="1" max="5" value="5" placeholder="Puntuació (1-5)" style="padding: 8px; border-radius: 6px; border: 1px solid #ccc;" />
+        <input type="text" id="tool-data" placeholder="Data (ex: Març 2026)" style="padding: 8px; border-radius: 6px; border: 1px solid #ccc;" />
     </div>
-
-    <!-- Secció 2: Comentaris Autoritzats -->
-    <div style="background-color: #f0f7f4; border: 1px solid #00897b; border-radius: 12px; padding: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; flex-wrap: wrap; gap: 8px;">
-            <h2 style="margin: 0; color: #00897b; font-size: 1.3em;">✅ Comentaris Autoritzats Públicament</h2>
-            <span id="approved-count-badge" style="background-color: #00897b; color: white; padding: 4px 12px; border-radius: 20px; font-weight: bold; font-size: 0.9em;">0 aprovats</span>
-        </div>
-        <p style="margin-top: 0; color: #666; font-size: 0.9em;">Aquests comentaris estan actualment visibles per a tots els visitants del portal.</p>
-
-        <div id="approved-comments-list" style="display: flex; flex-direction: column; gap: 14px; margin-top: 16px;">
-            <p style="color: #888; font-style: italic;">🔄 Carregant comentaris aprovats de Firebase...</p>
-        </div>
+    <textarea id="tool-com" rows="2" placeholder="Comentari rebut per correu..." style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box;"></textarea>
+    <div style="margin-top: 10px; display: flex; gap: 10px;">
+        <button onclick="generarBlocJson()" style="padding: 8px 16px; background-color: #00897b; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Generar JSON</button>
+        <button onclick="copiarJson()" style="padding: 8px 16px; background-color: #555; color: white; border: none; border-radius: 6px; cursor: pointer;">Copiar</button>
     </div>
-
+    <pre id="tool-result" style="margin-top: 10px; background: #263238; color: #aeea00; padding: 12px; border-radius: 6px; display: none;"></pre>
 </div>
 
 <script>
-(function() {
-    const firebaseConfig = {
-        projectId: "escoltes-mallorca"
+function generarBlocJson() {
+    const slug = document.getElementById('tool-slug').value.trim();
+    const agr = document.getElementById('tool-agr').value.trim();
+    const uni = document.getElementById('tool-uni').value.trim();
+    const pts = parseInt(document.getElementById('tool-pts').value, 10) || 5;
+    const dt = document.getElementById('tool-data').value.trim();
+    const com = document.getElementById('tool-com').value.trim();
+
+    const obj = {
+        ruta_slug: slug,
+        agrupament: agr,
+        unitat: uni,
+        puntuacio: pts,
+        data: dt,
+        comentari: com
     };
 
-    if (typeof firebase !== 'undefined' && !firebase.apps.length) {
-        firebase.initializeApp(firebaseConfig);
+    const res = JSON.stringify(obj, null, 2);
+    const el = document.getElementById('tool-result');
+    el.style.display = 'block';
+    el.innerText = ',\n' + res;
+}
+
+function copiarJson() {
+    const el = document.getElementById('tool-result');
+    if (el && el.innerText) {
+        navigator.clipboard.writeText(el.innerText);
+        alert('Copiat al porta-retalls!');
     }
-
-    function escapeHtml(text) {
-        if (!text) return '';
-        return String(text)
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;")
-            .replace(/'/g, "&#039;");
-    }
-
-    function sortDesc(items) {
-        return items.sort((a, b) => {
-            const timeA = a.createdAt?.seconds ? a.createdAt.seconds * 1000 : (new Date(a.createdAt || a.data || 0).getTime() || 0);
-            const timeB = b.createdAt?.seconds ? b.createdAt.seconds * 1000 : (new Date(b.createdAt || b.data || 0).getTime() || 0);
-            return timeB - timeA;
-        });
-    }
-
-    window.initAdminComments = function() {
-        if (typeof firebase === 'undefined' || !firebase.firestore) {
-            console.error("Firebase Firestore no està disponible.");
-            return;
-        }
-
-        const db = firebase.firestore();
-
-        db.collection("experiencies").onSnapshot((snapshot) => {
-            const pendingList = [];
-            const approvedList = [];
-
-            snapshot.forEach(doc => {
-                const data = doc.data();
-                const item = { id: doc.id, ...data };
-                if (data.authorized === true) {
-                    approvedList.push(item);
-                } else {
-                    pendingList.push(item);
-                }
-            });
-
-            sortDesc(pendingList);
-            sortDesc(approvedList);
-
-            renderPendingComments(pendingList);
-            renderApprovedComments(approvedList);
-        }, (err) => {
-            console.error("Error carregar comentaris Firestore:", err);
-            const pCont = document.getElementById('pending-comments-list');
-            if (pCont) pCont.innerHTML = `<p style="color: #d32f2f;">❌ Error en connectar amb Firestore: ${escapeHtml(err.message)}</p>`;
-        });
-    };
-
-    window.approveComment = async function(docId) {
-        if (!confirm("Vols autoritzar aquest comentari per a la seva publicació immediata?")) return;
-        try {
-            const db = firebase.firestore();
-            await db.collection("experiencies").doc(docId).update({
-                authorized: true,
-                approvedAt: firebase.firestore.FieldValue.serverTimestamp()
-            });
-            alert("✅ Comentari autoritzat amb èxit!");
-        } catch (e) {
-            alert("❌ Error en autoritzar: " + e.message);
-        }
-    };
-
-    window.revokeComment = async function(docId) {
-        if (!confirm("Vols desautoritzar aquest comentari? Tornarà a l'estat pendent.")) return;
-        try {
-            const db = firebase.firestore();
-            await db.collection("experiencies").doc(docId).update({
-                authorized: false
-            });
-            alert("⚠️ Comentari mogut a pendents.");
-        } catch (e) {
-            alert("❌ Error en desautoritzar: " + e.message);
-        }
-    };
-
-    window.deleteComment = async function(docId) {
-        if (!confirm("⚠️ Esteu segur de voler esborrar finalment aquest comentari? L'acció no es pot desfer.")) return;
-        try {
-            const db = firebase.firestore();
-            await db.collection("experiencies").doc(docId).delete();
-            alert("🗑️ Comentari eliminat de Firebase.");
-        } catch (e) {
-            alert("❌ Error en eliminar: " + e.message);
-        }
-    };
-
-    function renderPendingComments(items) {
-        const container = document.getElementById('pending-comments-list');
-        const badge = document.getElementById('pending-count-badge');
-        if (!container) return;
-
-        badge.innerText = `${items.length} pendents`;
-
-        if (items.length === 0) {
-            container.innerHTML = `<p style="color: #666; font-style: italic; margin: 0;">🎉 Genial! No hi ha cap comentari pendent d'autorització.</p>`;
-            return;
-        }
-
-        let html = '';
-        items.forEach(item => {
-            const safeScore = Math.max(1, Math.min(5, Math.round(Number(item.puntuacio) || 5)));
-            const stars = "⭐".repeat(safeScore);
-            const rawRoute = item.ruta_slug || '';
-            const routeDisplay = rawRoute ? `<a href="../rutes/${encodeURIComponent(rawRoute)}/" target="_blank" style="color: #d84315; text-decoration: underline; font-weight: bold;">📍 Ruta: ${escapeHtml(rawRoute)} ↗</a>` : '<span style="color: #888;">📍 Ruta Desconeguda</span>';
-            const name = escapeHtml(item.nom || 'Anònim');
-            const emailHtml = item.email ? ` (<a href="mailto:${encodeURI(item.email)}" style="color: #00897b;">${escapeHtml(item.email)}</a>)` : '';
-            const group = escapeHtml(item.agrupament || 'Sense Agrupament');
-            const unit = item.branca ? ` | Branca: ${escapeHtml(item.branca)}` : '';
-            const comment = escapeHtml(item.comentari || '');
-            let dateStr = escapeHtml(item.data || '');
-            if (item.createdAt && item.createdAt.toDate) {
-                dateStr += (dateStr ? ' · ' : '') + item.createdAt.toDate().toLocaleDateString('ca-ES');
-            }
-
-            html += `
-                <div style="background: white; border: 1px solid #ffe082; border-radius: 8px; padding: 14px; box-shadow: 0 2px 4px rgba(0,0,0,0.04);">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;">
-                        <div>
-                            <div>${routeDisplay}</div>
-                            <div style="font-size: 0.9em; color: #333; margin-top: 4px;">
-                                👤 <b>${name}</b>${emailHtml} | ⚜️ <b>${group}</b>${unit}
-                            </div>
-                        </div>
-                        <span style="color: #f57f17; font-weight: bold; font-size: 0.9em;">${stars} ${dateStr ? `(${dateStr})` : ''}</span>
-                    </div>
-                    <p style="background: #fffde7; padding: 10px; border-radius: 6px; border-left: 4px solid #ffb300; margin: 8px 0 12px 0; font-size: 0.95em; line-height: 1.4;">
-                        "${comment}"
-                    </p>
-                    <div style="display: flex; justify-content: flex-end; gap: 10px;">
-                        <button onclick="deleteComment('${escapeHtml(item.id)}')" style="padding: 6px 14px; background-color: #d32f2f; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.85em;">🗑️ Esborrar</button>
-                        <button onclick="approveComment('${escapeHtml(item.id)}')" style="padding: 6px 18px; background-color: #2e7d32; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; font-size: 0.85em;">✅ Aprovar / Autoritzar</button>
-                    </div>
-                </div>
-            `;
-        });
-        container.innerHTML = html;
-    }
-
-    function renderApprovedComments(items) {
-        const container = document.getElementById('approved-comments-list');
-        const badge = document.getElementById('approved-count-badge');
-        if (!container) return;
-
-        badge.innerText = `${items.length} aprovats`;
-
-        if (items.length === 0) {
-            container.innerHTML = `<p style="color: #666; font-style: italic; margin: 0;">Encara no hi ha cap comentari aprovat a Firebase.</p>`;
-            return;
-        }
-
-        let html = '';
-        items.forEach(item => {
-            const safeScore = Math.max(1, Math.min(5, Math.round(Number(item.puntuacio) || 5)));
-            const stars = "⭐".repeat(safeScore);
-            const rawRoute = item.ruta_slug || '';
-            const routeDisplay = rawRoute ? `<a href="../rutes/${encodeURIComponent(rawRoute)}/" target="_blank" style="color: #00897b; text-decoration: underline; font-weight: bold;">📍 Ruta: ${escapeHtml(rawRoute)} ↗</a>` : '<span style="color: #888;">📍 Ruta Desconeguda</span>';
-            const name = escapeHtml(item.nom || 'Anònim');
-            const emailHtml = item.email ? ` (${escapeHtml(item.email)})` : '';
-            const group = escapeHtml(item.agrupament || 'Sense Agrupament');
-            const unit = item.branca ? ` | Branca: ${escapeHtml(item.branca)}` : '';
-            const comment = escapeHtml(item.comentari || '');
-            let dateStr = escapeHtml(item.data || '');
-            if (item.createdAt && item.createdAt.toDate) {
-                dateStr += (dateStr ? ' · ' : '') + item.createdAt.toDate().toLocaleDateString('ca-ES');
-            }
-
-            html += `
-                <div style="background: white; border: 1px solid #b2dfdb; border-radius: 8px; padding: 14px; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 8px; margin-bottom: 8px;">
-                        <div>
-                            <div>${routeDisplay}</div>
-                            <div style="font-size: 0.88em; color: #444; margin-top: 4px;">
-                                👤 <b>${name}</b>${emailHtml} | ⚜️ <b>${group}</b>${unit}
-                            </div>
-                        </div>
-                        <span style="color: #f57f17; font-weight: bold; font-size: 0.88em;">${stars} ${dateStr ? `(${dateStr})` : ''}</span>
-                    </div>
-                    <p style="margin: 6px 0 10px 0; font-size: 0.92em; color: #333; line-height: 1.4;">
-                        "${comment}"
-                    </p>
-                    <div style="display: flex; justify-content: flex-end; gap: 10px;">
-                        <button onclick="revokeComment('${escapeHtml(item.id)}')" style="padding: 5px 12px; background-color: #ef6c00; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.8em;">⚠️ Desautoritzar</button>
-                        <button onclick="deleteComment('${escapeHtml(item.id)}')" style="padding: 5px 12px; background-color: #c62828; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 0.8em;">🗑️ Esborrar</button>
-                    </div>
-                </div>
-            `;
-        });
-        container.innerHTML = html;
-    }
-
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', window.initAdminComments);
-    } else {
-        window.initAdminComments();
-    }
-
-    if (typeof document$ !== 'undefined') {
-        document$.subscribe(function() {
-            window.initAdminComments();
-        });
-    }
-})();
+}
 </script>

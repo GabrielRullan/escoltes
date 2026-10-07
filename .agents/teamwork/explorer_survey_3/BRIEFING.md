@@ -1,4 +1,4 @@
-# BRIEFING — 2026-10-02T06:02:10Z
+# BRIEFING — 2026-10-02T06:06:00Z
 
 ## Mission
 Investigate `run_phase1.py`, `mkdocs.yml`, navigation structure, CI/CD deployment pipelines (`deploy_firebase.yml`), and outline exact verification steps for the route comments & admin moderation features.
@@ -27,10 +27,13 @@ Investigate `run_phase1.py`, `mkdocs.yml`, navigation structure, CI/CD deploymen
 - **Code layout**: Root python scripts (`run_phase1.py`), `mkdocs.yml`, `docs/`, `.github/workflows/deploy_firebase.yml`.
 
 ## Key Decisions Made
-- Starting systematic inspection of `run_phase1.py`, `mkdocs.yml`, `.github/workflows/` and testing commands.
+- Confirmed `run_phase1.py` calls `scripts/build_wiki_pages.py` via subprocess.
+- Verified `mkdocs.yml` structure: `admin_comentaris.md` is positioned under `Escoltisme a Mallorca:` as `Moderació de Comentaris: mallorca/admin_comentaris.md`.
+- Analyzed `deploy_firebase.yml`: triggers on push to main/master and manual dispatch, installs `requirements.txt`, executes `run_phase1.py` and `python -m mkdocs build`, deploys `/site` to Firebase.
+- Executed and validated `mkdocs build`, verifying successful compilation of `site/mallorca/admin_comentaris/index.html` (30.5 KB).
 
 ## Artifact Index
 - `DISPATCH.md` — Dispatch message
 - `BRIEFING.md` — Working context & identity
 - `progress.md` — Progress tracker and heartbeat
-- `handoff.md` — Final survey report
+- `handoff.md` — Comprehensive handoff report with 5 components and features/edge cases tables

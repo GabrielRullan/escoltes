@@ -1,0 +1,1614 @@
+[
+  {
+    "codi_ine": "07001",
+    "municipi": "Alaró",
+    "municipi_cat": "Alaró",
+    "slug": "alaro-id07001",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/alaro-id07001",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07001.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "Excursió al Castell d'Alaró (des d'Orient o Es Verger)",
+        "slug": "castell-d-alaro",
+        "dificultat": "Moderada",
+        "distancia_km": 8.0,
+        "desnivell_positiu_m": 450,
+        "durada_estimada": "3h 00min"
+      },
+      {
+        "nom": "Pas des Llop i Cova de sa Campana (Alaró / Escorca)",
+        "slug": "castell-de-reina-alaro",
+        "dificultat": "Exigent",
+        "distancia_km": 11.0,
+        "desnivell_positiu_m": 590,
+        "durada_estimada": "4h 30min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "Castell d'Alaró (Hostatgeria i Refugi)",
+        "titularitat": "Fundació Castell d'Alaró / Consell",
+        "capacitat": 30,
+        "web": "http://www.castelldalaro.cat/"
+      },
+      {
+        "nom": "S'Olivaret (Alaró)",
+        "titularitat": "Gestió Privada",
+        "capacitat": 40,
+        "web": ""
+      }
+    ],
+    "total_recursos": 4
+  },
+  {
+    "codi_ine": "07003",
+    "municipi": "Alcúdia",
+    "municipi_cat": "Alcúdia",
+    "slug": "alcudia-id07003",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/alcudia-id07003",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07003.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "Penya Rotja i Ermita de la Victòria (Alcúdia)",
+        "slug": "penya-rotja-alcudia",
+        "dificultat": "Moderada",
+        "distancia_km": 6.8,
+        "desnivell_positiu_m": 310,
+        "durada_estimada": "2h 45min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "Campament de la Victòria",
+        "titularitat": "IBJOVE (Govern de les Illes Balears)",
+        "capacitat": 200,
+        "web": "https://ibjove.caib.es/"
+      },
+      {
+        "nom": "Refugi del Coll Baix",
+        "titularitat": "IBANAT (Govern de les Illes Balears)",
+        "capacitat": 6,
+        "web": "https://www.caib.es/sites/ibanat/"
+      }
+    ],
+    "total_recursos": 3
+  },
+  {
+    "codi_ine": "07004",
+    "municipi": "Algaida",
+    "municipi_cat": "Algaida",
+    "slug": "algaida-id07004",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/algaida-id07004",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07004.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "Puig de Randa i Santuari de Cura (Algaida)",
+        "slug": "puig-de-randa-cura",
+        "dificultat": "Moderada",
+        "distancia_km": 9.0,
+        "desnivell_positiu_m": 410,
+        "durada_estimada": "3h 00min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "Santuari de Cura",
+        "titularitat": "Ordre de Franciscans",
+        "capacitat": 50,
+        "web": "https://www.santuaridecura.gratis/"
+      }
+    ],
+    "total_recursos": 2
+  },
+  {
+    "codi_ine": "07005",
+    "municipi": "Andratx",
+    "municipi_cat": "Andratx",
+    "slug": "andratx-id07005",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/andratx-id07005",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07005.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "GR-221 Etapa 1: Port d'Andratx a La Trapa",
+        "slug": "gr221-etapa-1-port-andratx-trapa",
+        "dificultat": "Moderada",
+        "distancia_km": 11.8,
+        "desnivell_positiu_m": 480,
+        "durada_estimada": "4h 30min"
+      },
+      {
+        "nom": "GR-221 Etapa 2: La Trapa a Estellencs",
+        "slug": "gr221-etapa-2-la-trapa-estellencs",
+        "dificultat": "Exigent",
+        "distancia_km": 14.5,
+        "desnivell_positiu_m": 620,
+        "durada_estimada": "5h 45min"
+      },
+      {
+        "nom": "Muela de s'Esclop (des de sa Vinya de Galatzó)",
+        "slug": "muela-de-sesclop",
+        "dificultat": "Exigent",
+        "distancia_km": 12.8,
+        "desnivell_positiu_m": 690,
+        "durada_estimada": "5h 00min"
+      },
+      {
+        "nom": "Parc Natural de sa Dragonera (Cala Lledó - Far Vell)",
+        "slug": "parc-natural-dragonera",
+        "dificultat": "Moderada",
+        "distancia_km": 7.4,
+        "desnivell_positiu_m": 350,
+        "durada_estimada": "3h 00min"
+      },
+      {
+        "nom": "Cala en Basset i Torre de sa Salve des de Sant Elm",
+        "slug": "sant-elm-la-glorieta-dragonera",
+        "dificultat": "Fàcil",
+        "distancia_km": 5.2,
+        "desnivell_positiu_m": 140,
+        "durada_estimada": "2h 00min"
+      },
+      {
+        "nom": "Coll de sa Gramola al Puig de sa Monja (Andratx)",
+        "slug": "coll-de-sa-gramola-ses-basses",
+        "dificultat": "Moderada",
+        "distancia_km": 7.5,
+        "desnivell_positiu_m": 280,
+        "durada_estimada": "2h 45min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "La Trapa (Zona d'Acampada)",
+        "titularitat": "GOB Mallorca",
+        "capacitat": 25,
+        "web": "https://www.gobmallorca.com/"
+      },
+      {
+        "nom": "Refugi de Ses Fontanelles",
+        "titularitat": "Gestió Privada / GR-221",
+        "capacitat": 16,
+        "web": ""
+      }
+    ],
+    "total_recursos": 8
+  },
+  {
+    "codi_ine": "07901",
+    "municipi": "Ariany",
+    "municipi_cat": "Ariany",
+    "slug": "ariany-id07901",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/ariany-id07901",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07901.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [],
+    "total_recursos": 0
+  },
+  {
+    "codi_ine": "07006",
+    "municipi": "Artà",
+    "municipi_cat": "Artà",
+    "slug": "arta-id07006",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/arta-id07006",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07006.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "S'Alqueria Vella al Campament dels Soldats (Artà)",
+        "slug": "salquerieta-vella-campament-soldats",
+        "dificultat": "Fàcil - Moderada",
+        "distancia_km": 7.0,
+        "desnivell_positiu_m": 210,
+        "durada_estimada": "2h 30min"
+      },
+      {
+        "nom": "Puig de sa Tudossa i Talaia de Moreia (Artà)",
+        "slug": "puig-de-sa-tudossa-arta",
+        "dificultat": "Moderada - Exigent",
+        "distancia_km": 11.2,
+        "desnivell_positiu_m": 460,
+        "durada_estimada": "4h 15min"
+      },
+      {
+        "nom": "Excursió de Betlem a Platja des Caló (Artà)",
+        "slug": "betlem-a-playa-es-calo",
+        "dificultat": "Molt Fàcil",
+        "distancia_km": 7.0,
+        "desnivell_positiu_m": 80,
+        "durada_estimada": "2h 15min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "Caseta dels Oguers",
+        "titularitat": "IBANAT (Govern de les Illes Balears)",
+        "capacitat": 10,
+        "web": "https://www.caib.es/sites/ibanat/"
+      },
+      {
+        "nom": "Refugi de S'Arenalet d'es Verger",
+        "titularitat": "IBANAT / Parc Natural de Llevant",
+        "capacitat": 22,
+        "web": "https://www.caib.es/sites/ibanat/"
+      },
+      {
+        "nom": "Casa de s'Alzina (Albarca)",
+        "titularitat": "IBANAT (Govern de les Illes Balears)",
+        "capacitat": 10,
+        "web": "https://www.caib.es/sites/ibanat/"
+      },
+      {
+        "nom": "Betlem (Colònia de Sant Pere)",
+        "titularitat": "Ajuntament d'Artà",
+        "capacitat": 40,
+        "web": "https://www.arta.cat/"
+      },
+      {
+        "nom": "Sant Guillem i Sant Antoni",
+        "titularitat": "Gestió Entitat",
+        "capacitat": 35,
+        "web": ""
+      }
+    ],
+    "total_recursos": 8
+  },
+  {
+    "codi_ine": "07007",
+    "municipi": "Banyalbufar",
+    "municipi_cat": "Banyalbufar",
+    "slug": "banyalbufar-id07007",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/banyalbufar-id07007",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07007.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "Esporles a Banyalbufar pel Camí des Correu",
+        "slug": "puig-des-teix-espolres",
+        "dificultat": "Fàcil - Moderada",
+        "distancia_km": 8.2,
+        "desnivell_positiu_m": 280,
+        "durada_estimada": "2h 45min"
+      },
+      {
+        "nom": "Finca Pública de Planícia (Banyalbufar)",
+        "slug": "finca-publica-planicia-banyalbufar",
+        "dificultat": "Moderada",
+        "distancia_km": 9.2,
+        "desnivell_positiu_m": 320,
+        "durada_estimada": "3h 15min"
+      }
+    ],
+    "acampades": [],
+    "total_recursos": 2
+  },
+  {
+    "codi_ine": "07008",
+    "municipi": "Binissalem",
+    "municipi_cat": "Binissalem",
+    "slug": "binissalem-id07008",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/binissalem-id07008",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07008.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [
+      {
+        "nom": "Ca n'Arabí",
+        "titularitat": "Ajuntament de Binissalem",
+        "capacitat": 50,
+        "web": "https://www.ajbinissalem.net/"
+      }
+    ],
+    "total_recursos": 1
+  },
+  {
+    "codi_ine": "07010",
+    "municipi": "Bunyola",
+    "municipi_cat": "Bunyola",
+    "slug": "bunyola-id07010",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/bunyola-id07010",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07010.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "Es Salt des Freu (Orient / Bunyola)",
+        "slug": "es-salt-des-freu-orient",
+        "dificultat": "Molt Fàcil",
+        "distancia_km": 4.5,
+        "desnivell_positiu_m": 120,
+        "durada_estimada": "1h 45min"
+      },
+      {
+        "nom": "Tomb per la Finca Pública de Raixa",
+        "slug": "finca-publica-raixa",
+        "dificultat": "Fàcil",
+        "distancia_km": 3.0,
+        "desnivell_positiu_m": 110,
+        "durada_estimada": "1h 15min"
+      },
+      {
+        "nom": "Puig de sa Comuna de Bunyola (per Penya d'en Honor)",
+        "slug": "puig-de-sa-comuna-bunyola",
+        "dificultat": "Moderada",
+        "distancia_km": 10.5,
+        "desnivell_positiu_m": 560,
+        "durada_estimada": "3h 45min"
+      },
+      {
+        "nom": "Puig de na Francessa (Bunyola)",
+        "slug": "puig-de-na-francesa-bunyola",
+        "dificultat": "Moderada",
+        "distancia_km": 8.0,
+        "desnivell_positiu_m": 430,
+        "durada_estimada": "3h 00min"
+      },
+      {
+        "nom": "Orient a sa Coma de Santa Maria pel Pas de s'Escaleta",
+        "slug": "penyal-de-honor-orient",
+        "dificultat": "Moderada",
+        "distancia_km": 11.5,
+        "desnivell_positiu_m": 390,
+        "durada_estimada": "4h 00min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "Binicanella (Casa de Colònies)",
+        "titularitat": "Fundació Pere Tarrés",
+        "capacitat": 80,
+        "web": "https://www.peretarres.org/"
+      }
+    ],
+    "total_recursos": 6
+  },
+  {
+    "codi_ine": "07009",
+    "municipi": "Búger",
+    "municipi_cat": "Búger",
+    "slug": "buger-id07009",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/buger-id07009",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07009.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [],
+    "total_recursos": 0
+  },
+  {
+    "codi_ine": "07011",
+    "municipi": "Calvià",
+    "municipi_cat": "Calvià",
+    "slug": "calvia-id07011",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/calvia-id07011",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07011.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "Muela de s'Esclop (des de sa Vinya de Galatzó)",
+        "slug": "muela-de-sesclop",
+        "dificultat": "Exigent",
+        "distancia_km": 12.8,
+        "desnivell_positiu_m": 690,
+        "durada_estimada": "5h 00min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "Refugi de la Finca Pública de Galatzó",
+        "titularitat": "Consell de Mallorca / Aj. Calvià",
+        "capacitat": 50,
+        "web": "https://caminsdemallorca.consell-mallorca.cat/"
+      }
+    ],
+    "total_recursos": 2
+  },
+  {
+    "codi_ine": "07012",
+    "municipi": "Campanet",
+    "municipi_cat": "Campanet",
+    "slug": "campanet-id07012",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/campanet-id07012",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07012.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "Ses Fonts Ufanes (Campanet)",
+        "slug": "ses-fonts-ufanes-campanet",
+        "dificultat": "Molt Fàcil",
+        "distancia_km": 3.8,
+        "desnivell_positiu_m": 60,
+        "durada_estimada": "1h 15min"
+      }
+    ],
+    "acampades": [],
+    "total_recursos": 1
+  },
+  {
+    "codi_ine": "07013",
+    "municipi": "Campos",
+    "municipi_cat": "Campos",
+    "slug": "campos-id07013",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/campos-id07013",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07013.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [],
+    "total_recursos": 0
+  },
+  {
+    "codi_ine": "07014",
+    "municipi": "Capdepera",
+    "municipi_cat": "Capdepera",
+    "slug": "capdepera-id07014",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/capdepera-id07014",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07014.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [],
+    "total_recursos": 0
+  },
+  {
+    "codi_ine": "07016",
+    "municipi": "Consell",
+    "municipi_cat": "Consell",
+    "slug": "consell-id07016",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/consell-id07016",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07016.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [],
+    "total_recursos": 0
+  },
+  {
+    "codi_ine": "07017",
+    "municipi": "Costitx",
+    "municipi_cat": "Costitx",
+    "slug": "costitx-id07017",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/costitx-id07017",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07017.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [],
+    "total_recursos": 0
+  },
+  {
+    "codi_ine": "07018",
+    "municipi": "Deià",
+    "municipi_cat": "Deià",
+    "slug": "deia-id07018",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/deia-id07018",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07018.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "GR-221 Etapa 4: Esporles a Deià",
+        "slug": "gr221-etapa-4-esporles-deia",
+        "dificultat": "Exigent",
+        "distancia_km": 19.6,
+        "desnivell_positiu_m": 890,
+        "durada_estimada": "6h 45min"
+      },
+      {
+        "nom": "GR-221 Etapa 5: Deià al Port de Sóller",
+        "slug": "gr221-etapa-5-deia-port-soller",
+        "dificultat": "Fàcil - Moderada",
+        "distancia_km": 10.2,
+        "desnivell_positiu_m": 310,
+        "durada_estimada": "3h 30min"
+      },
+      {
+        "nom": "Sa Foradada des de Son Marroig (Deià)",
+        "slug": "sa-foradada-son-marroig",
+        "dificultat": "Moderada",
+        "distancia_km": 7.0,
+        "desnivell_positiu_m": 290,
+        "durada_estimada": "2h 45min"
+      },
+      {
+        "nom": "Camí des Rafal i Cova de sa Cauba (Deià)",
+        "slug": "cami-des-rafal-deia",
+        "dificultat": "Moderada",
+        "distancia_km": 6.5,
+        "desnivell_positiu_m": 270,
+        "durada_estimada": "2h 30min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "Refugi de Can Boi",
+        "titularitat": "Consell de Mallorca (Xarxa GR-221)",
+        "capacitat": 32,
+        "web": "https://caminsdemallorca.consell-mallorca.cat/"
+      }
+    ],
+    "total_recursos": 5
+  },
+  {
+    "codi_ine": "07019",
+    "municipi": "Escorca",
+    "municipi_cat": "Escorca",
+    "slug": "escorca-lluc-id07019",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/escorca-lluc-id07019",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07019.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "GR-221 Etapa 6: Sóller a Tossals Verds",
+        "slug": "gr221-etapa-6-soller-tossals-verds",
+        "dificultat": "Exigent",
+        "distancia_km": 15.0,
+        "desnivell_positiu_m": 820,
+        "durada_estimada": "5h 30min"
+      },
+      {
+        "nom": "GR-221 Etapa 7: Tossals Verds a Son Amer (Lluc)",
+        "slug": "gr221-etapa-7-tossals-verds-son-amer",
+        "dificultat": "Exigent",
+        "distancia_km": 14.8,
+        "desnivell_positiu_m": 830,
+        "durada_estimada": "5h 45min"
+      },
+      {
+        "nom": "GR-221 Etapa 8: Son Amer a Pollença",
+        "slug": "gr221-etapa-8-son-amer-pollenca",
+        "dificultat": "Fàcil - Moderada",
+        "distancia_km": 16.7,
+        "desnivell_positiu_m": 240,
+        "durada_estimada": "4h 45min"
+      },
+      {
+        "nom": "Camí de ses Voltes d'en Galileu (Lluc)",
+        "slug": "cami-de-ses-voltes-galileu",
+        "dificultat": "Moderada - Exigent",
+        "distancia_km": 9.4,
+        "desnivell_positiu_m": 580,
+        "durada_estimada": "3h 45min"
+      },
+      {
+        "nom": "Ruta de les Fonts de sa Costera (Sóller - Cala Tuent)",
+        "slug": "fonts-de-sa-costera-soller",
+        "dificultat": "Moderada",
+        "distancia_km": 12.0,
+        "desnivell_positiu_m": 380,
+        "durada_estimada": "4h 00min"
+      },
+      {
+        "nom": "Torrent de Pareis (Només estiu / temps sec)",
+        "slug": "torrent-de-pareis",
+        "dificultat": "Molt Exigent / Tècnica",
+        "distancia_km": 7.2,
+        "desnivell_positiu_m": 50,
+        "durada_estimada": "5h 00min"
+      },
+      {
+        "nom": "Ascensió al Puig Tomir (des de Binifaldó)",
+        "slug": "coma-de-binifaldo-puig-tomir",
+        "dificultat": "Exigent",
+        "distancia_km": 10.8,
+        "desnivell_positiu_m": 670,
+        "durada_estimada": "4h 30min"
+      },
+      {
+        "nom": "Fornalutx al Coll de sa Bàlitx i Cala Tuent",
+        "slug": "puig-de-ses-basses-fornalutx",
+        "dificultat": "Moderada - Exigent",
+        "distancia_km": 13.5,
+        "desnivell_positiu_m": 420,
+        "durada_estimada": "4h 45min"
+      },
+      {
+        "nom": "Pas des Llop i Cova de sa Campana (Alaró / Escorca)",
+        "slug": "castell-de-reina-alaro",
+        "dificultat": "Exigent",
+        "distancia_km": 11.0,
+        "desnivell_positiu_m": 590,
+        "durada_estimada": "4h 30min"
+      },
+      {
+        "nom": "Volta a l'Embassament de Cúber i Font de s'Ametler",
+        "slug": "embassament-cuber-gorg-blau",
+        "dificultat": "Molt Fàcil",
+        "distancia_km": 5.0,
+        "desnivell_positiu_m": 60,
+        "durada_estimada": "1h 45min"
+      },
+      {
+        "nom": "Camí Vell de Pollença a Lluc (per la Font del Tomir)",
+        "slug": "monestir-de-lluc-cami-vell",
+        "dificultat": "Moderada",
+        "distancia_km": 12.5,
+        "desnivell_positiu_m": 490,
+        "durada_estimada": "4h 00min"
+      },
+      {
+        "nom": "Torrent De Pareis Escorca Sa Calobra",
+        "slug": "torrent-de-pareis-escorca-sa-calobra",
+        "dificultat": "Moderada",
+        "distancia_km": 8.5,
+        "desnivell_positiu_m": 350,
+        "durada_estimada": "3h 30min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "Refugi de Tossals Verds",
+        "titularitat": "Consell de Mallorca (Xarxa GR-221)",
+        "capacitat": 30,
+        "web": "https://caminsdemallorca.consell-mallorca.cat/"
+      },
+      {
+        "nom": "Àrea d'Acampada de Sa Font Coberta",
+        "titularitat": "IBANAT (Govern de les Illes Balears)",
+        "capacitat": 150,
+        "web": "https://www.caib.es/sites/ibanat/"
+      },
+      {
+        "nom": "Àrea d'Acampada des Pixarells",
+        "titularitat": "IBANAT (Govern de les Illes Balears)",
+        "capacitat": 80,
+        "web": "https://www.caib.es/sites/ibanat/"
+      },
+      {
+        "nom": "Àrea d'Acampada de Marjanor",
+        "titularitat": "IBANAT (Govern de les Illes Balears)",
+        "capacitat": 60,
+        "web": "https://www.caib.es/sites/ibanat/"
+      },
+      {
+        "nom": "Refugi de Son Amer",
+        "titularitat": "Consell de Mallorca (Xarxa GR-221)",
+        "capacitat": 52,
+        "web": "https://caminsdemallorca.consell-mallorca.cat/"
+      },
+      {
+        "nom": "Cases de Binifaldó (Refugi IBANAT)",
+        "titularitat": "IBANAT (Govern de les Illes Balears)",
+        "capacitat": 30,
+        "web": "https://www.caib.es/sites/ibanat/"
+      },
+      {
+        "nom": "Refugi de Cúber",
+        "titularitat": "IBANAT (Govern de les Illes Balears)",
+        "capacitat": 6,
+        "web": "https://www.caib.es/sites/ibanat/"
+      }
+    ],
+    "total_recursos": 19
+  },
+  {
+    "codi_ine": "07020",
+    "municipi": "Esporles",
+    "municipi_cat": "Esporles",
+    "slug": "esporles-id07020",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/esporles-id07020",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07020.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "GR-221 Etapa 3: Estellencs a Esporles",
+        "slug": "gr221-etapa-3-estellencs-esporles",
+        "dificultat": "Moderada",
+        "distancia_km": 15.2,
+        "desnivell_positiu_m": 540,
+        "durada_estimada": "5h 15min"
+      },
+      {
+        "nom": "GR-221 Etapa 4: Esporles a Deià",
+        "slug": "gr221-etapa-4-esporles-deia",
+        "dificultat": "Exigent",
+        "distancia_km": 19.6,
+        "desnivell_positiu_m": 890,
+        "durada_estimada": "6h 45min"
+      },
+      {
+        "nom": "Fita del Ram i Ermita de Maristel·la (Esporles)",
+        "slug": "fita-del-ram-maristella",
+        "dificultat": "Moderada",
+        "distancia_km": 8.5,
+        "desnivell_positiu_m": 520,
+        "durada_estimada": "3h 30min"
+      },
+      {
+        "nom": "Esporles a Banyalbufar pel Camí des Correu",
+        "slug": "puig-des-teix-espolres",
+        "dificultat": "Fàcil - Moderada",
+        "distancia_km": 8.2,
+        "desnivell_positiu_m": 280,
+        "durada_estimada": "2h 45min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "Maristel·la (Ermita i Terreny)",
+        "titularitat": "Obreria de Maristel·la",
+        "capacitat": 35,
+        "web": ""
+      }
+    ],
+    "total_recursos": 5
+  },
+  {
+    "codi_ine": "07021",
+    "municipi": "Estellencs",
+    "municipi_cat": "Estellencs",
+    "slug": "estellencs-id07021",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/estellencs-id07021",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07021.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "GR-221 Etapa 2: La Trapa a Estellencs",
+        "slug": "gr221-etapa-2-la-trapa-estellencs",
+        "dificultat": "Exigent",
+        "distancia_km": 14.5,
+        "desnivell_positiu_m": 620,
+        "durada_estimada": "5h 45min"
+      },
+      {
+        "nom": "GR-221 Etapa 3: Estellencs a Esporles",
+        "slug": "gr221-etapa-3-estellencs-esporles",
+        "dificultat": "Moderada",
+        "distancia_km": 15.2,
+        "desnivell_positiu_m": 540,
+        "durada_estimada": "5h 15min"
+      },
+      {
+        "nom": "Puig de Galatzó (des de la Font des Pi)",
+        "slug": "puig-de-galatzo-font-des-pi",
+        "dificultat": "Exigent",
+        "distancia_km": 11.2,
+        "desnivell_positiu_m": 780,
+        "durada_estimada": "4h 45min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "Refugi de Sa Coma d'en Vidal",
+        "titularitat": "Consell de Mallorca (Xarxa GR-221)",
+        "capacitat": 24,
+        "web": "https://caminsdemallorca.consell-mallorca.cat/"
+      }
+    ],
+    "total_recursos": 4
+  },
+  {
+    "codi_ine": "07022",
+    "municipi": "Felanitx",
+    "municipi_cat": "Felanitx",
+    "slug": "felanitx-id07022",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/felanitx-id07022",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07022.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "Puig de Sant Salvador (Felanitx)",
+        "slug": "puig-de-sant-salvador-felanitx",
+        "dificultat": "Moderada",
+        "distancia_km": 7.5,
+        "desnivell_positiu_m": 430,
+        "durada_estimada": "2h 45min"
+      },
+      {
+        "nom": "Castell de Santueri (Felanitx)",
+        "slug": "castell-de-santueri-felanitx",
+        "dificultat": "Fàcil - Moderada",
+        "distancia_km": 6.0,
+        "desnivell_positiu_m": 320,
+        "durada_estimada": "2h 15min"
+      },
+      {
+        "nom": "Volta al Puig de Santueri i Castell de Santueri",
+        "slug": "puig-de-santueri-felanitx-circular",
+        "dificultat": "Moderada",
+        "distancia_km": 7.8,
+        "desnivell_positiu_m": 290,
+        "durada_estimada": "2h 30min"
+      }
+    ],
+    "acampades": [],
+    "total_recursos": 3
+  },
+  {
+    "codi_ine": "07025",
+    "municipi": "Fornalutx",
+    "municipi_cat": "Fornalutx",
+    "slug": "fornalutx-id07025",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/fornalutx-id07025",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07025.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "Fornalutx al Coll de sa Bàlitx i Cala Tuent",
+        "slug": "puig-de-ses-basses-fornalutx",
+        "dificultat": "Moderada - Exigent",
+        "distancia_km": 13.5,
+        "desnivell_positiu_m": 420,
+        "durada_estimada": "4h 45min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "Refugi de Cúber",
+        "titularitat": "IBANAT (Govern de les Illes Balears)",
+        "capacitat": 6,
+        "web": "https://www.caib.es/sites/ibanat/"
+      }
+    ],
+    "total_recursos": 2
+  },
+  {
+    "codi_ine": "07027",
+    "municipi": "Inca",
+    "municipi_cat": "Inca",
+    "slug": "inca-id07027",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/inca-id07027",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07027.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [],
+    "total_recursos": 0
+  },
+  {
+    "codi_ine": "07028",
+    "municipi": "Lloret de Vistalegre",
+    "municipi_cat": "Lloret de Vistalegre",
+    "slug": "lloret-de-vistalegre-id07028",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/lloret-de-vistalegre-id07028",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07028.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "Sa Comuna de Lloret de Vistalegre",
+        "slug": "sa-comuna-de-lloret-de-vistalegre",
+        "dificultat": "Molt Fàcil",
+        "distancia_km": 4.0,
+        "desnivell_positiu_m": 45,
+        "durada_estimada": "1h 30min"
+      }
+    ],
+    "acampades": [],
+    "total_recursos": 1
+  },
+  {
+    "codi_ine": "07029",
+    "municipi": "Lloseta",
+    "municipi_cat": "Lloseta",
+    "slug": "lloseta-id07029",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/lloseta-id07029",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07029.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [],
+    "total_recursos": 0
+  },
+  {
+    "codi_ine": "07030",
+    "municipi": "Llubí",
+    "municipi_cat": "Llubí",
+    "slug": "llubi-id07030",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/llubi-id07030",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07030.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [],
+    "total_recursos": 0
+  },
+  {
+    "codi_ine": "07031",
+    "municipi": "Llucmajor",
+    "municipi_cat": "Llucmajor",
+    "slug": "llucmajor-id07031",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/llucmajor-id07031",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07031.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "s'Estanyol a la Torre de s'Estalella (Llucmajor)",
+        "slug": "estanyol-a-torre-estalella-llucmajor",
+        "dificultat": "Molt Fàcil",
+        "distancia_km": 4.2,
+        "desnivell_positiu_m": 20,
+        "durada_estimada": "1h 30min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "S'Estanyol (Llucmajor)",
+        "titularitat": "Gestió Entitat",
+        "capacitat": 40,
+        "web": ""
+      }
+    ],
+    "total_recursos": 2
+  },
+  {
+    "codi_ine": "07033",
+    "municipi": "Manacor",
+    "municipi_cat": "Manacor",
+    "slug": "manacor-id07033",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/manacor-id07033",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07033.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "Cala Varques des de les Coves del Pirata (Manacor)",
+        "slug": "cala-varques-manacor",
+        "dificultat": "Fàcil",
+        "distancia_km": 6.0,
+        "desnivell_positiu_m": 45,
+        "durada_estimada": "2h 00min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "Son Talent",
+        "titularitat": "Ajuntament de Manacor",
+        "capacitat": 40,
+        "web": "https://www.manacor.org/"
+      },
+      {
+        "nom": "Sa Murtera",
+        "titularitat": "Ajuntament de Manacor",
+        "capacitat": 35,
+        "web": "https://www.manacor.org/"
+      },
+      {
+        "nom": "Puig d'Alanar",
+        "titularitat": "Ajuntament de Manacor",
+        "capacitat": 35,
+        "web": "https://www.manacor.org/"
+      }
+    ],
+    "total_recursos": 4
+  },
+  {
+    "codi_ine": "07034",
+    "municipi": "Mancor de la Vall",
+    "municipi_cat": "Mancor de la Vall",
+    "slug": "mancor-de-la-vall-id07034",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/mancor-de-la-vall-id07034",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07034.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [
+      {
+        "nom": "Monestir de Santa Llúcia",
+        "titularitat": "Comunitat del Monestir",
+        "capacitat": 30,
+        "web": ""
+      }
+    ],
+    "total_recursos": 1
+  },
+  {
+    "codi_ine": "07035",
+    "municipi": "Maria de la Salut",
+    "municipi_cat": "Maria de la Salut",
+    "slug": "maria-de-la-salut-id07035",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/maria-de-la-salut-id07035",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07035.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [],
+    "total_recursos": 0
+  },
+  {
+    "codi_ine": "07036",
+    "municipi": "Marratxí",
+    "municipi_cat": "Marratxí",
+    "slug": "marratxi-cabaneta-la-id07036",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/marratxi-cabaneta-la-id07036",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07036.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [],
+    "total_recursos": 0
+  },
+  {
+    "codi_ine": "07038",
+    "municipi": "Montuïri",
+    "municipi_cat": "Montuïri",
+    "slug": "montuiri-id07038",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/montuiri-id07038",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07038.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "Puig de Sant Miquel (Montuïri)",
+        "slug": "puig-de-sant-miquel-montuiri",
+        "dificultat": "Fàcil",
+        "distancia_km": 5.2,
+        "desnivell_positiu_m": 160,
+        "durada_estimada": "1h 45min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "Puig de Sant Miquel (Kcodril)",
+        "titularitat": "Kcodril / Gestió Entitat",
+        "capacitat": 40,
+        "web": ""
+      }
+    ],
+    "total_recursos": 2
+  },
+  {
+    "codi_ine": "07039",
+    "municipi": "Muro",
+    "municipi_cat": "Muro",
+    "slug": "muro-id07039",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/muro-id07039",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07039.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "Parc Natural de s'Albufera de Mallorca",
+        "slug": "parc-natural-albufera-mallorca",
+        "dificultat": "Molt Fàcil",
+        "distancia_km": 6.2,
+        "desnivell_positiu_m": 10,
+        "durada_estimada": "2h 00min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "Son Real (Refugi i Cases)",
+        "titularitat": "IBANAT (Govern de les Illes Balears)",
+        "capacitat": 12,
+        "web": "https://www.caib.es/sites/ibanat/"
+      }
+    ],
+    "total_recursos": 2
+  },
+  {
+    "codi_ine": "07040",
+    "municipi": "Palma",
+    "municipi_cat": "Palma",
+    "slug": "palma-id07040",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/palma-id07040",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07040.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "Tomb pel Bosc del Castell de Bellver (Palma)",
+        "slug": "castell-de-bellver-bosc-palma",
+        "dificultat": "Molt Fàcil",
+        "distancia_km": 4.2,
+        "desnivell_positiu_m": 120,
+        "durada_estimada": "1h 30min"
+      }
+    ],
+    "acampades": [],
+    "total_recursos": 1
+  },
+  {
+    "codi_ine": "07041",
+    "municipi": "Petra",
+    "municipi_cat": "Petra",
+    "slug": "petra-id07041",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/petra-id07041",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07041.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "Pujada a l'Ermita de Bonany des de Petra",
+        "slug": "ermita-bonany-petra",
+        "dificultat": "Fàcil",
+        "distancia_km": 7.0,
+        "desnivell_positiu_m": 220,
+        "durada_estimada": "2h 15min"
+      }
+    ],
+    "acampades": [],
+    "total_recursos": 1
+  },
+  {
+    "codi_ine": "07042",
+    "municipi": "Pollença",
+    "municipi_cat": "Pollença",
+    "slug": "pollenca-id07042",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/pollenca-id07042",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07042.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "GR-221 Etapa 8: Son Amer a Pollença",
+        "slug": "gr221-etapa-8-son-amer-pollenca",
+        "dificultat": "Fàcil - Moderada",
+        "distancia_km": 16.7,
+        "desnivell_positiu_m": 240,
+        "durada_estimada": "4h 45min"
+      },
+      {
+        "nom": "Cala Boquer i Vall de Boquer (Pollença)",
+        "slug": "cala-boquer-pollenca",
+        "dificultat": "Fàcil",
+        "distancia_km": 5.5,
+        "desnivell_positiu_m": 120,
+        "durada_estimada": "2h 00min"
+      },
+      {
+        "nom": "Volta al Puig de Maria (Pollença)",
+        "slug": "volta-puig-de-maria-pollenca",
+        "dificultat": "Fàcil",
+        "distancia_km": 4.5,
+        "desnivell_positiu_m": 240,
+        "durada_estimada": "1h 45min"
+      },
+      {
+        "nom": "Cami del Far de Formentor a Cala Murta (Pollença)",
+        "slug": "penyal-des-migdia-formentor",
+        "dificultat": "Fàcil - Moderada",
+        "distancia_km": 6.8,
+        "desnivell_positiu_m": 190,
+        "durada_estimada": "2h 30min"
+      },
+      {
+        "nom": "Camí Vell de Pollença a Lluc (per la Font del Tomir)",
+        "slug": "monestir-de-lluc-cami-vell",
+        "dificultat": "Moderada",
+        "distancia_km": 12.5,
+        "desnivell_positiu_m": 490,
+        "durada_estimada": "4h 00min"
+      },
+      {
+        "nom": "Coves Blanques (Cala Sant Vicenç / Pollença)",
+        "slug": "coves-blanques-pollenca",
+        "dificultat": "Fàcil",
+        "distancia_km": 5.4,
+        "desnivell_positiu_m": 150,
+        "durada_estimada": "2h 00min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "Santuari del Puig de Maria",
+        "titularitat": "Ajuntament de Pollença / Obreria",
+        "capacitat": 25,
+        "web": "https://www.ajpollenca.net/"
+      },
+      {
+        "nom": "Refugi de Lavanor",
+        "titularitat": "IBANAT (Govern de les Illes Balears)",
+        "capacitat": 10,
+        "web": "https://www.caib.es/sites/ibanat/"
+      }
+    ],
+    "total_recursos": 8
+  },
+  {
+    "codi_ine": "07043",
+    "municipi": "Porreres",
+    "municipi_cat": "Porreres",
+    "slug": "porreres-id07043",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/porreres-id07043",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07043.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [
+      {
+        "nom": "Santuari de Monti-Sion",
+        "titularitat": "Gestió Obreria Monti-Sion",
+        "capacitat": 45,
+        "web": ""
+      }
+    ],
+    "total_recursos": 1
+  },
+  {
+    "codi_ine": "07045",
+    "municipi": "Puigpunyent",
+    "municipi_cat": "Puigpunyent",
+    "slug": "puigpunyent-id07045",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/puigpunyent-id07045",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07045.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "Puig de Galatzó (des de la Font des Pi)",
+        "slug": "puig-de-galatzo-font-des-pi",
+        "dificultat": "Exigent",
+        "distancia_km": 11.2,
+        "desnivell_positiu_m": 780,
+        "durada_estimada": "4h 45min"
+      },
+      {
+        "nom": "Penya de les Sínies i Reserva de Puigpunyent",
+        "slug": "penya-de-sa-foradada-puigpunyent",
+        "dificultat": "Fàcil",
+        "distancia_km": 5.0,
+        "desnivell_positiu_m": 160,
+        "durada_estimada": "2h 00min"
+      }
+    ],
+    "acampades": [],
+    "total_recursos": 2
+  },
+  {
+    "codi_ine": "07044",
+    "municipi": "Sa Pobla",
+    "municipi_cat": "Sa Pobla",
+    "slug": "pobla-sa-id07044",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/pobla-sa-id07044",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07044.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "Parc Natural de s'Albufera de Mallorca",
+        "slug": "parc-natural-albufera-mallorca",
+        "dificultat": "Molt Fàcil",
+        "distancia_km": 6.2,
+        "desnivell_positiu_m": 10,
+        "durada_estimada": "2h 00min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "Crestatx (Ermita i Terreny)",
+        "titularitat": "Parròquia de Crestatx",
+        "capacitat": 60,
+        "web": ""
+      }
+    ],
+    "total_recursos": 2
+  },
+  {
+    "codi_ine": "07049",
+    "municipi": "Sant Joan",
+    "municipi_cat": "Sant Joan",
+    "slug": "sant-joan-id07049",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/sant-joan-id07049",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07049.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [],
+    "total_recursos": 0
+  },
+  {
+    "codi_ine": "07051",
+    "municipi": "Sant Llorenç des Cardassar",
+    "municipi_cat": "Sant Llorenç des Cardassar",
+    "slug": "sant-llorenc-des-cardassar-id07051",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/sant-llorenc-des-cardassar-id07051",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07051.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [],
+    "total_recursos": 0
+  },
+  {
+    "codi_ine": "07053",
+    "municipi": "Santa Eugènia",
+    "municipi_cat": "Santa Eugènia",
+    "slug": "santa-eugenia-id07053",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/santa-eugenia-id07053",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07053.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [],
+    "total_recursos": 0
+  },
+  {
+    "codi_ine": "07055",
+    "municipi": "Santa Margalida",
+    "municipi_cat": "Santa Margalida",
+    "slug": "santa-margalida-id07055",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/santa-margalida-id07055",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07055.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "Ruta Litoral de la Finca Pública de Son Real",
+        "slug": "son-real-can-picafort",
+        "dificultat": "Molt Fàcil",
+        "distancia_km": 8.5,
+        "desnivell_positiu_m": 25,
+        "durada_estimada": "2h 30min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "S'Hort de Son Serra",
+        "titularitat": "Col·legi Montesión",
+        "capacitat": 80,
+        "web": "https://montesion.org/"
+      },
+      {
+        "nom": "Son Real (Refugi i Cases)",
+        "titularitat": "IBANAT (Govern de les Illes Balears)",
+        "capacitat": 12,
+        "web": "https://www.caib.es/sites/ibanat/"
+      }
+    ],
+    "total_recursos": 3
+  },
+  {
+    "codi_ine": "07056",
+    "municipi": "Santa Maria del Camí",
+    "municipi_cat": "Santa Maria del Camí",
+    "slug": "santa-maria-del-cami-id07056",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/santa-maria-del-cami-id07056",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07056.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "Avenc de Son Pou (Coanegra / Santa Maria)",
+        "slug": "avenc-de-son-pou",
+        "dificultat": "Fàcil - Moderada",
+        "distancia_km": 8.0,
+        "desnivell_positiu_m": 180,
+        "durada_estimada": "2h 45min"
+      },
+      {
+        "nom": "Orient a sa Coma de Santa Maria pel Pas de s'Escaleta",
+        "slug": "penyal-de-honor-orient",
+        "dificultat": "Moderada",
+        "distancia_km": 11.5,
+        "desnivell_positiu_m": 390,
+        "durada_estimada": "4h 00min"
+      },
+      {
+        "nom": "Torrent de Coanegra i Salt des Freu de Coanegra",
+        "slug": "torrent-de-coanegra-santa-maria",
+        "dificultat": "Moderada",
+        "distancia_km": 9.5,
+        "desnivell_positiu_m": 210,
+        "durada_estimada": "3h 15min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "Ca Ses Monges",
+        "titularitat": "Ajuntament de Santa Maria del Camí",
+        "capacitat": 30,
+        "web": "https://www.santamariadelcami.cat/"
+      }
+    ],
+    "total_recursos": 4
+  },
+  {
+    "codi_ine": "07057",
+    "municipi": "Santanyí",
+    "municipi_cat": "Santanyí",
+    "slug": "santanyi-id07057",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/santanyi-id07057",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07057.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "Parc Natural de Mondragó (Santanyí)",
+        "slug": "parc-natural-mondrago",
+        "dificultat": "Molt Fàcil",
+        "distancia_km": 5.2,
+        "desnivell_positiu_m": 40,
+        "durada_estimada": "2h 00min"
+      },
+      {
+        "nom": "Puig de Consolació (Santanyí / s'Alqueria Blanca)",
+        "slug": "sanctuari-de-consolacio-santanyi",
+        "dificultat": "Molt Fàcil",
+        "distancia_km": 3.5,
+        "desnivell_positiu_m": 110,
+        "durada_estimada": "1h 15min"
+      }
+    ],
+    "acampades": [],
+    "total_recursos": 2
+  },
+  {
+    "codi_ine": "07058",
+    "municipi": "Selva",
+    "municipi_cat": "Selva",
+    "slug": "selva-id07058",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/selva-id07058",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07058.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "Caimari al Coll de sa Batalla pel Camí Vell de Lluc",
+        "slug": "ermita-de-sant-simon-caimari",
+        "dificultat": "Moderada",
+        "distancia_km": 7.8,
+        "desnivell_positiu_m": 410,
+        "durada_estimada": "2h 45min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "Comuna de Caimari",
+        "titularitat": "Ajuntament de Selva",
+        "capacitat": 40,
+        "web": "https://www.ajselva.net/"
+      }
+    ],
+    "total_recursos": 2
+  },
+  {
+    "codi_ine": "07047",
+    "municipi": "Sencelles",
+    "municipi_cat": "Sencelles",
+    "slug": "sencelles-id07047",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/sencelles-id07047",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07047.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [],
+    "total_recursos": 0
+  },
+  {
+    "codi_ine": "07059",
+    "municipi": "Ses Salines",
+    "municipi_cat": "Ses Salines",
+    "slug": "salines-ses-id07059",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/salines-ses-id07059",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07059.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [
+      {
+        "nom": "Sant Francesc d'Assís (Colònia de Sant Jordi)",
+        "titularitat": "Filles de la Misericòrdia",
+        "capacitat": 60,
+        "web": ""
+      }
+    ],
+    "total_recursos": 1
+  },
+  {
+    "codi_ine": "07060",
+    "municipi": "Sineu",
+    "municipi_cat": "Sineu",
+    "slug": "sineu-id07060",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/sineu-id07060",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07060.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [],
+    "total_recursos": 0
+  },
+  {
+    "codi_ine": "07062",
+    "municipi": "Son Servera",
+    "municipi_cat": "Son Servera",
+    "slug": "son-servera-id07062",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/son-servera-id07062",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07062.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [],
+    "total_recursos": 0
+  },
+  {
+    "codi_ine": "07061",
+    "municipi": "Sóller",
+    "municipi_cat": "Sóller",
+    "slug": "soller-id07061",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/soller-id07061",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07061.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "GR-221 Etapa 5: Deià al Port de Sóller",
+        "slug": "gr221-etapa-5-deia-port-soller",
+        "dificultat": "Fàcil - Moderada",
+        "distancia_km": 10.2,
+        "desnivell_positiu_m": 310,
+        "durada_estimada": "3h 30min"
+      },
+      {
+        "nom": "GR-221 Etapa 6: Sóller a Tossals Verds",
+        "slug": "gr221-etapa-6-soller-tossals-verds",
+        "dificultat": "Exigent",
+        "distancia_km": 15.0,
+        "desnivell_positiu_m": 820,
+        "durada_estimada": "5h 30min"
+      },
+      {
+        "nom": "Ruta de les Fonts de sa Costera (Sóller - Cala Tuent)",
+        "slug": "fonts-de-sa-costera-soller",
+        "dificultat": "Moderada",
+        "distancia_km": 12.0,
+        "desnivell_positiu_m": 380,
+        "durada_estimada": "4h 00min"
+      },
+      {
+        "nom": "Camí de sa Sirereta i Cova de ses Albellons (Sóller)",
+        "slug": "cami-de-sa-sirereta-soller",
+        "dificultat": "Moderada",
+        "distancia_km": 7.2,
+        "desnivell_positiu_m": 310,
+        "durada_estimada": "2h 45min"
+      },
+      {
+        "nom": "Clot des Cirers des del Port de Sóller",
+        "slug": "clot-des-cirers-soller",
+        "dificultat": "Moderada",
+        "distancia_km": 9.8,
+        "desnivell_positiu_m": 480,
+        "durada_estimada": "3h 45min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "Refugi de Muleta",
+        "titularitat": "Consell de Mallorca (Xarxa GR-221)",
+        "capacitat": 30,
+        "web": "https://caminsdemallorca.consell-mallorca.cat/"
+      },
+      {
+        "nom": "Sant Ramon de Penyafort",
+        "titularitat": "Cristians Vall de Sóller",
+        "capacitat": 45,
+        "web": ""
+      }
+    ],
+    "total_recursos": 7
+  },
+  {
+    "codi_ine": "07063",
+    "municipi": "Valldemossa",
+    "municipi_cat": "Valldemossa",
+    "slug": "valldemossa-id07063",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/valldemossa-id07063",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07063.xml",
+    "illa": "Mallorca",
+    "rutes": [
+      {
+        "nom": "GR-221 Etapa 4: Esporles a Deià",
+        "slug": "gr221-etapa-4-esporles-deia",
+        "dificultat": "Exigent",
+        "distancia_km": 19.6,
+        "desnivell_positiu_m": 890,
+        "durada_estimada": "6h 45min"
+      },
+      {
+        "nom": "Ermita de la Trinitat i Miradors de Valldemossa",
+        "slug": "ermita-trinitat-valldemossa",
+        "dificultat": "Fàcil",
+        "distancia_km": 5.8,
+        "desnivell_positiu_m": 220,
+        "durada_estimada": "2h 15min"
+      },
+      {
+        "nom": "Puig des Teix pel Camí de s'Arxiduc (Valldemossa)",
+        "slug": "puig-des-teix-valldemossa",
+        "dificultat": "Exigent",
+        "distancia_km": 14.0,
+        "desnivell_positiu_m": 810,
+        "durada_estimada": "5h 15min"
+      },
+      {
+        "nom": "Mirador de ses Basses i Son Gual (Valldemossa)",
+        "slug": "mirador-de-ses-basses-son-gual-valldemossa",
+        "dificultat": "Fàcil",
+        "distancia_km": 6.8,
+        "desnivell_positiu_m": 290,
+        "durada_estimada": "2h 30min"
+      }
+    ],
+    "acampades": [
+      {
+        "nom": "Refugi de Son Moragues",
+        "titularitat": "IBANAT (Govern de les Illes Balears)",
+        "capacitat": 15,
+        "web": "https://www.caib.es/sites/ibanat/"
+      }
+    ],
+    "total_recursos": 5
+  },
+  {
+    "codi_ine": "07065",
+    "municipi": "Vilafranca de Bonany",
+    "municipi_cat": "Vilafranca de Bonany",
+    "slug": "vilafranca-de-bonany-id07065",
+    "url": "https://www.aemet.es/es/eltiempo/prediccion/municipios/vilafranca-de-bonany-id07065",
+    "xml_url": "https://www.aemet.es/xml/municipios/localidad_07065.xml",
+    "illa": "Mallorca",
+    "rutes": [],
+    "acampades": [],
+    "total_recursos": 0
+  }
+]

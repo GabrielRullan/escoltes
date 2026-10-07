@@ -1,0 +1,33 @@
+{
+  "name": "escoltes",
+  "version": "1.0.0",
+  "description": "[![Deploy Wiki to GitHub Pages](https://github.com/GabrielRullan/escoltes/actions/workflows/deploy_wiki.yml/badge.svg)](https://github.com/GabrielRullan/escoltes/actions/workflows/deploy_wiki.yml)",
+  "main": "test_empirical_challenge.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy": "astro build && npx firebase-tools deploy --only hosting",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielRullan/escoltes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/GabrielRullan/escoltes/issues"
+  },
+  "homepage": "https://github.com/GabrielRullan/escoltes#readme",
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.6",
+    "tailwindcss": "^4.3.3"
+  }
+}

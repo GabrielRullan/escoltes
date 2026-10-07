@@ -1,10 +1,11 @@
-site_name: Portal Escolta de Mallorca
+site_name: Portal d'excursions per a escoltes a Mallorca
 site_description: Base de dades de rutes, terrenys d'acampada, refugis, agrupaments i transport públic a Mallorca.
 site_author: Equip de Suport del Grup Escolta
 site_url: https://gabrielrullan.github.io/escoltes/
 repo_url: https://github.com/GabrielRullan/escoltes
 repo_name: GabrielRullan/escoltes
 edit_uri: edit/main/docs/
+copyright: 'Aquesta pàgina és de creació i manteniment voluntari, qualsevol comentari contacteu a <a href="mailto:gabriel@data-partner.xyz">gabriel@data-partner.xyz</a>'
 
 theme:
   name: material

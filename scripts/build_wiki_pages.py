@@ -118,21 +118,34 @@ def find_tib_lines_for_route(route, transport_data):
 
 def get_firebase_experiences_section_html(rut, agrupaments):
     slug = rut['slug']
+    route_name = rut['nom']
     static_exps = rut.get("experiencies", [])
     static_exps_json = json.dumps(static_exps, ensure_ascii=False)
     
+    # Ordenar TOTS els agrupaments alfabèticament i categoritzar-los
+    sorted_agrups = sorted(agrupaments, key=lambda x: x["nom"])
+    
     agrupament_options = '                    <option value="">-- Selecciona el teu Agrupament --</option>\n'
-    for agr in agrupaments:
-        agrupament_options += f'                    <option value="{agr["nom"]}">{agr["nom"]}</option>\n'
-    agrupament_options += '                    <option value="Altre Agrupament / Grup Escolta">Altre Agrupament / Grup Escolta</option>'
+    agrupament_options += '                    <optgroup label="🏙️ Agrupaments de Palma de Mallorca">\n'
+    for agr in sorted_agrups:
+        if agr.get("zona") == "Barri" or agr.get("municipi", "").lower() == "palma":
+            agrupament_options += f'                        <option value="{agr["nom"]}">{agr["nom"]} ({agr.get("ubicacio_detall", "Palma")})</option>\n'
+    agrupament_options += '                    </optgroup>\n'
+    agrupament_options += '                    <optgroup label="🏡 Agrupaments de Part Forana (Pobles)">\n'
+    for agr in sorted_agrups:
+        if agr.get("zona") != "Barri" and agr.get("municipi", "").lower() != "palma":
+            agrupament_options += f'                        <option value="{agr["nom"]}">{agr["nom"]} ({agr.get("municipi", "Mallorca")})</option>\n'
+    agrupament_options += '                    </optgroup>\n'
+    agrupament_options += '                    <optgroup label="⛵ Altres Illes i Territoris Escoltes">\n'
+    agrupament_options += '                        <option value="Agrupament Escolta de Menorca">Agrupament Escolta de Menorca</option>\n'
+    agrupament_options += '                        <option value="Agrupament Escolta d\'Eivissa / Formentera">Agrupament Escolta d\'Eivissa / Formentera</option>\n'
+    agrupament_options += '                        <option value="Agrupament de Catalunya / València">Agrupament de Catalunya / País Valencià</option>\n'
+    agrupament_options += '                    </optgroup>\n'
+    agrupament_options += '                    <option value="Altre Agrupament Escolta">Altre Agrupament Escolta (especificar)</option>'
 
     return f"""---
 
 ## 💬 Experiències i Valoracions dels Agrupaments Escoltes
-
-<!-- Firebase SDK compat via CDN -->
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
 
 <div id="firebase-exp-wrapper" style="background-color: var(--md-code-bg-color, #f8f9fa); border: 1px solid #e0e0e0; padding: 20px; border-radius: 12px; margin-top: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
     
@@ -151,38 +164,43 @@ def get_firebase_experiences_section_html(rut, agrupaments):
         </button>
     </div>
 
-    <!-- Formulari interactiu de publicació Firebase (Inicialment ocult) -->
+    <!-- Formulari interactiu d'enviament a l'administrador (Inicialment ocult) -->
     <div id="exp-form-container" style="display: none; background-color: #ffffff; border: 2px solid #00897b; border-radius: 10px; padding: 18px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.08);">
-        <h4 style="margin: 0 0 12px 0; color: #00897b; font-size: 1.05em;">📝 Enviar la teva experiència per a aquesta excursió (Sense registre)</h4>
+        <h4 style="margin: 0 0 6px 0; color: #00897b; font-size: 1.05em;">📝 Enviar la teva experiència per a aquesta excursió</h4>
+        <p style="margin: 0 0 14px 0; font-size: 0.85em; color: #555;">Qualsevol cap o agrupament pot compartir valoracions. El formulari enviarà les dades per correu electrònic a l'administrador per ser publicades a la fitxa.</p>
         
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-bottom: 12px;">
             <div>
                 <label style="font-weight: bold; font-size: 0.85em; display: block; margin-bottom: 4px;">👤 Nom i Llinatges (*):</label>
-                <input type="text" id="exp-nom" placeholder="Ex: Joan Bennàssar" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc;" />
+                <input type="text" id="exp-nom" placeholder="Ex: Joan Bennàssar" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box;" />
             </div>
             <div>
-                <label style="font-weight: bold; font-size: 0.85em; display: block; margin-bottom: 4px;">✉️ Correu Electrònic (*):</label>
-                <input type="email" id="exp-email" placeholder="joan@escoltes.cat" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc;" />
+                <label style="font-weight: bold; font-size: 0.85em; display: block; margin-bottom: 4px;">✉️ El teu Correu Electrònic (*):</label>
+                <input type="email" id="exp-email" placeholder="joan@escoltes.cat" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box;" />
             </div>
             <div>
                 <label style="font-weight: bold; font-size: 0.85em; display: block; margin-bottom: 4px;">⚜️ Agrupament Escolta (*):</label>
-                <select id="exp-agrupament" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc;">
+                <select id="exp-agrupament" onchange="onAgrupamentChange()" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box;">
 {agrupament_options}
                 </select>
+                <div id="exp-altre-agrupament-box" style="display: none; margin-top: 6px;">
+                    <input type="text" id="exp-altre-agrupament" placeholder="Escriu el nom del teu agrupament..." style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc; font-size: 0.88em; box-sizing: border-box;" />
+                </div>
             </div>
             <div>
-                <label style="font-weight: bold; font-size: 0.85em; display: block; margin-bottom: 4px;">🎒 Branca Escolta (*):</label>
-                <select id="exp-branca" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc;">
-                    <option value="Castors/Fures">Castors / Fures (6-8 anys)</option>
+                <label style="font-weight: bold; font-size: 0.85em; display: block; margin-bottom: 4px;">🎒 Unitat Escolta (*):</label>
+                <select id="exp-unitat" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box;">
+                    <option value="Ferrerets">Ferrerets (6-8 anys)</option>
                     <option value="Llops/Daines">Llops / Daines (8-11 anys)</option>
-                    <option value="Pioners/Rangers">Pioners / Rangers (11-14 anys)</option>
-                    <option value="Rovers/Rutes">Rovers / Rutes (14-17+ anys)</option>
-                    <option value="Caps/Monitors">Caps / Equip de Suport</option>
+                    <option value="Rangers/Guies">Rangers / Guies o Pioners (11-14 anys)</option>
+                    <option value="Pioners/Caravel·les">Pioners / Caravel·les o Rutes (14-17 anys)</option>
+                    <option value="Rovers/Rutes">Rovers / Rutes (17-19 anys)</option>
+                    <option value="Caps/Equip de Suport">Caps / Responsables / Suport</option>
                 </select>
             </div>
             <div>
                 <label style="font-weight: bold; font-size: 0.85em; display: block; margin-bottom: 4px;">⭐ Valoració Global:</label>
-                <select id="exp-puntuacio" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc;">
+                <select id="exp-puntuacio" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box;">
                     <option value="5">⭐⭐⭐⭐⭐ (5/5 - Excel·lent ruta)</option>
                     <option value="4">⭐⭐⭐⭐ (4/5 - Molt bona)</option>
                     <option value="3">⭐⭐⭐ (3/5 - Correcta)</option>
@@ -192,25 +210,25 @@ def get_firebase_experiences_section_html(rut, agrupaments):
             </div>
             <div>
                 <label style="font-weight: bold; font-size: 0.85em; display: block; margin-bottom: 4px;">📅 Data de la Sortida:</label>
-                <input type="text" id="exp-data" placeholder="Ex: Setembre 2026" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc;" />
+                <input type="text" id="exp-data" placeholder="Ex: Febrer 2026" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box;" />
             </div>
         </div>
 
         <div style="margin-bottom: 14px;">
             <label style="font-weight: bold; font-size: 0.85em; display: block; margin-bottom: 4px;">💬 Comentaris, consells d'aigua, ombra o recomanacions logístiques (*):</label>
-            <textarea id="exp-comentari" rows="3" placeholder="Comentau l'estat del camí, les fonts amb aigua, punts d'ombra, zones d'acampada o recomanacions per a la vostra branca..." style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; font-family: inherit; font-size: 0.9em; box-sizing: border-box;"></textarea>
+            <textarea id="exp-comentari" rows="3" placeholder="Comentau l'estat del camí, les fonts amb aigua, punts d'ombra, zones d'acampada o recomanacions per a la vostra unitat..." style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; font-family: inherit; font-size: 0.9em; box-sizing: border-box;"></textarea>
         </div>
 
         <div style="display: flex; justify-content: flex-end; gap: 10px;">
             <button onclick="toggleExpForm()" style="padding: 8px 16px; background-color: #757575; color: white; border: none; border-radius: 6px; cursor: pointer;">Cancel·lar</button>
-            <button id="exp-submit-btn" onclick="submitFirebaseExperience('{slug}')" style="padding: 8px 20px; background-color: #00897b; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">🚀 Publicar Comentari</button>
+            <button id="exp-submit-btn" onclick="submitExperience('{slug}')" style="padding: 8px 20px; background-color: #00897b; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">✉️ Enviar Experiència per Correu</button>
         </div>
         <div id="exp-status-msg" style="margin-top: 10px; font-weight: bold; font-size: 0.9em;"></div>
     </div>
 
     <!-- Llista interactiva de ressenyes -->
     <div id="experiences-list-container" style="display: flex; flex-direction: column; gap: 12px;">
-        <p style="color: #666; font-style: italic; font-size: 0.88em;">🔄 Carregant experiències de Firebase...</p>
+        <p style="color: #666; font-style: italic; font-size: 0.88em;">🔄 Carregant experiències d'agrupaments...</p>
     </div>
 
 </div>
@@ -218,16 +236,8 @@ def get_firebase_experiences_section_html(rut, agrupaments):
 <script>
 (function() {{
     const routeSlug = "{slug}";
+    const routeName = "{route_name}";
     const staticExperiences = {static_exps_json};
-
-    // Configurar Firebase Firestore
-    const firebaseConfig = {{
-        projectId: "escoltes-mallorca"
-    }};
-
-    if (typeof firebase !== 'undefined' && !firebase.apps.length) {{
-        firebase.initializeApp(firebaseConfig);
-    }}
 
     function escapeHtml(text) {{
         if (!text) return '';
@@ -238,6 +248,13 @@ def get_firebase_experiences_section_html(rut, agrupaments):
             .replace(/"/g, "&quot;")
             .replace(/'/g, "&#039;");
     }}
+
+    window.onAgrupamentChange = function() {{
+        const agrSelect = document.getElementById('exp-agrupament');
+        const altreBox = document.getElementById('exp-altre-agrupament-box');
+        if (!agrSelect || !altreBox) return;
+        altreBox.style.display = (agrSelect.value === 'Altre Agrupament Escolta') ? 'block' : 'none';
+    }};
 
     window.toggleExpForm = function() {{
         const form = document.getElementById('exp-form-container');
@@ -265,7 +282,7 @@ def get_firebase_experiences_section_html(rut, agrupaments):
             if (summarySubtitle) summarySubtitle.innerText = "Sigueu els primers a deixar consells sobre aquesta ruta per a altres agrupaments escoltes!";
             container.innerHTML = `
                 <div style="text-align: center; padding: 20px; background: white; border-radius: 8px; border: 1px dashed #ccc;">
-                    <p style="margin: 0; color: #666;">⛺ Heu fet aquesta excursió? Polsau el botó superior per afegir la teva experiència en temps real.</p>
+                    <p style="margin: 0; color: #666;">⛺ Heu fet aquesta excursió? Polsau el botó superior per enviar la vostra experiència per correu a l'administrador.</p>
                 </div>
             `;
             return;
@@ -284,14 +301,15 @@ def get_firebase_experiences_section_html(rut, agrupaments):
             const expStars = "⭐".repeat(score);
             const authorName = exp.nom ? `👤 ${{escapeHtml(exp.nom)}} - ` : '';
             const agrName = escapeHtml(exp.agrupament || 'Agrupament Escolta');
-            const brancaName = exp.branca ? ` (${{escapeHtml(exp.branca)}})` : '';
+            const unitatVal = exp.unitat || exp.branca || '';
+            const unitatName = unitatVal ? ` (${{escapeHtml(unitatVal)}})` : '';
             const dataStr = escapeHtml(exp.data || '');
             const comentariText = escapeHtml(exp.comentari || '');
             
             html += `
                 <div style="border: 1px solid #e0e0e0; border-radius: 8px; padding: 14px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.03);">
                     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px; margin-bottom: 6px;">
-                        <span style="font-weight: bold; color: #00897b; font-size: 0.95em;">${{authorName}}⚜️ ${{agrName}} <span style="font-weight: normal; color: #666; font-size: 0.9em;">${{brancaName}}</span></span>
+                        <span style="font-weight: bold; color: #00897b; font-size: 0.95em;">${{authorName}}⚜️ ${{agrName}} <span style="font-weight: normal; color: #666; font-size: 0.9em;">${{unitatName}}</span></span>
                         <span style="font-size: 0.85em; color: #f57f17; font-weight: bold;">${{expStars}} <span style="color: #888; font-weight: normal;">(${{dataStr}})</span></span>
                     </div>
                     <p style="margin: 4px 0 0 0; font-size: 0.9em; color: #333; line-height: 1.45;"><i>"${{comentariText}}"</i></p>
@@ -301,52 +319,27 @@ def get_firebase_experiences_section_html(rut, agrupaments):
         container.innerHTML = html;
     }};
 
-    let liveExperiences = [...staticExperiences];
-
-    window.initFirebaseExperiences = function() {{
-        renderExperiencesList(liveExperiences);
-        
-        if (typeof firebase !== 'undefined' && firebase.firestore) {{
-            try {{
-                const db = firebase.firestore();
-                db.collection("experiencies")
-                  .where("ruta_slug", "==", routeSlug)
-                  .onSnapshot((snapshot) => {{
-                      const fetched = [];
-                      snapshot.forEach(doc => {{
-                          const data = doc.data();
-                          if (data.authorized === true || data.authorized === undefined) {{
-                              fetched.push(data);
-                          }}
-                      }});
-                      
-                      const combined = [...fetched];
-                      staticExperiences.forEach(st => {{
-                          if (!combined.some(f => f.comentari === st.comentari && f.agrupament === st.agrupament)) {{
-                              combined.push(st);
-                          }}
-                      }});
-                      liveExperiences = combined;
-                      renderExperiencesList(liveExperiences);
-                  }}, (err) => {{
-                      console.warn("Firestore snapshot error/offline, using static exps:", err);
-                  }});
-            }} catch(e) {{
-                console.warn("Firebase init error:", e);
-            }}
-        }}
+    window.initExperiences = function() {{
+        renderExperiencesList(staticExperiences);
     }};
 
-    window.submitFirebaseExperience = async function(slug) {{
+    window.submitExperience = async function(slug) {{
         const nom = document.getElementById('exp-nom').value.trim();
         const email = document.getElementById('exp-email').value.trim();
-        const agrupament = document.getElementById('exp-agrupament').value;
-        const branca = document.getElementById('exp-branca').value;
+        let agrupament = document.getElementById('exp-agrupament').value;
+        const unitat = document.getElementById('exp-unitat').value;
         const puntuacio = parseInt(document.getElementById('exp-puntuacio').value, 10);
         const dataVal = document.getElementById('exp-data').value.trim() || 'Recenta';
         const comentari = document.getElementById('exp-comentari').value.trim();
         const statusMsg = document.getElementById('exp-status-msg');
         const submitBtn = document.getElementById('exp-submit-btn');
+
+        if (agrupament === 'Altre Agrupament Escolta') {{
+            const customAgr = document.getElementById('exp-altre-agrupament')?.value.trim();
+            if (customAgr) {{
+                agrupament = customAgr;
+            }}
+        }}
 
         if (!nom) {{
             statusMsg.style.color = '#d32f2f';
@@ -362,7 +355,7 @@ def get_firebase_experiences_section_html(rut, agrupaments):
 
         if (!agrupament) {{
             statusMsg.style.color = '#d32f2f';
-            statusMsg.innerText = '⚠️ Si us plau, selecciona el teu agrupament escolta.';
+            statusMsg.innerText = '⚠️ Si us plau, selecciona o indica el teu agrupament escolta.';
             return;
         }}
 
@@ -372,59 +365,70 @@ def get_firebase_experiences_section_html(rut, agrupaments):
             return;
         }}
 
-        const newExp = {{
-            ruta_slug: slug,
-            nom: nom,
-            email: email,
-            agrupament: agrupament,
-            branca: branca,
-            puntuacio: puntuacio,
-            data: dataVal,
-            comentari: comentari,
-            authorized: false,
-            createdAt: (typeof firebase !== 'undefined' && firebase.firestore) ? firebase.firestore.FieldValue.serverTimestamp() : new Date().toISOString()
-        }};
+        const mailtoSubject = `[Nova Experiència] ${{routeName}} - ${{agrupament}} (${{unitat}})`;
+        const mailtoBody = `Ruta: ${{routeName}} (${{slug}})\nNom autor/a: ${{nom}}\nCorreu: ${{email}}\nAgrupament: ${{agrupament}}\nUnitat: ${{unitat}}\nValoració: ${{puntuacio}} / 5 estrelles\nData sortida: ${{dataVal}}\n\nComentaris i consells:\n${{comentari}}`;
+        const mailtoUrl = `mailto:escoltesmallorca@gmail.com?subject=${{encodeURIComponent(mailtoSubject)}}&body=${{encodeURIComponent(mailtoBody)}}`;
 
         statusMsg.style.color = '#00897b';
-        statusMsg.innerText = '⏳ Enviant comentari a Firebase...';
+        statusMsg.innerText = '⏳ Enviant comentari per correu electrònic a escoltesmallorca@gmail.com...';
         submitBtn.disabled = true;
 
         try {{
-            if (typeof firebase !== 'undefined' && firebase.firestore) {{
-                const db = firebase.firestore();
-                await db.collection("experiencies").add(newExp);
+            const response = await fetch("https://formsubmit.co/ajax/escoltesmallorca@gmail.com", {{
+                method: "POST",
+                headers: {{
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                }},
+                body: JSON.stringify({{
+                    _subject: mailtoSubject,
+                    _replyto: email,
+                    "Ruta": routeName,
+                    "Autor": nom,
+                    "Correu": email,
+                    "Agrupament": agrupament,
+                    "Unitat": unitat,
+                    "Valoracio": `${{puntuacio}} / 5 estrelles`,
+                    "Data_Sortida": dataVal,
+                    "Comentaris": comentari
+                }})
+            }});
+
+            if (response.ok) {{
                 statusMsg.style.color = '#2e7d32';
-                statusMsg.innerText = "✅ Comentari enviat amb èxit! Està pendent d'autorització per part de l'administrador per ser visible públicament.";
+                statusMsg.innerHTML = "✅ <b>Experiència enviada amb èxit!</b> Hem rebut la teva ressenya per correu a escoltesmallorca@gmail.com. L'administrador la revisarà i l'afegirà a la fitxa pública!";
+                document.getElementById('exp-nom').value = '';
+                document.getElementById('exp-email').value = '';
+                document.getElementById('exp-comentari').value = '';
+                document.getElementById('exp-data').value = '';
+                setTimeout(() => {{
+                    toggleExpForm();
+                    statusMsg.innerText = '';
+                    submitBtn.disabled = false;
+                }}, 3500);
             }} else {{
-                throw new Error("Firebase Firestore no està disponible.");
+                throw new Error("HTTP error " + response.status);
             }}
-            
-            document.getElementById('exp-nom').value = '';
-            document.getElementById('exp-email').value = '';
-            document.getElementById('exp-comentari').value = '';
-            document.getElementById('exp-data').value = '';
-            setTimeout(() => {{
-                toggleExpForm();
-                statusMsg.innerText = '';
-                submitBtn.disabled = false;
-            }}, 3000);
-        }} catch (error) {{
-            console.error("Error al enviar a Firebase:", error);
-            statusMsg.style.color = '#d32f2f';
-            statusMsg.innerText = '❌ Error en enviar el comentari: Si us plau, comprova la teva connexió.';
+        }} catch (err) {{
+            console.warn("FormSubmit fetch error, oferint mailto:", err);
+            statusMsg.style.color = '#e65100';
+            statusMsg.innerHTML = `⚠️ No s'ha pogut tramitar automàticament per xarxa. <a href="${{mailtoUrl}}" target="_blank" style="color: #00897b; font-weight: bold; text-decoration: underline;">👉 Fes clic aquí per obrir el teu gestor de correu i enviar-ho directament a escoltesmallorca@gmail.com</a>.`;
             submitBtn.disabled = false;
         }}
     }};
 
+    window.submitFirebaseExperience = window.submitExperience;
+    window.initFirebaseExperiences = window.initExperiences;
+
     if (document.readyState === 'loading') {{
-        document.addEventListener('DOMContentLoaded', window.initFirebaseExperiences);
+        document.addEventListener('DOMContentLoaded', window.initExperiences);
     }} else {{
-        window.initFirebaseExperiences();
+        window.initExperiences();
     }}
 
     if (typeof document$ !== 'undefined') {{
         document$.subscribe(function() {{
-            window.initFirebaseExperiences();
+            window.initExperiences();
         }});
     }}
 }})();
@@ -565,7 +569,7 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
                 md += f"| **{ref['nom']}** | **{dist:.1f} km** | Requereix autocar/vehicle de suport des de la ruta | [Veure Refugi](../acampada/{ref['slug']}.md) |\n"
 
         md += """
-### ⚜️ Agrupaments Escoltes Més Propers (Suport Logístic i Emergència)
+### ⚜️ Agrupaments Escoltes Més Propers a l'Inici de la Ruta (Suport Logístic i Emergència)
 | Agrupament / Casal | Municipi | Distància | Enllaç |
 | :--- | :--- | :---: | :--- |
 """
@@ -573,7 +577,7 @@ A continuació es detallen les línies de bus del TIB i trens de Mallorca (SFM /
             md += f"| **{agr['nom']}** | {agr['municipi']} | **{dist:.1f} km** | [Veure Casal](../agrupaments/{agr['slug']}.md) |\n"
 
         md += "\n"
-        # --- SECCIÓ D'EXPERIÈNCIES I VALORACIONS DELS AGRUPAMENTS (FIREBASE FIRESTORE) ---
+        # --- SECCIÓ D'EXPERIÈNCIES I VALORACIONS DELS AGRUPAMENTS (FORMULARI AMB ENVIAMENT A GMAIL) ---
         md += get_firebase_experiences_section_html(rut, agrupaments) + "\n\n"
 
         file_path = f"docs/mallorca/rutes/{rut['slug']}.md"
@@ -881,16 +885,16 @@ def build_rutes_overview(rutes):
     municipis = sorted(list(set([r.get('municipi', 'Mallorca').split('/')[0].strip() for r in rutes])))
     zones = sorted(list(set([r.get('zona', 'Serra de Tramuntana') for r in rutes])))
     dificultats = ["Molt Fàcil", "Fàcil", "Fàcil - Moderada", "Moderada", "Moderada - Exigent", "Exigent", "Molt Exigent / Tècnica"]
-    branques = ["Castors/Fures", "Llops/Daines", "Pioners/Rangers", "Rovers/Rutes"]
+    unitats = ["Ferrerets", "Llops/Daines", "Pioners/Rangers", "Rovers/Rutes"]
 
     municipi_options = "".join([f'<option value="{m}">{m}</option>' for m in municipis])
     zona_options = "".join([f'<option value="{z}">{z}</option>' for z in zones])
     dificultat_options = "".join([f'<option value="{d}">{d}</option>' for d in dificultats])
-    branca_options = "".join([f'<option value="{b}">{b}</option>' for b in branques])
+    unitat_options = "".join([f'<option value="{u}">{u}</option>' for u in unitats])
 
     md = f"""# 🥾 Cercador i Índex de Rutes de Senderisme a Mallorca
 
-Benvinguts al cercador interactiu de la base de dades d'excursions. Podeu filtrar les **{len(rutes)} rutes catalogades** per **Municipi**, **Zona**, **Dificultat**, **Branca Escolta** o **Recursos de Wikiloc / Turisme Petit**, i veure la posició exacte dels inicis de ruta al mapa interactiu.
+Benvinguts al cercador interactiu de la base de dades d'excursions. Podeu filtrar les **{len(rutes)} rutes catalogades** per **Municipi**, **Zona**, **Dificultat**, **Unitat Escolta** o **Recursos de Wikiloc / Turisme Petit**, i veure la posició exacte dels inicis de ruta al mapa interactiu.
 
 ---
 
@@ -930,10 +934,10 @@ Benvinguts al cercador interactiu de la base de dades d'excursions. Podeu filtra
             </select>
         </div>
         <div>
-            <label style="font-weight: bold; font-size: 0.85em;">⚜️ Branca Escolta:</label>
-            <select id="filter-branca" onchange="applyRouteFilters()" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc;">
-                <option value="">Totes les branques</option>
-                {branca_options}
+            <label style="font-weight: bold; font-size: 0.85em;">⚜️ Unitat Escolta:</label>
+            <select id="filter-unitat" onchange="applyRouteFilters()" style="width: 100%; padding: 8px; border-radius: 6px; border: 1px solid #ccc;">
+                <option value="">Totes les unitats</option>
+                {unitat_options}
             </select>
         </div>
         <div>
@@ -1055,7 +1059,7 @@ function applyRouteFilters() {{
     const mun = document.getElementById('filter-municipi').value.toLowerCase();
     const zon = document.getElementById('filter-zona').value.toLowerCase();
     const dif = document.getElementById('filter-dificultat').value.toLowerCase();
-    const bra = document.getElementById('filter-branca').value.toLowerCase();
+    const uni = document.getElementById('filter-unitat').value.toLowerCase();
     const plat = document.getElementById('filter-plataforma').value;
     const txt = document.getElementById('filter-search').value.toLowerCase();
     
@@ -1063,7 +1067,7 @@ function applyRouteFilters() {{
         const matchMun = !mun || (r.municipi && r.municipi.toLowerCase().includes(mun));
         const matchZon = !zon || (r.zona && r.zona.toLowerCase().includes(zon));
         const matchDif = !dif || (r.dificultat && r.dificultat.toLowerCase().includes(dif));
-        const matchBra = !bra || (r.apte_unitats && r.apte_unitats.some(u => u.toLowerCase().includes(bra)));
+        const matchUni = !uni || (r.apte_unitats && r.apte_unitats.some(u => u.toLowerCase().includes(uni)));
         const matchTxt = !txt || (r.nom.toLowerCase().includes(txt) || (r.descripcio && r.descripcio.toLowerCase().includes(txt)) || (r.municipi && r.municipi.toLowerCase().includes(txt)));
         
         let matchPlat = true;
@@ -1079,7 +1083,7 @@ function applyRouteFilters() {{
             matchPlat = r.experiencies && r.experiencies.length > 0;
         }}
         
-        return matchMun && matchZon && matchDif && matchBra && matchTxt && matchPlat;
+        return matchMun && matchZon && matchDif && matchUni && matchTxt && matchPlat;
     }});
     
     renderRoutes(filtered);
@@ -1094,7 +1098,7 @@ function resetFilters() {{
     document.getElementById('filter-municipi').value = '';
     document.getElementById('filter-zona').value = '';
     document.getElementById('filter-dificultat').value = '';
-    document.getElementById('filter-branca').value = '';
+    document.getElementById('filter-unitat').value = '';
     document.getElementById('filter-plataforma').value = '';
     document.getElementById('filter-search').value = '';
     applyRouteFilters();

@@ -1,0 +1,157 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import routes from '../../../data/rutes_mallorca.json';
+---
+
+<Layout
+  title="Panell d'Administració de Comentaris Escoltes"
+  description="Eina administrativa per validar i afegir ressenyes escoltes a data/experiencies_rutes.json."
+>
+  <div class="mb-8">
+    <div class="flex items-center gap-2 text-xs text-stone-500 mb-2">
+      <a href="/" class="hover:underline">Inici</a>
+      <span>›</span>
+      <span class="text-stone-800 font-semibold">Administració de Comentaris</span>
+    </div>
+
+    <h1 class="text-2xl sm:text-3xl font-extrabold text-stone-900 mb-2">
+      ⚙️ Administració de Comentaris i Ressenyes
+    </h1>
+    <p class="text-sm text-stone-600 max-w-3xl leading-relaxed">
+      Aquesta eina permet convertir els correus electrònics rebuts pel formulari de ressenyes en un fragment JSON a punt per afegir al fitxer <code>data/experiencies_rutes.json</code>.
+    </p>
+  </div>
+
+  <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-xs max-w-3xl mb-8">
+    <h2 class="text-lg font-bold text-stone-900 mb-4">
+      Generador de fragment JSON per a una nova experiència
+    </h2>
+
+    <div class="space-y-4">
+      <div>
+        <label for="adminRuta" class="block text-xs font-bold text-stone-700 uppercase mb-1">
+          Ruta
+        </label>
+        <select
+          id="adminRuta"
+          class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] outline-hidden"
+        >
+          {routes.map((r) => (
+            <option value={r.slug}>{r.nom} ({r.slug})</option>
+          ))}
+        </select>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="adminAgrupament" class="block text-xs font-bold text-stone-700 uppercase mb-1">
+            Agrupament
+          </label>
+          <input
+            type="text"
+            id="adminAgrupament"
+            placeholder="Ex: AEG Eladi Homs"
+            class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] outline-hidden"
+          />
+        </div>
+
+        <div>
+          <label for="adminUnitat" class="block text-xs font-bold text-stone-700 uppercase mb-1">
+            Unitat
+          </label>
+          <input
+            type="text"
+            id="adminUnitat"
+            placeholder="Ex: Ferrerets (6-8 anys)"
+            class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] outline-hidden"
+          />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div>
+          <label for="adminData" class="block text-xs font-bold text-stone-700 uppercase mb-1">
+            Data
+          </label>
+          <input
+            type="text"
+            id="adminData"
+            placeholder="Ex: Març 2026"
+            class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] outline-hidden"
+          />
+        </div>
+
+        <div>
+          <label for="adminPuntuacio" class="block text-xs font-bold text-stone-700 uppercase mb-1">
+            Puntuació (1 a 5 estrelles)
+          </label>
+          <select
+            id="adminPuntuacio"
+            class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] outline-hidden"
+          >
+            <option value="5">5 estrelles</option>
+            <option value="4">4 estrelles</option>
+            <option value="3">3 estrelles</option>
+            <option value="2">2 estrelles</option>
+            <option value="1">1 estrella</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label for="adminComentari" class="block text-xs font-bold text-stone-700 uppercase mb-1">
+          Comentari / Ressenya
+        </label>
+        <textarea
+          id="adminComentari"
+          rows="4"
+          placeholder="Comentari rebut al correu..."
+          class="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] outline-hidden"
+        ></textarea>
+      </div>
+
+      <button
+        type="button"
+        id="btnGenerateJson"
+        class="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#1b4332] text-white font-bold text-xs sm:text-sm hover:bg-[#2d6a4f] transition"
+      >
+        Generar JSON per a data/experiencies_rutes.json
+      </button>
+
+      <div class="mt-4 pt-4 border-t border-stone-200">
+        <label class="block text-xs font-bold text-stone-700 uppercase mb-1">
+          Resultat (Copia i enganxa):
+        </label>
+        <pre id="jsonResult" class="p-4 bg-stone-900 text-emerald-400 rounded-xl text-xs overflow-x-auto whitespace-pre-wrap"></pre>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  const btn = document.getElementById('btnGenerateJson');
+  if (btn) {
+    btn.addEventListener('click', () => {
+      const ruta = (document.getElementById('adminRuta') as HTMLSelectElement)?.value || '';
+      const agrupament = (document.getElementById('adminAgrupament') as HTMLInputElement)?.value.trim() || '';
+      const unitat = (document.getElementById('adminUnitat') as HTMLInputElement)?.value.trim() || '';
+      const data = (document.getElementById('adminData') as HTMLInputElement)?.value.trim() || '';
+      const puntuacio = parseInt((document.getElementById('adminPuntuacio') as HTMLSelectElement)?.value || '5', 10);
+      const comentari = (document.getElementById('adminComentari') as HTMLTextAreaElement)?.value.trim() || '';
+
+      const snippet = {
+        ruta_slug: ruta,
+        agrupament: agrupament,
+        puntuacio: puntuacio,
+        data: data,
+        comentari: comentari,
+        unitat: unitat,
+      };
+
+      const resEl = document.getElementById('jsonResult');
+      if (resEl) {
+        resEl.textContent = JSON.stringify(snippet, null, 2) + ',';
+      }
+    });
+  }
+</script>

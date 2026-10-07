@@ -141,7 +141,7 @@ def get_ibanat_and_camping_data():
             "restriccio_foc": "Prohibit l'1 maig - 15 d'octubre",
             "acces_emergencia": "Carretera de Palma a Sóller (Ma-11)",
             "lat": 39.6380, "lon": 2.6840,
-            "descripcio": "Gran àrea recreativa als peus de la Serra de Tramuntana, molt utilitzada per a trobades de branques joves (Castors i Llops)."
+            "descripcio": "Gran àrea recreativa als peus de la Serra de Tramuntana, molt utilitzada per a trobades de branques joves (Ferrerets i Llops)."
         },
         {
             "slug": "area-recreativa-sa-coma-binifaldo",

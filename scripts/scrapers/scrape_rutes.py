@@ -28,7 +28,7 @@ def get_mallorca_routes_data():
             "punts_aigua": ["Deià (poble)", "Can Boi", "Refugi de Muleta / Port de Sóller"],
             "passos_finca_privada": ["Camí de Castelló (passos de pedra en sec habilitats)"],
             "punts_interes": ["Tafona de Can Boi", "Capella de Castelló", "Far de Muleta"],
-            "consells_seguretat": "Ideal per a branques joves (Castors, Llops). Camí molt ben senyalitzat.",
+            "consells_seguretat": "Ideal per a branques joves (Ferrerets, Llops). Camí molt ben senyalitzat.",
             "apte_unitats": ["Llops/Daines", "Pioners/Rangers", "Rovers/Rutes"],
             "lat": 39.7491, "lon": 2.6483,
             "descripcio": "Etapa costanera assequible i d'alt valor patrimonial entre Deià i el Port de Sóller, passant pel Refugi de Muleta i Can Boi."
@@ -73,8 +73,8 @@ def get_mallorca_routes_data():
             "punts_aigua": ["Pollença poble", "Santuari del Puig de Maria"],
             "passos_finca_privada": ["Camí públic pavimentat i empedrat"],
             "punts_interes": ["Santuari del segle XIV", "Vistes a la badia de Pollença i Alcúdia"],
-            "consells_seguretat": "Excel·lent opció per a iniciació de Castors i Llops.",
-            "apte_unitats": ["Castors/Fures", "Llops/Daines", "Pioners/Rangers"],
+            "consells_seguretat": "Excel·lent opció per a iniciació de Ferrerets i Llops.",
+            "apte_unitats": ["Ferrerets", "Llops/Daines", "Pioners/Rangers"],
             "lat": 39.8735, "lon": 3.0180,
             "descripcio": "Ruta fàcil d'iniciació per a les branques més joves cap al cim del Puig de Maria de Pollença."
         },
