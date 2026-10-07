@@ -86,6 +86,22 @@ const acampadesGeo = acampades.map((a) => ({
     data-initial-type={initialType}
   ></div>
 
+  <!-- Map Filter Active Notice Banner (shown when a filter from map is active) -->
+  <div id="mapActiveFilterBar" class="hidden px-5 py-2.5 bg-emerald-50 border-t border-emerald-200 flex items-center justify-between text-xs text-[#1b4332]">
+    <div class="flex items-center gap-2">
+      <span>📍 Filtre actiu des del mapa:</span>
+      <strong id="mapFilterName" class="font-bold underline text-stone-900"></strong>
+      <span class="text-stone-500">(la llista inferior s'ha actualitzat)</span>
+    </div>
+    <button
+      type="button"
+      id="btnClearMapFilter"
+      class="px-2.5 py-1 rounded-md bg-white border border-emerald-300 hover:bg-emerald-100 font-bold text-xs text-[#1b4332] transition"
+    >
+      Netejar filtre ✕
+    </button>
+  </div>
+
   <!-- Map Legend Footer -->
   <div class="px-5 py-3 bg-white border-t border-stone-100 flex items-center justify-between flex-wrap gap-3 text-xs text-stone-600">
     <div class="flex items-center gap-4 flex-wrap font-medium">
@@ -98,8 +114,8 @@ const acampadesGeo = acampades.map((a) => ({
         <strong>Zona acampada / Refugi</strong>
       </span>
       <span class="hidden md:inline text-stone-400">|</span>
-      <span class="hidden md:inline text-stone-500">
-        Fes clic sobre qualsevol punt per veure detalls, unitats i accedir a la fitxa.
+      <span class="text-[#1b4332] font-semibold flex items-center gap-1">
+        💡 Clica sobre un punt per filtrar la llista pel seu municipi o paratge
       </span>
     </div>
 
@@ -163,12 +179,58 @@ const acampadesGeo = acampades.map((a) => ({
     const routeMarkers: any[] = [];
     const acampadaMarkers: any[] = [];
 
+    // Helper to trigger list filtering below from map
+    function triggerFilterFromMap(keyword: string, type: 'municipi' | 'zona' | 'nom') {
+      const searchInputRoutes = document.getElementById('searchInput') as HTMLInputElement | null;
+      const zoneSelect = document.getElementById('zoneFilter') as HTMLSelectElement | null;
+      const searchInputCamps = document.getElementById('searchAcampada') as HTMLInputElement | null;
+      const municipiSelectCamps = document.getElementById('municipiAcampadaFilter') as HTMLSelectElement | null;
+
+      const activeBar = document.getElementById('mapActiveFilterBar');
+      const filterNameEl = document.getElementById('mapFilterName');
+
+      if (activeBar && filterNameEl) {
+        activeBar.classList.remove('hidden');
+        filterNameEl.textContent = keyword;
+      }
+
+      // If on routes page
+      if (searchInputRoutes) {
+        searchInputRoutes.value = keyword;
+        searchInputRoutes.dispatchEvent(new Event('input', { bubbles: true }));
+        // Smooth scroll towards the list
+        document.getElementById('cercador-rutes')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      // If on acampada page
+      if (searchInputCamps) {
+        searchInputCamps.value = keyword;
+        searchInputCamps.dispatchEvent(new Event('input', { bubbles: true }));
+        searchInputCamps.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    // Clear filter banner action
+    document.getElementById('btnClearMapFilter')?.addEventListener('click', () => {
+      const activeBar = document.getElementById('mapActiveFilterBar');
+      if (activeBar) activeBar.classList.add('hidden');
+
+      const resetRoutesBtn = document.getElementById('resetFilters') as HTMLButtonElement | null;
+      if (resetRoutesBtn) resetRoutesBtn.click();
+
+      const sCamps = document.getElementById('searchAcampada') as HTMLInputElement | null;
+      if (sCamps) {
+        sCamps.value = '';
+        sCamps.dispatchEvent(new Event('input', { bubbles: true }));
+      }
+    });
+
     // Add Route markers
     routesData.forEach((r: any) => {
       if (!r.lat || !r.lon) return;
 
       const popupContent = `
-        <div style="font-family: inherit; font-size: 12px; max-width: 240px; padding: 2px;">
+        <div style="font-family: inherit; font-size: 12px; max-width: 250px; padding: 2px;">
           <div style="display: flex; align-items: center; justify-content: space-between; gap: 4px; margin-bottom: 4px;">
             <span style="background: #1b4332; color: white; padding: 2px 6px; border-radius: 4px; font-weight: bold; font-size: 10px;">RUTA</span>
             <span style="color: #666; font-size: 11px;">${r.municipi}</span>
@@ -181,9 +243,19 @@ const acampadesGeo = acampades.map((a) => ({
             <span>⛰️ +${r.desnivell_positiu_m}m</span>
             <span>${r.dificultat}</span>
           </div>
-          <a href="/rutes/${r.slug}" style="display: block; text-align: center; background: #1b4332; color: white; padding: 5px 8px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 6px;">
-            Veure fitxa de la ruta →
-          </a>
+          <div style="display: flex; gap: 4px; margin-top: 6px;">
+            <button
+              type="button"
+              onclick="window.__filterMallorca('${r.municipi.replace(/'/g, "\\'")}')"
+              style="flex: 1; text-align: center; background: #e7e5e4; color: #1c1917; padding: 5px 6px; border-radius: 6px; border: none; font-weight: 600; cursor: pointer; font-size: 11px;"
+              title="Filtra la llista per aquest municipi"
+            >
+              🔍 Filtra ${r.municipi}
+            </button>
+            <a href="/rutes/${r.slug}" style="flex: 1; text-align: center; background: #1b4332; color: white; padding: 5px 6px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 11px;">
+              Fitxa →
+            </a>
+          </div>
         </div>
       `;
 
@@ -196,7 +268,7 @@ const acampadesGeo = acampades.map((a) => ({
       if (!a.lat || !a.lon) return;
 
       const popupContent = `
-        <div style="font-family: inherit; font-size: 12px; max-width: 240px; padding: 2px;">
+        <div style="font-family: inherit; font-size: 12px; max-width: 250px; padding: 2px;">
           <div style="display: flex; align-items: center; justify-content: space-between; gap: 4px; margin-bottom: 4px;">
             <span style="background: #d97706; color: white; padding: 2px 6px; border-radius: 4px; font-weight: bold; font-size: 10px;">ACAMPADA / REFUGI</span>
             <span style="color: #666; font-size: 11px;">${a.municipi}</span>
@@ -208,21 +280,36 @@ const acampadesGeo = acampades.map((a) => ({
             Titularitat: ${a.titularitat}
             ${a.capacitat ? `<br>Capacitat: ${a.capacitat}` : ''}
           </div>
-          ${a.web ? `
-            <a href="${a.web}" target="_blank" rel="noopener noreferrer" style="display: block; text-align: center; background: #d97706; color: white; padding: 5px 8px; border-radius: 6px; text-decoration: none; font-weight: bold;">
-              Web oficial / Reserva ↗
-            </a>
-          ` : `
-            <a href="/acampada" style="display: block; text-align: center; background: #57534e; color: white; padding: 5px 8px; border-radius: 6px; text-decoration: none; font-weight: bold;">
-              Veure directori d'acampada →
-            </a>
-          `}
+          <div style="display: flex; gap: 4px; margin-top: 6px;">
+            <button
+              type="button"
+              onclick="window.__filterMallorca('${a.municipi.replace(/'/g, "\\'")}')"
+              style="flex: 1; text-align: center; background: #e7e5e4; color: #1c1917; padding: 5px 6px; border-radius: 6px; border: none; font-weight: 600; cursor: pointer; font-size: 11px;"
+              title="Filtra la llista per aquest municipi"
+            >
+              🔍 Filtra ${a.municipi}
+            </button>
+            ${a.web ? `
+              <a href="${a.web}" target="_blank" rel="noopener noreferrer" style="flex: 1; text-align: center; background: #d97706; color: white; padding: 5px 6px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 11px;">
+                Reserva ↗
+              </a>
+            ` : `
+              <a href="/acampada" style="flex: 1; text-align: center; background: #57534e; color: white; padding: 5px 6px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 11px;">
+                Directori →
+              </a>
+            `}
+          </div>
         </div>
       `;
 
       const marker = L.marker([a.lat, a.lon], { icon: acampadaIcon }).bindPopup(popupContent);
       acampadaMarkers.push(marker);
     });
+
+    // Expose global callback for HTML popup buttons
+    (window as any).__filterMallorca = (name: string) => {
+      triggerFilterFromMap(name, 'municipi');
+    };
 
     const routeLayerGroup = L.layerGroup(routeMarkers);
     const acampadaLayerGroup = L.layerGroup(acampadaMarkers);
