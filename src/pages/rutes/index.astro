@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import RouteCard from '../../components/RouteCard.astro';
 import FilterBar from '../../components/FilterBar.astro';
+import MallorcaMap from '../../components/MallorcaMap.astro';
 
 import routes from '../../../data/rutes_mallorca.json';
 import experiencies from '../../../data/experiencies_rutes.json';
@@ -32,6 +33,9 @@ experiencies.forEach((e) => {
       Més de 65 rutes catalogades i revisades per a agrupaments escoltes i guies. Filtra per edat / unitat, dificultat o zona per planificar la vostra propera sortida de camp.
     </p>
   </div>
+
+  <!-- Interactive OpenStreetMap of Mallorca -->
+  <MallorcaMap initialType="rutes" />
 
   <FilterBar zones={zones} totalRoutes={routes.length} />
 

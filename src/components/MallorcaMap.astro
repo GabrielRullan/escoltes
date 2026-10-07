@@ -1,0 +1,277 @@
+---
+interface Props {
+  initialType?: 'all' | 'rutes' | 'acampada';
+  heightClass?: string;
+}
+
+const { initialType = 'all', heightClass = 'h-[460px] sm:h-[540px]' } = Astro.props;
+
+import routes from '../../data/rutes_mallorca.json';
+import acampades from '../../data/acampada_mallorca.json';
+
+// Minimal payloads for the map to keep DOM lightweight
+const routesGeo = routes.map((r) => ({
+  type: 'ruta',
+  nom: r.nom,
+  slug: r.slug,
+  lat: r.lat,
+  lon: r.lon,
+  municipi: r.municipi,
+  zona: r.zona,
+  dificultat: r.dificultat,
+  distancia_km: r.distancia_km,
+  desnivell_positiu_m: r.desnivell_positiu_m,
+  apte_unitats: r.apte_unitats || [],
+}));
+
+const acampadesGeo = acampades.map((a) => ({
+  type: 'acampada',
+  nom: a.nom,
+  lat: a.lat,
+  lon: a.lon,
+  municipi: a.municipi,
+  titularitat: a.titularitat,
+  capacitat: a.capacitat,
+  web: a.web,
+}));
+---
+
+<div class="bg-white rounded-3xl border border-stone-200 shadow-xs overflow-hidden mb-8" id="osmMapWrapper">
+  <!-- Map Header & Control Bar -->
+  <div class="p-4 sm:p-5 border-b border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-stone-50/60">
+    <div>
+      <h3 class="text-base sm:text-lg font-bold text-stone-900 flex items-center gap-2">
+        <span>🗺️ Mapa interactiu de Mallorca</span>
+        <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-100 text-[#1b4332] border border-emerald-200">
+          OpenStreetMap
+        </span>
+      </h3>
+      <p class="text-xs text-stone-500 mt-0.5">
+        Visualitza la distribució geogràfica de les excursions i espais d'acampada a l'illa.
+      </p>
+    </div>
+
+    <!-- Map Filter Pills -->
+    <div class="flex items-center gap-1.5 bg-stone-200/70 p-1 rounded-xl self-start sm:self-auto text-xs font-bold">
+      <button
+        type="button"
+        class="map-filter-btn px-3 py-1.5 rounded-lg transition"
+        data-filter="all"
+      >
+        Tots ({routes.length + acampades.length})
+      </button>
+      <button
+        type="button"
+        class="map-filter-btn px-3 py-1.5 rounded-lg transition"
+        data-filter="rutes"
+      >
+        🥾 Rutes ({routes.length})
+      </button>
+      <button
+        type="button"
+        class="map-filter-btn px-3 py-1.5 rounded-lg transition"
+        data-filter="acampada"
+      >
+        🏕️ Refugis & Acampada ({acampades.length})
+      </button>
+    </div>
+  </div>
+
+  <!-- Leaflet Map Container -->
+  <div
+    id="osmGeneralMap"
+    class={`w-full ${heightClass} z-10`}
+    data-routes={JSON.stringify(routesGeo)}
+    data-acampades={JSON.stringify(acampadesGeo)}
+    data-initial-type={initialType}
+  ></div>
+
+  <!-- Map Legend Footer -->
+  <div class="px-5 py-3 bg-white border-t border-stone-100 flex items-center justify-between flex-wrap gap-3 text-xs text-stone-600">
+    <div class="flex items-center gap-4 flex-wrap font-medium">
+      <span class="flex items-center gap-1.5">
+        <span class="w-3.5 h-3.5 rounded-full bg-[#1b4332] inline-block shadow-xs border border-white"></span>
+        <strong>Ruta escolta (inici)</strong>
+      </span>
+      <span class="flex items-center gap-1.5">
+        <span class="w-3.5 h-3.5 rounded-full bg-[#d97706] inline-block shadow-xs border border-white"></span>
+        <strong>Zona acampada / Refugi</strong>
+      </span>
+      <span class="hidden md:inline text-stone-400">|</span>
+      <span class="hidden md:inline text-stone-500">
+        Fes clic sobre qualsevol punt per veure detalls, unitats i accedir a la fitxa.
+      </span>
+    </div>
+
+    <button
+      type="button"
+      id="btnResetMapZoom"
+      class="text-[11px] font-bold text-stone-500 hover:text-stone-900 hover:underline"
+    >
+      ↺ Centra Mallorca
+    </button>
+  </div>
+</div>
+
+<script>
+  function setupOsmMap() {
+    const mapEl = document.getElementById('osmGeneralMap');
+    if (!mapEl || !(window as any).L) return;
+
+    // Prevent re-initialization if already loaded on this element
+    if ((mapEl as any)._leaflet_id) {
+      return;
+    }
+
+    const L = (window as any).L;
+    const routesData = JSON.parse(mapEl.dataset.routes || '[]');
+    const acampadesData = JSON.parse(mapEl.dataset.acampades || '[]');
+    const initialType = mapEl.dataset.initialType || 'all';
+
+    // Center of Mallorca
+    const mallorcaCenter: [number, number] = [39.6953, 2.95];
+    const initialZoom = window.innerWidth < 640 ? 9 : 10;
+
+    const map = L.map('osmGeneralMap', {
+      center: mallorcaCenter,
+      zoom: initialZoom,
+      scrollWheelZoom: false,
+    });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom: 18,
+    }).addTo(map);
+
+    // Custom circular pulse markers for clean design
+    const routeIcon = L.divIcon({
+      className: 'osm-custom-pin-route',
+      html: `<div style="background-color: #1b4332; width: 22px; height: 22px; border-radius: 50%; border: 2.5px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; font-size: 11px; color: white;">🥾</div>`,
+      iconSize: [22, 22],
+      iconAnchor: [11, 11],
+      popupAnchor: [0, -11],
+    });
+
+    const acampadaIcon = L.divIcon({
+      className: 'osm-custom-pin-camp',
+      html: `<div style="background-color: #d97706; width: 22px; height: 22px; border-radius: 50%; border: 2.5px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; font-size: 11px; color: white;">🏕️</div>`,
+      iconSize: [22, 22],
+      iconAnchor: [11, 11],
+      popupAnchor: [0, -11],
+    });
+
+    const routeMarkers: any[] = [];
+    const acampadaMarkers: any[] = [];
+
+    // Add Route markers
+    routesData.forEach((r: any) => {
+      if (!r.lat || !r.lon) return;
+
+      const popupContent = `
+        <div style="font-family: inherit; font-size: 12px; max-width: 240px; padding: 2px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 4px; margin-bottom: 4px;">
+            <span style="background: #1b4332; color: white; padding: 2px 6px; border-radius: 4px; font-weight: bold; font-size: 10px;">RUTA</span>
+            <span style="color: #666; font-size: 11px;">${r.municipi}</span>
+          </div>
+          <strong style="font-size: 13px; line-height: 1.3; color: #1c1917; display: block; margin-bottom: 6px;">
+            ${r.nom}
+          </strong>
+          <div style="background: #f5f5f4; padding: 4px 6px; border-radius: 6px; margin-bottom: 6px; display: flex; justify-content: space-between; font-weight: 600; color: #44403c;">
+            <span>🥾 ${r.distancia_km} km</span>
+            <span>⛰️ +${r.desnivell_positiu_m}m</span>
+            <span>${r.dificultat}</span>
+          </div>
+          <a href="/rutes/${r.slug}" style="display: block; text-align: center; background: #1b4332; color: white; padding: 5px 8px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 6px;">
+            Veure fitxa de la ruta →
+          </a>
+        </div>
+      `;
+
+      const marker = L.marker([r.lat, r.lon], { icon: routeIcon }).bindPopup(popupContent);
+      routeMarkers.push(marker);
+    });
+
+    // Add Campsite markers
+    acampadesData.forEach((a: any) => {
+      if (!a.lat || !a.lon) return;
+
+      const popupContent = `
+        <div style="font-family: inherit; font-size: 12px; max-width: 240px; padding: 2px;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 4px; margin-bottom: 4px;">
+            <span style="background: #d97706; color: white; padding: 2px 6px; border-radius: 4px; font-weight: bold; font-size: 10px;">ACAMPADA / REFUGI</span>
+            <span style="color: #666; font-size: 11px;">${a.municipi}</span>
+          </div>
+          <strong style="font-size: 13px; line-height: 1.3; color: #1c1917; display: block; margin-bottom: 6px;">
+            ${a.nom}
+          </strong>
+          <div style="background: #fef3c7; color: #92400e; padding: 4px 6px; border-radius: 6px; margin-bottom: 6px; font-weight: 600; font-size: 11px;">
+            Titularitat: ${a.titularitat}
+            ${a.capacitat ? `<br>Capacitat: ${a.capacitat}` : ''}
+          </div>
+          ${a.web ? `
+            <a href="${a.web}" target="_blank" rel="noopener noreferrer" style="display: block; text-align: center; background: #d97706; color: white; padding: 5px 8px; border-radius: 6px; text-decoration: none; font-weight: bold;">
+              Web oficial / Reserva ↗
+            </a>
+          ` : `
+            <a href="/acampada" style="display: block; text-align: center; background: #57534e; color: white; padding: 5px 8px; border-radius: 6px; text-decoration: none; font-weight: bold;">
+              Veure directori d'acampada →
+            </a>
+          `}
+        </div>
+      `;
+
+      const marker = L.marker([a.lat, a.lon], { icon: acampadaIcon }).bindPopup(popupContent);
+      acampadaMarkers.push(marker);
+    });
+
+    const routeLayerGroup = L.layerGroup(routeMarkers);
+    const acampadaLayerGroup = L.layerGroup(acampadaMarkers);
+
+    // Initial layer state
+    function applyLayerFilter(filterType: string) {
+      if (filterType === 'all') {
+        if (!map.hasLayer(routeLayerGroup)) map.addLayer(routeLayerGroup);
+        if (!map.hasLayer(acampadaLayerGroup)) map.addLayer(acampadaLayerGroup);
+      } else if (filterType === 'rutes') {
+        if (!map.hasLayer(routeLayerGroup)) map.addLayer(routeLayerGroup);
+        if (map.hasLayer(acampadaLayerGroup)) map.removeLayer(acampadaLayerGroup);
+      } else if (filterType === 'acampada') {
+        if (map.hasLayer(routeLayerGroup)) map.removeLayer(routeLayerGroup);
+        if (!map.hasLayer(acampadaLayerGroup)) map.addLayer(acampadaLayerGroup);
+      }
+
+      // Update button styling
+      const buttons = document.querySelectorAll('.map-filter-btn');
+      buttons.forEach((btn) => {
+        const b = btn as HTMLButtonElement;
+        const isActive = b.dataset.filter === filterType;
+        if (isActive) {
+          b.className = 'map-filter-btn px-3 py-1.5 rounded-lg transition bg-white text-stone-900 shadow-xs font-bold';
+        } else {
+          b.className = 'map-filter-btn px-3 py-1.5 rounded-lg transition text-stone-600 hover:text-stone-900 font-medium';
+        }
+      });
+    }
+
+    applyLayerFilter(initialType);
+
+    // Button event listeners
+    const buttons = document.querySelectorAll('.map-filter-btn');
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const target = e.currentTarget as HTMLButtonElement;
+        const filterVal = target.dataset.filter || 'all';
+        applyLayerFilter(filterVal);
+      });
+    });
+
+    // Reset zoom button
+    const btnReset = document.getElementById('btnResetMapZoom');
+    btnReset?.addEventListener('click', () => {
+      map.setView(mallorcaCenter, initialZoom);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', setupOsmMap);
+  setTimeout(setupOsmMap, 300);
+</script>

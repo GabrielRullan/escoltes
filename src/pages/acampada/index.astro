@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import AlertBanner from '../../components/AlertBanner.astro';
+import MallorcaMap from '../../components/MallorcaMap.astro';
 import acampades from '../../../data/acampada_mallorca.json';
 import aemetMunicipis from '../../../data/aemet_municipis_balears.json';
 
@@ -37,6 +38,9 @@ const matchAemet = (mun: string) => {
   </div>
 
   <AlertBanner />
+
+  <!-- Interactive OpenStreetMap of Mallorca (Filtered to Campsites) -->
+  <MallorcaMap initialType="acampada" />
 
   <!-- Filter & Search Bar for Campsites -->
   <div class="bg-white rounded-2xl border border-stone-200 p-5 sm:p-6 shadow-xs mb-8">
