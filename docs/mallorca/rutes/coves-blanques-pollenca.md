@@ -63,7 +63,7 @@ setTimeout(initRouteTrackMap_coves_blanques_pollenca, 400);
 | **Dificultat Tècnica** | **Fàcil** |
 | **Durada Estimada** | **2h 00min** |
 | **Unitats Recomanades** | **Ferrerets, Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
-| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Coves%20Blanques%20%28Cala%20Sant%20Vicen%C3%A7%20/%20Pollen%C3%A7a%29)** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/find.do?q=Coves%20Blanques%20%28Cala%20Sant%20Vicen%C3%A7%20/%20Pollen%C3%A7a%29)** |
 | **Guia Turisme Petit** | **[👶 Veure Guia de Família a Turisme Petit 🔗](https://www.turismepetit.com/excursion/excursion-a-las-coves-blanques-en-pollenca/)** |
 
 ---

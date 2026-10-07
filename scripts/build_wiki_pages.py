@@ -472,7 +472,7 @@ def build_individual_route_pages(rutes, refugis, agrupaments, transport_data):
             wikiloc_str = f"[💚 Obrir Track Oficial a Wikiloc 🔗]({wikiloc_url})"
         else:
             search_query = urllib.parse.quote(rut['nom'])
-            wikiloc_str = f"[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q={search_query})"
+            wikiloc_str = f"[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/find.do?q={search_query})"
 
         turismepetit_url = rut.get("turismepetit_url")
         turismepetit_row = f"| **Guia Turisme Petit** | **[👶 Veure Guia de Família a Turisme Petit 🔗]({turismepetit_url})** |\n" if turismepetit_url else ""
@@ -1013,7 +1013,7 @@ function renderRoutes(routesToRender) {{
         const badgeColor = getBadgeColor(r.dificultat);
         const unitatsStr = r.apte_unitats ? r.apte_unitats.join(', ') : '';
         
-        const wikilocUrl = r.wikiloc_url ? r.wikiloc_url : `https://www.wikiloc.com/wikiloc/map.do?q=${{encodeURIComponent(r.nom)}}`;
+        const wikilocUrl = r.wikiloc_url ? r.wikiloc_url : `https://www.wikiloc.com/wikiloc/find.do?q=${{encodeURIComponent(r.nom)}}`;
 
         const tpBtn = r.turismepetit_url ? `<a href="${{r.turismepetit_url}}" target="_blank" style="display: inline-block; padding: 6px 12px; background-color: #e65100; color: white; text-decoration: none; border-radius: 4px; font-size: 0.85em; font-weight: bold;">👶 Turisme Petit 🔗</a>` : '';
 

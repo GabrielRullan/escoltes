@@ -119,7 +119,7 @@ function renderRoutes(routesToRender) {
         const badgeColor = getBadgeColor(r.dificultat);
         const unitatsStr = r.apte_unitats ? r.apte_unitats.join(', ') : '';
         
-        const wikilocUrl = r.wikiloc_url ? r.wikiloc_url : `https://www.wikiloc.com/wikiloc/map.do?q=${encodeURIComponent(r.nom)}`;
+        const wikilocUrl = r.wikiloc_url ? r.wikiloc_url : `https://www.wikiloc.com/wikiloc/find.do?q=${encodeURIComponent(r.nom)}`;
 
         const tpBtn = r.turismepetit_url ? `<a href="${r.turismepetit_url}" target="_blank" style="display: inline-block; padding: 6px 12px; background-color: #e65100; color: white; text-decoration: none; border-radius: 4px; font-size: 0.85em; font-weight: bold;">👶 Turisme Petit 🔗</a>` : '';
 

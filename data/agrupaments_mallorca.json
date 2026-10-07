@@ -91,8 +91,8 @@
     "descripcio": "Agrupament històric de Palma, vinculat a la parròquia de Sant Alonso."
   },
   {
-    "slug": "aeg-jaume-i",
-    "nom": "AEG Jaume I",
+    "slug": "aeg-jaume-i-i-verge-de-lluc",
+    "nom": "AEG Jaume I i Verge de Lluc",
     "associacio": "MEGM (Moviment Escolta i Guiatge de Mallorca)",
     "municipi": "Palma",
     "zona": "Barri",
@@ -101,20 +101,7 @@
     "web": "https://megm.org/agrupaments/",
     "lat": 39.579,
     "lon": 2.653,
-    "descripcio": "Agrupament del barri de l'Encarnació a Palma."
-  },
-  {
-    "slug": "aeg-verge-de-lluc",
-    "nom": "AEG Verge de Lluc",
-    "associacio": "MEGM (Moviment Escolta i Guiatge de Mallorca)",
-    "municipi": "Palma",
-    "zona": "Barri",
-    "ubicacio_detall": "Parròquia de l'Encarnació (Palma)",
-    "email": "vergedelluc@megm.org",
-    "web": "https://megm.org/agrupaments/",
-    "lat": 39.5795,
-    "lon": 2.6535,
-    "descripcio": "Agrupament germà situat a la parròquia de l'Encarnació a Palma."
+    "descripcio": "Agrupament escolta del barri de l'Encarnació a Palma."
   },
   {
     "slug": "aeg-ramon-llull",

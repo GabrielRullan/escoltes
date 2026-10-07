@@ -63,7 +63,7 @@ setTimeout(initRouteTrackMap_castell_de_bellver_bosc_palma, 400);
 | **Dificultat Tècnica** | **Molt Fàcil** |
 | **Durada Estimada** | **1h 30min** |
 | **Unitats Recomanades** | **Ferrerets, Llops/Daines** |
-| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Tomb%20pel%20Bosc%20del%20Castell%20de%20Bellver%20%28Palma%29)** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/find.do?q=Tomb%20pel%20Bosc%20del%20Castell%20de%20Bellver%20%28Palma%29)** |
 
 ---
 

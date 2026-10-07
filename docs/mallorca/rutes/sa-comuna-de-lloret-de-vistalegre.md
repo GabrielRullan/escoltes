@@ -63,7 +63,7 @@ setTimeout(initRouteTrackMap_sa_comuna_de_lloret_de_vistalegre, 400);
 | **Dificultat Tècnica** | **Molt Fàcil** |
 | **Durada Estimada** | **1h 30min** |
 | **Unitats Recomanades** | **Ferrerets, Llops/Daines** |
-| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Sa%20Comuna%20de%20Lloret%20de%20Vistalegre)** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/find.do?q=Sa%20Comuna%20de%20Lloret%20de%20Vistalegre)** |
 
 ---
 

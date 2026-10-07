@@ -63,7 +63,7 @@ setTimeout(initRouteTrackMap_estanyol_a_torre_estalella_llucmajor, 400);
 | **Dificultat Tècnica** | **Molt Fàcil** |
 | **Durada Estimada** | **1h 30min** |
 | **Unitats Recomanades** | **Ferrerets, Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
-| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=s%27Estanyol%20a%20la%20Torre%20de%20s%27Estalella%20%28Llucmajor%29)** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/find.do?q=s%27Estanyol%20a%20la%20Torre%20de%20s%27Estalella%20%28Llucmajor%29)** |
 | **Guia Turisme Petit** | **[👶 Veure Guia de Família a Turisme Petit 🔗](https://www.turismepetit.com/excursion/excursion-desde-estanyol-a-torre-estalella/)** |
 
 ---

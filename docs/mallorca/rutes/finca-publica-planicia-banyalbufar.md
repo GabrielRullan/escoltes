@@ -63,7 +63,7 @@ setTimeout(initRouteTrackMap_finca_publica_planicia_banyalbufar, 400);
 | **Dificultat Tècnica** | **Moderada** |
 | **Durada Estimada** | **3h 15min** |
 | **Unitats Recomanades** | **Llops/Daines, Pioners/Rangers, Rovers/Rutes** |
-| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/map.do?q=Finca%20P%C3%BAblica%20de%20Plan%C3%ADcia%20%28Banyalbufar%29)** |
+| **Track a Wikiloc** | **[💚 Cercar Track a Wikiloc 🔗](https://www.wikiloc.com/wikiloc/find.do?q=Finca%20P%C3%BAblica%20de%20Plan%C3%ADcia%20%28Banyalbufar%29)** |
 | **Guia Turisme Petit** | **[👶 Veure Guia de Família a Turisme Petit 🔗](https://www.turismepetit.com/excursion/excursion-semicircular-por-la-finca-publica-de-planicia/)** |
 
 ---
