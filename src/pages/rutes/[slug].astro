@@ -173,6 +173,18 @@ const getDifficultyColor = (diff: string) => {
       </div>
 
       <div class="flex flex-wrap items-center gap-2">
+        {route.font_url && (
+          <a
+            href={route.font_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#1b4332] hover:bg-[#2d6a4f] text-white font-bold text-xs shadow-xs transition"
+            title={`Guia i fitxa oficial: ${route.font || 'Font oficial'}`}
+          >
+            <span>🏛️ Guia Oficial ({route.font ? route.font.split('(')[0].trim() : 'Oficial'})</span>
+            <span>↗</span>
+          </a>
+        )}
         {matchedAemet && (
           <a
             href={matchedAemet.url}
@@ -181,7 +193,7 @@ const getDifficultyColor = (diff: string) => {
             class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-600 active:bg-amber-700 text-white font-bold text-xs shadow-xs transition"
             title={`Consultar la previsió oficial de l'AEMET a ${matchedAemet.municipi}`}
           >
-            <span>🌤️ Visualitza a l'AEMET ({matchedAemet.municipi})</span>
+            <span>🌤️ AEMET ({matchedAemet.municipi})</span>
             <span>↗</span>
           </a>
         )}
@@ -294,6 +306,65 @@ const getDifficultyColor = (diff: string) => {
     <!-- Right Column (1 col): Field Utility, Transit & Nearby Groups -->
     <div class="space-y-8">
       
+      <!-- Route Origin & Official Guide Card -->
+      <section class="bg-white rounded-3xl border border-stone-200 p-6 shadow-xs">
+        <h3 class="text-base font-bold text-stone-900 mb-2 flex items-center gap-2">
+          <span>🏛️ Origen i Documentació Oficial</span>
+        </h3>
+        <p class="text-xs text-stone-600 mb-4 leading-relaxed">
+          {route.font ? (
+            <>Itinerari catalogat i mantingut per <strong>{route.font}</strong>.</>
+          ) : (
+            <>Itinerari tradicional senyalitzat de Mallorca.</>
+          )}
+        </p>
+
+        <div class="space-y-2">
+          {route.font_url && (
+            <a
+              href={route.font_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-between p-2.5 rounded-xl bg-stone-50 hover:bg-[#1b4332]/5 border border-stone-200 text-xs font-semibold text-stone-800 hover:text-[#1b4332] transition group"
+            >
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="shrink-0">🌐</span>
+                <span class="truncate">Fitxa oficial ({route.font ? route.font.split('(')[0].trim() : 'Oficial'})</span>
+              </div>
+              <span class="text-stone-400 group-hover:text-[#1b4332] shrink-0 ml-1">↗</span>
+            </a>
+          )}
+          {route.wikiloc_url && (
+            <a
+              href={route.wikiloc_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-between p-2.5 rounded-xl bg-stone-50 hover:bg-emerald-50 border border-stone-200 text-xs font-semibold text-stone-800 hover:text-emerald-700 transition group"
+            >
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="shrink-0">📱</span>
+                <span class="truncate">Track GPS a Wikiloc</span>
+              </div>
+              <span class="text-stone-400 group-hover:text-emerald-600 shrink-0 ml-1">↗</span>
+            </a>
+          )}
+          {route.turismepetit_url && (
+            <a
+              href={route.turismepetit_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center justify-between p-2.5 rounded-xl bg-stone-50 hover:bg-sky-50 border border-stone-200 text-xs font-semibold text-stone-800 hover:text-sky-700 transition group"
+            >
+              <div class="flex items-center gap-2 min-w-0">
+                <span class="shrink-0">👨‍👩‍👧</span>
+                <span class="truncate">Guia familiar Turisme Petit</span>
+              </div>
+              <span class="text-stone-400 group-hover:text-sky-600 shrink-0 ml-1">↗</span>
+            </a>
+          )}
+        </div>
+      </section>
+
       <!-- Water Points Card -->
       <section class="bg-white rounded-3xl border border-stone-200 p-6 shadow-xs">
         <h3 class="text-base font-bold text-stone-900 mb-3 flex items-center gap-2">

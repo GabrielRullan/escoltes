@@ -69,7 +69,10 @@
         "nom": "Arribada a la Trapa",
         "desc": "Descens cap a les cases i marjades del monestir de la Trapa."
       }
-    ]
+    ],
+    "font": "Consell de Mallorca (Ruta de Pedra en Sec GR-221)",
+    "font_url": "https://caminsdepedra.conselldemallorca.cat/-/etapa-1-port-d-andratx-la-trapa",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+1+Port+d+Andratx+La+Trapa"
   },
   {
     "slug": "gr221-etapa-2-la-trapa-estellencs",
@@ -140,7 +143,10 @@
         "nom": "Arribada a Estellencs",
         "desc": "Baixada entre marjades d'oliveres fins al poble d'Estellencs."
       }
-    ]
+    ],
+    "font": "Consell de Mallorca (Ruta de Pedra en Sec GR-221)",
+    "font_url": "https://caminsdepedra.conselldemallorca.cat/-/etapa-2-la-trapa-estellencs",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+2+La+Trapa+Estellencs"
   },
   {
     "slug": "gr221-etapa-3-estellencs-esporles",
@@ -212,7 +218,10 @@
         "nom": "Arribada a Esporles",
         "desc": "Descens suau fins al passeig d'Esporles."
       }
-    ]
+    ],
+    "font": "Consell de Mallorca (Ruta de Pedra en Sec GR-221)",
+    "font_url": "https://caminsdepedra.conselldemallorca.cat/-/etapa-3-estellencs-esporles",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+3+Estellencs+Esporles"
   },
   {
     "slug": "gr221-etapa-4-esporles-deia",
@@ -285,7 +294,10 @@
         "nom": "Descens a Deià i Refugi Can Boi",
         "desc": "Baixada de pedra empedrada fins al centre de Deià."
       }
-    ]
+    ],
+    "font": "Consell de Mallorca (Ruta de Pedra en Sec GR-221)",
+    "font_url": "https://caminsdepedra.conselldemallorca.cat/-/etapa-4-esporles-can-boi",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+4+Esporles+Deia"
   },
   {
     "slug": "gr221-etapa-5-deia-port-soller",
@@ -360,7 +372,10 @@
         "nom": "Refugi de Muleta",
         "desc": "Arribada al far i refugi de Muleta sobre la badia del Port de Sóller."
       }
-    ]
+    ],
+    "font": "Consell de Mallorca (Ruta de Pedra en Sec GR-221)",
+    "font_url": "https://caminsdepedra.conselldemallorca.cat/-/etapa-5-can-boi-muleta",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+5+Deia+Port+de+Soller"
   },
   {
     "slug": "gr221-etapa-6-soller-tossals-verds",
@@ -433,7 +448,10 @@
         "nom": "Coll des Coloms a Tossals Verds",
         "desc": "Baixada pel Pas des Llis o Coll des Coloms fins al refugi de Tossals Verds."
       }
-    ]
+    ],
+    "font": "Consell de Mallorca (Ruta de Pedra en Sec GR-221)",
+    "font_url": "https://caminsdepedra.conselldemallorca.cat/-/etapa-6-muleta-tossals-verds",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+6+Soller+Tossals+Verds"
   },
   {
     "slug": "gr221-etapa-7-tossals-verds-son-amer",
@@ -507,7 +525,10 @@
         "nom": "Arribada a Son Amer (Lluc)",
         "desc": "Entrada a la vall de Lluc i refugi de Son Amer."
       }
-    ]
+    ],
+    "font": "Consell de Mallorca (Ruta de Pedra en Sec GR-221)",
+    "font_url": "https://caminsdepedra.conselldemallorca.cat/-/etapa-7-tossals-verds-son-amer",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+7+Tossals+Verds+Son+Amer"
   },
   {
     "slug": "gr221-etapa-8-son-amer-pollenca",
@@ -582,7 +603,10 @@
         "nom": "Pont Romà i Pollença",
         "desc": "Entrada triomfal a Pollença pel Pont Romà."
       }
-    ]
+    ],
+    "font": "Consell de Mallorca (Ruta de Pedra en Sec GR-221)",
+    "font_url": "https://caminsdepedra.conselldemallorca.cat/-/etapa-8-son-amer-pont-roma",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+8+Son+Amer+Pollenca"
   },
   {
     "slug": "es-salt-des-freu-orient",
@@ -644,7 +668,11 @@
         "nom": "Cascada des Salt des Freu",
         "desc": "Arribada a les pozes i salts d'aigua."
       }
-    ]
+    ],
+    "font": "Turisme Petit",
+    "font_url": "https://www.turismepetit.com/excursion/excursion-al-salt-des-freu-en-orient/",
+    "turismepetit_url": "https://www.turismepetit.com/excursion/excursion-al-salt-des-freu-en-orient/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Salt+des+Freu+Orient"
   },
   {
     "slug": "ses-fonts-ufanes-campanet",
@@ -706,12 +734,16 @@
         "nom": "Brollador de les Ufanes",
         "desc": "Punt on l'aigua s'anega entre els arbres en dies de pluja."
       }
-    ]
+    ],
+    "font": "Govern de les Illes Balears (Monument Natural de ses Fonts Ufanes)",
+    "font_url": "https://www.caib.es/sites/espaisnaturalsprotegits/ca/monument_natural_de_ses_fonts_ufanes/",
+    "turismepetit_url": "https://www.turismepetit.com/excursion/ses-fonts-ufanes-en-campanet/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Ses+Fonts+Ufanes+Campanet"
   },
   {
     "slug": "cami-de-ses-voltes-galileu",
     "nom": "Camí de ses Voltes d'en Galileu (Lluc)",
-    "font": "Turisme Petit",
+    "font": "Consell de Mallorca (Camins de Pedra GR-221)",
     "municipi": "Escorca",
     "zona": "Tramuntana Nord",
     "distancia_km": 9.4,
@@ -736,7 +768,10 @@
     ],
     "lat": 39.814,
     "lon": 2.875,
-    "descripcio": "Ruta patrimonial que remunta les voltes empedrades cap a les antigues cases de neu de la Tramuntana."
+    "descripcio": "Ruta patrimonial que remunta les voltes empedrades cap a les antigues cases de neu de la Tramuntana.",
+    "font_url": "https://caminsdepedra.conselldemallorca.cat/",
+    "turismepetit_url": "https://www.turismepetit.com/excursion/voltes-den-galileu-en-escorca/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Voltes+den+Galileu+Lluc"
   },
   {
     "slug": "parc-natural-mondrago",
@@ -799,12 +834,16 @@
         "nom": "Mirador des Cap des Moro",
         "desc": "Vistes a les penyes litorals del sud."
       }
-    ]
+    ],
+    "font": "Govern de les Illes Balears (Parc Natural de Mondragó)",
+    "font_url": "https://www.caib.es/sites/espaisnaturalsprotegits/ca/parc_natural_de_mondrago/",
+    "turismepetit_url": "https://www.turismepetit.com/excursion/parque-natural-de-mondrago/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Parc+Natural+de+Mondrago"
   },
   {
     "slug": "parc-natural-albufera-mallorca",
     "nom": "Parc Natural de s'Albufera de Mallorca",
-    "font": "Turisme Petit / Parcs Naturals",
+    "font": "Govern de les Illes Balears (Parc Natural de s'Albufera)",
     "municipi": "Sa Pobla / Muro",
     "zona": "Pla de Mallorca",
     "distancia_km": 6.2,
@@ -830,12 +869,15 @@
     ],
     "lat": 39.792,
     "lon": 3.118,
-    "descripcio": "La major zona humida de les Balears, ideal per a tallers d'observació d'aus i ecologia."
+    "descripcio": "La major zona humida de les Balears, ideal per a tallers d'observació d'aus i ecologia.",
+    "font_url": "https://www.caib.es/sites/espaisnaturalsprotegits/ca/parc_natural_de_salbufera_de_mallorca/",
+    "turismepetit_url": "https://www.turismepetit.com/excursion/parque-natural-de-salbufera-de-mallorca/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Parc+Natural+de+s+Albufera+de+Mallorca"
   },
   {
     "slug": "finca-publica-raixa",
     "nom": "Tomb per la Finca Pública de Raixa",
-    "font": "Turisme Petit / Consell de Mallorca",
+    "font": "Consell de Mallorca (Finca Pública de Raixa)",
     "municipi": "Bunyola",
     "zona": "Tramuntana Central",
     "distancia_km": 3.0,
@@ -860,12 +902,15 @@
     ],
     "lat": 39.648,
     "lon": 2.672,
-    "descripcio": "Possessió senyorial emblemàtica als peus de Bunyola amb jardins monumentals."
+    "descripcio": "Possessió senyorial emblemàtica als peus de Bunyola amb jardins monumentals.",
+    "font_url": "https://raixa.conselldemallorca.cat/",
+    "turismepetit_url": "https://www.turismepetit.com/excursion/finca-publica-de-raixa-en-bunyola/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Finca+Publica+de+Raixa"
   },
   {
     "slug": "cala-boquer-pollenca",
     "nom": "Cala Boquer i Vall de Boquer (Pollença)",
-    "font": "Turisme Petit",
+    "font": "Turisme Petit / Ajuntament de Pollença",
     "municipi": "Pollença",
     "zona": "Tramuntana Nord",
     "distancia_km": 5.5,
@@ -891,12 +936,15 @@
     ],
     "lat": 39.912,
     "lon": 3.084,
-    "descripcio": "Passejada assequible entre muntanyes fins a una cala verge del nord de Mallorca."
+    "descripcio": "Passejada assequible entre muntanyes fins a una cala verge del nord de Mallorca.",
+    "font_url": "https://www.turismepetit.com/excursion/cala-boquer-en-pollenca/",
+    "turismepetit_url": "https://www.turismepetit.com/excursion/cala-boquer-en-pollenca/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cala+Boquer+Pollenca"
   },
   {
     "slug": "salquerieta-vella-campament-soldats",
     "nom": "S'Alqueria Vella al Campament dels Soldats (Artà)",
-    "font": "Turisme Petit / Parc Natural de Llevant",
+    "font": "Govern de les Illes Balears (Parc Natural de la Península de Llevant)",
     "municipi": "Artà",
     "zona": "Llevant",
     "distancia_km": 7.0,
@@ -920,12 +968,15 @@
     ],
     "lat": 39.735,
     "lon": 3.342,
-    "descripcio": "Ruta històrica i natural pel Parc Natural de Llevant des de les cases de s'Alqueria Vella."
+    "descripcio": "Ruta històrica i natural pel Parc Natural de Llevant des de les cases de s'Alqueria Vella.",
+    "font_url": "https://www.caib.es/sites/espaisnaturalsprotegits/ca/parc_natural_de_la_peninsula_de_llevant/",
+    "turismepetit_url": "https://www.turismepetit.com/excursion/parc-natural-de-llevant/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=S+Alqueria+Vella+Campament+Soldats+Arta"
   },
   {
     "slug": "puig-de-galatzo-font-des-pi",
     "nom": "Puig de Galatzó (des de la Font des Pi)",
-    "font": "Camins de Mallorca",
+    "font": "Ajuntament de Calvià (Finca Pública de Galatzó)",
     "municipi": "Puigpunyent / Estellencs",
     "zona": "Tramuntana Sud",
     "distancia_km": 11.2,
@@ -951,12 +1002,14 @@
     "lat": 39.621,
     "lon": 2.478,
     "descripcio": "Ascensió al cim piramidal més emblemàtic del ponent mallorquí.",
-    "turismepetit_url": "https://www.turismepetit.com/excursion/excursion-a-la-finca-publica-de-galatzo/"
+    "turismepetit_url": "https://www.turismepetit.com/excursion/excursion-a-la-finca-publica-de-galatzo/",
+    "font_url": "https://www.calvia.com/fincagalatzo/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+Galatzo+Font+des+Pi"
   },
   {
     "slug": "muela-de-sesclop",
     "nom": "Muela de s'Esclop (des de sa Vinya de Galatzó)",
-    "font": "Finca Pública Galatzó",
+    "font": "Ajuntament de Calvià (Finca Pública de Galatzó)",
     "municipi": "Calvià / Andratx",
     "zona": "Tramuntana Sud",
     "distancia_km": 12.8,
@@ -981,12 +1034,14 @@
     ],
     "lat": 39.598,
     "lon": 2.451,
-    "descripcio": "Ruta d'alta muntanya cap a la taula rocosa de s'Esclop, on el físic Arago va mesurar el meridià de París."
+    "descripcio": "Ruta d'alta muntanya cap a la taula rocosa de s'Esclop, on el físic Arago va mesurar el meridià de París.",
+    "font_url": "https://www.calvia.com/fincagalatzo/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Muela+de+s+Esclop+Galatzo"
   },
   {
     "slug": "fita-del-ram-maristella",
     "nom": "Fita del Ram i Ermita de Maristel·la (Esporles)",
-    "font": "Excursionisme Esporles",
+    "font": "Ajuntament d'Esporles",
     "municipi": "Esporles",
     "zona": "Tramuntana Sud",
     "distancia_km": 8.5,
@@ -1013,12 +1068,14 @@
     ],
     "lat": 39.664,
     "lon": 2.569,
-    "descripcio": "Excursió boscosa d'alzinar i patrimoni etnogràfic sobre la vila d'Esporles."
+    "descripcio": "Excursió boscosa d'alzinar i patrimoni etnogràfic sobre la vila d'Esporles.",
+    "font_url": "https://ajesporles.net/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Fita+del+Ram+Ermita+Maristella+Esporles"
   },
   {
     "slug": "sa-foradada-son-marroig",
     "nom": "Sa Foradada des de Son Marroig (Deià)",
-    "font": "Patrimoni Tramuntana",
+    "font": "Fundació Son Marroig / Ajuntament de Deià",
     "municipi": "Deià",
     "zona": "Tramuntana Central",
     "distancia_km": 7.0,
@@ -1043,12 +1100,14 @@
     ],
     "lat": 39.751,
     "lon": 2.628,
-    "descripcio": "Baixada clàssica cap a la singular península rocosa foradada de la costa nord."
+    "descripcio": "Baixada clàssica cap a la singular península rocosa foradada de la costa nord.",
+    "font_url": "https://sonmarroig.com/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Sa+Foradada+Son+Marroig+Deia"
   },
   {
     "slug": "ermita-trinitat-valldemossa",
     "nom": "Ermita de la Trinitat i Miradors de Valldemossa",
-    "font": "Camins de Valldemossa",
+    "font": "Ajuntament de Valldemossa (Camins de l'Arxiduc)",
     "municipi": "Valldemossa",
     "zona": "Tramuntana Central",
     "distancia_km": 5.8,
@@ -1073,12 +1132,14 @@
     ],
     "lat": 39.718,
     "lon": 2.612,
-    "descripcio": "Ruta de pau i espiritualitat pels boscos d'alzinars de Valldemossa."
+    "descripcio": "Ruta de pau i espiritualitat pels boscos d'alzinars de Valldemossa.",
+    "font_url": "https://valldemossa.es/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Ermita+de+la+Trinitat+Valldemossa"
   },
   {
     "slug": "avenc-de-son-pou",
     "nom": "Avenc de Son Pou (Coanegra / Santa Maria)",
-    "font": "Senderisme Santa Maria",
+    "font": "Ajuntament de Santa Maria del Camí",
     "municipi": "Santa Maria del Camí",
     "zona": "Raiguer",
     "distancia_km": 8.0,
@@ -1104,12 +1165,14 @@
     ],
     "lat": 39.675,
     "lon": 2.768,
-    "descripcio": "Excursió per la vall de Coanegra fins a la cova-avenc amb claraboia natural més gran de Mallorca."
+    "descripcio": "Excursió per la vall de Coanegra fins a la cova-avenc amb claraboia natural més gran de Mallorca.",
+    "font_url": "https://ajsantamariadelcami.org/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Avenc+de+Son+Pou+Coanegra"
   },
   {
     "slug": "puig-de-sa-comuna-bunyola",
     "nom": "Puig de sa Comuna de Bunyola (per Penya d'en Honor)",
-    "font": "Comuna de Bunyola",
+    "font": "Ajuntament de Bunyola (Sa Comuna)",
     "municipi": "Bunyola",
     "zona": "Tramuntana Central",
     "distancia_km": 10.5,
@@ -1135,12 +1198,14 @@
     ],
     "lat": 39.699,
     "lon": 2.705,
-    "descripcio": "Gran bosc públic de la Comuna de Bunyola, polmó verd per a activitats escoltes."
+    "descripcio": "Gran bosc públic de la Comuna de Bunyola, polmó verd per a activitats escoltes.",
+    "font_url": "https://ajbunyola.net/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+sa+Comuna+Bunyola+Penya+Honor"
   },
   {
     "slug": "parc-natural-dragonera",
     "nom": "Parc Natural de sa Dragonera (Cala Lledó - Far Vell)",
-    "font": "Parc Natural sa Dragonera",
+    "font": "Consell de Mallorca (Parc Natural de sa Dragonera)",
     "municipi": "Andratx",
     "zona": "Tramuntana Sud",
     "distancia_km": 7.4,
@@ -1166,12 +1231,15 @@
     ],
     "lat": 39.584,
     "lon": 2.318,
-    "descripcio": "Ruta insular de protecció biològica i vistes espectaculars a la costa de ponent."
+    "descripcio": "Ruta insular de protecció biològica i vistes espectaculars a la costa de ponent.",
+    "font_url": "https://dragonera.conselldemallorca.cat/",
+    "turismepetit_url": "https://www.turismepetit.com/excursion/parque-natural-de-sa-dragonera/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Parc+Natural+de+sa+Dragonera"
   },
   {
     "slug": "puig-de-randa-cura",
     "nom": "Puig de Randa i Santuari de Cura (Algaida)",
-    "font": "Excursionisme Pla de Mallorca",
+    "font": "Santuari de Cura / Ajuntament d'Algaida",
     "municipi": "Algaida",
     "zona": "Pla de Mallorca",
     "distancia_km": 9.0,
@@ -1198,12 +1266,15 @@
     ],
     "lat": 39.528,
     "lon": 2.926,
-    "descripcio": "Muntanya sagrada del centre de Mallorca associada a la figura de Ramon Llull."
+    "descripcio": "Muntanya sagrada del centre de Mallorca associada a la figura de Ramon Llull.",
+    "font_url": "https://santuariodecura.com/",
+    "turismepetit_url": "https://www.turismepetit.com/excursion/santuario-de-cura-en-randa/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+Randa+Santuari+de+Cura"
   },
   {
     "slug": "puig-de-sant-salvador-felanitx",
     "nom": "Puig de Sant Salvador (Felanitx)",
-    "font": "Excursionisme Migjorn",
+    "font": "Ajuntament de Felanitx (Patrimoni i Senderisme)",
     "municipi": "Felanitx",
     "zona": "Migjorn",
     "distancia_km": 7.5,
@@ -1230,12 +1301,14 @@
     ],
     "lat": 39.458,
     "lon": 3.186,
-    "descripcio": "El mirador natural del Llevant i Migjorn de Mallorca des de Felanitx."
+    "descripcio": "El mirador natural del Llevant i Migjorn de Mallorca des de Felanitx.",
+    "font_url": "https://visitfelanitx.com/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+Sant+Salvador+Felanitx"
   },
   {
     "slug": "castell-de-santueri-felanitx",
     "nom": "Castell de Santueri (Felanitx)",
-    "font": "Patrimoni Felanitx",
+    "font": "Fundació Castell de Santueri / Ajuntament de Felanitx",
     "municipi": "Felanitx",
     "zona": "Migjorn",
     "distancia_km": 6.0,
@@ -1260,12 +1333,14 @@
     ],
     "lat": 39.442,
     "lon": 3.188,
-    "descripcio": "Imponent castell roquer edificat sobre restes romanes i musulmanes a Felanitx."
+    "descripcio": "Imponent castell roquer edificat sobre restes romanes i musulmanes a Felanitx.",
+    "font_url": "https://visitfelanitx.com/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Castell+de+Santueri+Felanitx"
   },
   {
     "slug": "fonts-de-sa-costera-soller",
     "nom": "Ruta de les Fonts de sa Costera (Sóller - Cala Tuent)",
-    "font": "Consell de Mallorca",
+    "font": "Consell de Mallorca (Ruta de Pedra en Sec - Variant Sa Costera)",
     "municipi": "Sóller / Escorca",
     "zona": "Tramuntana Central",
     "distancia_km": 12.0,
@@ -1291,12 +1366,14 @@
     ],
     "lat": 39.785,
     "lon": 2.735,
-    "descripcio": "Una de les rutes litorals més maragda i majestuoses de la costa nord de Mallorca."
+    "descripcio": "Una de les rutes litorals més maragda i majestuoses de la costa nord de Mallorca.",
+    "font_url": "https://caminsdepedra.conselldemallorca.cat/variante-6-sa-costera-tramo-binibassi-cala-tuent",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Sa+Costera+Cala+Tuent+Soller"
   },
   {
     "slug": "puig-des-teix-valldemossa",
     "nom": "Puig des Teix pel Camí de s'Arxiduc (Valldemossa)",
-    "font": "Muntanya Valldemossa",
+    "font": "Ajuntament de Valldemossa (Camins de l'Arxiduc)",
     "municipi": "Valldemossa",
     "zona": "Tramuntana Central",
     "distancia_km": 14.0,
@@ -1321,12 +1398,14 @@
     ],
     "lat": 39.712,
     "lon": 2.625,
-    "descripcio": "Spectacular camí de la carena construït per l'Arxiduc Lluís Salvador sobre Valldemossa."
+    "descripcio": "Spectacular camí de la carena construït per l'Arxiduc Lluís Salvador sobre Valldemossa.",
+    "font_url": "https://valldemossa.es/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+des+Teix+Cami+de+s+Arxiduc+Valldemossa"
   },
   {
     "slug": "son-real-can-picafort",
     "nom": "Ruta Litoral de la Finca Pública de Son Real",
-    "font": "Finca Pública Son Real / IBANAT",
+    "font": "Govern de les Illes Balears (Finca Pública de Son Real)",
     "municipi": "Santa Margalida",
     "zona": "Pla de Mallorca",
     "distancia_km": 8.5,
@@ -1352,12 +1431,15 @@
     ],
     "lat": 39.751,
     "lon": 3.19,
-    "descripcio": "Ruta arqueològica verge vora mar a la badia d'Alcúdia."
+    "descripcio": "Ruta arqueològica verge vora mar a la badia d'Alcúdia.",
+    "font_url": "https://www.caib.es/sites/espaisnaturalsprotegits/ca/finca_publica_de_son_real/",
+    "turismepetit_url": "https://www.turismepetit.com/excursion/finca-publica-de-son-real/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Finca+Publica+de+Son+Real"
   },
   {
     "slug": "castell-d-alaro",
     "nom": "Excursió al Castell d'Alaró (des d'Orient o Es Verger)",
-    "font": "Camins de Mallorca",
+    "font": "Consell de Mallorca (Camins de Pedra)",
     "municipi": "Alaró",
     "zona": "Raiguer",
     "distancia_km": 8.0,
@@ -1385,12 +1467,14 @@
     "lat": 39.7025,
     "lon": 2.7915,
     "descripcio": "Excursió clàssica de l'escoltisme mallorquí cap a la fortalesa rocosa del Castell d'Alaró.",
-    "turismepetit_url": "https://www.turismepetit.com/excursion/el-castell-dalaro/"
+    "turismepetit_url": "https://www.turismepetit.com/excursion/el-castell-dalaro/",
+    "font_url": "https://caminsdepedra.conselldemallorca.cat/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Castell+d+Alaro"
   },
   {
     "slug": "torrent-de-pareis",
     "nom": "Torrent de Pareis (Només estiu / temps sec)",
-    "font": "Consell de Mallorca / Seguretat",
+    "font": "Govern de les Illes Balears (Monument Natural del Torrent de Pareis)",
     "municipi": "Escorca",
     "zona": "Tramuntana Nord",
     "distancia_km": 7.2,
@@ -1415,12 +1499,14 @@
     "lat": 39.826,
     "lon": 2.846,
     "descripcio": "La travessa de cañón més famosa de la Mediterrània. Extrema precaució i preparació tècnica.",
-    "turismepetit_url": "https://www.turismepetit.com/excursion/torrent-de-pareis-en-bus-y-barco/"
+    "turismepetit_url": "https://www.turismepetit.com/excursion/torrent-de-pareis-en-bus-y-barco/",
+    "font_url": "https://www.caib.es/sites/espaisnaturalsprotegits/ca/monument_natural_dels_torrents_de_pareis_del_gorg_blau_i_de_lluc/",
+    "wikiloc_url": "https://es.wikiloc.com/rutas-senderismo/torrent-de-pareis-escorca-sa-calobra-2194812"
   },
   {
     "slug": "volta-puig-de-maria-pollenca",
     "nom": "Volta al Puig de Maria (Pollença)",
-    "font": "Turisme Petit",
+    "font": "Turisme Petit / Ajuntament de Pollença",
     "municipi": "Pollença",
     "zona": "Tramuntana Nord",
     "distancia_km": 4.5,
@@ -1446,12 +1532,15 @@
     ],
     "lat": 39.8735,
     "lon": 3.018,
-    "descripcio": "Ruta fàcil d'iniciació per a les branques més joves cap al cim del Puig de Maria de Pollença."
+    "descripcio": "Ruta fàcil d'iniciació per a les branques més joves cap al cim del Puig de Maria de Pollença.",
+    "font_url": "https://www.turismepetit.com/excursion/excursion-al-puig-de-maria-en-pollenca/",
+    "turismepetit_url": "https://www.turismepetit.com/excursion/excursion-al-puig-de-maria-en-pollenca/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+Maria+Pollenca"
   },
   {
     "slug": "penya-de-sa-foradada-puigpunyent",
     "nom": "Penya de les Sínies i Reserva de Puigpunyent",
-    "font": "Turisme Petit",
+    "font": "Turisme Petit / Ajuntament de Puigpunyent",
     "municipi": "Puigpunyent",
     "zona": "Tramuntana Sud",
     "distancia_km": 5.0,
@@ -1475,12 +1564,15 @@
     ],
     "lat": 39.623,
     "lon": 2.528,
-    "descripcio": "Itinerari familiar boscós al peu del Galatzó."
+    "descripcio": "Itinerari familiar boscós al peu del Galatzó.",
+    "font_url": "https://www.turismepetit.com/excursion/la-reserva-puig-de-galatzo/",
+    "turismepetit_url": "https://www.turismepetit.com/excursion/la-reserva-puig-de-galatzo/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puigpunyent+Penya+de+les+Sinies"
   },
   {
     "slug": "castell-de-bellver-bosc-palma",
     "nom": "Tomb pel Bosc del Castell de Bellver (Palma)",
-    "font": "Ajuntament de Palma",
+    "font": "Ajuntament de Palma (Castell de Bellver)",
     "municipi": "Palma",
     "zona": "Palma",
     "distancia_km": 4.2,
@@ -1504,12 +1596,14 @@
     ],
     "lat": 39.563,
     "lon": 2.619,
-    "descripcio": "El bosc urbà escolta per excel·lència dels agrupaments de la ciutat de Palma."
+    "descripcio": "El bosc urbà escolta per excel·lència dels agrupaments de la ciutat de Palma.",
+    "font_url": "https://castelldebellver.palma.cat/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Castell+de+Bellver+bosc+Palma"
   },
   {
     "slug": "penyal-des-migdia-formentor",
     "nom": "Cami del Far de Formentor a Cala Murta (Pollença)",
-    "font": "Turisme Petit",
+    "font": "Turisme Petit / Ajuntament de Pollença",
     "municipi": "Pollença",
     "zona": "Tramuntana Nord",
     "distancia_km": 6.8,
@@ -1535,12 +1629,15 @@
     ],
     "lat": 39.948,
     "lon": 3.178,
-    "descripcio": "Ruta litoral per la península de Formentor finalitzant a la cala verge de Cala Murta."
+    "descripcio": "Ruta litoral per la península de Formentor finalitzant a la cala verge de Cala Murta.",
+    "font_url": "https://www.turismepetit.com/excursion/cala-murta-en-pollenca/",
+    "turismepetit_url": "https://www.turismepetit.com/excursion/cala-murta-en-pollenca/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cala+Murta+Formentor"
   },
   {
     "slug": "puig-de-sant-miquel-montuiri",
     "nom": "Puig de Sant Miquel (Montuïri)",
-    "font": "Senderisme Pla de Mallorca",
+    "font": "Ajuntament de Montuïri",
     "municipi": "Montuïri",
     "zona": "Pla de Mallorca",
     "distancia_km": 5.2,
@@ -1564,12 +1661,14 @@
     ],
     "lat": 39.578,
     "lon": 2.985,
-    "descripcio": "Passejada rural pel Pla de Mallorca fins a l'ermita de Sant Miquel."
+    "descripcio": "Passejada rural pel Pla de Mallorca fins a l'ermita de Sant Miquel.",
+    "font_url": "https://ajmontuiri.net/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+Sant+Miquel+Montuiri"
   },
   {
     "slug": "cami-des-rafal-deia",
     "nom": "Camí des Rafal i Cova de sa Cauba (Deià)",
-    "font": "Excursionisme Deià",
+    "font": "Ajuntament de Deià",
     "municipi": "Deià",
     "zona": "Tramuntana Central",
     "distancia_km": 6.5,
@@ -1593,12 +1692,14 @@
     ],
     "lat": 39.753,
     "lon": 2.651,
-    "descripcio": "Ruta boscosa per les terrasses d'oliveres i alzinars sobre Deià."
+    "descripcio": "Ruta boscosa per les terrasses d'oliveres i alzinars sobre Deià.",
+    "font_url": "https://ajdeia.net/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cami+des+Rafal+Cova+sa+Cauba+Deia"
   },
   {
     "slug": "coma-de-binifaldo-puig-tomir",
     "nom": "Ascensió al Puig Tomir (des de Binifaldó)",
-    "font": "Excursionisme Tramuntana",
+    "font": "Consell de Mallorca (Paratge Natural Serra de Tramuntana)",
     "municipi": "Escorca",
     "zona": "Tramuntana Nord",
     "distancia_km": 10.8,
@@ -1623,12 +1724,14 @@
     ],
     "lat": 39.8311,
     "lon": 2.8988,
-    "descripcio": "Una de les grans meques d'alta muntanya escolta de la Tramuntana nord."
+    "descripcio": "Una de les grans meques d'alta muntanya escolta de la Tramuntana nord.",
+    "font_url": "https://caminsdepedra.conselldemallorca.cat/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+Tomir+Binifaldo+Escorca"
   },
   {
     "slug": "puig-de-ses-basses-fornalutx",
     "nom": "Fornalutx al Coll de sa Bàlitx i Cala Tuent",
-    "font": "Excursionisme Sóller/Fornalutx",
+    "font": "Ajuntament de Fornalutx",
     "municipi": "Fornalutx / Escorca",
     "zona": "Tramuntana Central",
     "distancia_km": 13.5,
@@ -1653,12 +1756,14 @@
     ],
     "lat": 39.782,
     "lon": 2.741,
-    "descripcio": "Descens per la preciosa vall de Bàlitx des de Fornalutx fins a la mar."
+    "descripcio": "Descens per la preciosa vall de Bàlitx des de Fornalutx fins a la mar.",
+    "font_url": "https://ajfornalutx.net/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Fornalutx+Coll+de+sa+Balitx+Cala+Tuent"
   },
   {
     "slug": "cami-de-sa-sirereta-soller",
     "nom": "Camí de sa Sirereta i Cova de ses Albellons (Sóller)",
-    "font": "Excursionisme Sóller",
+    "font": "Ajuntament de Sóller",
     "municipi": "Sóller",
     "zona": "Tramuntana Central",
     "distancia_km": 7.2,
@@ -1682,12 +1787,14 @@
     ],
     "lat": 39.769,
     "lon": 2.718,
-    "descripcio": "Itinerari pels horts tradicionals de citrics i oli de la vall de Sóller."
+    "descripcio": "Itinerari pels horts tradicionals de citrics i oli de la vall de Sóller.",
+    "font_url": "https://ajsoller.net/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cami+de+sa+Sirereta+Soller"
   },
   {
     "slug": "castell-de-reina-alaro",
     "nom": "Pas des Llop i Cova de sa Campana (Alaró / Escorca)",
-    "font": "Espeleo i Excursionisme Mallorca",
+    "font": "Ajuntament d'Alaró / Federació Balear d'Espeleologia",
     "municipi": "Alaró / Escorca",
     "zona": "Raiguer",
     "distancia_km": 11.0,
@@ -1710,12 +1817,14 @@
     ],
     "lat": 39.728,
     "lon": 2.812,
-    "descripcio": "Ruta tècnica per la cara nord de la serra d'Alaró i les seves cavitats subterrànies."
+    "descripcio": "Ruta tècnica per la cara nord de la serra d'Alaró i les seves cavitats subterrànies.",
+    "font_url": "https://ajalaro.net/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Pas+des+Llop+Cova+de+sa+Campana+Alaro"
   },
   {
     "slug": "sant-elm-la-glorieta-dragonera",
     "nom": "Cala en Basset i Torre de sa Salve des de Sant Elm",
-    "font": "Turisme Petit",
+    "font": "Turisme Petit / Ajuntament d'Andratx",
     "municipi": "Andratx",
     "zona": "Tramuntana Sud",
     "distancia_km": 5.2,
@@ -1739,12 +1848,15 @@
     ],
     "lat": 39.581,
     "lon": 2.352,
-    "descripcio": "Passejada litoral fins a la torre de defensa amb vistes a sa Dragonera."
+    "descripcio": "Passejada litoral fins a la torre de defensa amb vistes a sa Dragonera.",
+    "font_url": "https://www.turismepetit.com/excursion/cala-en-basset-en-sant-elm/",
+    "turismepetit_url": "https://www.turismepetit.com/excursion/cala-en-basset-en-sant-elm/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cala+en+Basset+Torre+sa+Salve+Sant+Elm"
   },
   {
     "slug": "clot-des-cirers-soller",
     "nom": "Clot des Cirers des del Port de Sóller",
-    "font": "Muntanya Sóller",
+    "font": "Ajuntament de Sóller",
     "municipi": "Sóller",
     "zona": "Tramuntana Central",
     "distancia_km": 9.8,
@@ -1769,12 +1881,14 @@
     ],
     "lat": 39.789,
     "lon": 2.695,
-    "descripcio": "Vall secreta d'oliveres i maquis sobre el Port de Sóller."
+    "descripcio": "Vall secreta d'oliveres i maquis sobre el Port de Sóller.",
+    "font_url": "https://ajsoller.net/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Clot+des+Cirers+Port+de+Soller"
   },
   {
     "slug": "puig-de-na-francesa-bunyola",
     "nom": "Puig de na Francessa (Bunyola)",
-    "font": "Senderisme Bunyola",
+    "font": "Ajuntament de Bunyola (Senderisme)",
     "municipi": "Bunyola",
     "zona": "Tramuntana Central",
     "distancia_km": 8.0,
@@ -1798,12 +1912,14 @@
     ],
     "lat": 39.691,
     "lon": 2.712,
-    "descripcio": "Atalaia panoràmica sobre la vall de Bunyola i el Pla de Palma."
+    "descripcio": "Atalaia panoràmica sobre la vall de Bunyola i el Pla de Palma.",
+    "font_url": "https://ajbunyola.net/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+na+Francesa+Bunyola"
   },
   {
     "slug": "penyal-de-honor-orient",
     "nom": "Orient a sa Coma de Santa Maria pel Pas de s'Escaleta",
-    "font": "Excursionisme Santa Maria",
+    "font": "Ajuntament de Bunyola / Santa Maria",
     "municipi": "Bunyola / Santa Maria",
     "zona": "Tramuntana Central",
     "distancia_km": 11.5,
@@ -1828,12 +1944,14 @@
     ],
     "lat": 39.715,
     "lon": 2.785,
-    "descripcio": "Connexió tradicional de muntanya entre la vall d'Orient i Santa Maria del Camí."
+    "descripcio": "Connexió tradicional de muntanya entre la vall d'Orient i Santa Maria del Camí.",
+    "font_url": "https://ajbunyola.net/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Penya+d+Honor+Orient+Pas+de+s+Escaleta"
   },
   {
     "slug": "puig-des-teix-espolres",
     "nom": "Esporles a Banyalbufar pel Camí des Correu",
-    "font": "Turisme Petit / Camins de Mallorca",
+    "font": "Consell de Mallorca (Camí des Correu GR-221)",
     "municipi": "Esporles / Banyalbufar",
     "zona": "Tramuntana Sud",
     "distancia_km": 8.2,
@@ -1859,12 +1977,15 @@
     ],
     "lat": 39.668,
     "lon": 2.548,
-    "descripcio": "El camí històric medieval més popular de la Tramuntana sud."
+    "descripcio": "El camí històric medieval més popular de la Tramuntana sud.",
+    "font_url": "https://caminsdepedra.conselldemallorca.cat/-/etapa-3-estellencs-esporles",
+    "turismepetit_url": "https://www.turismepetit.com/excursion/el-cami-des-correu-de-esporles-a-banyalbufar/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cami+des+Correu+Esporles+Banyalbufar"
   },
   {
     "slug": "embassament-cuber-gorg-blau",
     "nom": "Volta a l'Embassament de Cúber i Font de s'Ametler",
-    "font": "Turisme Petit",
+    "font": "Consell de Mallorca (Ruta dels Embassaments GR-221)",
     "municipi": "Escorca",
     "zona": "Tramuntana Nord",
     "distancia_km": 5.0,
@@ -1889,12 +2010,15 @@
     ],
     "lat": 39.7821,
     "lon": 2.7915,
-    "descripcio": "Passejada accessible al voltant de l'estany de Cúber sota la mirada del Puig Major."
+    "descripcio": "Passejada accessible al voltant de l'estany de Cúber sota la mirada del Puig Major.",
+    "font_url": "https://caminsdepedra.conselldemallorca.cat/",
+    "turismepetit_url": "https://www.turismepetit.com/excursion/embalse-de-cuber-en-escorca/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Embassament+de+Cuber+Font+de+s+Ametler"
   },
   {
     "slug": "monestir-de-lluc-cami-vell",
     "nom": "Camí Vell de Pollença a Lluc (per la Font del Tomir)",
-    "font": "Camins de Mallorca",
+    "font": "Consell de Mallorca (Camins de Pedra)",
     "municipi": "Pollença / Escorca",
     "zona": "Tramuntana Nord",
     "distancia_km": 12.5,
@@ -1919,12 +2043,14 @@
     ],
     "lat": 39.852,
     "lon": 2.945,
-    "descripcio": "Antiga via de peregrinació cap al santuari de la Patrona de Mallorca."
+    "descripcio": "Antiga via de peregrinació cap al santuari de la Patrona de Mallorca.",
+    "font_url": "https://caminsdepedra.conselldemallorca.cat/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cami+Vell+de+Pollenca+a+Lluc"
   },
   {
     "slug": "cala-varques-manacor",
     "nom": "Cala Varques des de les Coves del Pirata (Manacor)",
-    "font": "Excursionisme Manacor",
+    "font": "Ajuntament de Manacor (Senderisme Litoral)",
     "municipi": "Manacor",
     "zona": "Llevant",
     "distancia_km": 6.0,
@@ -1949,12 +2075,14 @@
     ],
     "lat": 39.502,
     "lon": 3.285,
-    "descripcio": "Passejada pineda litoral fins a la verge Cala Varques i el seu pont de roca."
+    "descripcio": "Passejada pineda litoral fins a la verge Cala Varques i el seu pont de roca.",
+    "font_url": "https://manacor.org/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cala+Varques+Coves+del+Pirata+Manacor"
   },
   {
     "slug": "puig-de-santueri-felanitx-circular",
     "nom": "Volta al Puig de Santueri i Castell de Santueri",
-    "font": "Felanitx Excursions",
+    "font": "Ajuntament de Felanitx",
     "municipi": "Felanitx",
     "zona": "Migjorn",
     "distancia_km": 7.8,
@@ -1978,12 +2106,14 @@
     ],
     "lat": 39.445,
     "lon": 3.189,
-    "descripcio": "Circumval·lació rocosa al voltant de la fortalesa de Santueri."
+    "descripcio": "Circumval·lació rocosa al voltant de la fortalesa de Santueri.",
+    "font_url": "https://visitfelanitx.com/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Volta+al+Puig+de+Santueri+Felanitx"
   },
   {
     "slug": "ermita-bonany-petra",
     "nom": "Pujada a l'Ermita de Bonany des de Petra",
-    "font": "Turisme Petit / Pla de Mallorca",
+    "font": "Turisme Petit / Ajuntament de Petra",
     "municipi": "Petra",
     "zona": "Pla de Mallorca",
     "distancia_km": 7.0,
@@ -2008,12 +2138,15 @@
     ],
     "lat": 39.605,
     "lon": 3.102,
-    "descripcio": "El mirador del Pla de Mallorca des del poble de Petra."
+    "descripcio": "El mirador del Pla de Mallorca des del poble de Petra.",
+    "font_url": "https://www.turismepetit.com/excursion/ermita-de-bonany-en-petra/",
+    "turismepetit_url": "https://www.turismepetit.com/excursion/ermita-de-bonany-en-petra/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Ermita+de+Bonany+Petra"
   },
   {
     "slug": "torrent-de-coanegra-santa-maria",
     "nom": "Torrent de Coanegra i Salt des Freu de Coanegra",
-    "font": "Santa Maria Excursions",
+    "font": "Ajuntament de Santa Maria del Camí",
     "municipi": "Santa Maria del Camí",
     "zona": "Raiguer",
     "distancia_km": 9.5,
@@ -2037,12 +2170,14 @@
     ],
     "lat": 39.668,
     "lon": 2.761,
-    "descripcio": "Sender boscós ombrívol seguint el llit del torrent de Coanegra."
+    "descripcio": "Sender boscós ombrívol seguint el llit del torrent de Coanegra.",
+    "font_url": "https://ajsantamariadelcami.org/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Torrent+de+Coanegra+Salt+des+Freu"
   },
   {
     "slug": "penya-rotja-alcudia",
     "nom": "Penya Rotja i Ermita de la Victòria (Alcúdia)",
-    "font": "Turisme Alcúdia",
+    "font": "Ajuntament d'Alcúdia (Turisme)",
     "municipi": "Alcúdia",
     "zona": "Raiguer",
     "distancia_km": 6.8,
@@ -2067,12 +2202,14 @@
     ],
     "lat": 39.871,
     "lon": 3.172,
-    "descripcio": "Niu d'àliga defensiu a la península de la Victòria d'Alcúdia."
+    "descripcio": "Niu d'àliga defensiu a la península de la Victòria d'Alcúdia.",
+    "font_url": "https://alcudia.net/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Penya+Rotja+Ermita+Victoria+Alcudia"
   },
   {
     "slug": "puig-de-sa-tudossa-arta",
     "nom": "Puig de sa Tudossa i Talaia de Moreia (Artà)",
-    "font": "Parc Natural de Llevant",
+    "font": "Govern de les Illes Balears (Parc Natural de la Península de Llevant)",
     "municipi": "Artà",
     "zona": "Llevant",
     "distancia_km": 11.2,
@@ -2096,12 +2233,14 @@
     ],
     "lat": 39.748,
     "lon": 3.349,
-    "descripcio": "Sostre del Parc Natural de Llevant amb panoràmiques marítimes."
+    "descripcio": "Sostre del Parc Natural de Llevant amb panoràmiques marítimes.",
+    "font_url": "https://www.caib.es/sites/espaisnaturalsprotegits/ca/parc_natural_de_la_peninsula_de_llevant/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+sa+Tudossa+Arta"
   },
   {
     "slug": "sa-comuna-de-lloret-de-vistalegre",
     "nom": "Sa Comuna de Lloret de Vistalegre",
-    "font": "Turisme Petit / Pla de Mallorca",
+    "font": "Turisme Petit / Ajuntament de Lloret de Vistalegre",
     "municipi": "Lloret de Vistalegre",
     "zona": "Pla de Mallorca",
     "distancia_km": 4.0,
@@ -2126,12 +2265,15 @@
     ],
     "lat": 39.612,
     "lon": 2.975,
-    "descripcio": "Bosc pla ideal per a la primera acampada o jornada de jocs de les branques més petites."
+    "descripcio": "Bosc pla ideal per a la primera acampada o jornada de jocs de les branques més petites.",
+    "font_url": "https://www.turismepetit.com/excursion/sa-comuna-de-lloret-de-vistalegre/",
+    "turismepetit_url": "https://www.turismepetit.com/excursion/sa-comuna-de-lloret-de-vistalegre/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Sa+Comuna+de+Lloret+de+Vistalegre"
   },
   {
     "slug": "coll-de-sa-gramola-ses-basses",
     "nom": "Coll de sa Gramola al Puig de sa Monja (Andratx)",
-    "font": "Senderisme Andratx",
+    "font": "Ajuntament d'Andratx (Senderisme)",
     "municipi": "Andratx",
     "zona": "Tramuntana Sud",
     "distancia_km": 7.5,
@@ -2154,12 +2296,14 @@
     ],
     "lat": 39.611,
     "lon": 2.395,
-    "descripcio": "Mirador excepcional sobre els penya-segats del mar d'Andratx."
+    "descripcio": "Mirador excepcional sobre els penya-segats del mar d'Andratx.",
+    "font_url": "https://andratx.cat/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Coll+de+sa+Gramola+Puig+sa+Monja+Andratx"
   },
   {
     "slug": "sanctuari-de-consolacio-santanyi",
     "nom": "Puig de Consolació (Santanyí / s'Alqueria Blanca)",
-    "font": "Turisme Petit / Migjorn",
+    "font": "Turisme Petit / Ajuntament de Santanyí",
     "municipi": "Santanyí",
     "zona": "Migjorn",
     "distancia_km": 3.5,
@@ -2184,12 +2328,15 @@
     ],
     "lat": 39.378,
     "lon": 3.162,
-    "descripcio": "Petit puig d'accés fàcil al sud de Mallorca amb panoràmiques marines."
+    "descripcio": "Petit puig d'accés fàcil al sud de Mallorca amb panoràmiques marines.",
+    "font_url": "https://www.turismepetit.com/excursion/santuario-de-consolacio-en-santanyi/",
+    "turismepetit_url": "https://www.turismepetit.com/excursion/santuario-de-consolacio-en-santanyi/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Santuari+Consolacio+Santanyi"
   },
   {
     "slug": "ermita-de-sant-simon-caimari",
     "nom": "Caimari al Coll de sa Batalla pel Camí Vell de Lluc",
-    "font": "Camins de Selva / Caimari",
+    "font": "Ajuntament de Selva / Camins de Caimari",
     "municipi": "Selva / Caimari",
     "zona": "Raiguer",
     "distancia_km": 7.8,
@@ -2215,7 +2362,9 @@
     ],
     "lat": 39.778,
     "lon": 2.902,
-    "descripcio": "Subida tradicional des del poble de la oliva Caimari cap a les portes de Lluc."
+    "descripcio": "Subida tradicional des del poble de la oliva Caimari cap a les portes de Lluc.",
+    "font_url": "https://ajselva.net/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Caimari+Coll+de+sa+Batalla+Cami+Vell+Lluc"
   },
   {
     "slug": "torrent-de-pareis-escorca-sa-calobra",
@@ -2271,7 +2420,9 @@
         "nom": "Punt d'arribada",
         "desc": "Final de la ruta o retorn al punt d'origen."
       }
-    ]
+    ],
+    "font": "Govern de les Illes Balears (Monument Natural del Torrent de Pareis)",
+    "font_url": "https://www.caib.es/sites/espaisnaturalsprotegits/ca/monument_natural_dels_torrents_de_pareis_del_gorg_blau_i_de_lluc/"
   },
   {
     "slug": "betlem-a-playa-es-calo",
@@ -2334,7 +2485,10 @@
         "nom": "Arribada a es Caló",
         "desc": "Embarcador tradicional de fusta i platja verge."
       }
-    ]
+    ],
+    "font": "Turisme Petit / Parc Natural de Llevant",
+    "font_url": "https://www.turismepetit.com/excursion/excursion-de-betlem-a-playa-es-calo/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Betlem+Platja+es+Calo+Arta"
   },
   {
     "slug": "mirador-de-ses-basses-son-gual-valldemossa",
@@ -2397,7 +2551,10 @@
         "nom": "Mirador de Son Gual",
         "desc": "Balcó natural amb vistes impressionants a tota la vall."
       }
-    ]
+    ],
+    "font": "Turisme Petit / Ajuntament de Valldemossa",
+    "font_url": "https://www.turismepetit.com/excursion/excursion-al-mirador-de-ses-basses-y-mirador-de-son-gual/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Mirador+ses+Basses+Son+Gual+Valldemossa"
   },
   {
     "slug": "estanyol-a-torre-estalella-llucmajor",
@@ -2460,7 +2617,10 @@
         "nom": "Torre de s'Estalella",
         "desc": "Arribada a la torre defensiva amb vistes a Cabrera."
       }
-    ]
+    ],
+    "font": "Turisme Petit / Ajuntament de Llucmajor",
+    "font_url": "https://www.turismepetit.com/excursion/excursion-desde-estanyol-a-torre-estalella/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=s+Estanyol+Torre+de+s+Estalella+Llucmajor"
   },
   {
     "slug": "coves-blanques-pollenca",
@@ -2523,7 +2683,10 @@
         "nom": "Túnels de les Coves Blanques",
         "desc": "Galeries militars excavades a la roca."
       }
-    ]
+    ],
+    "font": "Turisme Petit / Ajuntament de Pollença",
+    "font_url": "https://www.turismepetit.com/excursion/excursion-a-las-coves-blanques-en-pollenca/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Coves+Blanques+Cala+Sant+Vicenc"
   },
   {
     "slug": "finca-publica-planicia-banyalbufar",
@@ -2587,6 +2750,9 @@
         "nom": "Font de sa Mentida",
         "desc": "Retorn circular per l'alzinar alt."
       }
-    ]
+    ],
+    "font": "Govern de les Illes Balears (Finca Pública de Planícia)",
+    "font_url": "https://www.caib.es/sites/espaisnaturalsprotegits/ca/finca_publica_de_planicia/",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Finca+Publica+de+Planicia"
   }
 ]

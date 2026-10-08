@@ -16,6 +16,8 @@ interface Route {
   descripcio: string;
   wikiloc_url?: string;
   turismepetit_url?: string;
+  font?: string;
+  font_url?: string;
 }
 
 interface Props {
@@ -245,7 +247,7 @@ const hasPrivateGate = (route.passos_finca_privada || []).some((p) => {
 
     <!-- Card Action Footer -->
     <div class="pt-4 mt-2 border-t border-stone-100 flex items-center justify-between text-xs">
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-1.5 flex-wrap">
         {hasWater ? (
           <span class="text-teal-700 font-medium flex items-center gap-1" title="Aigua potable disponible a la ruta">
             💧 Aigua
@@ -255,9 +257,12 @@ const hasPrivateGate = (route.passos_finca_privada || []).some((p) => {
             ⚠️ Sense aigua
           </span>
         )}
-        {route.wikiloc_url && (
-          <span class="text-emerald-700 font-medium bg-emerald-50 px-2 py-0.5 rounded-md">
-            GPS Wikiloc
+        {route.font && (
+          <span
+            class="text-stone-600 font-medium bg-stone-100/90 px-2 py-0.5 rounded-md truncate max-w-[150px] inline-block"
+            title={`Font oficial: ${route.font}`}
+          >
+            🏛️ {route.font.split('(')[0].trim()}
           </span>
         )}
       </div>
