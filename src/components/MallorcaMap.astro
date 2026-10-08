@@ -6,8 +6,12 @@ interface Props {
 
 const { initialType = 'all', heightClass = 'h-[460px] sm:h-[540px]' } = Astro.props;
 
-import routes from '../../data/rutes_mallorca.json';
-import acampades from '../../data/acampada_mallorca.json';
+import { getAllRoutes } from '../data/routes';
+import { getAllCampsites } from '../data/campsites';
+import { ISLANDS, ARCHIPELAGO_CENTER, ARCHIPELAGO_ZOOM } from '../data/islands';
+
+const routes = getAllRoutes();
+const acampades = getAllCampsites();
 
 // Minimal payloads for the map to keep DOM lightweight
 const routesGeo = routes.map((r) => ({
@@ -18,6 +22,7 @@ const routesGeo = routes.map((r) => ({
   lon: r.lon,
   municipi: r.municipi,
   zona: r.zona,
+  illa: r.illa || 'Mallorca',
   dificultat: r.dificultat,
   distancia_km: r.distancia_km,
   desnivell_positiu_m: r.desnivell_positiu_m,
@@ -30,6 +35,7 @@ const acampadesGeo = acampades.map((a) => ({
   lat: a.lat,
   lon: a.lon,
   municipi: a.municipi,
+  illa: a.illa || 'Mallorca',
   titularitat: a.titularitat,
   capacitat: a.capacitat,
   web: a.web,
@@ -41,13 +47,13 @@ const acampadesGeo = acampades.map((a) => ({
   <div class="p-4 sm:p-5 border-b border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-stone-50/60">
     <div>
       <h3 class="text-base sm:text-lg font-bold text-stone-900 flex items-center gap-2">
-        <span>🗺️ Mapa interactiu de Mallorca</span>
+        <span>🗺️ Mapa interactiu de les Illes Balears</span>
         <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-100 text-[#1b4332] border border-emerald-200">
           OpenStreetMap
         </span>
       </h3>
       <p class="text-xs text-stone-500 mt-0.5">
-        Visualitza la distribució geogràfica de les excursions i espais d'acampada a l'illa.
+        Visualitza la distribució geogràfica de les excursions i espais d'acampada a Mallorca, Menorca, Eivissa i Formentera.
       </p>
     </div>
 
@@ -84,6 +90,9 @@ const acampadesGeo = acampades.map((a) => ({
     data-routes={JSON.stringify(routesGeo)}
     data-acampades={JSON.stringify(acampadesGeo)}
     data-initial-type={initialType}
+    data-archipelago-center={JSON.stringify(ARCHIPELAGO_CENTER)}
+    data-archipelago-zoom={ARCHIPELAGO_ZOOM}
+    data-islands={JSON.stringify(ISLANDS)}
   ></div>
 
   <!-- Map Filter Active Notice Banner (shown when a filter from map is active) -->
@@ -124,12 +133,17 @@ const acampadesGeo = acampades.map((a) => ({
       id="btnResetMapZoom"
       class="text-[11px] font-bold text-stone-500 hover:text-stone-900 hover:underline"
     >
-      ↺ Centra Mallorca
+      ↺ Centra Illes Balears
     </button>
   </div>
 </div>
 
 <script>
+  let pendingMapIsland: string | null = null;
+  (window as any).__setMapIsland = function(island: string) {
+    pendingMapIsland = island;
+  };
+
   function setupOsmMap() {
     const mapEl = document.getElementById('osmGeneralMap');
     if (!mapEl || !(window as any).L) return;
@@ -144,13 +158,36 @@ const acampadesGeo = acampades.map((a) => ({
     const acampadesData = JSON.parse(mapEl.dataset.acampades || '[]');
     const initialType = mapEl.dataset.initialType || 'all';
 
-    // Center of Mallorca
-    const mallorcaCenter: [number, number] = [39.6953, 2.95];
-    const initialZoom = window.innerWidth < 640 ? 9 : 10;
+    // Center of Balearic archipelago
+    const archipelagoCenter: [number, number] = [39.50, 3.00];
+    const archipelagoZoom: number = 8;
+
+    const islandsConfig: Record<string, { center: [number, number]; zoom: number; bounds: [[number, number], [number, number]] }> = {
+      mallorca: {
+        center: [39.6953, 2.95],
+        zoom: 9,
+        bounds: [[39.25, 2.30], [39.95, 3.50]],
+      },
+      menorca: {
+        center: [39.95, 4.10],
+        zoom: 10,
+        bounds: [[39.75, 3.75], [40.10, 4.35]],
+      },
+      eivissa: {
+        center: [38.98, 1.40],
+        zoom: 10,
+        bounds: [[38.80, 1.15], [39.15, 1.65]],
+      },
+      formentera: {
+        center: [38.70, 1.45],
+        zoom: 11,
+        bounds: [[38.60, 1.35], [38.80, 1.60]],
+      },
+    };
 
     const map = L.map('osmGeneralMap', {
-      center: mallorcaCenter,
-      zoom: initialZoom,
+      center: archipelagoCenter,
+      zoom: archipelagoZoom,
       scrollWheelZoom: false,
     });
 
@@ -182,9 +219,7 @@ const acampadesGeo = acampades.map((a) => ({
     // Helper to trigger list filtering below from map
     function triggerFilterFromMap(keyword: string, type: 'municipi' | 'zona' | 'nom') {
       const searchInputRoutes = document.getElementById('searchInput') as HTMLInputElement | null;
-      const zoneSelect = document.getElementById('zoneFilter') as HTMLSelectElement | null;
       const searchInputCamps = document.getElementById('searchAcampada') as HTMLInputElement | null;
-      const municipiSelectCamps = document.getElementById('municipiAcampadaFilter') as HTMLSelectElement | null;
 
       const activeBar = document.getElementById('mapActiveFilterBar');
       const filterNameEl = document.getElementById('mapFilterName');
@@ -198,7 +233,6 @@ const acampadesGeo = acampades.map((a) => ({
       if (searchInputRoutes) {
         searchInputRoutes.value = keyword;
         searchInputRoutes.dispatchEvent(new Event('input', { bubbles: true }));
-        // Smooth scroll towards the list
         document.getElementById('cercador-rutes')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
 
@@ -233,7 +267,7 @@ const acampadesGeo = acampades.map((a) => ({
         <div style="font-family: inherit; font-size: 12px; max-width: 250px; padding: 2px;">
           <div style="display: flex; align-items: center; justify-content: space-between; gap: 4px; margin-bottom: 4px;">
             <span style="background: #1b4332; color: white; padding: 2px 6px; border-radius: 4px; font-weight: bold; font-size: 10px;">RUTA</span>
-            <span style="color: #666; font-size: 11px;">${r.municipi}</span>
+            <span style="color: #666; font-size: 11px;">${r.municipi} (${r.illa || 'Mallorca'})</span>
           </div>
           <strong style="font-size: 13px; line-height: 1.3; color: #1c1917; display: block; margin-bottom: 6px;">
             ${r.nom}
@@ -260,6 +294,8 @@ const acampadesGeo = acampades.map((a) => ({
       `;
 
       const marker = L.marker([r.lat, r.lon], { icon: routeIcon }).bindPopup(popupContent);
+      marker._illa = (r.illa || 'Mallorca').toLowerCase().trim();
+      marker._type = 'ruta';
       routeMarkers.push(marker);
     });
 
@@ -271,7 +307,7 @@ const acampadesGeo = acampades.map((a) => ({
         <div style="font-family: inherit; font-size: 12px; max-width: 250px; padding: 2px;">
           <div style="display: flex; align-items: center; justify-content: space-between; gap: 4px; margin-bottom: 4px;">
             <span style="background: #d97706; color: white; padding: 2px 6px; border-radius: 4px; font-weight: bold; font-size: 10px;">ACAMPADA / REFUGI</span>
-            <span style="color: #666; font-size: 11px;">${a.municipi}</span>
+            <span style="color: #666; font-size: 11px;">${a.municipi} (${a.illa || 'Mallorca'})</span>
           </div>
           <strong style="font-size: 13px; line-height: 1.3; color: #1c1917; display: block; margin-bottom: 6px;">
             ${a.nom}
@@ -303,6 +339,8 @@ const acampadesGeo = acampades.map((a) => ({
       `;
 
       const marker = L.marker([a.lat, a.lon], { icon: acampadaIcon }).bindPopup(popupContent);
+      marker._illa = (a.illa || 'Mallorca').toLowerCase().trim();
+      marker._type = 'acampada';
       acampadaMarkers.push(marker);
     });
 
@@ -310,22 +348,73 @@ const acampadesGeo = acampades.map((a) => ({
     (window as any).__filterMallorca = (name: string) => {
       triggerFilterFromMap(name, 'municipi');
     };
+    (window as any).__filterMap = (name: string) => {
+      triggerFilterFromMap(name, 'municipi');
+    };
 
-    const routeLayerGroup = L.layerGroup(routeMarkers);
-    const acampadaLayerGroup = L.layerGroup(acampadaMarkers);
+    let currentIsland = 'all';
+    let currentLayerFilter = initialType;
+
+    function updateMarkerVisibility() {
+      routeMarkers.forEach((marker: any) => {
+        const matchType = currentLayerFilter === 'all' || currentLayerFilter === 'rutes';
+        const matchIsland = currentIsland === 'all' || marker._illa === currentIsland;
+        if (matchType && matchIsland) {
+          if (!map.hasLayer(marker)) map.addLayer(marker);
+        } else {
+          if (map.hasLayer(marker)) map.removeLayer(marker);
+        }
+      });
+
+      acampadaMarkers.forEach((marker: any) => {
+        const matchType = currentLayerFilter === 'all' || currentLayerFilter === 'acampada';
+        const matchIsland = currentIsland === 'all' || marker._illa === currentIsland;
+        if (matchType && matchIsland) {
+          if (!map.hasLayer(marker)) map.addLayer(marker);
+        } else {
+          if (map.hasLayer(marker)) map.removeLayer(marker);
+        }
+      });
+    }
+
+    // Expose window.__setMapIsland globally
+    (window as any).__setMapIsland = function(island: string) {
+      const raw = (island || '').toLowerCase().trim();
+      const target = (raw === '' || raw === 'all' || raw === 'totes') ? 'all' : raw;
+      currentIsland = target;
+
+      if (target === 'all') {
+        if (map.flyTo) {
+          map.flyTo(archipelagoCenter, archipelagoZoom);
+        } else {
+          map.setView(archipelagoCenter, archipelagoZoom);
+        }
+      } else {
+        const conf = islandsConfig[target];
+        if (conf) {
+          if (conf.bounds) {
+            if (map.flyToBounds) {
+              map.flyToBounds(conf.bounds, { padding: [30, 30], maxZoom: 12 });
+            } else {
+              map.fitBounds(conf.bounds, { padding: [30, 30], maxZoom: 12 });
+            }
+          } else if (conf.center) {
+            if (map.flyTo) {
+              map.flyTo(conf.center, conf.zoom);
+            } else {
+              map.setView(conf.center, conf.zoom);
+            }
+          }
+        }
+      }
+
+      updateMarkerVisibility();
+    };
 
     // Initial layer state
     function applyLayerFilter(filterType: string) {
-      if (filterType === 'all') {
-        if (!map.hasLayer(routeLayerGroup)) map.addLayer(routeLayerGroup);
-        if (!map.hasLayer(acampadaLayerGroup)) map.addLayer(acampadaLayerGroup);
-      } else if (filterType === 'rutes') {
-        if (!map.hasLayer(routeLayerGroup)) map.addLayer(routeLayerGroup);
-        if (map.hasLayer(acampadaLayerGroup)) map.removeLayer(acampadaLayerGroup);
-      } else if (filterType === 'acampada') {
-        if (map.hasLayer(routeLayerGroup)) map.removeLayer(routeLayerGroup);
-        if (!map.hasLayer(acampadaLayerGroup)) map.addLayer(acampadaLayerGroup);
-      }
+      currentLayerFilter = filterType;
+      updateMarkerVisibility();
 
       // Update button styling
       const buttons = document.querySelectorAll('.map-filter-btn');
@@ -342,6 +431,21 @@ const acampadesGeo = acampades.map((a) => ({
 
     applyLayerFilter(initialType);
 
+    // If there was a pending island call before map initialized, execute it now
+    if (pendingMapIsland) {
+      (window as any).__setMapIsland(pendingMapIsland);
+      pendingMapIsland = null;
+    } else {
+      // Check if URL query parameter ?illa=... is set
+      try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlIlla = urlParams.get('illa');
+        if (urlIlla) {
+          (window as any).__setMapIsland(urlIlla);
+        }
+      } catch (e) {}
+    }
+
     // Button event listeners
     const buttons = document.querySelectorAll('.map-filter-btn');
     buttons.forEach((btn) => {
@@ -355,7 +459,10 @@ const acampadesGeo = acampades.map((a) => ({
     // Reset zoom button
     const btnReset = document.getElementById('btnResetMapZoom');
     btnReset?.addEventListener('click', () => {
-      map.setView(mallorcaCenter, initialZoom);
+      (window as any).__setMapIsland('all');
+      if ((window as any).__setFilterIsland) {
+        (window as any).__setFilterIsland('all');
+      }
     });
   }
 

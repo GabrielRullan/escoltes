@@ -2,14 +2,16 @@
 import Layout from '../../layouts/Layout.astro';
 import ExperienceForm from '../../components/ExperienceForm.astro';
 
-import routes from '../../../data/rutes_mallorca.json';
-import agrupaments from '../../../data/agrupaments_mallorca.json';
-import transportData from '../../../data/transport_mallorca.json';
+import { getAllRoutes } from '../../data/routes';
+import { getAllCampsites } from '../../data/campsites';
+import { getAllGroups } from '../../data/groups';
+import { getAllTransport } from '../../data/transport';
 import experiencies from '../../../data/experiencies_rutes.json';
 import aemetMunicipis from '../../../data/aemet_municipis_balears.json';
 
 export async function getStaticPaths() {
-  return routes.map((route) => ({
+  const allRoutes = getAllRoutes();
+  return allRoutes.map((route) => ({
     params: { slug: route.slug },
     props: { route },
   }));
@@ -17,12 +19,18 @@ export async function getStaticPaths() {
 
 const { route } = Astro.props;
 
-// Match AEMET municipality for weather forecast
+// Match AEMET municipality for weather forecast with island fallback
 const rMunClean = (route.municipi || '').toLowerCase();
+const rIlla = (route.illa || 'Mallorca').toLowerCase();
+const islandCapital = rIlla === 'menorca' ? 'maó' : (rIlla === 'eivissa' || rIlla === 'formentera') ? 'eivissa' : 'palma';
+
 const matchedAemet = aemetMunicipis.find((m) => {
   const mName = m.municipi.toLowerCase();
   const mSlug = m.slug.toLowerCase().split('-id')[0];
   return rMunClean.includes(mName) || mName.includes(rMunClean) || rMunClean.includes(mSlug);
+}) || aemetMunicipis.find((m) => {
+  const mName = m.municipi.toLowerCase();
+  return mName === islandCapital || mName.includes(islandCapital);
 }) || aemetMunicipis.find((m) => m.municipi.toLowerCase() === 'palma');
 
 // Haversine distance in km
@@ -40,26 +48,45 @@ function haversineKm(lat1: number, lon1: number, lat2: number, lon2: number) {
   return Math.round(R * c * 10) / 10;
 }
 
-// Nearby scout groups (només a menys de 10 km)
+const campsites = getAllCampsites();
+const agrupaments = getAllGroups();
+const transportData = getAllTransport();
+
+// Nearby scout groups (només a menys de 15 km)
 const nearbyAgrupaments = agrupaments
   .map((ag) => ({
     ...ag,
     distancia: haversineKm(route.lat || 39.65, route.lon || 2.9, ag.lat || 39.65, ag.lon || 2.9),
   }))
-  .filter((ag) => ag.distancia <= 10)
+  .filter((ag) => ag.distancia <= 15)
   .sort((a, b) => a.distancia - b.distancia)
   .slice(0, 3);
 
-// TIB Bus and SFM train lines
+// Nearby campsites (a menys de 15 km)
+const nearbyCampsites = campsites
+  .map((c) => ({
+    ...c,
+    distancia: haversineKm(route.lat || 39.65, route.lon || 2.9, c.lat || 39.65, c.lon || 2.9),
+  }))
+  .filter((c) => c.distancia <= 15)
+  .sort((a, b) => a.distancia - b.distancia)
+  .slice(0, 3);
+
+// TIB Bus and SFM train lines (per island and municipality)
 const rMun = (route.municipi || '').toLowerCase();
 const rZon = (route.zona || '').toLowerCase();
+const rOrig = (route.punt_origen || '').toLowerCase();
 
 const matchedBusLines = (transportData.linies_bus || []).filter((b: any) => {
+  const bIlla = (b.illa || 'Mallorca').toLowerCase();
+  if (bIlla !== rIlla) return false;
   const coberts = (b.municipis_coberts || []).map((m: string) => m.toLowerCase());
-  return coberts.some((m: string) => rMun.includes(m) || rZon.includes(m));
+  return coberts.some((m: string) => rMun.includes(m) || rZon.includes(m) || rOrig.includes(m));
 });
 
 const matchedTrainLines = (transportData.linies_tren || []).filter((t: any) => {
+  const tIlla = (t.illa || 'Mallorca').toLowerCase();
+  if (tIlla !== rIlla) return false;
   const coberts = (t.municipis_coberts || []).map((m: string) => m.toLowerCase());
   return coberts.some((m: string) => rMun.includes(m));
 });
@@ -79,7 +106,7 @@ const getDifficultyColor = (diff: string) => {
 ---
 
 <Layout
-  title={`${route.nom} - Ruta Escolta a Mallorca`}
+  title={`${route.nom} - Ruta Escolta a ${route.illa || 'Mallorca'}`}
   description={route.descripcio}
 >
   <!-- Breadcrumbs -->
@@ -95,7 +122,7 @@ const getDifficultyColor = (diff: string) => {
   <header class="bg-white rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-xs mb-8">
     <div class="flex flex-wrap items-center gap-2 mb-3">
       <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-stone-100 text-stone-700 border border-stone-200">
-        📍 {route.municipi} · {route.zona}
+        📍 {route.municipi} · {route.illa || 'Mallorca'}{route.zona ? ` · ${route.zona}` : ''}
       </span>
       <span class={`inline-flex items-center px-3 py-1 rounded-full text-xs font-bold border ${getDifficultyColor(route.dificultat)}`}>
         Dificultat: {route.dificultat}
@@ -198,7 +225,7 @@ const getDifficultyColor = (diff: string) => {
           </a>
         )}
         <a
-          href={route.wikiloc_url || `https://www.wikiloc.com/wikiloc/find.do?q=${encodeURIComponent(route.nom + ' Mallorca')}`}
+          href={route.wikiloc_url || `https://www.wikiloc.com/wikiloc/find.do?q=${encodeURIComponent(route.nom + ' ' + (route.illa || 'Balears'))}`}
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-xs transition"
@@ -366,7 +393,7 @@ const getDifficultyColor = (diff: string) => {
           {route.font ? (
             <>Itinerari catalogat i mantingut per <strong>{route.font}</strong>.</>
           ) : (
-            <>Itinerari tradicional senyalitzat de Mallorca.</>
+            <>Itinerari tradicional senyalitzat de {route.illa || 'Mallorca'}.</>
           )}
         </p>
 
@@ -475,7 +502,7 @@ const getDifficultyColor = (diff: string) => {
               <div class="p-3 rounded-xl bg-stone-50 border border-stone-100 text-xs">
                 <div class="flex items-center justify-between mb-1">
                   <span class="font-bold text-[#1b4332] bg-[#1b4332]/10 px-2 py-0.5 rounded">
-                    Bus {bus.linia}
+                    Bus {bus.codi || bus.linia}
                   </span>
                   <a
                     href={bus.link_horaris}
@@ -483,7 +510,7 @@ const getDifficultyColor = (diff: string) => {
                     rel="noopener noreferrer"
                     class="text-sky-600 hover:underline font-semibold"
                   >
-                    Horaris TIB ↗
+                    Horaris ↗
                   </a>
                 </div>
                 <p class="text-stone-700 font-medium">{bus.nom}</p>
@@ -511,22 +538,68 @@ const getDifficultyColor = (diff: string) => {
           </div>
         ) : (
           <div class="text-xs text-stone-500">
-            <p>Consulta la xarxa comarcal del TIB per a {route.municipi}.</p>
-            <a href="https://www.tib.org/" target="_blank" class="inline-block mt-2 text-sky-600 font-bold hover:underline">
-              Cercador d'horaris a TIB.org ↗
+            <p>Consulta la xarxa de transport públic per a {route.municipi} ({route.illa || 'Mallorca'}).</p>
+            <a
+              href={
+                rIlla === 'menorca'
+                  ? 'https://www.tib.org/ca/web/ctm/autobus/linia/01'
+                  : rIlla === 'eivissa'
+                  ? 'https://ibiza.avanzagrupo.com/lineas-y-horarios'
+                  : rIlla === 'formentera'
+                  ? 'https://autobusespaya.com/'
+                  : 'https://www.tib.org/'
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block mt-2 text-sky-600 font-bold hover:underline"
+            >
+              Cercador d'horaris oficials ↗
             </a>
           </div>
         )}
       </section>
 
-      <!-- Nearby Scout Groups (només si n'hi ha a menys de 10 km) -->
+      <!-- Nearby Campsites (només si n'hi ha a menys de 15 km) -->
+      {nearbyCampsites.length > 0 && (
+        <section class="bg-white rounded-3xl border border-stone-200 p-6 shadow-xs">
+          <h3 class="text-base font-bold text-stone-900 mb-1 flex items-center gap-2">
+            <span>🏕️ Espais d'acampada i refugis propers</span>
+          </h3>
+          <p class="text-xs text-stone-500 mb-3">
+            Instal·lacions legals i refugis a menys de 15 km per pernoctar durant la sortida.
+          </p>
+
+          <div class="space-y-2.5">
+            {nearbyCampsites.map((camp) => (
+              <div class="p-3 rounded-xl bg-stone-50 border border-stone-100 flex items-center justify-between">
+                <div>
+                  <span class="block text-xs font-bold text-stone-800">{camp.nom}</span>
+                  <span class="block text-[11px] text-stone-500">{camp.municipi} · {camp.titularitat}</span>
+                </div>
+                <div class="text-right">
+                  <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-lg">
+                    ~{camp.distancia} km
+                  </span>
+                  {camp.web && (
+                    <a href={camp.web} target="_blank" rel="noopener noreferrer" class="block text-[11px] text-sky-600 hover:underline font-semibold mt-1">
+                      Reserva ↗
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <!-- Nearby Scout Groups (només si n'hi ha a menys de 15 km) -->
       {nearbyAgrupaments.length > 0 && (
         <section class="bg-white rounded-3xl border border-stone-200 p-6 shadow-xs">
           <h3 class="text-base font-bold text-stone-900 mb-1 flex items-center gap-2">
             <span>⚜️ Agrupaments escoltes més propers</span>
           </h3>
           <p class="text-xs text-stone-500 mb-3">
-            Grups locals (a menys de 10 km) a qui consultar o contactar per a col·laboracions.
+            Grups locals (a menys de 15 km) a qui consultar o contactar per a col·laboracions.
           </p>
 
           <div class="space-y-2.5">

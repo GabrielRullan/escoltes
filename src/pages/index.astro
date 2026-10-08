@@ -3,9 +3,14 @@ import Layout from '../layouts/Layout.astro';
 import RouteCard from '../components/RouteCard.astro';
 import FilterBar from '../components/FilterBar.astro';
 
-import routes from '../../data/rutes_mallorca.json';
-import acampades from '../../data/acampada_mallorca.json';
+import { getAllRoutes } from '../data/routes';
+import { getAllCampsites } from '../data/campsites';
+import { getAllGroups } from '../data/groups';
 import experiencies from '../../data/experiencies_rutes.json';
+
+const routes = getAllRoutes();
+const acampades = getAllCampsites();
+const groups = getAllGroups();
 
 // Get unique zones
 const zones = [...new Set(routes.map((r) => r.zona).filter(Boolean))].sort();
@@ -17,7 +22,7 @@ experiencies.forEach((e) => {
 });
 ---
 
-<Layout title="Portal d'excursions per a escoltes a Mallorca">
+<Layout title="Portal d'excursions per a escoltes a les Illes Balears">
   
   <!-- Hero Section -->
   <section class="relative rounded-3xl bg-gradient-to-br from-[#1b4332] via-[#2d6a4f] to-[#1b4332] text-white p-6 sm:p-10 lg:p-12 mb-10 shadow-xl overflow-hidden">
@@ -28,15 +33,15 @@ experiencies.forEach((e) => {
     <div class="relative z-10 max-w-3xl">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-xs sm:text-sm font-semibold mb-4 text-emerald-200">
         <span>⚜️</span>
-        <span>Guia per a caps i agrupaments escoltes</span>
+        <span>Guia per a caps i agrupaments escoltes de les Illes Balears</span>
       </div>
 
       <h1 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight mb-4 text-white">
-        Portal d'excursions per a escoltes a Mallorca
+        Portal d'excursions per a escoltes a les Illes Balears
       </h1>
 
       <p class="text-sm sm:text-base lg:text-lg text-emerald-100/90 leading-relaxed mb-6 font-normal">
-        Troba la millor ruta per a la teva unitat: des de <strong>Ferrerets</strong> (6-8 anys) fins a <strong>Rutes i guies</strong> (17-19 anys). Amb traçats GPS, punts d'aigua revisats i transport públic TIB.
+        Troba la millor ruta per a la teva unitat a <strong>Mallorca, Menorca, Eivissa i Formentera</strong>: des de <strong>Ferrerets / Castors</strong> (6-8 anys) fins a <strong>Rutes i guies</strong> (17-19 anys). Amb traçats GPS del GR-221 i Camí de Cavalls GR-223, punts d'aigua revisats i transport públic insular.
       </p>
 
       <!-- Quick Action Buttons -->
@@ -45,7 +50,7 @@ experiencies.forEach((e) => {
           href="#cercador-rutes"
           class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white text-[#1b4332] hover:bg-emerald-50 active:bg-emerald-100 font-bold text-xs sm:text-sm shadow-md transition-all"
         >
-          <span>🥾 Explorar 65+ rutes</span>
+          <span>🥾 Explorar {routes.length} rutes</span>
           <span>↓</span>
         </a>
 
@@ -53,14 +58,14 @@ experiencies.forEach((e) => {
           href="/acampada"
           class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 active:bg-white/30 backdrop-blur-md border border-white/25 text-white font-bold text-xs sm:text-sm transition-all"
         >
-          <span>🏕️ Refugis & Acampada</span>
+          <span>🏕️ Refugis & Acampada ({acampades.length})</span>
         </a>
 
         <a
           href="/transport"
           class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 active:bg-white/30 backdrop-blur-md border border-white/25 text-white font-bold text-xs sm:text-sm transition-all"
         >
-          <span>🚌 Transport TIB</span>
+          <span>🚌 Transport Públic</span>
         </a>
       </div>
     </div>
@@ -74,8 +79,8 @@ experiencies.forEach((e) => {
     >
       <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">🥾</div>
       <div>
-        <h3 class="text-sm sm:text-base font-bold text-stone-900 group-hover:text-[#1b4332] transition-colors">65+ Rutes</h3>
-        <p class="text-xs text-stone-500 mt-0.5">Adaptades per edats</p>
+        <h3 class="text-sm sm:text-base font-bold text-stone-900 group-hover:text-[#1b4332] transition-colors">{routes.length} Rutes</h3>
+        <p class="text-xs text-stone-500 mt-0.5">4 illes balears</p>
       </div>
     </a>
 
@@ -86,7 +91,7 @@ experiencies.forEach((e) => {
       <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">🏕️</div>
       <div>
         <h3 class="text-sm sm:text-base font-bold text-stone-900 group-hover:text-[#1b4332] transition-colors">{acampades.length} Acampades</h3>
-        <p class="text-xs text-stone-500 mt-0.5">Refugis públics i privats</p>
+        <p class="text-xs text-stone-500 mt-0.5">Refugis, albergs i zones</p>
       </div>
     </a>
 
@@ -97,7 +102,7 @@ experiencies.forEach((e) => {
       <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">🌤️</div>
       <div>
         <h3 class="text-sm sm:text-base font-bold text-stone-900 group-hover:text-amber-700 transition-colors">Meteo AEMET</h3>
-        <p class="text-xs text-stone-500 mt-0.5">53 municipis de Mallorca</p>
+        <p class="text-xs text-stone-500 mt-0.5">Tots els municipis</p>
       </div>
     </a>
 
@@ -107,8 +112,8 @@ experiencies.forEach((e) => {
     >
       <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">🚌</div>
       <div>
-        <h3 class="text-sm sm:text-base font-bold text-stone-900 group-hover:text-[#1b4332] transition-colors">Bus TIB & Tren</h3>
-        <p class="text-xs text-stone-500 mt-0.5">Transport públic a ruta</p>
+        <h3 class="text-sm sm:text-base font-bold text-stone-900 group-hover:text-[#1b4332] transition-colors">Bus & Tren</h3>
+        <p class="text-xs text-stone-500 mt-0.5">Xarxa balear completa</p>
       </div>
     </a>
 
@@ -118,8 +123,8 @@ experiencies.forEach((e) => {
     >
       <div class="text-3xl mb-3 group-hover:scale-110 transition-transform">⚜️</div>
       <div>
-        <h3 class="text-sm sm:text-base font-bold text-stone-900 group-hover:text-[#1b4332] transition-colors">Agrupaments</h3>
-        <p class="text-xs text-stone-500 mt-0.5">Palma i Part Forana</p>
+        <h3 class="text-sm sm:text-base font-bold text-stone-900 group-hover:text-[#1b4332] transition-colors">{groups.length} Agrupaments</h3>
+        <p class="text-xs text-stone-500 mt-0.5">Mallorca, Menorca i Eivissa</p>
       </div>
     </a>
   </section>

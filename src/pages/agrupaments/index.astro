@@ -1,14 +1,23 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import agrupaments from '../../../data/agrupaments_mallorca.json';
+import { getAllGroups } from '../../data/groups';
 
-const palmaGroups = agrupaments.filter((a) => a.municipi.toLowerCase() === 'palma' || a.zona.toLowerCase().includes('palma'));
-const partForanaGroups = agrupaments.filter((a) => a.municipi.toLowerCase() !== 'palma' && !a.zona.toLowerCase().includes('palma'));
+const agrupaments = getAllGroups();
+
+const mallorcaGroups = agrupaments.filter((a) => (a.illa || 'Mallorca').toLowerCase() === 'mallorca');
+const palmaGroups = mallorcaGroups.filter((a) => a.municipi.toLowerCase() === 'palma' || (a.zona && a.zona.toLowerCase().includes('palma')));
+const partForanaGroups = mallorcaGroups.filter((a) => a.municipi.toLowerCase() !== 'palma' && !(a.zona && a.zona.toLowerCase().includes('palma')));
+
+const menorcaGroups = agrupaments.filter((a) => (a.illa || '').toLowerCase() === 'menorca');
+const pitiusesGroups = agrupaments.filter((a) => {
+  const illa = (a.illa || '').toLowerCase();
+  return illa === 'eivissa' || illa === 'formentera' || illa.includes('pitius');
+});
 ---
 
 <Layout
-  title="Directori d'Agrupaments Escoltes a Mallorca"
-  description="Directori complet d'agrupaments escoltes i guies de Palma i Part Forana (Mallorca). Contactes, associacions i ubicacions."
+  title="Directori d'Agrupaments Escoltes a les Illes Balears"
+  description="Directori complet dels 24 agrupaments escoltes i guies de les Illes Balears (Mallorca, Menorca i Eivissa: MEGM, Escoltes de Menorca, Escoltes de Mallorca, ASDE). Contactes, seus i associacions."
 >
   <div class="mb-8">
     <div class="flex items-center gap-2 text-xs text-stone-500 mb-2">
@@ -18,10 +27,10 @@ const partForanaGroups = agrupaments.filter((a) => a.municipi.toLowerCase() !== 
     </div>
 
     <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-stone-900 mb-3">
-      ⚜️ Directori d'Agrupaments Escoltes de Mallorca
+      ⚜️ Directori d'Agrupaments Escoltes de les Illes Balears
     </h1>
     <p class="text-sm sm:text-base text-stone-600 max-w-3xl leading-relaxed">
-      Xarxa d'agrupaments escoltes i guies actius a l'illa (Moviment Escolta i Guiatge de Mallorca, Escoltes de Mallorca i associacions germanes).
+      Xarxa de {agrupaments.length} agrupaments escoltes i guies actius a l'arxipèlag (Moviment Escolta i Guiatge de Mallorca, Escoltes de Menorca - MSC, Escoltes de Mallorca i ASDE Scouts d'Espanya a les Pitiüses).
     </p>
   </div>
 
@@ -43,7 +52,7 @@ const partForanaGroups = agrupaments.filter((a) => a.municipi.toLowerCase() !== 
           <div>
             <div class="flex items-center justify-between gap-2 mb-2">
               <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-700">
-                📍 {ag.municipi}
+                📍 {ag.municipi} · {ag.illa || 'Mallorca'}
               </span>
               <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold bg-[#1b4332]/10 text-[#1b4332]">
                 {ag.associacio}
@@ -93,7 +102,7 @@ const partForanaGroups = agrupaments.filter((a) => a.municipi.toLowerCase() !== 
           <div>
             <div class="flex items-center justify-between gap-2 mb-2">
               <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-700">
-                📍 {ag.municipi}
+                📍 {ag.municipi} · {ag.illa || 'Mallorca'}
               </span>
               <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold bg-[#1b4332]/10 text-[#1b4332]">
                 {ag.associacio}
@@ -125,4 +134,103 @@ const partForanaGroups = agrupaments.filter((a) => a.municipi.toLowerCase() !== 
     </div>
   </section>
 
+  <!-- Menorca Section -->
+  <section class="mb-12">
+    <div class="flex items-center gap-2 mb-4 pb-2 border-b border-stone-200">
+      <span class="text-2xl">🌊</span>
+      <h2 class="text-xl sm:text-2xl font-bold text-stone-900">
+        Agrupaments de Menorca (Escoltes de Menorca · MSC)
+      </h2>
+      <span class="text-xs font-bold text-stone-500 bg-stone-100 px-2.5 py-0.5 rounded-full ml-auto">
+        {menorcaGroups.length} agrupaments
+      </span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {menorcaGroups.map((ag) => (
+        <div class="bg-white rounded-2xl border border-stone-200 p-5 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-700">
+                📍 {ag.municipi} · Menorca
+              </span>
+              <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold bg-[#1b4332]/10 text-[#1b4332]">
+                {ag.associacio}
+              </span>
+            </div>
+            <h3 class="text-base font-bold text-stone-900 mb-2">{ag.nom}</h3>
+            <p class="text-xs text-stone-600 mb-4">{ag.descripcio || ag.ubicacio_detall}</p>
+          </div>
+
+          <div class="pt-3 border-t border-stone-100 space-y-1 text-xs">
+            {ag.ubicacio_detall && (
+              <p class="text-stone-500 truncate">📍 {ag.ubicacio_detall}</p>
+            )}
+            <div class="flex items-center justify-between pt-1">
+              {ag.email && (
+                <a href={`mailto:${ag.email}`} class="text-[#1b4332] font-semibold hover:underline">
+                  ✉️ {ag.email}
+                </a>
+              )}
+              {ag.web && (
+                <a href={ag.web} target="_blank" class="text-sky-600 font-semibold hover:underline ml-auto">
+                  Web ↗
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Pitiüses Section -->
+  <section class="mb-12">
+    <div class="flex items-center gap-2 mb-4 pb-2 border-b border-stone-200">
+      <span class="text-2xl">🦎</span>
+      <h2 class="text-xl sm:text-2xl font-bold text-stone-900">
+        Agrupaments d'Eivissa i Pitiüses
+      </h2>
+      <span class="text-xs font-bold text-stone-500 bg-stone-100 px-2.5 py-0.5 rounded-full ml-auto">
+        {pitiusesGroups.length} agrupaments
+      </span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {pitiusesGroups.map((ag) => (
+        <div class="bg-white rounded-2xl border border-stone-200 p-5 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-stone-100 text-stone-700">
+                📍 {ag.municipi} · {ag.illa || 'Eivissa'}
+              </span>
+              <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-bold bg-[#1b4332]/10 text-[#1b4332]">
+                {ag.associacio}
+              </span>
+            </div>
+            <h3 class="text-base font-bold text-stone-900 mb-2">{ag.nom}</h3>
+            <p class="text-xs text-stone-600 mb-4">{ag.descripcio || ag.ubicacio_detall}</p>
+          </div>
+
+          <div class="pt-3 border-t border-stone-100 space-y-1 text-xs">
+            {ag.ubicacio_detall && (
+              <p class="text-stone-500 truncate">📍 {ag.ubicacio_detall}</p>
+            )}
+            <div class="flex items-center justify-between pt-1">
+              {ag.email && (
+                <a href={`mailto:${ag.email}`} class="text-[#1b4332] font-semibold hover:underline">
+                  ✉️ {ag.email}
+                </a>
+              )}
+              {ag.web && (
+                <a href={ag.web} target="_blank" class="text-sky-600 font-semibold hover:underline ml-auto">
+                  Web ↗
+                </a>
+              )}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
 </Layout>

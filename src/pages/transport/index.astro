@@ -1,14 +1,22 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import transportData from '../../../data/transport_mallorca.json';
+import { getAllTransport } from '../../data/transport';
 
-const buses = transportData.linies_bus || [];
-const trens = transportData.linies_tren || [];
+const transport = getAllTransport();
+const buses = transport.linies_bus || [];
+const trens = transport.linies_tren || [];
+
+const mallorcaBuses = buses.filter((b) => (b.illa || 'Mallorca').toLowerCase() === 'mallorca');
+const menorcaBuses = buses.filter((b) => (b.illa || '').toLowerCase() === 'menorca');
+const pitiusesBuses = buses.filter((b) => {
+  const illa = (b.illa || '').toLowerCase();
+  return illa === 'eivissa' || illa === 'formentera';
+});
 ---
 
 <Layout
-  title="Transport Públic per a Escoltes a Mallorca - Bus TIB i Tren"
-  description="Guia pràctica de línies d'autobús TIB i trens SFM per arribar a les rutes de Mallorca amb agrupaments escoltes."
+  title="Transport Públic per a Escoltes a les Illes Balears - Bus i Tren"
+  description="Guia pràctica de línies de transport públic a les Illes Balears (TIB Mallorca, SFM, TMSA i Torres Menorca, TIB Eivissa i Autocares Paya Formentera) per arribar a les rutes escoltes."
 >
   <div class="mb-8">
     <div class="flex items-center gap-2 text-xs text-stone-500 mb-2">
@@ -18,10 +26,10 @@ const trens = transportData.linies_tren || [];
     </div>
 
     <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-stone-900 mb-3">
-      🚌 Transport Públic per a Sortides Escoltes
+      🚌 Transport Públic per a Sortides Escoltes a les Balears
     </h1>
     <p class="text-sm sm:text-base text-stone-600 max-w-3xl leading-relaxed">
-      A Mallorca, el transport col·lectiu permet reduir la petjada ecològica i fer excursions de travessa (inici en un punt i final en un altre) sense necessitat de cotxes privats.
+      A les Illes Balears, el transport col·lectiu permet reduir la petjada ecològica i fer excursions de travessa (inici en un punt i final en un altre com el Camí de Cavalls GR-223 o el GR-221) sense necessitat de vehicles privats.
     </p>
   </div>
 
@@ -31,7 +39,7 @@ const trens = transportData.linies_tren || [];
       <span>ℹ️ Avís per a desplaçaments en grup escolta (&gt; 10 persones)</span>
     </h3>
     <p class="text-xs sm:text-sm text-sky-900 leading-relaxed mb-3">
-      Si viatgeu amb una unitat nombrosa (Llops, Ràngers, Pioners o tot l'agrupament) en línies d'autobús TIB amb alta afluència a la Serra de Tramuntana (ex: línia 204 Sóller, 231 Valldemossa o 311 Lluc), es recomana contactar prèviament amb el Consorci de Transports de Mallorca (CTM) al telèfon <strong>971 17 77 77</strong> o mitjançant el formulari web per preveure reforços de comboi.
+      Si viatgeu amb una unitat nombrosa (Llops, Ràngers, Pioners o tot l'agrupament) en línies d'autobús interurbà amb alta afluència (ex: Mallorca Serra de Tramuntana 204 o 231, Menorca eix central L01 o platges del GR-223, Eivissa L03 o Formentera), es recomana contactar prèviament amb les operadores oficials per preveure reforços de comboi.
     </p>
     <div class="flex flex-wrap items-center gap-2 text-xs">
       <a
@@ -40,22 +48,43 @@ const trens = transportData.linies_tren || [];
         rel="noopener noreferrer"
         class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-sky-700 hover:bg-sky-800 text-white font-bold transition"
       >
-        <span>Web oficial de TIB.org</span>
+        <span>TIB Mallorca (971 17 77 77)</span>
         <span>↗</span>
       </a>
       <a
-        href="tel:971177777"
-        class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white border border-sky-200 text-sky-900 font-bold hover:bg-sky-100 transition"
+        href="https://www.tmsa.es/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white border border-sky-300 text-sky-900 font-bold hover:bg-sky-100 transition"
       >
-        <span>📞 Trucar al 971 17 77 77</span>
+        <span>TMSA Menorca</span>
+        <span>↗</span>
+      </a>
+      <a
+        href="https://ibiza.avanzagrupo.com/lineas-y-horarios"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white border border-sky-300 text-sky-900 font-bold hover:bg-sky-100 transition"
+      >
+        <span>Avanza / TIB Eivissa</span>
+        <span>↗</span>
+      </a>
+      <a
+        href="https://autobusespaya.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-white border border-sky-300 text-sky-900 font-bold hover:bg-sky-100 transition"
+      >
+        <span>Paya Formentera</span>
+        <span>↗</span>
       </a>
     </div>
   </div>
 
-  <!-- Train SFM Section -->
+  <!-- Train SFM Section (Mallorca) -->
   <section class="mb-12">
     <h2 class="text-xl sm:text-2xl font-bold text-stone-900 mb-4 flex items-center gap-2">
-      <span>🚆 Xarxa Ferroviària (SFM & Tren de Sóller)</span>
+      <span>🚆 Xarxa Ferroviària de Mallorca (SFM & Tren de Sóller)</span>
     </h2>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -89,19 +118,25 @@ const trens = transportData.linies_tren || [];
     </div>
   </section>
 
-  <!-- Bus TIB Section -->
+  <!-- Bus Mallorca Section -->
   <section class="mb-12">
-    <h2 class="text-xl sm:text-2xl font-bold text-stone-900 mb-4 flex items-center gap-2">
-      <span>🚌 Línies d'Autobús TIB cap a Inici de Rutes</span>
-    </h2>
+    <div class="flex items-center gap-2 mb-4 pb-2 border-b border-stone-200">
+      <span class="text-2xl">🚌</span>
+      <h2 class="text-xl sm:text-2xl font-bold text-stone-900">
+        Línies d'Autobús TIB Mallorca ({mallorcaBuses.length} línies)
+      </h2>
+      <span class="text-xs font-bold text-stone-500 bg-stone-100 px-2.5 py-0.5 rounded-full ml-auto">
+        Mallorca
+      </span>
+    </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      {buses.map((b: any) => (
+      {mallorcaBuses.map((b: any) => (
         <div class="bg-white rounded-2xl border border-stone-200 p-5 shadow-xs flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#1b4332]/10 text-[#1b4332]">
-                Línia {b.linia}
+                Línia {b.linia || b.codi}
               </span>
               <a
                 href={b.link_horaris}
@@ -114,9 +149,9 @@ const trens = transportData.linies_tren || [];
             </div>
             <h3 class="text-base font-bold text-stone-900 mb-2">{b.nom}</h3>
             <div class="text-xs text-stone-600 space-y-1 mb-4">
-              <p><strong>Recorregut:</strong> {b.recorregut}</p>
+              {b.recorregut && <p><strong>Recorregut:</strong> {b.recorregut}</p>}
               <p><strong>Municipis:</strong> {b.municipis_coberts?.join(', ')}</p>
-              <p><strong>Cap de setmana:</strong> {b.frequencia_cap_de_setmana}</p>
+              {b.frequencia_cap_de_setmana && <p><strong>Cap de setmana:</strong> {b.frequencia_cap_de_setmana}</p>}
             </div>
           </div>
           {b.adequat_escoltes && (
@@ -125,6 +160,96 @@ const trens = transportData.linies_tren || [];
               <span>Molt recomanat per a unitats escoltes</span>
             </span>
           )}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Bus Menorca Section -->
+  <section class="mb-12">
+    <div class="flex items-center gap-2 mb-4 pb-2 border-b border-stone-200">
+      <span class="text-2xl">🚌</span>
+      <h2 class="text-xl sm:text-2xl font-bold text-stone-900">
+        Xarxa d'Autobusos de Menorca · TMSA & Torres ({menorcaBuses.length} línies)
+      </h2>
+      <span class="text-xs font-bold text-stone-500 bg-stone-100 px-2.5 py-0.5 rounded-full ml-auto">
+        Menorca (Camí de Cavalls)
+      </span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {menorcaBuses.map((b: any) => (
+        <div class="bg-white rounded-2xl border border-stone-200 p-5 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#1b4332]/10 text-[#1b4332]">
+                {b.codi || `Línia ${b.linia}`}
+              </span>
+              <a
+                href={b.link_horaris}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-xs text-sky-600 hover:underline font-bold"
+              >
+                Horaris ↗
+              </a>
+            </div>
+            <h3 class="text-base font-bold text-stone-900 mb-2">{b.nom}</h3>
+            <div class="text-xs text-stone-600 space-y-1 mb-4">
+              {b.corredor && <p><strong>Corredor:</strong> {b.corredor}</p>}
+              {b.parades_clau && <p><strong>Parades clau:</strong> {b.parades_clau.join(' · ')}</p>}
+              <p><strong>Municipis:</strong> {b.municipis_coberts?.join(', ')}</p>
+            </div>
+          </div>
+          <span class="text-[11px] font-semibold text-teal-800 bg-teal-50 px-2.5 py-1.5 rounded-lg border border-teal-100 flex items-center gap-1.5">
+            <span>🐴</span>
+            <span>Connexió amb etapes del GR-223</span>
+          </span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Bus Eivissa & Formentera Section -->
+  <section class="mb-12">
+    <div class="flex items-center gap-2 mb-4 pb-2 border-b border-stone-200">
+      <span class="text-2xl">🚌</span>
+      <h2 class="text-xl sm:text-2xl font-bold text-stone-900">
+        Línies d'Autobús d'Eivissa i Formentera ({pitiusesBuses.length} línies)
+      </h2>
+      <span class="text-xs font-bold text-stone-500 bg-stone-100 px-2.5 py-0.5 rounded-full ml-auto">
+        Pitiüses
+      </span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {pitiusesBuses.map((b: any) => (
+        <div class="bg-white rounded-2xl border border-stone-200 p-5 shadow-xs flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-[#1b4332]/10 text-[#1b4332]">
+                {b.codi || `Línia ${b.linia}`}
+              </span>
+              <a
+                href={b.link_horaris}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-xs text-sky-600 hover:underline font-bold"
+              >
+                Horaris ↗
+              </a>
+            </div>
+            <h3 class="text-base font-bold text-stone-900 mb-2">{b.nom}</h3>
+            <div class="text-xs text-stone-600 space-y-1 mb-4">
+              {b.corredor && <p><strong>Corredor:</strong> {b.corredor}</p>}
+              {b.parades_clau && <p><strong>Parades clau:</strong> {b.parades_clau.join(' · ')}</p>}
+              <p><strong>Municipis:</strong> {b.municipis_coberts?.join(', ')}</p>
+            </div>
+          </div>
+          <span class="text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-1.5 rounded-lg border border-emerald-100 flex items-center gap-1.5">
+            <span>🏖️</span>
+            <span>Accés a rutes de costa i parcs naturals</span>
+          </span>
         </div>
       ))}
     </div>

@@ -1,0 +1,30 @@
+[
+  {
+    "slug": "ae-los-condors",
+    "nom": "AE Los Cóndors",
+    "associacio": "ASDE Scouts de Baleares / Scouts de España",
+    "municipi": "Eivissa",
+    "illa": "Eivissa",
+    "zona": "Eivissa Ciutat",
+    "ubicacio_detall": "Can Misses / Ca n'Escandell, Eivissa",
+    "lat": 38.9102,
+    "lon": 1.4245,
+    "email": "ibiza@scoutsdebaleares.org",
+    "web": "https://scoutsdebaleares.org",
+    "descripcio": "Grup scout històric d'Eivissa fundat als anys 80, membre d'ASDE Scouts de Baleares, actiu en projectes d'educació ambiental i ciutadania."
+  },
+  {
+    "slug": "ae-isidor-macabich",
+    "nom": "AE Isidor Macabich",
+    "associacio": "Escoltes de Balears (MSC)",
+    "municipi": "Eivissa",
+    "illa": "Eivissa",
+    "zona": "Eivissa Ciutat",
+    "ubicacio_detall": "Avinguda d'Isidor Macabich, Eivissa",
+    "lat": 38.9135,
+    "lon": 1.431,
+    "email": "isidormacabich@escoltesbalears.org",
+    "web": "https://www.vilajove.eivissa.es",
+    "descripcio": "Agrupament escolta d'Eivissa ciutat federat al Moviment Scout Catòlic (MSC), actiu en activitats d'excursionisme a ses Salines i els Amunts."
+  }
+]

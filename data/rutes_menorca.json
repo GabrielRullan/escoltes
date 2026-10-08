@@ -1,0 +1,1165 @@
+[
+  {
+    "slug": "gr223-etapa-01-mao-es-grau",
+    "nom": "GR-223 Etapa 1: Maó a Es Grau",
+    "municipi": "Maó",
+    "zona": "Llevant de Menorca",
+    "illa": "Menorca",
+    "distancia_km": 10.0,
+    "desnivell_positiu_m": 110,
+    "dificultat": "Moderada",
+    "durada_estimada": "3h 15min",
+    "apte_unitats": [
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Port de Maó (inici)",
+      "Sa Mesquida",
+      "Es Grau (final)"
+    ],
+    "consells_seguretat": "Tram inicial d'asfalt compartit a la sortida del port de Maó; extremar la vigilància del trànsit rodat. Zona molt assolellada sense ombra a Binillautí; dur calçat ferm, gorra i protecció solar.",
+    "descripcio": "Primera etapa del Camí de Cavalls que surt del port de Maó, passa per la cala de Sa Mesquida amb la seva torre de defensa i s'endinsa al Parc Natural de s'Albufera des Grau.",
+    "lat": 39.8942,
+    "lon": 4.2647,
+    "punt_origen": "Culàrsega del Port de Maó",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-223+Etapa+1+Mao+Es+Grau",
+    "track_coordinates": [
+      [
+        39.8942,
+        4.2647
+      ],
+      [
+        39.912,
+        4.286
+      ],
+      [
+        39.935,
+        4.275
+      ],
+      [
+        39.9515,
+        4.2682
+      ]
+    ],
+    "punts_interes": [
+      "Port de Maó",
+      "Torre de Sa Mesquida",
+      "Cala Binillautí",
+      "Parc Natural de s'Albufera des Grau"
+    ]
+  },
+  {
+    "slug": "gr223-etapa-02-es-grau-favaritx",
+    "nom": "GR-223 Etapa 2: Es Grau a Cap de Favàritx",
+    "municipi": "Maó",
+    "zona": "Parc Natural de s'Albufera des Grau",
+    "illa": "Menorca",
+    "distancia_km": 8.6,
+    "desnivell_positiu_m": 135,
+    "dificultat": "Moderada",
+    "durada_estimada": "3h 00min",
+    "apte_unitats": [
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Es Grau (inici)",
+      "Nul a Favàritx (dur reserva completa)"
+    ],
+    "consells_seguretat": "Pissarres negres que absorbeixen molta calor a l'estiu; terreny completament desabrigat sense ombra. Mínim 2.5L d'aigua per escolta. Respectar els camins senyalitzats per no malmetre la flora dunar.",
+    "descripcio": "Travessa el cor del Parc Natural de s'Albufera des Grau vorejant cales verges com Cala Tortuga i Cala Presili fins a l'espectacular paisatge geològic lunar del Cap de Favàritx.",
+    "lat": 39.9515,
+    "lon": 4.2682,
+    "punt_origen": "Platja des Grau (accés Parc Natural)",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-223+Etapa+2+Es+Grau+Favaritx",
+    "track_coordinates": [
+      [
+        39.9515,
+        4.2682
+      ],
+      [
+        39.965,
+        4.26
+      ],
+      [
+        39.978,
+        4.258
+      ],
+      [
+        39.988,
+        4.252
+      ]
+    ],
+    "punts_interes": [
+      "Platja des Grau",
+      "Cala de Sa Torreta",
+      "Cala Tortuga",
+      "Cala Presili",
+      "Far de Favàritx"
+    ]
+  },
+  {
+    "slug": "gr223-etapa-03-favaritx-arenal-castell",
+    "nom": "GR-223 Etapa 3: Favàritx a Arenal d'en Castell",
+    "municipi": "Es Mercadal",
+    "zona": "Nord de Menorca",
+    "illa": "Menorca",
+    "distancia_km": 13.6,
+    "desnivell_positiu_m": 230,
+    "dificultat": "Moderada",
+    "durada_estimada": "4h 15min",
+    "apte_unitats": [
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Arenal d'en Castell (final)",
+      "Cap punt intermedi"
+    ],
+    "consells_seguretat": "Tram llarg, aïllat i molt pedregós ('trencapies'). Expost a forts cops de vent de tramuntana. Portar reserva d'aigua suficient (mínim 2.5L per persona) i farmaciola per rascades i torçades.",
+    "descripcio": "Recorregut costaner agreste que voreja les salines de Mongofre, el Port d'Addaia i cales verges com Cala Pudenta, acabant a la badia semicircular d'Arenal d'en Castell.",
+    "lat": 39.988,
+    "lon": 4.252,
+    "punt_origen": "Carretera d'accés al Far de Favàritx",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-223+Etapa+3+Favaritx+Arenal+Castell",
+    "track_coordinates": [
+      [
+        39.988,
+        4.252
+      ],
+      [
+        39.998,
+        4.225
+      ],
+      [
+        40.005,
+        4.198
+      ],
+      [
+        40.0215,
+        4.1835
+      ]
+    ],
+    "punts_interes": [
+      "Far de Favàritx",
+      "Salines de Mongofre",
+      "Pou d'en Caldes",
+      "Port d'Addaia",
+      "Arenal d'en Castell"
+    ]
+  },
+  {
+    "slug": "gr223-etapa-04-arenal-castell-cala-tirant",
+    "nom": "GR-223 Etapa 4: Arenal d'en Castell a Cala Tirant",
+    "municipi": "Es Mercadal",
+    "zona": "Nord de Menorca",
+    "illa": "Menorca",
+    "distancia_km": 10.8,
+    "desnivell_positiu_m": 160,
+    "dificultat": "Fàcil",
+    "durada_estimada": "3h 00min",
+    "apte_unitats": [
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Arenal d'en Castell (inici)",
+      "Son Parc",
+      "Cala Tirant (final)"
+    ],
+    "consells_seguretat": "Precaució als creuaments vials a Son Parc. Etapa assequible i planera apte per a branques joves. Calçat adequat per a trams de sorra a Son Saura del Nord i pista forestal.",
+    "descripcio": "Etapa costanera assequible que connecta Arenal d'en Castell amb Son Saura del Nord, la platja de Son Parc i la gran badia verge de Cala Tirant.",
+    "lat": 40.0215,
+    "lon": 4.1835,
+    "punt_origen": "Arenal d'en Castell (passeig marítim)",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-223+Etapa+4+Arenal+Castell+Cala+Tirant",
+    "track_coordinates": [
+      [
+        40.0215,
+        4.1835
+      ],
+      [
+        40.031,
+        4.162
+      ],
+      [
+        40.032,
+        4.15
+      ],
+      [
+        40.045,
+        4.113
+      ]
+    ],
+    "punts_interes": [
+      "Arenal d'en Castell",
+      "Son Saura del Nord",
+      "Platja de Son Parc",
+      "Cala Tirant"
+    ]
+  },
+  {
+    "slug": "gr223-etapa-05-cala-tirant-binimella",
+    "nom": "GR-223 Etapa 5: Cala Tirant a Binimel·là",
+    "municipi": "Es Mercadal",
+    "zona": "Nord de Menorca",
+    "illa": "Menorca",
+    "distancia_km": 9.6,
+    "desnivell_positiu_m": 175,
+    "dificultat": "Moderada",
+    "durada_estimada": "3h 00min",
+    "apte_unitats": [
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Cala Tirant (inici)",
+      "Binimel·là (estiu, restaurant)"
+    ],
+    "consells_seguretat": "Respectar i protegir el fràgil sistema dunar de Cavalleria transitant estrictament per les passarel·les. Sol intens i terreny argilós vermellós amb còdols solts. Portar mínim 2.5 litres d'aigua per persona ja que no hi ha punts d'aigua potable garantits en tot el tram.",
+    "descripcio": "Trajecte espectacular pel nord menorquí vorejant la platja de Cavalleria, el port natural de Sanitja i culminant a la platja salvatge de Binimel·là.",
+    "lat": 40.045,
+    "lon": 4.113,
+    "punt_origen": "Aparcament de Cala Tirant",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-223+Etapa+5+Cala+Tirant+Binimella",
+    "track_coordinates": [
+      [
+        40.045,
+        4.113
+      ],
+      [
+        40.051,
+        4.095
+      ],
+      [
+        40.058,
+        4.075
+      ],
+      [
+        40.052,
+        4.053
+      ]
+    ],
+    "punts_interes": [
+      "Cala Tirant",
+      "Port de Sanitja",
+      "Platja de Cavalleria",
+      "Platja de Binimel·là"
+    ]
+  },
+  {
+    "slug": "gr223-etapa-06-binimella-els-alocs",
+    "nom": "GR-223 Etapa 6: Binimel·là a Els Alocs",
+    "municipi": "Ferreries",
+    "zona": "Nord de Menorca",
+    "illa": "Menorca",
+    "distancia_km": 8.9,
+    "desnivell_positiu_m": 280,
+    "dificultat": "Exigent",
+    "durada_estimada": "3h 45min",
+    "apte_unitats": [
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Nul en tot el tram (100% verge)"
+    ],
+    "consells_seguretat": "Etapa més exigent de l'illa sense cap punt d'aigua en tot el tram (100% verge). Risc elevat de cop de calor; obligatori dur mínim 3 litres d'aigua per persona. Fort pendís a Calderer; només apte per a Pioners i Rutes.",
+    "descripcio": "L'etapa més salvatge i muntanyosa del Camí de Cavalls, passant per Cala Pregonda, Cala Barril i Cala en Calderer entre penya-segats abruptes i valls verges.",
+    "lat": 40.052,
+    "lon": 4.053,
+    "punt_origen": "Platja de Binimel·là",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-223+Etapa+6+Binimella+Els+Alocs",
+    "track_coordinates": [
+      [
+        40.052,
+        4.053
+      ],
+      [
+        40.056,
+        4.041
+      ],
+      [
+        40.059,
+        4.02
+      ],
+      [
+        40.06,
+        3.999
+      ],
+      [
+        40.057,
+        3.985
+      ]
+    ],
+    "punts_interes": [
+      "Cala Pregonda",
+      "Illot de Pregonda",
+      "Cala Barril",
+      "Cala en Calderer",
+      "Els Alocs"
+    ]
+  },
+  {
+    "slug": "gr223-etapa-07-els-alocs-algaiarens",
+    "nom": "GR-223 Etapa 7: Els Alocs a Algaiarens (La Vall)",
+    "municipi": "Ciutadella",
+    "zona": "Nord de Menorca",
+    "illa": "Menorca",
+    "distancia_km": 9.7,
+    "desnivell_positiu_m": 345,
+    "dificultat": "Exigent",
+    "durada_estimada": "4h 00min",
+    "apte_unitats": [
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Nul en tot el tram (font de Cala Pilar no tractada)"
+    ],
+    "consells_seguretat": "Terreny molt agreste amb grava solta al Coll de Cala Pilar. Cobertura de telefonia mòbil molt baixa o nul·la. Mínim 3 litres d'aigua per persona. Només apte per a unitats majors.",
+    "descripcio": "Travessa el paisatge vermellós de Cala Pilar i el Pla de Mar fins a les frondoses pinedes i platges verges de sorra blanca de la Vall d'Algaiarens.",
+    "lat": 40.057,
+    "lon": 3.985,
+    "punt_origen": "Cala dels Alocs",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-223+Etapa+7+Els+Alocs+Algaiarens",
+    "track_coordinates": [
+      [
+        40.057,
+        3.985
+      ],
+      [
+        40.055,
+        3.972
+      ],
+      [
+        40.052,
+        3.948
+      ],
+      [
+        40.046,
+        3.921
+      ]
+    ],
+    "punts_interes": [
+      "Cala dels Alocs",
+      "Cala Pilar",
+      "Coll del Pilar",
+      "Pla de Mar",
+      "Platja d'Algaiarens"
+    ]
+  },
+  {
+    "slug": "gr223-etapa-08-algaiarens-cala-morell",
+    "nom": "GR-223 Etapa 8: Algaiarens a Cala Morell",
+    "municipi": "Ciutadella",
+    "zona": "Ponent de Menorca",
+    "illa": "Menorca",
+    "distancia_km": 5.4,
+    "desnivell_positiu_m": 150,
+    "dificultat": "Fàcil",
+    "durada_estimada": "1h 45min",
+    "apte_unitats": [
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Cala Morell (nucli urbà final)"
+    ],
+    "consells_seguretat": "Pineda inicial amb bona ombra. Precaució a la zona de penya-segats i coves de la necròpolis talaiòtica de Cala Morell: no enfilar-se a les roques inestables.",
+    "descripcio": "Etapa curta i agradable entre boscos de pi blanc que culmina a la cala protegida de Cala Morell amb la seva cèlebre necròpolis rupestre de coves talaiòtiques.",
+    "lat": 40.046,
+    "lon": 3.921,
+    "punt_origen": "Aparcament d'Algaiarens (La Vall)",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-223+Etapa+8+Algaiarens+Cala+Morell",
+    "track_coordinates": [
+      [
+        40.046,
+        3.921
+      ],
+      [
+        40.048,
+        3.91
+      ],
+      [
+        40.051,
+        3.895
+      ],
+      [
+        40.054,
+        3.882
+      ]
+    ],
+    "punts_interes": [
+      "Pineda de La Vall",
+      "Ses Fontanelles",
+      "Cala Morell",
+      "Necròpolis talaiòtica de Cala Morell"
+    ]
+  },
+  {
+    "slug": "gr223-etapa-09-cala-morell-punta-nati",
+    "nom": "GR-223 Etapa 9: Cala Morell a Punta Nati",
+    "municipi": "Ciutadella",
+    "zona": "Ponent de Menorca",
+    "illa": "Menorca",
+    "distancia_km": 7.0,
+    "desnivell_positiu_m": 90,
+    "dificultat": "Moderada",
+    "durada_estimada": "2h 30min",
+    "apte_unitats": [
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Cala Morell (inici)",
+      "Nul a Punta Nati"
+    ],
+    "consells_seguretat": "Terreny càrstic de pedra calcària esmolada sense cap ombra ('Menorca Seca'). Calçat de muntanya amb sola gruixuda obligatori i protecció solar alta per l'elevada reverberació.",
+    "descripcio": "Paisatge imponent dominat per la pedra seca, barraques de bestiar tradicionals de gran volum i penya-segats marins fins al solitari Far de Punta Nati.",
+    "lat": 40.054,
+    "lon": 3.882,
+    "punt_origen": "Cala Morell (carrer de la Mar)",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-223+Etapa+9+Cala+Morell+Punta+Nati",
+    "track_coordinates": [
+      [
+        40.054,
+        3.882
+      ],
+      [
+        40.057,
+        3.855
+      ],
+      [
+        40.053,
+        3.838
+      ],
+      [
+        40.05,
+        3.8235
+      ]
+    ],
+    "punts_interes": [
+      "Cala Morell",
+      "Ses Roques Vermelles",
+      "Barraques de pedra seca",
+      "Far de Punta Nati"
+    ]
+  },
+  {
+    "slug": "gr223-etapa-10-punta-nati-ciutadella",
+    "nom": "GR-223 Etapa 10: Punta Nati a Ciutadella",
+    "municipi": "Ciutadella",
+    "zona": "Ponent de Menorca",
+    "illa": "Menorca",
+    "distancia_km": 10.5,
+    "desnivell_positiu_m": 100,
+    "dificultat": "Fàcil",
+    "durada_estimada": "3h 00min",
+    "apte_unitats": [
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Cala en Blanes",
+      "Ciutadella de Menorca (nucli urbà)"
+    ],
+    "consells_seguretat": "Pas espectacular pel Pont d'en Gil sobre penya-segats verticals marins: aturar la marxa escolta en fila índia i evitar acostar-se a la vora en dies de vent fort. Tram final urbà.",
+    "descripcio": "Des del far de Punta Nati resseguint la costa oest fins a l'arc natural del Pont d'en Gil, entrant a Ciutadella pel passeig marítim i el seu històric port antic.",
+    "lat": 40.05,
+    "lon": 3.8235,
+    "punt_origen": "Far de Punta Nati",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-223+Etapa+10+Punta+Nati+Ciutadella",
+    "track_coordinates": [
+      [
+        40.05,
+        3.8235
+      ],
+      [
+        40.012,
+        3.796
+      ],
+      [
+        40.008,
+        3.815
+      ],
+      [
+        40.001,
+        3.837
+      ]
+    ],
+    "punts_interes": [
+      "Far de Punta Nati",
+      "Pont d'en Gil",
+      "Cala en Blanes",
+      "Port històric de Ciutadella"
+    ]
+  },
+  {
+    "slug": "gr223-etapa-11-ciutadella-cap-dartrutx",
+    "nom": "GR-223 Etapa 11: Ciutadella a Cap d'Artrutx",
+    "municipi": "Ciutadella",
+    "zona": "Ponent de Menorca",
+    "illa": "Menorca",
+    "distancia_km": 13.2,
+    "desnivell_positiu_m": 45,
+    "dificultat": "Fàcil",
+    "durada_estimada": "3h 30min",
+    "apte_unitats": [
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Ciutadella (inici)",
+      "Cala Blanca",
+      "Cap d'Artrutx (final)"
+    ],
+    "consells_seguretat": "Camí pla de costa semiurbà. Assegurar protecció solar i aigua abundant durant els mesos càlids. Apte per a totes les branques escoltes gràcies al desnivell pràcticament nul.",
+    "descripcio": "Sortida de Ciutadella resseguint la costa sud-oest passant per Cala Santandria, Cala Blanca i arribant al far emblemàtic de Cap d'Artrutx enfront de Mallorca.",
+    "lat": 40.001,
+    "lon": 3.837,
+    "punt_origen": "Plaça des Born (Ciutadella)",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-223+Etapa+11+Ciutadella+Cap+d+Artrutx",
+    "track_coordinates": [
+      [
+        40.001,
+        3.837
+      ],
+      [
+        39.978,
+        3.835
+      ],
+      [
+        39.965,
+        3.833
+      ],
+      [
+        39.923,
+        3.824
+      ]
+    ],
+    "punts_interes": [
+      "Plaça des Born",
+      "Cala Santandria",
+      "Cala Blanca",
+      "Far de Cap d'Artrutx"
+    ]
+  },
+  {
+    "slug": "gr223-etapa-12-cap-dartrutx-cala-turqueta",
+    "nom": "GR-223 Etapa 12: Cap d'Artrutx a Cala en Turqueta",
+    "municipi": "Ciutadella",
+    "zona": "Sud de Menorca",
+    "illa": "Menorca",
+    "distancia_km": 13.3,
+    "desnivell_positiu_m": 85,
+    "dificultat": "Moderada",
+    "durada_estimada": "3h 45min",
+    "apte_unitats": [
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Cap d'Artrutx (inici)",
+      "Aparcament Cala en Turqueta (estiu)"
+    ],
+    "consells_seguretat": "Roquissar pla molt obert i sense ombra als trams de Son Saura i Es Talaier. Calor persistent a l'estiu; dur mínim 2.5L d'aigua per persona i protecció solar completa.",
+    "descripcio": "Etapa meridional que voreja les platges emblemàtiques de sorra blanca de Son Saura, Es Talaier i culmina a les famoses aigües turqueses de Cala en Turqueta.",
+    "lat": 39.923,
+    "lon": 3.824,
+    "punt_origen": "Far de Cap d'Artrutx",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-223+Etapa+12+Cap+Artrutx+Cala+Turqueta",
+    "track_coordinates": [
+      [
+        39.923,
+        3.824
+      ],
+      [
+        39.922,
+        3.852
+      ],
+      [
+        39.925,
+        3.875
+      ],
+      [
+        39.932,
+        3.915
+      ]
+    ],
+    "punts_interes": [
+      "Far de Cap d'Artrutx",
+      "Cala en Bosc",
+      "Platges de Son Saura",
+      "Es Talaier",
+      "Cala en Turqueta"
+    ]
+  },
+  {
+    "slug": "gr223-etapa-13-cala-turqueta-cala-galdana",
+    "nom": "GR-223 Etapa 13: Cala en Turqueta a Cala Galdana",
+    "municipi": "Ferreries",
+    "zona": "Sud de Menorca",
+    "illa": "Menorca",
+    "distancia_km": 6.4,
+    "desnivell_positiu_m": 150,
+    "dificultat": "Fàcil",
+    "durada_estimada": "2h 00min",
+    "apte_unitats": [
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Macarella (estiu, serveis)",
+      "Cala Galdana (final)"
+    ],
+    "consells_seguretat": "Pinedes d'ombra i esglaons de fusta. Respectar el sistema dunar protegit de Macarelleta. Prohibit fer foc; alt risc forestal d'incendi a l'estiu.",
+    "descripcio": "Un dels trams més emblemàtics de Menorca que connecta Cala en Turqueta, Cala Macarella, Macarelleta i la badia protegida de Cala Galdana.",
+    "lat": 39.932,
+    "lon": 3.915,
+    "punt_origen": "Cala en Turqueta (àrea de serveis)",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-223+Etapa+13+Cala+Turqueta+Cala+Galdana",
+    "track_coordinates": [
+      [
+        39.932,
+        3.915
+      ],
+      [
+        39.936,
+        3.935
+      ],
+      [
+        39.938,
+        3.942
+      ],
+      [
+        39.937,
+        3.963
+      ]
+    ],
+    "punts_interes": [
+      "Cala en Turqueta",
+      "Cala Macarelleta",
+      "Cala Macarella",
+      "Miradors de Cala Galdana"
+    ]
+  },
+  {
+    "slug": "gr223-etapa-14-cala-galdana-santo-tomas",
+    "nom": "GR-223 Etapa 14: Cala Galdana a Santo Tomàs",
+    "municipi": "Es Migjorn Gran",
+    "zona": "Sud de Menorca",
+    "illa": "Menorca",
+    "distancia_km": 10.8,
+    "desnivell_positiu_m": 240,
+    "dificultat": "Moderada",
+    "durada_estimada": "3h 30min",
+    "apte_unitats": [
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Cala Galdana (inici)",
+      "Santo Tomàs (final)"
+    ],
+    "consells_seguretat": "Travessa els barrancs abruptes de Trebalúger, Fustam i Escorxada. Terreny amb forts desnivells curts i fang relliscós en cas de pluja. Aïllament intermedi sense serveis.",
+    "descripcio": "Recorregut per cales verges solitàries del sud menorquí com Cala Mitjana, Trebalúger, Cala Fustam i Cala Escorxada fins a arribar a Santo Tomàs.",
+    "lat": 39.937,
+    "lon": 3.963,
+    "punt_origen": "Cala Galdana (pont del riu Algendar)",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-223+Etapa+14+Cala+Galdana+Santo+Tomas",
+    "track_coordinates": [
+      [
+        39.937,
+        3.963
+      ],
+      [
+        39.934,
+        3.972
+      ],
+      [
+        39.928,
+        3.99
+      ],
+      [
+        39.924,
+        4.015
+      ],
+      [
+        39.917,
+        4.04
+      ]
+    ],
+    "punts_interes": [
+      "Cala Galdana",
+      "Cala Mitjana",
+      "Barranc de Trebalúger",
+      "Cala Fustam",
+      "Cala Escorxada",
+      "Santo Tomàs"
+    ]
+  },
+  {
+    "slug": "gr223-etapa-15-santo-tomas-son-bou",
+    "nom": "GR-223 Etapa 15: Santo Tomàs a Son Bou",
+    "municipi": "Alaior",
+    "zona": "Sud de Menorca",
+    "illa": "Menorca",
+    "distancia_km": 6.4,
+    "desnivell_positiu_m": 70,
+    "dificultat": "Fàcil",
+    "durada_estimada": "1h 45min",
+    "apte_unitats": [
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Santo Tomàs (inici)",
+      "Son Bou (final, botigues i fonts)"
+    ],
+    "consells_seguretat": "Platja de Son Bou i maresma protegida (Prat de Son Bou). Etapa molt plana i ràpida. Respectar la zona arqueològica de la basílica paleocristiana de Son Bou.",
+    "descripcio": "Agradable passeig costaner que voreja la platja verge d'Atalis i la gran platja i maresma de Son Bou amb la seva basílica paleocristiana del segle V.",
+    "lat": 39.917,
+    "lon": 4.04,
+    "punt_origen": "Platja de Santo Tomàs",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-223+Etapa+15+Santo+Tomas+Son+Bou",
+    "track_coordinates": [
+      [
+        39.917,
+        4.04
+      ],
+      [
+        39.912,
+        4.053
+      ],
+      [
+        39.905,
+        4.062
+      ],
+      [
+        39.899,
+        4.072
+      ]
+    ],
+    "punts_interes": [
+      "Platja de Santo Tomàs",
+      "Platja d'Atalis",
+      "Prat de Son Bou",
+      "Basílica paleocristiana de Son Bou"
+    ]
+  },
+  {
+    "slug": "gr223-etapa-16-son-bou-cala-en-porter",
+    "nom": "GR-223 Etapa 16: Son Bou a Cala en Porter",
+    "municipi": "Alaior",
+    "zona": "Sud de Menorca",
+    "illa": "Menorca",
+    "distancia_km": 8.0,
+    "desnivell_positiu_m": 140,
+    "dificultat": "Moderada",
+    "durada_estimada": "2h 30min",
+    "apte_unitats": [
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Son Bou (inici)",
+      "Cala en Porter (final)"
+    ],
+    "consells_seguretat": "Pas pels barrancs de Llucalari i Cala en Porter. Descensos amb còdols solts on cal vigilar les torçades de turmell. Forta xafogor a l'interior dels barrancs a l'estiu.",
+    "descripcio": "Connexió entre Son Bou i Cala en Porter passant per la cala de còdols de Llucalari i l'interior rural de camps de conreu i parets de pedra seca tradicionals.",
+    "lat": 39.899,
+    "lon": 4.072,
+    "punt_origen": "Son Bou (estany des Prat)",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-223+Etapa+16+Son+Bou+Cala+en+Porter",
+    "track_coordinates": [
+      [
+        39.899,
+        4.072
+      ],
+      [
+        39.889,
+        4.091
+      ],
+      [
+        39.88,
+        4.11
+      ],
+      [
+        39.871,
+        4.133
+      ]
+    ],
+    "punts_interes": [
+      "Son Bou",
+      "Cala Llucalari",
+      "Barranc de Llucalari",
+      "Barranc de Cala en Porter",
+      "Cala en Porter"
+    ]
+  },
+  {
+    "slug": "gr223-etapa-17-cala-en-porter-binisafuller",
+    "nom": "GR-223 Etapa 17: Cala en Porter a Binisafúller",
+    "municipi": "Sant Lluís",
+    "zona": "Sud de Menorca",
+    "illa": "Menorca",
+    "distancia_km": 11.8,
+    "desnivell_positiu_m": 130,
+    "dificultat": "Moderada",
+    "durada_estimada": "3h 30min",
+    "apte_unitats": [
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Cala en Porter",
+      "Es Canutells",
+      "Binisafúller"
+    ],
+    "consells_seguretat": "Mosaic rural menorquí amb túnels de vegetació. Tancar sempre les barreres de bestiar de llenyam per respectar les finques ramaderes i evitar fugides d'animals.",
+    "descripcio": "Recorregut pel sud-est menorquí visitant les cales de Calescoves (necròpolis talaiòtica), Es Canutells, Binisafúller i zones de camp tradicional.",
+    "lat": 39.871,
+    "lon": 4.133,
+    "punt_origen": "Platja de Cala en Porter",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-223+Etapa+17+Cala+Porter+Binisafuller",
+    "track_coordinates": [
+      [
+        39.871,
+        4.133
+      ],
+      [
+        39.865,
+        4.148
+      ],
+      [
+        39.852,
+        4.17
+      ],
+      [
+        39.829,
+        4.205
+      ]
+    ],
+    "punts_interes": [
+      "Cala en Porter",
+      "Calescoves (necròpolis)",
+      "Es Canutells",
+      "Binisafúller"
+    ]
+  },
+  {
+    "slug": "gr223-etapa-18-binisafuller-punta-prima",
+    "nom": "GR-223 Etapa 18: Binisafúller a Punta Prima",
+    "municipi": "Sant Lluís",
+    "zona": "Sud-Est de Menorca",
+    "illa": "Menorca",
+    "distancia_km": 8.1,
+    "desnivell_positiu_m": 55,
+    "dificultat": "Fàcil",
+    "durada_estimada": "2h 15min",
+    "apte_unitats": [
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Binisafúller",
+      "Binibèquer Vell",
+      "Punta Prima"
+    ],
+    "consells_seguretat": "Vials asfaltats i passeig marítim; compte amb el trànsit de vehicles a l'estiu. Vistes directes al far de l'Illa de l'Aire. Apte per a totes les unitats.",
+    "descripcio": "Etapa planera que creua el poblat de pescadors de Binibèquer Vell, Biniancolla i arriba a la platja de Punta Prima enfront de la reserva de l'Illa de l'Aire.",
+    "lat": 39.829,
+    "lon": 4.205,
+    "punt_origen": "Caló Blanc / Binisafúller",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-223+Etapa+18+Binisafuller+Punta+Prima",
+    "track_coordinates": [
+      [
+        39.829,
+        4.205
+      ],
+      [
+        39.822,
+        4.225
+      ],
+      [
+        39.818,
+        4.255
+      ],
+      [
+        39.814,
+        4.281
+      ]
+    ],
+    "punts_interes": [
+      "Caló Blanc",
+      "Binibèquer Vell",
+      "Biniancolla",
+      "Platja de Punta Prima",
+      "Far de l'Illa de l'Aire"
+    ]
+  },
+  {
+    "slug": "gr223-etapa-19-punta-prima-cala-sant-esteve",
+    "nom": "GR-223 Etapa 19: Punta Prima a Cala de Sant Esteve",
+    "municipi": "Es Castell",
+    "zona": "Llevant de Menorca",
+    "illa": "Menorca",
+    "distancia_km": 7.3,
+    "desnivell_positiu_m": 65,
+    "dificultat": "Fàcil",
+    "durada_estimada": "2h 00min",
+    "apte_unitats": [
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Punta Prima",
+      "Alcalfar",
+      "Cala de Sant Esteve"
+    ],
+    "consells_seguretat": "Bosc al Barranc de Rafalet d'alt valor ecològic; evitar sortir del sender marcat. Fort Marlborough i Torre d'Alcalfar al tram final amb penya-segats costaners.",
+    "descripcio": "Trajecte oriental passant per la cala d'Alcalfar, el frondós barranc d'ombres de Rafalet i la fortificació històrica britànica de Fort Marlborough a Sant Esteve.",
+    "lat": 39.814,
+    "lon": 4.281,
+    "punt_origen": "Torre de Son Ganxo (Punta Prima)",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-223+Etapa+19+Punta+Prima+Cala+Sant+Esteve",
+    "track_coordinates": [
+      [
+        39.814,
+        4.281
+      ],
+      [
+        39.828,
+        4.288
+      ],
+      [
+        39.845,
+        4.295
+      ],
+      [
+        39.863,
+        4.299
+      ]
+    ],
+    "punts_interes": [
+      "Torre de Son Ganxo",
+      "Cala d'Alcalfar",
+      "Barranc de Rafalet",
+      "Fort Marlborough",
+      "Cala de Sant Esteve"
+    ]
+  },
+  {
+    "slug": "gr223-etapa-20-cala-sant-esteve-mao",
+    "nom": "GR-223 Etapa 20: Cala de Sant Esteve a Maó",
+    "municipi": "Maó",
+    "zona": "Llevant de Menorca",
+    "illa": "Menorca",
+    "distancia_km": 6.0,
+    "desnivell_positiu_m": 75,
+    "dificultat": "Fàcil",
+    "durada_estimada": "1h 45min",
+    "apte_unitats": [
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Cala de Sant Esteve",
+      "Es Castell",
+      "Port de Maó"
+    ],
+    "consells_seguretat": "Recorregut urbà pel gran port natural de Maó. Respectar les normes de circulació per voreres i passeigs. Tancament oficial de la volta sencera a l'illa.",
+    "descripcio": "Darrera etapa del GR-223 que recorre Es Castell (Cales Fonts) i voreja el port de Maó fins a completar el perímetre complet de 185 km de l'illa.",
+    "lat": 39.863,
+    "lon": 4.299,
+    "punt_origen": "Cala de Sant Esteve",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-223+Etapa+20+Cala+Sant+Esteve+Mao",
+    "track_coordinates": [
+      [
+        39.863,
+        4.299
+      ],
+      [
+        39.872,
+        4.298
+      ],
+      [
+        39.88,
+        4.291
+      ],
+      [
+        39.8942,
+        4.2647
+      ]
+    ],
+    "punts_interes": [
+      "Cala de Sant Esteve",
+      "Es Castell (Cales Fonts)",
+      "Castell de Sant Felip",
+      "Port de Maó"
+    ]
+  },
+  {
+    "slug": "gr223-variant-far-de-cavalleria",
+    "nom": "Variant GR-223: Far de Cavalleria",
+    "municipi": "Es Mercadal",
+    "zona": "Nord de Menorca",
+    "illa": "Menorca",
+    "distancia_km": 6.5,
+    "desnivell_positiu_m": 85,
+    "dificultat": "Fàcil",
+    "durada_estimada": "1h 45min",
+    "apte_unitats": [
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Cala Tirant",
+      "Sanitja"
+    ],
+    "consells_seguretat": "Tram molt obert i exposat al vent fort de tramuntana. Extremar la precaució escolta als penya-segats de més de 90 metres d'alçada del Cap de Cavalleria.",
+    "descripcio": "Variant del Camí de Cavalls que arriba fins al punt més septentrional de Menorca, el Far de Cavalleria, passant per les ruïnes romanes del port de Sanisera.",
+    "lat": 40.045,
+    "lon": 4.113,
+    "punt_origen": "Cala Tirant / Port de Sanitja",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Variant+Far+de+Cavalleria+Menorca",
+    "track_coordinates": [
+      [
+        40.045,
+        4.113
+      ],
+      [
+        40.058,
+        4.101
+      ],
+      [
+        40.075,
+        4.098
+      ],
+      [
+        40.088,
+        4.093
+      ]
+    ],
+    "punts_interes": [
+      "Port de Sanitja (Sanisera romana)",
+      "Cap de Cavalleria",
+      "Far de Cavalleria",
+      "Penya-segats del Cap"
+    ]
+  },
+  {
+    "slug": "gr223-variant-barranc-dalgendar",
+    "nom": "Variant GR-223: Barranc d'Algendar",
+    "municipi": "Ferreries",
+    "zona": "Sud de Menorca",
+    "illa": "Menorca",
+    "distancia_km": 7.5,
+    "desnivell_positiu_m": 40,
+    "dificultat": "Moderada",
+    "durada_estimada": "2h 15min",
+    "apte_unitats": [
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rutes"
+    ],
+    "punts_aigua": [
+      "Ferreries",
+      "Brolladors d'Algendar",
+      "Cala Galdana"
+    ],
+    "consells_seguretat": "Barranc profund d'alt valor biològic; humitat elevada i camí fangós a prop dels brolladors. Respectar els horts tradicionals i tancar sempre les barreres.",
+    "descripcio": "Variant que recorre el canyó més important de Menorca, amb parets verticals de 80 metres, exuberant vegetació de ribera i brolladors d'aigua permanents.",
+    "lat": 39.983,
+    "lon": 3.982,
+    "punt_origen": "Ferreries (accés camí d'Algendar)",
+    "font": "Consell Insular de Menorca",
+    "font_url": "https://www.gr223.info",
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Variant+Barranc+Algendar+Ferreries",
+    "track_coordinates": [
+      [
+        39.983,
+        3.982
+      ],
+      [
+        39.965,
+        3.974
+      ],
+      [
+        39.951,
+        3.968
+      ],
+      [
+        39.937,
+        3.963
+      ]
+    ],
+    "punts_interes": [
+      "Pas d'en Revull",
+      "Cova del Càrritx",
+      "Brollador d'aigua dolça",
+      "Desembocadura de Cala Galdana"
+    ]
+  }
+]

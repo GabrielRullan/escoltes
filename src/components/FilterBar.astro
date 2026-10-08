@@ -24,6 +24,58 @@ const { zones = [], totalRoutes = 0 } = Astro.props;
   </div>
 
   <div class="space-y-4">
+    <!-- Island Filter Selector Pills -->
+    <div>
+      <div class="flex items-center justify-between mb-2">
+        <label class="block text-[11px] font-bold text-stone-600 uppercase tracking-wider">
+          Selecciona Illa
+        </label>
+        <span class="text-[11px] text-stone-400 font-medium">Arxipèlag Balear</span>
+      </div>
+      <div class="flex flex-wrap items-center gap-2" id="islandFilterContainer">
+        <button
+          type="button"
+          class="island-pill px-3.5 py-1.5 rounded-xl border text-xs font-bold transition shadow-xs flex items-center gap-1.5 bg-[#1b4332] text-white border-[#1b4332]"
+          data-illa="all"
+        >
+          <span>🏝️</span>
+          <span>Totes</span>
+        </button>
+        <button
+          type="button"
+          class="island-pill px-3.5 py-1.5 rounded-xl border border-stone-300 bg-stone-50 hover:bg-stone-100 text-stone-700 text-xs font-semibold transition flex items-center gap-1.5"
+          data-illa="mallorca"
+        >
+          <span>⛰️</span>
+          <span>Mallorca</span>
+        </button>
+        <button
+          type="button"
+          class="island-pill px-3.5 py-1.5 rounded-xl border border-stone-300 bg-stone-50 hover:bg-stone-100 text-stone-700 text-xs font-semibold transition flex items-center gap-1.5"
+          data-illa="menorca"
+        >
+          <span>🐎</span>
+          <span>Menorca</span>
+        </button>
+        <button
+          type="button"
+          class="island-pill px-3.5 py-1.5 rounded-xl border border-stone-300 bg-stone-50 hover:bg-stone-100 text-stone-700 text-xs font-semibold transition flex items-center gap-1.5"
+          data-illa="eivissa"
+        >
+          <span>🏰</span>
+          <span>Eivissa</span>
+        </button>
+        <button
+          type="button"
+          class="island-pill px-3.5 py-1.5 rounded-xl border border-stone-300 bg-stone-50 hover:bg-stone-100 text-stone-700 text-xs font-semibold transition flex items-center gap-1.5"
+          data-illa="formentera"
+        >
+          <span>🦎</span>
+          <span>Formentera</span>
+        </button>
+      </div>
+    </div>
+
     <!-- Search text input -->
     <div class="relative">
       <input
@@ -158,11 +210,61 @@ const { zones = [], totalRoutes = 0 } = Astro.props;
     const toggleFamily = document.getElementById('toggleFamily') as HTMLButtonElement | null;
     const resetBtn = document.getElementById('resetFilters') as HTMLButtonElement | null;
     const visibleCountEl = document.getElementById('visibleCount');
+    const islandPills = document.querySelectorAll<HTMLButtonElement>('.island-pill');
 
+    let activeIlla = 'all';
     let filterWater = false;
     let filterPublic = false;
     let filterGps = false;
     let filterFamily = false;
+
+    function setActiveIsland(illa: string, syncMap: boolean = true) {
+      const normalized = (illa || 'all').toLowerCase().trim();
+      activeIlla = normalized === 'totes' ? 'all' : normalized;
+
+      // Update pill button active states
+      islandPills.forEach((btn) => {
+        const btnIlla = (btn.dataset.illa || '').toLowerCase().trim();
+        const isActive = (activeIlla === 'all' && (btnIlla === 'all' || btnIlla === 'totes')) ||
+                         (btnIlla === activeIlla);
+        if (isActive) {
+          btn.className = 'island-pill px-3.5 py-1.5 rounded-xl border text-xs font-bold transition shadow-xs flex items-center gap-1.5 bg-[#1b4332] text-white border-[#1b4332]';
+        } else {
+          btn.className = 'island-pill px-3.5 py-1.5 rounded-xl border border-stone-300 bg-stone-50 hover:bg-stone-100 text-stone-700 text-xs font-semibold transition flex items-center gap-1.5';
+        }
+      });
+
+      // Synchronize with map
+      if (syncMap && (window as any).__setMapIsland) {
+        (window as any).__setMapIsland(activeIlla);
+      }
+
+      applyFilters();
+    }
+
+    // Attach click events to island selector pills
+    islandPills.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const selected = btn.dataset.illa || 'all';
+        setActiveIsland(selected, true);
+      });
+    });
+
+    // Support URL query parameter ?illa=... on load
+    try {
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlIlla = urlParams.get('illa');
+      if (urlIlla) {
+        setActiveIsland(urlIlla, true);
+      }
+    } catch (e) {
+      // Ignore if URLSearchParams is not available
+    }
+
+    // Expose global setter if other components or map trigger island changes
+    (window as any).__setFilterIsland = (illa: string) => {
+      setActiveIsland(illa, true);
+    };
 
     function togglePill(btn: HTMLButtonElement | null, state: boolean) {
       if (!btn) return;
@@ -223,7 +325,7 @@ const { zones = [], totalRoutes = 0 } = Astro.props;
         togglePill(togglePublic, false);
         togglePill(toggleGps, false);
         togglePill(toggleFamily, false);
-        applyFilters();
+        setActiveIsland('all', true);
       });
     }
 
@@ -240,12 +342,16 @@ const { zones = [], totalRoutes = 0 } = Astro.props;
         const nom = card.dataset.nom || '';
         const municipi = card.dataset.municipi || '';
         const zona = card.dataset.zona || '';
+        const cardIlla = (card.dataset.illa || 'mallorca').toLowerCase();
         const dificultat = card.dataset.dificultat || '';
         const unitatsRaw = card.dataset.unitats || '[]';
         const hasWikiloc = card.dataset.wikiloc === 'true';
         const hasTurisme = card.dataset.turismepetit === 'true';
         const hasAigua = card.dataset.aigua === 'true';
         const titularitat = card.dataset.titularitat || '';
+
+        // 0. Island filter
+        const matchIsland = activeIlla === 'all' || cardIlla === activeIlla;
 
         // 1. Text search
         const matchText = !q || nom.includes(q) || municipi.includes(q) || zona.includes(q);
@@ -275,7 +381,7 @@ const { zones = [], totalRoutes = 0 } = Astro.props;
         const matchGps = !filterGps || hasWikiloc;
         const matchFamily = !filterFamily || hasTurisme;
 
-        if (matchText && matchUnit && matchDiff && matchZone && matchWater && matchPublic && matchGps && matchFamily) {
+        if (matchIsland && matchText && matchUnit && matchDiff && matchZone && matchWater && matchPublic && matchGps && matchFamily) {
           card.style.display = '';
           visible++;
         } else {

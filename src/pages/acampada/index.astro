@@ -2,25 +2,28 @@
 import Layout from '../../layouts/Layout.astro';
 import AlertBanner from '../../components/AlertBanner.astro';
 import MallorcaMap from '../../components/MallorcaMap.astro';
-import acampades from '../../../data/acampada_mallorca.json';
+import { getAllCampsites } from '../../data/campsites';
 import aemetMunicipis from '../../../data/aemet_municipis_balears.json';
 
+const acampades = getAllCampsites();
 const titularitats = [...new Set(acampades.map((a) => a.titularitat).filter(Boolean))].sort();
 const municipis = [...new Set(acampades.map((a) => a.municipi).filter(Boolean))].sort();
 
-const matchAemet = (mun: string) => {
+const matchAemet = (mun: string, illa?: string) => {
   const mClean = (mun || '').toLowerCase();
+  const illaClean = (illa || 'Mallorca').toLowerCase();
+  const capital = illaClean === 'menorca' ? 'maó' : (illaClean === 'eivissa' || illaClean === 'formentera') ? 'eivissa' : 'palma';
   return aemetMunicipis.find((m) => {
     const mName = m.municipi.toLowerCase();
     const mSlug = m.slug.toLowerCase().split('-id')[0];
     return mClean.includes(mName) || mName.includes(mClean) || mClean.includes(mSlug);
-  }) || aemetMunicipis.find((m) => m.municipi.toLowerCase() === 'palma');
+  }) || aemetMunicipis.find((m) => m.municipi.toLowerCase() === capital) || aemetMunicipis.find((m) => m.municipi.toLowerCase() === 'palma');
 };
 ---
 
 <Layout
-  title="Refugis i Zones d'Acampada a Mallorca - Guia Escolta"
-  description={`Guia completa dels ${acampades.length} espais d'acampada i refugis a Mallorca (IBANAT, Consell de Mallorca, municipals i privats). Capacitat, accés d'emergència i reserves.`}
+  title="Refugis i Zones d'Acampada a les Illes Balears - Guia Escolta"
+  description={`Guia completa dels ${acampades.length} espais d'acampada i refugis a les Illes Balears (Mallorca, Menorca, Eivissa i Formentera: IBANAT, Consell, IBJOVE, municipals i privats). Capacitat, accés d'emergència i reserves.`}
 >
   <div class="mb-8">
     <div class="flex items-center gap-2 text-xs text-stone-500 mb-2">
@@ -30,10 +33,10 @@ const matchAemet = (mun: string) => {
     </div>
 
     <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-stone-900 mb-3">
-      🏕️ Refugis i Zones d'Acampada a Mallorca
+      🏕️ Refugis i Zones d'Acampada a les Illes Balears
     </h1>
     <p class="text-sm sm:text-base text-stone-600 max-w-3xl leading-relaxed">
-      Directori de {acampades.length} espais d'acampada, albergs i refugis de muntanya (públics i privats) per a sortides de cap de setmana, acampades i campaments d'estiu escoltes.
+      Directori de {acampades.length} espais d'acampada, albergs i refugis de muntanya (públics i privats) a Mallorca, Menorca, Eivissa i Formentera per a sortides de cap de setmana, acampades i campaments d'estiu escoltes.
     </p>
   </div>
 
@@ -102,11 +105,12 @@ const matchAemet = (mun: string) => {
           data-municipi={item.municipi.toLowerCase()}
           data-titularitat={item.titularitat.toLowerCase()}
           data-regim={regimClass}
+          data-illa={(item.illa || 'Mallorca').toLowerCase()}
         >
           <div>
             <div class="flex items-start justify-between gap-2 mb-3 flex-wrap">
               <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl text-xs font-bold bg-stone-100 text-stone-800 border border-stone-200">
-                📍 <strong>On es troba:</strong> {item.municipi}
+                📍 <strong>On es troba:</strong> {item.municipi} · {item.illa || 'Mallorca'}
               </span>
               <span class={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-bold ${
                 isPublic ? 'bg-emerald-100 text-[#1b4332] border border-emerald-200' : 'bg-amber-100 text-amber-900 border border-amber-200'
@@ -186,7 +190,7 @@ const matchAemet = (mun: string) => {
             )}
 
             {(() => {
-              const aemet = matchAemet(item.municipi);
+              const aemet = matchAemet(item.municipi, item.illa);
               if (!aemet) return null;
               return (
                 <a
@@ -232,8 +236,9 @@ const matchAemet = (mun: string) => {
         const municipi = card.dataset.municipi || '';
         const titularitat = card.dataset.titularitat || '';
         const regim = card.dataset.regim || '';
+        const illa = card.dataset.illa || '';
 
-        const mQ = !q || nom.includes(q) || municipi.includes(q);
+        const mQ = !q || nom.includes(q) || municipi.includes(q) || illa.includes(q);
         const mT = !t || titularitat.includes(t);
         const mG = !g || regim === g;
 

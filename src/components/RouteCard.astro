@@ -3,7 +3,8 @@ interface Route {
   slug: string;
   nom: string;
   municipi: string;
-  zona: string;
+  zona?: string;
+  illa?: string;
   distancia_km: number;
   desnivell_positiu_m: number;
   dificultat: string;
@@ -64,7 +65,7 @@ const townDrawings: Record<string, { url: string; label: string }> = {
   valldemossa: { url: '/images/pobles/valldemossa.png', label: 'Valldemossa' },
 };
 
-const getRoutePhoto = (slug: string, nom: string, municipi: string) => {
+const getRoutePhoto = (slug: string, nom: string, municipi: string, illa: string = 'Mallorca') => {
   const m = (municipi || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   const s = (slug + ' ' + nom).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
@@ -79,16 +80,17 @@ const getRoutePhoto = (slug: string, nom: string, municipi: string) => {
     }
   }
 
-  // Fallback to general Tramuntana illustration
+  // Graceful fallback to general illustration for non-Mallorca municipalities or unknown towns
+  const fallbackLabel = illa && illa.toLowerCase() !== 'mallorca' ? `${illa} (Dibuix)` : 'Mallorca (Dibuix)';
   return {
     url: '/images/pobles/tramuntana_general.jpg',
-    label: 'Mallorca (Dibuix)',
+    label: fallbackLabel,
     icon: '🎨',
     isDrawing: true,
   };
 };
 
-const photo = getRoutePhoto(route.slug, route.nom, route.municipi);
+const photo = getRoutePhoto(route.slug, route.nom, route.municipi, route.illa);
 
 // Styling for difficulty badge
 const getDifficultyColor = (diff: string) => {
@@ -122,7 +124,8 @@ const hasPrivateGate = (route.passos_finca_privada || []).some((p) => {
   data-slug={route.slug}
   data-nom={route.nom.toLowerCase()}
   data-municipi={route.municipi.toLowerCase()}
-  data-zona={route.zona.toLowerCase()}
+  data-zona={(route.zona || '').toLowerCase()}
+  data-illa={(route.illa || 'Mallorca').toLowerCase()}
   data-dificultat={route.dificultat.toLowerCase()}
   data-unitats={JSON.stringify(route.apte_unitats || [])}
   data-wikiloc={route.wikiloc_url ? 'true' : 'false'}
@@ -178,7 +181,7 @@ const hasPrivateGate = (route.passos_finca_privada || []).some((p) => {
     <!-- Bottom Overlay on Image: Location & Experience Count -->
     <div class="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white/95 pointer-events-none z-10">
       <span class="text-xs font-medium tracking-wide flex items-center gap-1 text-white/90 drop-shadow-sm">
-        📍 {route.municipi} · {route.zona}
+        📍 {route.municipi}{route.zona ? ` · ${route.zona}` : (route.illa && route.illa.toLowerCase() !== 'mallorca' ? ` · ${route.illa}` : '')}
       </span>
       {experienceCount > 0 && (
         <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-400 text-stone-950 shadow-sm">

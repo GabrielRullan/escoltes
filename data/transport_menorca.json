@@ -1,0 +1,196 @@
+{
+  "linies_bus": [
+    {
+      "codi": "MEN L01",
+      "nom": "Maó - Alaior - Es Mercadal - Ferreries - Ciutadella",
+      "corredor": "Eix Central (Connexió Total)",
+      "municipis_coberts": [
+        "Maó",
+        "Alaior",
+        "Es Mercadal",
+        "Ferreries",
+        "Ciutadella"
+      ],
+      "parades_clau": [
+        "Estació d'Autobusos de Maó",
+        "Alaior Centre",
+        "Es Mercadal",
+        "Ferreries",
+        "Via Perimetral de Ciutadella"
+      ],
+      "link_horaris": "https://www.tib.org/ca/web/ctm/autobus/linia/01"
+    },
+    {
+      "codi": "MEN L02",
+      "nom": "Maó - Es Castell",
+      "corredor": "Llevant",
+      "municipis_coberts": [
+        "Maó",
+        "Es Castell"
+      ],
+      "parades_clau": [
+        "Estació d'Autobusos de Maó",
+        "Es Castell Centre",
+        "Cala de Sant Esteve"
+      ],
+      "link_horaris": "https://www.tmsa.es/"
+    },
+    {
+      "codi": "MEN L03",
+      "nom": "Maó - Sant Lluís",
+      "corredor": "Llevant",
+      "municipis_coberts": [
+        "Maó",
+        "Sant Lluís"
+      ],
+      "parades_clau": [
+        "Estació d'Autobusos de Maó",
+        "Sant Lluís Centre",
+        "Campament Biniparratx / Punta Prima"
+      ],
+      "link_horaris": "https://www.tmsa.es/"
+    },
+    {
+      "codi": "MEN L21",
+      "nom": "Maó - Sant Climent",
+      "corredor": "Llevant Sud",
+      "municipis_coberts": [
+        "Maó",
+        "Sant Climent"
+      ],
+      "parades_clau": [
+        "Estació d'Autobusos de Maó",
+        "Sant Climent",
+        "Binissafúller"
+      ],
+      "link_horaris": "https://www.tmsa.es/"
+    },
+    {
+      "codi": "MEN L22",
+      "nom": "Maó - Canutells",
+      "corredor": "Llevant Sud",
+      "municipis_coberts": [
+        "Maó",
+        "Sant Lluís"
+      ],
+      "parades_clau": [
+        "Estació d'Autobusos de Maó",
+        "Sant Climent",
+        "Es Canutells",
+        "Binisafúller"
+      ],
+      "link_horaris": "https://www.tmsa.es/"
+    },
+    {
+      "codi": "MEN L31",
+      "nom": "Maó - Fornells",
+      "corredor": "Tramuntana Nord",
+      "municipis_coberts": [
+        "Maó",
+        "Es Mercadal",
+        "Fornells"
+      ],
+      "parades_clau": [
+        "Estació d'Autobusos de Maó",
+        "Es Mercadal",
+        "Arenal d'en Castell",
+        "Fornells Port"
+      ],
+      "link_horaris": "https://www.tmsa.es/"
+    },
+    {
+      "codi": "MEN L51",
+      "nom": "Maó - Alaior - Ferreries - Cala Galdana",
+      "corredor": "Migjorn Sud",
+      "municipis_coberts": [
+        "Maó",
+        "Alaior",
+        "Ferreries",
+        "Cala Galdana"
+      ],
+      "parades_clau": [
+        "Estació d'Autobusos de Maó",
+        "Alaior",
+        "Ferreries",
+        "Cala Galdana"
+      ],
+      "link_horaris": "https://www.tmsa.es/"
+    },
+    {
+      "codi": "MEN L52",
+      "nom": "Ciutadella - Ferreries - Cala Galdana",
+      "corredor": "Migjorn Oest",
+      "municipis_coberts": [
+        "Ciutadella",
+        "Ferreries",
+        "Cala Galdana"
+      ],
+      "parades_clau": [
+        "Plaça dels Pins (Ciutadella)",
+        "Ferreries",
+        "Cala Galdana"
+      ],
+      "link_horaris": "https://www.tmsa.es/"
+    },
+    {
+      "codi": "MEN L62",
+      "nom": "Ciutadella - Cala Morell - La Vall",
+      "corredor": "Ponent / Nord",
+      "municipis_coberts": [
+        "Ciutadella"
+      ],
+      "parades_clau": [
+        "Via Perimetral (Ciutadella)",
+        "Cala Morell",
+        "La Vall (Algaiarens)"
+      ],
+      "link_horaris": "https://e-torres.net/"
+    },
+    {
+      "codi": "MEN L65",
+      "nom": "Ciutadella - Caleta - Cala en Bosc - Son Xoriguer",
+      "corredor": "Ponent Sud",
+      "municipis_coberts": [
+        "Ciutadella"
+      ],
+      "parades_clau": [
+        "Ciutadella Centre",
+        "Sa Caleta",
+        "Cap d'Artrutx",
+        "Cala en Bosc",
+        "Son Xoriguer"
+      ],
+      "link_horaris": "https://e-torres.net/"
+    },
+    {
+      "codi": "MEN L68",
+      "nom": "Ciutadella - Cala Turqueta",
+      "corredor": "Platges Sud",
+      "municipis_coberts": [
+        "Ciutadella"
+      ],
+      "parades_clau": [
+        "Via Perimetral (Ciutadella)",
+        "Pàrquing Cala Turqueta"
+      ],
+      "link_horaris": "https://e-torres.net/"
+    },
+    {
+      "codi": "MEN L73",
+      "nom": "Maó - Alaior - Es Migjorn Gran",
+      "corredor": "Migjorn Central",
+      "municipis_coberts": [
+        "Maó",
+        "Alaior",
+        "Es Migjorn Gran"
+      ],
+      "parades_clau": [
+        "Estació d'Autobusos de Maó",
+        "Alaior",
+        "Es Migjorn Gran",
+        "Sant Tomàs"
+      ],
+      "link_horaris": "https://www.tmsa.es/"
+    }
+  ]
+}

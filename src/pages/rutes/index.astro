@@ -4,9 +4,10 @@ import RouteCard from '../../components/RouteCard.astro';
 import FilterBar from '../../components/FilterBar.astro';
 import MallorcaMap from '../../components/MallorcaMap.astro';
 
-import routes from '../../../data/rutes_mallorca.json';
+import { getAllRoutes } from '../../data/routes';
 import experiencies from '../../../data/experiencies_rutes.json';
 
+const routes = getAllRoutes();
 const zones = [...new Set(routes.map((r) => r.zona).filter(Boolean))].sort();
 
 const expCounts: Record<string, number> = {};
@@ -16,8 +17,8 @@ experiencies.forEach((e) => {
 ---
 
 <Layout
-  title="Catàleg d'excursions escoltes a Mallorca - 65+ rutes"
-  description="Catàleg complet de rutes escoltes a Mallorca: Serra de Tramuntana, Raiguer, Pla i Llevant. Amb desnivell, punts d'aigua i connexió TIB."
+  title="Catàleg d'excursions escoltes a les Illes Balears - 95+ rutes a Mallorca, Menorca, Eivissa i Formentera"
+  description="Catàleg complet d'excursions escoltes a les Illes Balears: 95+ rutes a Mallorca (Serra de Tramuntana, GR-221), Menorca (Camí de Cavalls GR-223), Eivissa i Formentera amb perfils, aigua i transport públic."
 >
   <div class="mb-8">
     <div class="flex items-center gap-2 text-xs text-stone-500 mb-2">
@@ -27,10 +28,10 @@ experiencies.forEach((e) => {
     </div>
 
     <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-stone-900 mb-3">
-      🥾 Catàleg d'excursions escoltes a Mallorca
+      🥾 Catàleg d'excursions escoltes a les Illes Balears
     </h1>
     <p class="text-sm sm:text-base text-stone-600 max-w-3xl leading-relaxed">
-      Més de 65 rutes catalogades i revisades per a agrupaments escoltes i guies. Filtra per edat / unitat, dificultat o zona per planificar la vostra propera sortida de camp.
+      Més de {routes.length} rutes catalogades i revisades a Mallorca, Menorca, Eivissa i Formentera per a agrupaments escoltes i guies. Filtra per illa, edat / unitat, dificultat o zona per planificar la vostra propera sortida de camp.
     </p>
   </div>
 

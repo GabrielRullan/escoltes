@@ -1,0 +1,209 @@
+[
+  {
+    "slug": "formentera-ruta-verda-1-la-savina-ses-illetes",
+    "nom": "Ruta Verda 1: La Savina a Ses Illetes",
+    "municipi": "Formentera",
+    "zona": "Parc Natural de ses Salines de Formentera",
+    "illa": "Formentera",
+    "distancia_km": 3.4,
+    "desnivell_positiu_m": 10,
+    "dificultat": "Fàcil",
+    "durada_estimada": "1h 00min",
+    "apte_unitats": [
+      "Castors/Fures",
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rutes i guies"
+    ],
+    "punts_aigua": [
+      "Port de la Savina (inici, fonts públiques i serveis)"
+    ],
+    "consells_seguretat": "Nul·la ombra natural i forta insolació. Calor elevada i reflex solar intens sobre la sorra i les salines; risc alt de deshidratació i cop de calor durant els mesos càlids. Dur barret, protecció solar factor 50 i mínim 2 litres d'aigua per persona. Respectar estrictament el pas per les passarel·les de fusta per no erosionar el sistema dunar protegit.",
+    "descripcio": "Ruta verda de senderisme i cicloturisme que arrenca al port de la Savina, voreja l'Estany Pudent i els antics estanys saliners fins a la idíl·lica platja de ses Illetes, dins el Parc Natural de ses Salines d'Eivissa i Formentera.",
+    "lat": 38.7335,
+    "lon": 1.417,
+    "punt_origen": "Estació Marítima del Port de La Savina (parada bus L1/L2)",
+    "font": "Consell de Formentera",
+    "wikiloc_url": "https://www.wikiloc.com/rutas-senderismo/ruta-verda-1-la-savina-ses-illetes-formentera-14829104",
+    "track_coordinates": [
+      [
+        38.7335,
+        1.417
+      ],
+      [
+        38.742,
+        1.423
+      ],
+      [
+        38.751,
+        1.428
+      ],
+      [
+        38.758,
+        1.433
+      ]
+    ],
+    "punts_interes": [
+      "Port de la Savina",
+      "Estany Pudent i avifauna aquàtica",
+      "Salines històriques de Formentera",
+      "Platja de Cavall d'en Borràs",
+      "Platja de ses Illetes"
+    ],
+    "itinerari_passos": [
+      {
+        "pas": 1,
+        "nom": "Sortida de la Savina",
+        "desc": "Inici al port vorejant l'Estany Pudent pel carril senyalitzat de terra."
+      },
+      {
+        "pas": 2,
+        "nom": "Camí de les Salines",
+        "desc": "Recorregut entre els estanys saliners tradicionals i la costa de ponent."
+      },
+      {
+        "pas": 3,
+        "nom": "Passarel·les de ses Illetes",
+        "desc": "Tram final per passarel·les de fusta sobre el sistema dunar fins a la platja."
+      }
+    ]
+  },
+  {
+    "slug": "formentera-cami-sa-pujada-la-mola",
+    "nom": "Camí de sa Pujada (La Mola)",
+    "municipi": "Formentera",
+    "zona": "Es Caló / La Mola",
+    "illa": "Formentera",
+    "distancia_km": 4.0,
+    "desnivell_positiu_m": 195,
+    "dificultat": "Moderada",
+    "durada_estimada": "1h 30min",
+    "apte_unitats": [
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rutes i guies"
+    ],
+    "punts_aigua": [
+      "Es Caló de Sant Agustí (inici)",
+      "El Pilar de la Mola (final)"
+    ],
+    "consells_seguretat": "Històric camí empedrat (Bé d'Interès Cultural) amb un desnivell empinat. Les lloses de pedra calcària polida són molt relliscoses amb humitat matinal o pluja; indispensable calçat de muntanya. Alts penya-segats sobre el mar; extremar la precaució i supervisió d'escoltes als miradors naturals per prevenir qualsevol perill de caiguda. Forta calor i sol directe a l'estiu; portar aigua abundant, gorra i crema de protecció solar.",
+    "descripcio": "L'antiga via d'accés tradicional a l'altiplà de la Mola, també coneguda com a camí Romà, declarada Bé d'Interès Cultural. Ofereix les vistes panoràmiques més espectaculars de tot l'istme de Formentera i les aigües del nord.",
+    "lat": 38.678,
+    "lon": 1.517,
+    "punt_origen": "Port pesquer d'Es Caló de Sant Agustí (parada bus L2)",
+    "font": "Consell de Formentera",
+    "wikiloc_url": "https://www.wikiloc.com/rutas-senderismo/ruta-verda-25-cami-de-sa-pujada-es-calo-la-mola-16382901",
+    "track_coordinates": [
+      [
+        38.678,
+        1.517
+      ],
+      [
+        38.672,
+        1.524
+      ],
+      [
+        38.669,
+        1.535
+      ],
+      [
+        38.668,
+        1.545
+      ]
+    ],
+    "punts_interes": [
+      "Port pesquer d'Es Caló de Sant Agustí",
+      "Varadors tradicionals de fusta",
+      "Camí empedrat de sa Pujada (BIC)",
+      "Mirador natural de les Rotes",
+      "Altiplà d'El Pilar de la Mola"
+    ],
+    "itinerari_passos": [
+      {
+        "pas": 1,
+        "nom": "Inici a Es Caló",
+        "desc": "Sortida des del port pesquer creuant la carretera Ma-2 cara a l'inici del camí empedrat."
+      },
+      {
+        "pas": 2,
+        "nom": "Ascensió pel Camí Romà",
+        "desc": "Pujada progressiva per la calçada de pedra amb miradors cap als dos costats de l'illa."
+      },
+      {
+        "pas": 3,
+        "nom": "Arribada a La Mola",
+        "desc": "Coronament de l'altiplà i arribada a la pista que condueix al poble del Pilar."
+      }
+    ]
+  },
+  {
+    "slug": "formentera-far-cap-de-barbaria",
+    "nom": "Far del Cap de Barbaria",
+    "municipi": "Formentera",
+    "zona": "Cap de Barbaria / Sud",
+    "illa": "Formentera",
+    "distancia_km": 4.4,
+    "desnivell_positiu_m": 40,
+    "dificultat": "Fàcil",
+    "durada_estimada": "1h 15min",
+    "apte_unitats": [
+      "Castors/Fures",
+      "Llops/Daines",
+      "Pioners/Rangers",
+      "Rutes i guies"
+    ],
+    "punts_aigua": [
+      "Cap punt al recorregut; portar aigua des de Sant Francesc Xavier"
+    ],
+    "consells_seguretat": "Entorn semidesèrtic i rocós amb manca total d'ombra natural o arbrat. Forta calor i insolació extrema; dur mínim 2 litres d'aigua per persona, barret i protecció solar. Perill extrem de caiguda al buit a la Cova Foradada (avenc que s'obre verticalment sobre el penya-segat marítim a gran alçada) i al perímetre dels penya-segats del far; supervisió d'escoltes estricta i prohibit apropar-se a la vora del penyal.",
+    "descripcio": "Trajecte tranquil pel paisatge àrid i solitari del sud de Formentera cap al far del Cap de Barbaria, la Torre de Garroveret i la cèlebre Cova Foradada foradada al penya-segat.",
+    "lat": 38.665,
+    "lon": 1.396,
+    "punt_origen": "Pàrquing d'accés al Cap de Barbaria (barrera forestal)",
+    "font": "Consell de Formentera",
+    "wikiloc_url": "https://www.wikiloc.com/rutas-senderismo/ruta-verda-8-cap-de-barbaria-far-cova-foradada-15948302",
+    "track_coordinates": [
+      [
+        38.665,
+        1.396
+      ],
+      [
+        38.658,
+        1.391
+      ],
+      [
+        38.651,
+        1.387
+      ],
+      [
+        38.648,
+        1.385
+      ]
+    ],
+    "punts_interes": [
+      "Paisatge semidesèrtic del Cap de Barbaria",
+      "Far de Barbaria",
+      "Cova Foradada (avenc natural al penya-segat)",
+      "Torre des Garroveret (segle XVIII)",
+      "Penya-segats de la costa sud"
+    ],
+    "itinerari_passos": [
+      {
+        "pas": 1,
+        "nom": "Pista des del pàrquing",
+        "desc": "Sortida de la barrera per la pista asfaltada d'accés restringit a vianants i bicicletes."
+      },
+      {
+        "pas": 2,
+        "nom": "Arribada al Far",
+        "desc": "Passeig fins a l'esplanada del far amb el mar obert a l'horitzó."
+      },
+      {
+        "pas": 3,
+        "nom": "Torre de Garroveret i Cova Foradada",
+        "desc": "Exploració amb màxima prudència de la torre i els miradors abans de retornar."
+      }
+    ]
+  }
+]
