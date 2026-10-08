@@ -125,6 +125,12 @@ const matchAemet = (mun: string) => {
           </p>
 
           <div class="space-y-2 text-xs text-stone-700 mb-4 bg-stone-50 p-3.5 rounded-xl border border-stone-100">
+            {item.punt_origen && (
+              <div class="flex items-start gap-1.5 text-xs text-stone-800 pb-2 border-b border-stone-200/60">
+                <span class="text-amber-700 font-bold shrink-0">🚩</span>
+                <span><strong>Punt d'origen / accés:</strong> {item.punt_origen}</span>
+              </div>
+            )}
             {item.lat && item.lon && (
               <div class="flex items-center justify-between text-[11px] pb-1.5 border-b border-stone-200/60">
                 <span class="flex items-center gap-1 text-stone-600">

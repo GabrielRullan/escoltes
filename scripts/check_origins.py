@@ -1,0 +1,133 @@
+import json
+
+# Mapping of exact starting points for all 65 routes in Mallorca
+ROUTE_ORIGINS = {
+    "gr221-etapa-1-port-andratx-trapa": "Port d'Andratx (carrer de la Cala d'en Basset / passeig marítim)",
+    "gr221-etapa-2-la-trapa-estellencs": "Monestir de La Trapa (Coll de sa Gramola / Sant Elm)",
+    "gr221-etapa-3-estellencs-esporles": "Estellencs (Plaça Constitució o Ma-10 sortida cap a Banyalbufar)",
+    "gr221-etapa-4-esporles-deia": "Esporles (Passeig del Rei / Camí de Correu)",
+    "gr221-etapa-5-deia-port-soller": "Deià (Refugi de Can Boi / Camí des Cingle)",
+    "gr221-etapa-6-soller-tossals-verds": "Sóller (Plaça de la Constitució / Pont d'en Barona)",
+    "gr221-etapa-7-tossals-verds-son-amer": "Refugi de Tossals Verds (accés des de Cúber o Alaró)",
+    "gr221-etapa-8-son-amer-pollenca": "Refugi de Son Amer (Lluc, Escorca)",
+    "es-salt-des-freu-orient": "Carretera Ma-2100 (km 8,5 entre Bunyola i Orient, entrada del Camí de son Roig)",
+    "ses-fonts-ufanes-campanet": "Aparcament de l'Ermita de Sant Miquel (Campanet)",
+    "cami-de-ses-voltes-galileu": "Monestir de Lluc (aparcament de ses Voltes / Font Coberta)",
+    "parc-natural-mondrago": "Centre d'Informació de ses Fonts de n'Alis (Parc Natural de Mondragó, Santanyí)",
+    "parc-natural-albufera-mallorca": "Centre de Recepció de Can Sauno (Pont dels Anglesos, Ma-12, Muro/Alcúdia)",
+    "finca-publica-raixa": "Finca Pública de Raixa (aparcament Ma-11 km 12,2, Bunyola)",
+    "cala-boquer-pollenca": "Aparcament de la Vall de Bóquer (Port de Pollença, inici de la pista)",
+    "salquerieta-vella-campament-soldats": "Centre d'informació de s'Alqueria Vella de Baix (Parc Natural de Llevant, Artà)",
+    "puig-de-galatzo-font-des-pi": "Mirador i Coll des Pi (carretera des Capdellà a Galilea)",
+    "muela-de-sesclop": "Coll de sa Gramola (aparcament de la Ma-10 km 106, Andratx)",
+    "fita-del-ram-maristella": "Esporles (aparcament de l'Església de Sant Pere o inici camí de Son Cabaspre)",
+    "sa-foradada-son-marroig": "Aparcament de Son Marroig (carretera Ma-10 Deià - Valldemossa)",
+    "ermita-trinitat-valldemossa": "Aparcament del Camí de l'Ermita de la Trinitat (Ma-10 km 69, Valldemossa)",
+    "avenc-de-son-pou": "Camí de Coanegra (Santa Maria del Camí) o Orient (Ma-2100)",
+    "puig-de-sa-comuna-bunyola": "Plaça de Bunyola o Aparcament de Cas Garriguer (Comuna de Bunyola)",
+    "parc-natural-dragonera": "Embarcador de Cala Lladó (Illa de sa Dragonera, accés en barca des de Sant Elm)",
+    "puig-de-randa-cura": "Randa (poble, aparcament d'entrada Ma-5010)",
+    "puig-de-sant-salvador-felanitx": "Aparcament del peu del calvari de Sant Salvador (carretera Ma-4011, Felanitx)",
+    "castell-de-santueri-felanitx": "Aparcament al peu del Castell de Santueri (Camí de Santueri, Felanitx)",
+    "fonts-de-sa-costera-soller": "Sóller (Plaça d'Espanya) o Biniaraix / Mirador de ses Barques (Ma-10)",
+    "puig-des-teix-valldemossa": "Valldemossa (aparcament de l'Escola Vella / Camí de s'Arxiduc)",
+    "son-real-can-picafort": "Centre d'Informació de la Finca Pública de Son Real (Ma-12 km 17,7, Santa Margalida)",
+    "castell-d-alaro": "Alaró (aparcament d'es Verger o des del poble d'Alaró)",
+    "torrent-de-pareis": "Restaurant d'Escorca (carretera Ma-10 km 25,2) o Cala Tuent / Sa Calobra",
+    "volta-puig-de-maria-pollenca": "Peu del Puig de Maria (Ma-2200, entrada sud de Pollença)",
+    "penya-de-sa-foradada-puigpunyent": "Puigpunyent (Plaça de l'Ajuntament / Camí de Son Serralta)",
+    "castell-de-bellver-bosc-palma": "Aparcament del Castell de Bellver (Carrer Camilo José Cela, Palma)",
+    "penyal-des-migdia-formentor": "Mirador des Colomer / sa Creueta (carretera del Far de Formentor Ma-2210)",
+    "puig-de-sant-miquel-montuiri": "Montuïri (Plaça Major / camí des Puig de Sant Miquel)",
+    "cami-des-rafal-deia": "Deià (Cala de Deià o parada de bus de Deià)",
+    "coma-de-binifaldo-puig-tomir": "Cases de Binifaldó (accés pel Coll de sa Batalla / Lluc, Escorca)",
+    "puig-de-ses-basses-fornalutx": "Fornalutx (Plaça d'Espanya / Camí de Monnàber)",
+    "cami-de-sa-sirereta-soller": "Sóller (carrer de la Victòria / Camí de Biniaraix)",
+    "castell-de-reina-alaro": "Plaça de la Vila d'Alaró (inici de la pujada pel Pas de s'Escaleta)",
+    "sant-elm-la-glorieta-dragonera": "Sant Elm (Aparcament de l'Avinguda de Jaume I / Camí de Cala en Basset)",
+    "clot-des-cirers-soller": "Port de Sóller (Platja d'en Repic / Camí de Muleta)",
+    "puig-de-na-francesa-bunyola": "Bunyola (Estació del Ferrocarril / Pista de la Comuna)",
+    "penyal-de-honor-orient": "Vall d'Orient (Ma-2100 km 11 / Camí des Freu)",
+    "puig-des-teix-espolres": "Esporles (Plaça de la Vila / Camí de Son Cabaspre)",
+    "embassament-cuber-gorg-blau": "Font des Noguer / Aparcament de l'Embassament de Cúber (carretera Ma-10 km 34)",
+    "monestir-de-lluc-cami-vell": "Pollença (Pont Romà / Camí Vell de Lluc)",
+    "cala-varques-manacor": "Camí de Cala Varques (carretera Ma-4014 Porto Cristo - Portocolom km 9)",
+    "puig-de-santueri-felanitx-circular": "Camí des Castell de Santueri (Ma-4012, Felanitx)",
+    "ermita-bonany-petra": "Petra (Plaça de Ramon Llull / Carrer de Bonany)",
+    "torrent-de-coanegra-santa-maria": "Santa Maria del Camí (Camí de Coanegra / Cases de Son Torrella)",
+    "penya-rotja-alcudia": "Ermita de la Victòria (aparcament del santuari, Alcúdia)",
+    "puig-de-sa-tudossa-arta": "Cases de s'Alqueria Vella de Baix (Parc Natural de la Península de Llevant, Artà)",
+    "sa-comuna-de-lloret-de-vistalegre": "Àrea recreativa de sa Comuna de Lloret de Vistalegre (camí de sa Comuna)",
+    "coll-de-sa-gramola-ses-basses": "Coll de sa Gramola (aparcament al quilòmetre 106 de la carretera Ma-10)",
+    "sanctuari-de-consolacio-santanyi": "S'Alqueria Blanca (inici del camí des Puig de Consolació, Santanyí)",
+    "ermita-de-sant-simon-caimari": "Plaça Major de Caimari (inici del Camí Vell de Lluc)",
+    "torrent-de-pareis-escorca-sa-calobra": "Aparcament del Restaurant d'Escorca (carretera Ma-10 km 25,2)",
+    "betlem-a-playa-es-calo": "Urbanització de Betlem (Carrer dels Calgues / final de l'asfalt, Artà)",
+    "mirador-de-ses-basses-son-gual-valldemossa": "Valldemossa (Part alta del poble / Camí de Son Gual)",
+    "estanyol-a-torre-estalella-llucmajor": "Club Nàutic de s'Estanyol de Migjorn (Avinguda de Bartomeu Servera)",
+    "coves-blanques-pollenca": "Cala Sant Vicenç (Platja de Cala Molins, Pollença)",
+    "finca-publica-planicia-banyalbufar": "Aparcament de la Finca Pública de Planícia (carretera Ma-10 km 90, Banyalbufar)"
+}
+
+# Mapping of exact access / starting origin points for all 45 camping & refuge spots
+ACAMPADA_ORIGINS = {
+    "la-trapa-andratx": "Sant Elm (inici Camí de la Trapa per Cala en Basset) o Coll de sa Gramola (Ma-10)",
+    "comuna-de-caimari": "Plaça de Caimari (pujada per la pista forestal de la Comuna de Caimari)",
+    "refugi-tossals-verds": "Aparcament de la Font des Noguer (Embassament de Cúber, Ma-10) o Clot d'Almadrà (Alaró)",
+    "maristella-esporles": "Esporles vila (Camí de Son Cabaspre i sender de l'Ermita de Maristel·la)",
+    "sa-coma-den-vidal": "Carretera Ma-10 km 98 (aparcament de ses Terres de Son Fortuny, Estellencs)",
+    "sa-font-coberta-lluc": "Monestir de Lluc (aparcament general Ma-10 / accés directe senyalitzat)",
+    "es-pixarells-lluc": "Carretera Ma-10 km 17 (entre Lluc i Pollença, àrea recreativa des Pixarells)",
+    "marjanor-lluc": "Monestir de Lluc (zona recreativa de Marjanor, davant el camp de futbol de Lluc)",
+    "ca-ses-monges-santa-maria": "Nucli urbà de Santa Maria del Camí (Carrer Llarg / zona parroquial)",
+    "refugi-son-amer": "Monestir de Lluc (pujada senyalitzada de 15 minuts des de l'aparcament de Lluc)",
+    "refugi-son-moragues": "Valldemossa (aparcament municipal Ma-1110 / pista forestal de Son Moragues)",
+    "campament-la-victoria-alcudia": "Carretera de la Victòria km 5 (Alcúdia, accés directe per vehicle)",
+    "ca-narabi-binissalem": "Estació de tren de Binissalem o camí rural de Ca n'Arabí",
+    "short-de-son-serra": "Son Serra de Marina (nucli urbà / accés per Ma-12)",
+    "castell-d-alaro-hostatgeria": "Plaça d'Alaró (a peu) o aparcament del Restaurant Es Verger (camí del Castell)",
+    "solivaret-alaro": "Carretera d'Alaró a Orient Ma-2100 km 3",
+    "refugi-coll-baix-alcudia": "Carretera del Mal Pas (Alcúdia) / Pista forestal del Coll Baix",
+    "santuari-de-cura-algaida": "Poble de Randa (carretera de pujada al Puig de Cura Ma-5018)",
+    "caseta-dels-oguers-arta": "Centre de Recepció de s'Alqueria Vella (Parc Natural de Llevant, Artà)",
+    "refugi-s-arenalet": "S'Alqueria Vella de Baix (Artà, sender de 2h30 a peu pel Camí dels Presos)",
+    "casa-de-salzina-albarca": "S'Alqueria Vella de Baix (Parc Natural de Llevant, pista d'Albarca)",
+    "binicanella-bunyola": "Nucli de Bunyola (carretera de Santa Maria Ma-2020 / entrada de Binicanella)",
+    "finca-de-galatzo-refugi": "Es Capdellà (Calvià, entrada principal de la Finca Pública de Galatzó)",
+    "sant-francesc-d-assis-ses-salines": "Colònia de Sant Jordi (Carrer de Dofí / accés urbà)",
+    "betlem-colonia-sant-pere": "Colònia de Sant Pere (carretera de Betlem Ma-3333)",
+    "sant-guillem-i-sant-antoni-betlem": "Ermita de Betlem (aparcament de l'Ermita Ma-3333, Artà)",
+    "refugi-can-boi": "Deià (carrer des Clot, nucli urbà accessible des de la parada de bus Ma-10)",
+    "cases-de-binifaldo": "Coll de sa Batalla (Escorca, pista forestal de Binifaldó Ma-2140)",
+    "refugi-cuber": "Aparcament de l'Embassament de Cúber (carretera Ma-10 km 34, Escorca)",
+    "son-talent-manacor": "Manacor (camí rural de Son Talent, sortida nord)",
+    "sa-murtera-manacor": "Manacor (camí vell de Sant Llorenç / Sa Murtera)",
+    "monestir-santa-llucia-mancor": "Mancor de la Vall (pujada al turó de Santa Llúcia des del poble)",
+    "puig-de-sant-miquel-montuiri-alberg": "Montuïri vila (camí asfaltat del Puig de Sant Miquel)",
+    "son-real-refugi-ibanat": "Centre d'Informació de Son Real (carretera Ma-12 km 17,7, Santa Margalida)",
+    "puig-de-maria-santuari-pollenca": "Entrada sud de Pollença (Ma-2200, inici del camí de ferradura del Puig de Maria)",
+    "refugi-lavanor-pollenca": "Carretera de Pollença a Cala Sant Vicenç / Camí de Ternelles",
+    "santuari-monti-sion-porreres": "Porreres (carrer de Monti-Sion / carretera Ma-5034)",
+    "refugi-muleta": "Port de Sóller (Platja d'en Repic / Camí del Far de Cap Gros)",
+    "puig-dalanar-manacor": "Carretera de Manacor a Porto Cristo Ma-4020 km 4",
+    "s-estanyol-llucmajor": "Nucli mariner de s'Estanyol de Migjorn (Llucmajor)",
+    "crestatx-sa-pobla": "Carretera de sa Pobla a Pollença Ma-2200 km 4 (oratori de Crestatx)",
+    "ses-fontanelles-sant-elm": "Coll de sa Gramola (carretera Ma-10 km 106, Andratx)",
+    "sant-ramon-de-penyafort-soller": "Sóller (carrer de Sant Ramon / centre urbà)",
+    "cas-garriguer-comuna-bunyola": "Poble de Bunyola (pista forestal de la Comuna de Bunyola / Cas Garriguer)",
+    "cases-des-bosc-massanella": "Mancor de la Vall (camí de Mancor a Caimari km 1,5, pista de la Finca de Massanella)"
+}
+
+print("Checking coverage...")
+routes = json.load(open('data/rutes_mallorca.json', encoding='utf-8'))
+for r in routes:
+    if r['slug'] not in ROUTE_ORIGINS:
+        print(f"MISSING ROUTE ORIGIN: {r['slug']}")
+
+acampades = json.load(open('data/acampada_mallorca.json', encoding='utf-8'))
+for a in acampades:
+    if a['slug'] not in ACAMPADA_ORIGINS:
+        print(f"MISSING ACAMPADA ORIGIN: {a['slug']}")
+
+print(f"Routes mapped: {len(ROUTE_ORIGINS)} / {len(routes)}")
+print(f"Acampades mapped: {len(ACAMPADA_ORIGINS)} / {len(acampades)}")

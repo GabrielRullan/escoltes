@@ -72,7 +72,15 @@
     ],
     "font": "Consell de Mallorca (Ruta de Pedra en Sec GR-221)",
     "font_url": "https://caminsdepedra.conselldemallorca.cat/-/etapa-1-port-d-andratx-la-trapa",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+1+Port+d+Andratx+La+Trapa"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+1+Port+d+Andratx+La+Trapa",
+    "punt_origen": "Port d'Andratx (carrer de la Cala d'en Basset / passeig marítim)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Port d'Andratx (carrer de la Cala d'en Basset / passeig marítim).",
+      "Aigua potable disponible a: Port d'Andratx (abans de sortir), Sant Elm. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Pas de sa Gramola (camí públic), Coll des Pal (obert)).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "gr221-etapa-2-la-trapa-estellencs",
@@ -146,7 +154,15 @@
     ],
     "font": "Consell de Mallorca (Ruta de Pedra en Sec GR-221)",
     "font_url": "https://caminsdepedra.conselldemallorca.cat/-/etapa-2-la-trapa-estellencs",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+2+La+Trapa+Estellencs"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+2+La+Trapa+Estellencs",
+    "punt_origen": "Monestir de La Trapa (Coll de sa Gramola / Sant Elm)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Monestir de La Trapa (Coll de sa Gramola / Sant Elm).",
+      "Aigua potable disponible a: Font de ses Fontanelles, Vila d'Estellencs. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Pas de s'Escapçat, Ses Fontanelles (passos habilitats)).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "gr221-etapa-3-estellencs-esporles",
@@ -221,7 +237,15 @@
     ],
     "font": "Consell de Mallorca (Ruta de Pedra en Sec GR-221)",
     "font_url": "https://caminsdepedra.conselldemallorca.cat/-/etapa-3-estellencs-esporles",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+3+Estellencs+Esporles"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+3+Estellencs+Esporles",
+    "punt_origen": "Estellencs (Plaça Constitució o Ma-10 sortida cap a Banyalbufar)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Estellencs (Plaça Constitució o Ma-10 sortida cap a Banyalbufar).",
+      "Aigua potable disponible a: Font de sa Coma (Banyalbufar), Banyalbufar vila, Esporles vila. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Camí des Correu (públic senyalitzat)).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "gr221-etapa-4-esporles-deia",
@@ -297,7 +321,15 @@
     ],
     "font": "Consell de Mallorca (Ruta de Pedra en Sec GR-221)",
     "font_url": "https://caminsdepedra.conselldemallorca.cat/-/etapa-4-esporles-can-boi",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+4+Esporles+Deia"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+4+Esporles+Deia",
+    "punt_origen": "Esporles (Passeig del Rei / Camí de Correu)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Esporles (Passeig del Rei / Camí de Correu).",
+      "Aigua potable disponible a: Esporles vila, Valldemossa vila, Deià vila (Refugi Can Boi). Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Camí de sa Coma des Cairats, Pla des Pouet).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "gr221-etapa-5-deia-port-soller",
@@ -375,7 +407,15 @@
     ],
     "font": "Consell de Mallorca (Ruta de Pedra en Sec GR-221)",
     "font_url": "https://caminsdepedra.conselldemallorca.cat/-/etapa-5-can-boi-muleta",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+5+Deia+Port+de+Soller"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+5+Deia+Port+de+Soller",
+    "punt_origen": "Deià (Refugi de Can Boi / Camí des Cingle)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Deià (Refugi de Can Boi / Camí des Cingle).",
+      "Aigua potable disponible a: Deià (Can Boi), Son Mico (cafè/aigua), Port de Sóller (Refugi Muleta). Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Camí des Pintors, Son Mico (obert)).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "gr221-etapa-6-soller-tossals-verds",
@@ -451,7 +491,15 @@
     ],
     "font": "Consell de Mallorca (Ruta de Pedra en Sec GR-221)",
     "font_url": "https://caminsdepedra.conselldemallorca.cat/-/etapa-6-muleta-tossals-verds",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+6+Soller+Tossals+Verds"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+6+Soller+Tossals+Verds",
+    "punt_origen": "Sóller (Plaça de la Constitució / Pont d'en Barona)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Sóller (Plaça de la Constitució / Pont d'en Barona).",
+      "Aigua potable disponible a: Biniaraix, Font de sa Mula, Refugi Tossals Verds. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Barranc de Biniaraix (públic d'interès cultural), Coll des Cornadors).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "gr221-etapa-7-tossals-verds-son-amer",
@@ -528,7 +576,15 @@
     ],
     "font": "Consell de Mallorca (Ruta de Pedra en Sec GR-221)",
     "font_url": "https://caminsdepedra.conselldemallorca.cat/-/etapa-7-tossals-verds-son-amer",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+7+Tossals+Verds+Son+Amer"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+7+Tossals+Verds+Son+Amer",
+    "punt_origen": "Refugi de Tossals Verds (accés des de Cúber o Alaró)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Refugi de Tossals Verds (accés des de Cúber o Alaró).",
+      "Aigua potable disponible a: Refugi Tossals Verds, Font des Prat, Font de sa Coma de sa Vinya, Son Amer / Lluc. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Coll des Prat, Coll de sa Batalla).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "gr221-etapa-8-son-amer-pollenca",
@@ -606,7 +662,15 @@
     ],
     "font": "Consell de Mallorca (Ruta de Pedra en Sec GR-221)",
     "font_url": "https://caminsdepedra.conselldemallorca.cat/-/etapa-8-son-amer-pont-roma",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+8+Son+Amer+Pollenca"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=GR-221+Etapa+8+Son+Amer+Pollenca",
+    "punt_origen": "Refugi de Son Amer (Lluc, Escorca)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Refugi de Son Amer (Lluc, Escorca).",
+      "Aigua potable disponible a: Son Amer, Binifaldó, Font de la Sinieta, Pollença vila. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Camí Vell de Lluc a Pollença (públic)).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "es-salt-des-freu-orient",
@@ -672,7 +736,15 @@
     "font": "Turisme Petit",
     "font_url": "https://www.turismepetit.com/excursion/excursion-al-salt-des-freu-en-orient/",
     "turismepetit_url": "https://www.turismepetit.com/excursion/excursion-al-salt-des-freu-en-orient/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Salt+des+Freu+Orient"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Salt+des+Freu+Orient",
+    "punt_origen": "Carretera Ma-2100 (km 8,5 entre Bunyola i Orient, entrada del Camí de son Roig)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Carretera Ma-2100 (km 8,5 entre Bunyola i Orient, entrada del Camí de son Roig).",
+      "Aigua potable disponible a: Font de Cals Reis (Orient). Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Camí des Freu (públic)).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "ses-fonts-ufanes-campanet",
@@ -738,7 +810,15 @@
     "font": "Govern de les Illes Balears (Monument Natural de ses Fonts Ufanes)",
     "font_url": "https://www.caib.es/sites/espaisnaturalsprotegits/ca/monument_natural_de_ses_fonts_ufanes/",
     "turismepetit_url": "https://www.turismepetit.com/excursion/ses-fonts-ufanes-en-campanet/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Ses+Fonts+Ufanes+Campanet"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Ses+Fonts+Ufanes+Campanet",
+    "punt_origen": "Aparcament de l'Ermita de Sant Miquel (Campanet)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Aparcament de l'Ermita de Sant Miquel (Campanet).",
+      "Aigua potable disponible a: Centre de Visitors de Gabellí Petit. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Finca Pública de Gabellí Petit (Govern)).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "cami-de-ses-voltes-galileu",
@@ -771,7 +851,15 @@
     "descripcio": "Ruta patrimonial que remunta les voltes empedrades cap a les antigues cases de neu de la Tramuntana.",
     "font_url": "https://caminsdepedra.conselldemallorca.cat/",
     "turismepetit_url": "https://www.turismepetit.com/excursion/voltes-den-galileu-en-escorca/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Voltes+den+Galileu+Lluc"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Voltes+den+Galileu+Lluc",
+    "punt_origen": "Monestir de Lluc (aparcament de ses Voltes / Font Coberta)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Monestir de Lluc (aparcament de ses Voltes / Font Coberta).",
+      "Aigua potable disponible a: Son Amer / Lluc. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Son Massip).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "parc-natural-mondrago",
@@ -838,7 +926,15 @@
     "font": "Govern de les Illes Balears (Parc Natural de Mondragó)",
     "font_url": "https://www.caib.es/sites/espaisnaturalsprotegits/ca/parc_natural_de_mondrago/",
     "turismepetit_url": "https://www.turismepetit.com/excursion/parque-natural-de-mondrago/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Parc+Natural+de+Mondrago"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Parc+Natural+de+Mondrago",
+    "punt_origen": "Centre d'Informació de ses Fonts de n'Alis (Parc Natural de Mondragó, Santanyí)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Centre d'Informació de ses Fonts de n'Alis (Parc Natural de Mondragó, Santanyí).",
+      "Aigua potable disponible a: Centre d'Informació del Parc Natural (sa Font de n'Alis). Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Parc Natural Protegit (públic)).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "parc-natural-albufera-mallorca",
@@ -872,7 +968,15 @@
     "descripcio": "La major zona humida de les Balears, ideal per a tallers d'observació d'aus i ecologia.",
     "font_url": "https://www.caib.es/sites/espaisnaturalsprotegits/ca/parc_natural_de_salbufera_de_mallorca/",
     "turismepetit_url": "https://www.turismepetit.com/excursion/parque-natural-de-salbufera-de-mallorca/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Parc+Natural+de+s+Albufera+de+Mallorca"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Parc+Natural+de+s+Albufera+de+Mallorca",
+    "punt_origen": "Centre de Recepció de Can Sauno (Pont dels Anglesos, Ma-12, Muro/Alcúdia)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Centre de Recepció de Can Sauno (Pont dels Anglesos, Ma-12, Muro/Alcúdia).",
+      "Aigua potable disponible a: Centre de visitants Sa Roca. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Parc Natural de s'Albufera).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "finca-publica-raixa",
@@ -905,7 +1009,15 @@
     "descripcio": "Possessió senyorial emblemàtica als peus de Bunyola amb jardins monumentals.",
     "font_url": "https://raixa.conselldemallorca.cat/",
     "turismepetit_url": "https://www.turismepetit.com/excursion/finca-publica-de-raixa-en-bunyola/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Finca+Publica+de+Raixa"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Finca+Publica+de+Raixa",
+    "punt_origen": "Finca Pública de Raixa (aparcament Ma-11 km 12,2, Bunyola)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Finca Pública de Raixa (aparcament Ma-11 km 12,2, Bunyola).",
+      "Aigua potable disponible a: Centre d'interpretació de Raixa. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Finca Pública de Raixa (Consell de Mallorca)).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "cala-boquer-pollenca",
@@ -939,7 +1051,15 @@
     "descripcio": "Passejada assequible entre muntanyes fins a una cala verge del nord de Mallorca.",
     "font_url": "https://www.turismepetit.com/excursion/cala-boquer-en-pollenca/",
     "turismepetit_url": "https://www.turismepetit.com/excursion/cala-boquer-en-pollenca/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cala+Boquer+Pollenca"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cala+Boquer+Pollenca",
+    "punt_origen": "Aparcament de la Vall de Bóquer (Port de Pollença, inici de la pista)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Aparcament de la Vall de Bóquer (Port de Pollença, inici de la pista).",
+      "Aigua potable disponible a: Port de Pollença (inici). Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Finca de Boquer).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "salquerieta-vella-campament-soldats",
@@ -971,7 +1091,15 @@
     "descripcio": "Ruta històrica i natural pel Parc Natural de Llevant des de les cases de s'Alqueria Vella.",
     "font_url": "https://www.caib.es/sites/espaisnaturalsprotegits/ca/parc_natural_de_la_peninsula_de_llevant/",
     "turismepetit_url": "https://www.turismepetit.com/excursion/parc-natural-de-llevant/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=S+Alqueria+Vella+Campament+Soldats+Arta"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=S+Alqueria+Vella+Campament+Soldats+Arta",
+    "punt_origen": "Centre d'informació de s'Alqueria Vella de Baix (Parc Natural de Llevant, Artà)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Centre d'informació de s'Alqueria Vella de Baix (Parc Natural de Llevant, Artà).",
+      "Aigua potable disponible a: Centre d'Informació de s'Alqueria Vella. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Parc Natural de la Península de Llevant).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "puig-de-galatzo-font-des-pi",
@@ -1004,7 +1132,15 @@
     "descripcio": "Ascensió al cim piramidal més emblemàtic del ponent mallorquí.",
     "turismepetit_url": "https://www.turismepetit.com/excursion/excursion-a-la-finca-publica-de-galatzo/",
     "font_url": "https://www.calvia.com/fincagalatzo/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+Galatzo+Font+des+Pi"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+Galatzo+Font+des+Pi",
+    "punt_origen": "Mirador i Coll des Pi (carretera des Capdellà a Galilea)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Mirador i Coll des Pi (carretera des Capdellà a Galilea).",
+      "Aigua potable disponible a: Font des Pi (no sempre pot). Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Finca Pública de Galatzó).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "muela-de-sesclop",
@@ -1036,7 +1172,15 @@
     "lon": 2.451,
     "descripcio": "Ruta d'alta muntanya cap a la taula rocosa de s'Esclop, on el físic Arago va mesurar el meridià de París.",
     "font_url": "https://www.calvia.com/fincagalatzo/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Muela+de+s+Esclop+Galatzo"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Muela+de+s+Esclop+Galatzo",
+    "punt_origen": "Coll de sa Gramola (aparcament de la Ma-10 km 106, Andratx)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Coll de sa Gramola (aparcament de la Ma-10 km 106, Andratx).",
+      "Aigua potable disponible a: Es Capdellà / sa Vinya. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Finca Pública de Galatzó).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "fita-del-ram-maristella",
@@ -1070,7 +1214,15 @@
     "lon": 2.569,
     "descripcio": "Excursió boscosa d'alzinar i patrimoni etnogràfic sobre la vila d'Esporles.",
     "font_url": "https://ajesporles.net/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Fita+del+Ram+Ermita+Maristella+Esporles"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Fita+del+Ram+Ermita+Maristella+Esporles",
+    "punt_origen": "Esporles (aparcament de l'Església de Sant Pere o inici camí de Son Cabaspre)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Esporles (aparcament de l'Església de Sant Pere o inici camí de Son Cabaspre).",
+      "Aigua potable disponible a: Esporles, Font de sa Sínia (Maristel·la). Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Bosc de sa Granja).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "sa-foradada-son-marroig",
@@ -1102,7 +1254,15 @@
     "lon": 2.628,
     "descripcio": "Baixada clàssica cap a la singular península rocosa foradada de la costa nord.",
     "font_url": "https://sonmarroig.com/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Sa+Foradada+Son+Marroig+Deia"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Sa+Foradada+Son+Marroig+Deia",
+    "punt_origen": "Aparcament de Son Marroig (carretera Ma-10 Deià - Valldemossa)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Aparcament de Son Marroig (carretera Ma-10 Deià - Valldemossa).",
+      "Aigua potable disponible a: Son Marroig (cafeteria). Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Possessió de Son Marroig (Arxiduc Lluís Salvador)).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "ermita-trinitat-valldemossa",
@@ -1134,7 +1294,15 @@
     "lon": 2.612,
     "descripcio": "Ruta de pau i espiritualitat pels boscos d'alzinars de Valldemossa.",
     "font_url": "https://valldemossa.es/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Ermita+de+la+Trinitat+Valldemossa"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Ermita+de+la+Trinitat+Valldemossa",
+    "punt_origen": "Aparcament del Camí de l'Ermita de la Trinitat (Ma-10 km 69, Valldemossa)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Aparcament del Camí de l'Ermita de la Trinitat (Ma-10 km 69, Valldemossa).",
+      "Aigua potable disponible a: Valldemossa / Ermita de la Trinitat. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Bosc de sa Coma).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "avenc-de-son-pou",
@@ -1167,7 +1335,15 @@
     "lon": 2.768,
     "descripcio": "Excursió per la vall de Coanegra fins a la cova-avenc amb claraboia natural més gran de Mallorca.",
     "font_url": "https://ajsantamariadelcami.org/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Avenc+de+Son+Pou+Coanegra"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Avenc+de+Son+Pou+Coanegra",
+    "punt_origen": "Camí de Coanegra (Santa Maria del Camí) o Orient (Ma-2100)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Camí de Coanegra (Santa Maria del Camí) o Orient (Ma-2100).",
+      "Aigua potable disponible a: Santa Maria del Camí. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Finca de Son Pou).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "puig-de-sa-comuna-bunyola",
@@ -1200,7 +1376,15 @@
     "lon": 2.705,
     "descripcio": "Gran bosc públic de la Comuna de Bunyola, polmó verd per a activitats escoltes.",
     "font_url": "https://ajbunyola.net/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+sa+Comuna+Bunyola+Penya+Honor"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+sa+Comuna+Bunyola+Penya+Honor",
+    "punt_origen": "Plaça de Bunyola o Aparcament de Cas Garriguer (Comuna de Bunyola)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Plaça de Bunyola o Aparcament de Cas Garriguer (Comuna de Bunyola).",
+      "Aigua potable disponible a: Bunyola (poble). Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Comuna de Bunyola (bosc públic)).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "parc-natural-dragonera",
@@ -1234,7 +1418,15 @@
     "descripcio": "Ruta insular de protecció biològica i vistes espectaculars a la costa de ponent.",
     "font_url": "https://dragonera.conselldemallorca.cat/",
     "turismepetit_url": "https://www.turismepetit.com/excursion/parque-natural-de-sa-dragonera/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Parc+Natural+de+sa+Dragonera"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Parc+Natural+de+sa+Dragonera",
+    "punt_origen": "Embarcador de Cala Lladó (Illa de sa Dragonera, accés en barca des de Sant Elm)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Embarcador de Cala Lladó (Illa de sa Dragonera, accés en barca des de Sant Elm).",
+      "Aigua potable disponible a: Centre de visitants de Cala Lledó. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Illa de sa Dragonera (Consell de Mallorca)).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "puig-de-randa-cura",
@@ -1269,7 +1461,15 @@
     "descripcio": "Muntanya sagrada del centre de Mallorca associada a la figura de Ramon Llull.",
     "font_url": "https://santuariodecura.com/",
     "turismepetit_url": "https://www.turismepetit.com/excursion/santuario-de-cura-en-randa/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+Randa+Santuari+de+Cura"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+Randa+Santuari+de+Cura",
+    "punt_origen": "Randa (poble, aparcament d'entrada Ma-5010)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Randa (poble, aparcament d'entrada Ma-5010).",
+      "Aigua potable disponible a: Randa, Santuari de Cura. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Camí vell de Randa).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "puig-de-sant-salvador-felanitx",
@@ -1303,7 +1503,15 @@
     "lon": 3.186,
     "descripcio": "El mirador natural del Llevant i Migjorn de Mallorca des de Felanitx.",
     "font_url": "https://visitfelanitx.com/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+Sant+Salvador+Felanitx"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+Sant+Salvador+Felanitx",
+    "punt_origen": "Aparcament del peu del calvari de Sant Salvador (carretera Ma-4011, Felanitx)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Aparcament del peu del calvari de Sant Salvador (carretera Ma-4011, Felanitx).",
+      "Aigua potable disponible a: Felanitx, Santuari de Sant Salvador. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Camí de la Drecera).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "castell-de-santueri-felanitx",
@@ -1335,7 +1543,15 @@
     "lon": 3.188,
     "descripcio": "Imponent castell roquer edificat sobre restes romanes i musulmanes a Felanitx.",
     "font_url": "https://visitfelanitx.com/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Castell+de+Santueri+Felanitx"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Castell+de+Santueri+Felanitx",
+    "punt_origen": "Aparcament al peu del Castell de Santueri (Camí de Santueri, Felanitx)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Aparcament al peu del Castell de Santueri (Camí de Santueri, Felanitx).",
+      "Aigua potable disponible a: Aparcament del Castell. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Camí de Santueri).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "fonts-de-sa-costera-soller",
@@ -1368,7 +1584,15 @@
     "lon": 2.735,
     "descripcio": "Una de les rutes litorals més maragda i majestuoses de la costa nord de Mallorca.",
     "font_url": "https://caminsdepedra.conselldemallorca.cat/variante-6-sa-costera-tramo-binibassi-cala-tuent",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Sa+Costera+Cala+Tuent+Soller"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Sa+Costera+Cala+Tuent+Soller",
+    "punt_origen": "Sóller (Plaça d'Espanya) o Biniaraix / Mirador de ses Barques (Ma-10)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Sóller (Plaça d'Espanya) o Biniaraix / Mirador de ses Barques (Ma-10).",
+      "Aigua potable disponible a: Biniaraix / Mirador de ses Barques, Font de sa Costera. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Finca de sa Costera).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "puig-des-teix-valldemossa",
@@ -1400,7 +1624,15 @@
     "lon": 2.625,
     "descripcio": "Spectacular camí de la carena construït per l'Arxiduc Lluís Salvador sobre Valldemossa.",
     "font_url": "https://valldemossa.es/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+des+Teix+Cami+de+s+Arxiduc+Valldemossa"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+des+Teix+Cami+de+s+Arxiduc+Valldemossa",
+    "punt_origen": "Valldemossa (aparcament de l'Escola Vella / Camí de s'Arxiduc)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Valldemossa (aparcament de l'Escola Vella / Camí de s'Arxiduc).",
+      "Aigua potable disponible a: Valldemossa (poble). Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Muntanya del Voltor (requereix permís gratuït prèvi a Valldemossa)).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "son-real-can-picafort",
@@ -1434,7 +1666,15 @@
     "descripcio": "Ruta arqueològica verge vora mar a la badia d'Alcúdia.",
     "font_url": "https://www.caib.es/sites/espaisnaturalsprotegits/ca/finca_publica_de_son_real/",
     "turismepetit_url": "https://www.turismepetit.com/excursion/finca-publica-de-son-real/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Finca+Publica+de+Son+Real"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Finca+Publica+de+Son+Real",
+    "punt_origen": "Centre d'Informació de la Finca Pública de Son Real (Ma-12 km 17,7, Santa Margalida)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Centre d'Informació de la Finca Pública de Son Real (Ma-12 km 17,7, Santa Margalida).",
+      "Aigua potable disponible a: Cases de Son Real (centre d'interpretació). Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Finca Pública de Son Real (Govern Balear)).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "castell-d-alaro",
@@ -1469,7 +1709,15 @@
     "descripcio": "Excursió clàssica de l'escoltisme mallorquí cap a la fortalesa rocosa del Castell d'Alaró.",
     "turismepetit_url": "https://www.turismepetit.com/excursion/el-castell-dalaro/",
     "font_url": "https://caminsdepedra.conselldemallorca.cat/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Castell+d+Alaro"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Castell+d+Alaro",
+    "punt_origen": "Alaró (aparcament d'es Verger o des del poble d'Alaró)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Alaró (aparcament d'es Verger o des del poble d'Alaró).",
+      "Aigua potable disponible a: Orient / Es Verger, Hostal del Castell d'Alaró. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Camí del Castell).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "torrent-de-pareis",
@@ -1501,7 +1749,15 @@
     "descripcio": "La travessa de cañón més famosa de la Mediterrània. Extrema precaució i preparació tècnica.",
     "turismepetit_url": "https://www.turismepetit.com/excursion/torrent-de-pareis-en-bus-y-barco/",
     "font_url": "https://www.caib.es/sites/espaisnaturalsprotegits/ca/monument_natural_dels_torrents_de_pareis_del_gorg_blau_i_de_lluc/",
-    "wikiloc_url": "https://es.wikiloc.com/rutas-senderismo/torrent-de-pareis-escorca-sa-calobra-2194812"
+    "wikiloc_url": "https://es.wikiloc.com/rutas-senderismo/torrent-de-pareis-escorca-sa-calobra-2194812",
+    "punt_origen": "Restaurant d'Escorca (carretera Ma-10 km 25,2) o Cala Tuent / Sa Calobra",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Restaurant d'Escorca (carretera Ma-10 km 25,2) o Cala Tuent / Sa Calobra.",
+      "Aigua potable disponible a: Escorca (inici) - CAP AIGUA EN TOT EL RECORREGUT. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Entre d'Escorca).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "volta-puig-de-maria-pollenca",
@@ -1535,7 +1791,15 @@
     "descripcio": "Ruta fàcil d'iniciació per a les branques més joves cap al cim del Puig de Maria de Pollença.",
     "font_url": "https://www.turismepetit.com/excursion/excursion-al-puig-de-maria-en-pollenca/",
     "turismepetit_url": "https://www.turismepetit.com/excursion/excursion-al-puig-de-maria-en-pollenca/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+Maria+Pollenca"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+Maria+Pollenca",
+    "punt_origen": "Peu del Puig de Maria (Ma-2200, entrada sud de Pollença)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Peu del Puig de Maria (Ma-2200, entrada sud de Pollença).",
+      "Aigua potable disponible a: Pollença poble, Santuari del Puig de Maria. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Camí públic pavimentat i empedrat).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "penya-de-sa-foradada-puigpunyent",
@@ -1567,7 +1831,15 @@
     "descripcio": "Itinerari familiar boscós al peu del Galatzó.",
     "font_url": "https://www.turismepetit.com/excursion/la-reserva-puig-de-galatzo/",
     "turismepetit_url": "https://www.turismepetit.com/excursion/la-reserva-puig-de-galatzo/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puigpunyent+Penya+de+les+Sinies"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puigpunyent+Penya+de+les+Sinies",
+    "punt_origen": "Puigpunyent (Plaça de l'Ajuntament / Camí de Son Serralta)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Puigpunyent (Plaça de l'Ajuntament / Camí de Son Serralta).",
+      "Aigua potable disponible a: Puigpunyent poble. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (La Reserva de Puigpunyent).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "castell-de-bellver-bosc-palma",
@@ -1598,7 +1870,15 @@
     "lon": 2.619,
     "descripcio": "El bosc urbà escolta per excel·lència dels agrupaments de la ciutat de Palma.",
     "font_url": "https://castelldebellver.palma.cat/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Castell+de+Bellver+bosc+Palma"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Castell+de+Bellver+bosc+Palma",
+    "punt_origen": "Aparcament del Castell de Bellver (Carrer Camilo José Cela, Palma)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Aparcament del Castell de Bellver (Carrer Camilo José Cela, Palma).",
+      "Aigua potable disponible a: Fonts públiques del Parc de Bellver. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Parc Públic del Castell de Bellver).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "penyal-des-migdia-formentor",
@@ -1632,7 +1912,15 @@
     "descripcio": "Ruta litoral per la península de Formentor finalitzant a la cala verge de Cala Murta.",
     "font_url": "https://www.turismepetit.com/excursion/cala-murta-en-pollenca/",
     "turismepetit_url": "https://www.turismepetit.com/excursion/cala-murta-en-pollenca/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cala+Murta+Formentor"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cala+Murta+Formentor",
+    "punt_origen": "Mirador des Colomer / sa Creueta (carretera del Far de Formentor Ma-2210)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Mirador des Colomer / sa Creueta (carretera del Far de Formentor Ma-2210).",
+      "Aigua potable disponible a: Cala Murta (cases de la fundació). Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Fundació Rotger-Villalonga (Cala Murta)).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "puig-de-sant-miquel-montuiri",
@@ -1663,7 +1951,15 @@
     "lon": 2.985,
     "descripcio": "Passejada rural pel Pla de Mallorca fins a l'ermita de Sant Miquel.",
     "font_url": "https://ajmontuiri.net/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+Sant+Miquel+Montuiri"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+Sant+Miquel+Montuiri",
+    "punt_origen": "Montuïri (Plaça Major / camí des Puig de Sant Miquel)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Montuïri (Plaça Major / camí des Puig de Sant Miquel).",
+      "Aigua potable disponible a: Montuïri poble. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Camí des Puig).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "cami-des-rafal-deia",
@@ -1694,7 +1990,15 @@
     "lon": 2.651,
     "descripcio": "Ruta boscosa per les terrasses d'oliveres i alzinars sobre Deià.",
     "font_url": "https://ajdeia.net/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cami+des+Rafal+Cova+sa+Cauba+Deia"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cami+des+Rafal+Cova+sa+Cauba+Deia",
+    "punt_origen": "Deià (Cala de Deià o parada de bus de Deià)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Deià (Cala de Deià o parada de bus de Deià).",
+      "Aigua potable disponible a: Deià poble. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Possessió des Rafal).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "coma-de-binifaldo-puig-tomir",
@@ -1726,7 +2030,15 @@
     "lon": 2.8988,
     "descripcio": "Una de les grans meques d'alta muntanya escolta de la Tramuntana nord.",
     "font_url": "https://caminsdepedra.conselldemallorca.cat/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+Tomir+Binifaldo+Escorca"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+Tomir+Binifaldo+Escorca",
+    "punt_origen": "Cases de Binifaldó (accés pel Coll de sa Batalla / Lluc, Escorca)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Cases de Binifaldó (accés pel Coll de sa Batalla / Lluc, Escorca).",
+      "Aigua potable disponible a: Cases de Binifaldó. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Finca de Binifaldó (IBANAT)).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "puig-de-ses-basses-fornalutx",
@@ -1758,7 +2070,15 @@
     "lon": 2.741,
     "descripcio": "Descens per la preciosa vall de Bàlitx des de Fornalutx fins a la mar.",
     "font_url": "https://ajfornalutx.net/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Fornalutx+Coll+de+sa+Balitx+Cala+Tuent"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Fornalutx+Coll+de+sa+Balitx+Cala+Tuent",
+    "punt_origen": "Fornalutx (Plaça d'Espanya / Camí de Monnàber)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Fornalutx (Plaça d'Espanya / Camí de Monnàber).",
+      "Aigua potable disponible a: Fornalutx (poble), Bàlitx d'Avall (font). Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Bàlitx d'Amunt, d'Enmig i d'Avall).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "cami-de-sa-sirereta-soller",
@@ -1789,7 +2109,15 @@
     "lon": 2.718,
     "descripcio": "Itinerari pels horts tradicionals de citrics i oli de la vall de Sóller.",
     "font_url": "https://ajsoller.net/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cami+de+sa+Sirereta+Soller"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cami+de+sa+Sirereta+Soller",
+    "punt_origen": "Sóller (carrer de la Victòria / Camí de Biniaraix)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Sóller (carrer de la Victòria / Camí de Biniaraix).",
+      "Aigua potable disponible a: Sóller poble. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Horta de Sóller).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "castell-de-reina-alaro",
@@ -1819,7 +2147,15 @@
     "lon": 2.812,
     "descripcio": "Ruta tècnica per la cara nord de la serra d'Alaró i les seves cavitats subterrànies.",
     "font_url": "https://ajalaro.net/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Pas+des+Llop+Cova+de+sa+Campana+Alaro"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Pas+des+Llop+Cova+de+sa+Campana+Alaro",
+    "punt_origen": "Plaça de la Vila d'Alaró (inici de la pujada pel Pas de s'Escaleta)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Plaça de la Vila d'Alaró (inici de la pujada pel Pas de s'Escaleta).",
+      "Aigua potable disponible a: Font de sa Cova. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Comuna d'Inca / Clot d'Alaro).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "sant-elm-la-glorieta-dragonera",
@@ -1851,7 +2187,15 @@
     "descripcio": "Passejada litoral fins a la torre de defensa amb vistes a sa Dragonera.",
     "font_url": "https://www.turismepetit.com/excursion/cala-en-basset-en-sant-elm/",
     "turismepetit_url": "https://www.turismepetit.com/excursion/cala-en-basset-en-sant-elm/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cala+en+Basset+Torre+sa+Salve+Sant+Elm"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cala+en+Basset+Torre+sa+Salve+Sant+Elm",
+    "punt_origen": "Sant Elm (Aparcament de l'Avinguda de Jaume I / Camí de Cala en Basset)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Sant Elm (Aparcament de l'Avinguda de Jaume I / Camí de Cala en Basset).",
+      "Aigua potable disponible a: Sant Elm. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Camí de sa Torre).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "clot-des-cirers-soller",
@@ -1883,7 +2227,15 @@
     "lon": 2.695,
     "descripcio": "Vall secreta d'oliveres i maquis sobre el Port de Sóller.",
     "font_url": "https://ajsoller.net/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Clot+des+Cirers+Port+de+Soller"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Clot+des+Cirers+Port+de+Soller",
+    "punt_origen": "Port de Sóller (Platja d'en Repic / Camí de Muleta)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Port de Sóller (Platja d'en Repic / Camí de Muleta).",
+      "Aigua potable disponible a: Port de Sóller, Muleta. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Finca de sa Figuera).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "puig-de-na-francesa-bunyola",
@@ -1914,7 +2266,15 @@
     "lon": 2.712,
     "descripcio": "Atalaia panoràmica sobre la vall de Bunyola i el Pla de Palma.",
     "font_url": "https://ajbunyola.net/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+na+Francesa+Bunyola"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+na+Francesa+Bunyola",
+    "punt_origen": "Bunyola (Estació del Ferrocarril / Pista de la Comuna)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Bunyola (Estació del Ferrocarril / Pista de la Comuna).",
+      "Aigua potable disponible a: Bunyola poble. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Camí de sa Coma).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "penyal-de-honor-orient",
@@ -1946,7 +2306,15 @@
     "lon": 2.785,
     "descripcio": "Connexió tradicional de muntanya entre la vall d'Orient i Santa Maria del Camí.",
     "font_url": "https://ajbunyola.net/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Penya+d+Honor+Orient+Pas+de+s+Escaleta"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Penya+d+Honor+Orient+Pas+de+s+Escaleta",
+    "punt_origen": "Vall d'Orient (Ma-2100 km 11 / Camí des Freu)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Vall d'Orient (Ma-2100 km 11 / Camí des Freu).",
+      "Aigua potable disponible a: Orient, Santa Maria del Camí. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Finca des Freu).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "puig-des-teix-espolres",
@@ -1980,7 +2348,15 @@
     "descripcio": "El camí històric medieval més popular de la Tramuntana sud.",
     "font_url": "https://caminsdepedra.conselldemallorca.cat/-/etapa-3-estellencs-esporles",
     "turismepetit_url": "https://www.turismepetit.com/excursion/el-cami-des-correu-de-esporles-a-banyalbufar/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cami+des+Correu+Esporles+Banyalbufar"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cami+des+Correu+Esporles+Banyalbufar",
+    "punt_origen": "Esporles (Plaça de la Vila / Camí de Son Cabaspre)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Esporles (Plaça de la Vila / Camí de Son Cabaspre).",
+      "Aigua potable disponible a: Esporles, Banyalbufar. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Camí des Correu públic).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "embassament-cuber-gorg-blau",
@@ -2013,7 +2389,15 @@
     "descripcio": "Passejada accessible al voltant de l'estany de Cúber sota la mirada del Puig Major.",
     "font_url": "https://caminsdepedra.conselldemallorca.cat/",
     "turismepetit_url": "https://www.turismepetit.com/excursion/embalse-de-cuber-en-escorca/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Embassament+de+Cuber+Font+de+s+Ametler"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Embassament+de+Cuber+Font+de+s+Ametler",
+    "punt_origen": "Font des Noguer / Aparcament de l'Embassament de Cúber (carretera Ma-10 km 34)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Font des Noguer / Aparcament de l'Embassament de Cúber (carretera Ma-10 km 34).",
+      "Aigua potable disponible a: Refugi de Cúber. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Finca Pública de Cúber (Govern Balear)).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "monestir-de-lluc-cami-vell",
@@ -2045,7 +2429,15 @@
     "lon": 2.945,
     "descripcio": "Antiga via de peregrinació cap al santuari de la Patrona de Mallorca.",
     "font_url": "https://caminsdepedra.conselldemallorca.cat/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cami+Vell+de+Pollenca+a+Lluc"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cami+Vell+de+Pollenca+a+Lluc",
+    "punt_origen": "Pollença (Pont Romà / Camí Vell de Lluc)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Pollença (Pont Romà / Camí Vell de Lluc).",
+      "Aigua potable disponible a: Pollença, Lluc. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Finca de Muntanya).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "cala-varques-manacor",
@@ -2077,7 +2469,15 @@
     "lon": 3.285,
     "descripcio": "Passejada pineda litoral fins a la verge Cala Varques i el seu pont de roca.",
     "font_url": "https://manacor.org/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cala+Varques+Coves+del+Pirata+Manacor"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Cala+Varques+Coves+del+Pirata+Manacor",
+    "punt_origen": "Camí de Cala Varques (carretera Ma-4014 Porto Cristo - Portocolom km 9)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Camí de Cala Varques (carretera Ma-4014 Porto Cristo - Portocolom km 9).",
+      "Aigua potable disponible a: Cap punt d'aigua - portar 2L. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Camí de Cala Varques).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "puig-de-santueri-felanitx-circular",
@@ -2108,7 +2508,15 @@
     "lon": 3.189,
     "descripcio": "Circumval·lació rocosa al voltant de la fortalesa de Santueri.",
     "font_url": "https://visitfelanitx.com/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Volta+al+Puig+de+Santueri+Felanitx"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Volta+al+Puig+de+Santueri+Felanitx",
+    "punt_origen": "Camí des Castell de Santueri (Ma-4012, Felanitx)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Camí des Castell de Santueri (Ma-4012, Felanitx).",
+      "Aigua potable disponible a: Felanitx. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Camí de Santueri).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "ermita-bonany-petra",
@@ -2141,7 +2549,15 @@
     "descripcio": "El mirador del Pla de Mallorca des del poble de Petra.",
     "font_url": "https://www.turismepetit.com/excursion/ermita-de-bonany-en-petra/",
     "turismepetit_url": "https://www.turismepetit.com/excursion/ermita-de-bonany-en-petra/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Ermita+de+Bonany+Petra"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Ermita+de+Bonany+Petra",
+    "punt_origen": "Petra (Plaça de Ramon Llull / Carrer de Bonany)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Petra (Plaça de Ramon Llull / Carrer de Bonany).",
+      "Aigua potable disponible a: Petra (poble), Ermita de Bonany. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Camí de Bonany).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "torrent-de-coanegra-santa-maria",
@@ -2172,7 +2588,15 @@
     "lon": 2.761,
     "descripcio": "Sender boscós ombrívol seguint el llit del torrent de Coanegra.",
     "font_url": "https://ajsantamariadelcami.org/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Torrent+de+Coanegra+Salt+des+Freu"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Torrent+de+Coanegra+Salt+des+Freu",
+    "punt_origen": "Santa Maria del Camí (Camí de Coanegra / Cases de Son Torrella)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Santa Maria del Camí (Camí de Coanegra / Cases de Son Torrella).",
+      "Aigua potable disponible a: Santa Maria del Camí. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Son Pou / Son Creus).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "penya-rotja-alcudia",
@@ -2204,7 +2628,15 @@
     "lon": 3.172,
     "descripcio": "Niu d'àliga defensiu a la península de la Victòria d'Alcúdia.",
     "font_url": "https://alcudia.net/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Penya+Rotja+Ermita+Victoria+Alcudia"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Penya+Rotja+Ermita+Victoria+Alcudia",
+    "punt_origen": "Ermita de la Victòria (aparcament del santuari, Alcúdia)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Ermita de la Victòria (aparcament del santuari, Alcúdia).",
+      "Aigua potable disponible a: Ermita de la Victòria. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Finca pública de la Victòria).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "puig-de-sa-tudossa-arta",
@@ -2235,7 +2667,15 @@
     "lon": 3.349,
     "descripcio": "Sostre del Parc Natural de Llevant amb panoràmiques marítimes.",
     "font_url": "https://www.caib.es/sites/espaisnaturalsprotegits/ca/parc_natural_de_la_peninsula_de_llevant/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+sa+Tudossa+Arta"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Puig+de+sa+Tudossa+Arta",
+    "punt_origen": "Cases de s'Alqueria Vella de Baix (Parc Natural de la Península de Llevant, Artà)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Cases de s'Alqueria Vella de Baix (Parc Natural de la Península de Llevant, Artà).",
+      "Aigua potable disponible a: S'Alqueria Vella. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Parc Natural de la Península de Llevant).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "sa-comuna-de-lloret-de-vistalegre",
@@ -2268,7 +2708,15 @@
     "descripcio": "Bosc pla ideal per a la primera acampada o jornada de jocs de les branques més petites.",
     "font_url": "https://www.turismepetit.com/excursion/sa-comuna-de-lloret-de-vistalegre/",
     "turismepetit_url": "https://www.turismepetit.com/excursion/sa-comuna-de-lloret-de-vistalegre/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Sa+Comuna+de+Lloret+de+Vistalegre"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Sa+Comuna+de+Lloret+de+Vistalegre",
+    "punt_origen": "Àrea recreativa de sa Comuna de Lloret de Vistalegre (camí de sa Comuna)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Àrea recreativa de sa Comuna de Lloret de Vistalegre (camí de sa Comuna).",
+      "Aigua potable disponible a: Lloret de Vistalegre. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Bosc Públic de la Comuna de Lloret).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "coll-de-sa-gramola-ses-basses",
@@ -2298,7 +2746,15 @@
     "lon": 2.395,
     "descripcio": "Mirador excepcional sobre els penya-segats del mar d'Andratx.",
     "font_url": "https://andratx.cat/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Coll+de+sa+Gramola+Puig+sa+Monja+Andratx"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Coll+de+sa+Gramola+Puig+sa+Monja+Andratx",
+    "punt_origen": "Coll de sa Gramola (aparcament al quilòmetre 106 de la carretera Ma-10)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Coll de sa Gramola (aparcament al quilòmetre 106 de la carretera Ma-10).",
+      "Aigua potable disponible a: Sense punts d'aigua. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Finca de sa Gramola).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "sanctuari-de-consolacio-santanyi",
@@ -2331,7 +2787,15 @@
     "descripcio": "Petit puig d'accés fàcil al sud de Mallorca amb panoràmiques marines.",
     "font_url": "https://www.turismepetit.com/excursion/santuario-de-consolacio-en-santanyi/",
     "turismepetit_url": "https://www.turismepetit.com/excursion/santuario-de-consolacio-en-santanyi/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Santuari+Consolacio+Santanyi"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Santuari+Consolacio+Santanyi",
+    "punt_origen": "S'Alqueria Blanca (inici del camí des Puig de Consolació, Santanyí)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de S'Alqueria Blanca (inici del camí des Puig de Consolació, Santanyí).",
+      "Aigua potable disponible a: S'Alqueria Blanca, Santuari de Consolació. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Camí des Santuari).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "ermita-de-sant-simon-caimari",
@@ -2364,7 +2828,15 @@
     "lon": 2.902,
     "descripcio": "Subida tradicional des del poble de la oliva Caimari cap a les portes de Lluc.",
     "font_url": "https://ajselva.net/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Caimari+Coll+de+sa+Batalla+Cami+Vell+Lluc"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Caimari+Coll+de+sa+Batalla+Cami+Vell+Lluc",
+    "punt_origen": "Plaça Major de Caimari (inici del Camí Vell de Lluc)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Plaça Major de Caimari (inici del Camí Vell de Lluc).",
+      "Aigua potable disponible a: Caimari (poble), Coll de sa Batalla (benzineria/restaurants). Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Camí Vell de Lluc).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "torrent-de-pareis-escorca-sa-calobra",
@@ -2422,7 +2894,15 @@
       }
     ],
     "font": "Govern de les Illes Balears (Monument Natural del Torrent de Pareis)",
-    "font_url": "https://www.caib.es/sites/espaisnaturalsprotegits/ca/monument_natural_dels_torrents_de_pareis_del_gorg_blau_i_de_lluc/"
+    "font_url": "https://www.caib.es/sites/espaisnaturalsprotegits/ca/monument_natural_dels_torrents_de_pareis_del_gorg_blau_i_de_lluc/",
+    "punt_origen": "Aparcament del Restaurant d'Escorca (carretera Ma-10 km 25,2)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Aparcament del Restaurant d'Escorca (carretera Ma-10 km 25,2).",
+      "Aigua potable disponible a: Consultar punts de recàrrega. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Consultar senyalització i camins habilitats).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "betlem-a-playa-es-calo",
@@ -2488,7 +2968,15 @@
     ],
     "font": "Turisme Petit / Parc Natural de Llevant",
     "font_url": "https://www.turismepetit.com/excursion/excursion-de-betlem-a-playa-es-calo/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Betlem+Platja+es+Calo+Arta"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Betlem+Platja+es+Calo+Arta",
+    "punt_origen": "Urbanització de Betlem (Carrer dels Calgues / final de l'asfalt, Artà)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Urbanització de Betlem (Carrer dels Calgues / final de l'asfalt, Artà).",
+      "Aigua potable disponible a: Llogaret de Betlem. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Sender públic del Parc Natural de Llevant).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "mirador-de-ses-basses-son-gual-valldemossa",
@@ -2554,7 +3042,15 @@
     ],
     "font": "Turisme Petit / Ajuntament de Valldemossa",
     "font_url": "https://www.turismepetit.com/excursion/excursion-al-mirador-de-ses-basses-y-mirador-de-son-gual/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Mirador+ses+Basses+Son+Gual+Valldemossa"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Mirador+ses+Basses+Son+Gual+Valldemossa",
+    "punt_origen": "Valldemossa (Part alta del poble / Camí de Son Gual)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Valldemossa (Part alta del poble / Camí de Son Gual).",
+      "Aigua potable disponible a: Vila de Valldemossa. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Miradors públics de sa Comuna de Valldemossa).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "estanyol-a-torre-estalella-llucmajor",
@@ -2620,7 +3116,15 @@
     ],
     "font": "Turisme Petit / Ajuntament de Llucmajor",
     "font_url": "https://www.turismepetit.com/excursion/excursion-desde-estanyol-a-torre-estalella/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=s+Estanyol+Torre+de+s+Estalella+Llucmajor"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=s+Estanyol+Torre+de+s+Estalella+Llucmajor",
+    "punt_origen": "Club Nàutic de s'Estanyol de Migjorn (Avinguda de Bartomeu Servera)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Club Nàutic de s'Estanyol de Migjorn (Avinguda de Bartomeu Servera).",
+      "Aigua potable disponible a: Poble de s'Estanyol de Migjorn. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Camí de sa costa (públic)).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "coves-blanques-pollenca",
@@ -2686,7 +3190,15 @@
     ],
     "font": "Turisme Petit / Ajuntament de Pollença",
     "font_url": "https://www.turismepetit.com/excursion/excursion-a-las-coves-blanques-en-pollenca/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Coves+Blanques+Cala+Sant+Vicenc"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Coves+Blanques+Cala+Sant+Vicenc",
+    "punt_origen": "Cala Sant Vicenç (Platja de Cala Molins, Pollença)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Cala Sant Vicenç (Platja de Cala Molins, Pollença).",
+      "Aigua potable disponible a: Cala Sant Vicenç. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Camí dels presoners (històric públic)).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   },
   {
     "slug": "finca-publica-planicia-banyalbufar",
@@ -2753,6 +3265,14 @@
     ],
     "font": "Govern de les Illes Balears (Finca Pública de Planícia)",
     "font_url": "https://www.caib.es/sites/espaisnaturalsprotegits/ca/finca_publica_de_planicia/",
-    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Finca+Publica+de+Planicia"
+    "wikiloc_url": "https://www.wikiloc.com/rutas/senderismo/espana/illes-balears?q=Finca+Publica+de+Planicia",
+    "punt_origen": "Aparcament de la Finca Pública de Planícia (carretera Ma-10 km 90, Banyalbufar)",
+    "punts_a_tenir_en_compte": [
+      "Inici i aparcament: Sortida des de Aparcament de la Finca Pública de Planícia (carretera Ma-10 km 90, Banyalbufar).",
+      "Aigua potable disponible a: Font de Planícia, Cases de Planícia. Recomanat dur cantimplora de reserva.",
+      "Pas per finques i servituds: Respecteu les propietats i tanqueu sempre totes les barreres (Finca Pública de Planícia (Govern de les Illes Balears)).",
+      "Prevenció d'incendis a les Illes Balears: Prohibició absoluta de fer foc a terreny forestal (especialment època d'alt risc de l'1 de maig al 15 d'octubre).",
+      "Seguretat i orientació: Calçat de muntanya adequat, farmaciola d'unitat, mapa/track GPS descarregat i protecció solar/gorra."
+    ]
   }
 ]

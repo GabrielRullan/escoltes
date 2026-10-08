@@ -19,7 +19,8 @@
     "acces_emergencia": "A peu des de Sant Elm o pista 4x4 des del Coll de sa Gramola",
     "lat": 39.598,
     "lon": 2.358,
-    "descripcio": "Terreny d'acampada a la finca de la Trapa en plena Serra de Tramuntana sud."
+    "descripcio": "Terreny d'acampada a la finca de la Trapa en plena Serra de Tramuntana sud.",
+    "punt_origen": "Sant Elm (inici Camí de la Trapa per Cala en Basset) o Coll de sa Gramola (Ma-10)"
   },
   {
     "slug": "comuna-de-caimari",
@@ -41,7 +42,8 @@
     "acces_emergencia": "Pista des de Caimari",
     "lat": 39.776,
     "lon": 2.903,
-    "descripcio": "Espai boscós a la Comuna de Caimari a les portes de la Serra de Tramuntana nord."
+    "descripcio": "Espai boscós a la Comuna de Caimari a les portes de la Serra de Tramuntana nord.",
+    "punt_origen": "Plaça de Caimari (pujada per la pista forestal de la Comuna de Caimari)"
   },
   {
     "slug": "refugi-tossals-verds",
@@ -65,7 +67,8 @@
     "acces_emergencia": "Camí rural accessible 4x4 des de la Ma-2130",
     "lat": 39.7583,
     "lon": 2.8222,
-    "descripcio": "Refugi clau del GR-221 amb zona habilitada per a l'acampada en tendes."
+    "descripcio": "Refugi clau del GR-221 amb zona habilitada per a l'acampada en tendes.",
+    "punt_origen": "Aparcament de la Font des Noguer (Embassament de Cúber, Ma-10) o Clot d'Almadrà (Alaró)"
   },
   {
     "slug": "maristella-esporles",
@@ -87,7 +90,8 @@
     "acces_emergencia": "A peu des d'Esporles (45 min)",
     "lat": 39.664,
     "lon": 2.569,
-    "descripcio": "Espai tradicional d'acampada escolta a l'alzinar de Maristel·la a Esporles."
+    "descripcio": "Espai tradicional d'acampada escolta a l'alzinar de Maristel·la a Esporles.",
+    "punt_origen": "Esporles vila (Camí de Son Cabaspre i sender de l'Ermita de Maristel·la)"
   },
   {
     "slug": "sa-coma-den-vidal",
@@ -110,7 +114,8 @@
     "acces_emergencia": "Camí des de la carretera Estellencs Ma-10",
     "lat": 39.638,
     "lon": 2.455,
-    "descripcio": "Refugi del GR-221 a la Tramuntana sud amb opció d'acampada en tendes."
+    "descripcio": "Refugi del GR-221 a la Tramuntana sud amb opció d'acampada en tendes.",
+    "punt_origen": "Carretera Ma-10 km 98 (aparcament de ses Terres de Son Fortuny, Estellencs)"
   },
   {
     "slug": "sa-font-coberta-lluc",
@@ -133,7 +138,8 @@
     "acces_emergencia": "Accés directe carretera Ma-10 Lluc",
     "lat": 39.824,
     "lon": 2.883,
-    "descripcio": "L'àrea d'acampada escolta de referència de l'IBANAT al costat del Monestir de Lluc."
+    "descripcio": "L'àrea d'acampada escolta de referència de l'IBANAT al costat del Monestir de Lluc.",
+    "punt_origen": "Monestir de Lluc (aparcament general Ma-10 / accés directe senyalitzat)"
   },
   {
     "slug": "es-pixarells-lluc",
@@ -155,7 +161,8 @@
     "acces_emergencia": "Carretera Lluc - Pollença Ma-10",
     "lat": 39.829,
     "lon": 2.891,
-    "descripcio": "Àrea d'acampada forestal de l'IBANAT a la carretera de Binifaldó."
+    "descripcio": "Àrea d'acampada forestal de l'IBANAT a la carretera de Binifaldó.",
+    "punt_origen": "Carretera Ma-10 km 17 (entre Lluc i Pollença, àrea recreativa des Pixarells)"
   },
   {
     "slug": "marjanor-lluc",
@@ -176,7 +183,8 @@
     "acces_emergencia": "Accés per carretera de Lluc",
     "lat": 39.821,
     "lon": 2.889,
-    "descripcio": "Terreny d'acampada de l'IBANAT a prop de sa Font Coberta."
+    "descripcio": "Terreny d'acampada de l'IBANAT a prop de sa Font Coberta.",
+    "punt_origen": "Monestir de Lluc (zona recreativa de Marjanor, davant el camp de futbol de Lluc)"
   },
   {
     "slug": "ca-ses-monges-santa-maria",
@@ -198,7 +206,8 @@
     "acces_emergencia": "Urbà des de Santa Maria",
     "lat": 39.6514,
     "lon": 2.7725,
-    "descripcio": "Instal·lació municipal a Santa Maria del Camí per a trobades i acampades escoltes."
+    "descripcio": "Instal·lació municipal a Santa Maria del Camí per a trobades i acampades escoltes.",
+    "punt_origen": "Nucli urbà de Santa Maria del Camí (Carrer Llarg / zona parroquial)"
   },
   {
     "slug": "refugi-son-amer",
@@ -223,7 +232,8 @@
     "acces_emergencia": "Accés directe per vehicle des de Lluc Ma-10",
     "lat": 39.8215,
     "lon": 2.8872,
-    "descripcio": "El refugi principal de Lluc amb zona d'acampada per a grups escoltes."
+    "descripcio": "El refugi principal de Lluc amb zona d'acampada per a grups escoltes.",
+    "punt_origen": "Monestir de Lluc (pujada senyalitzada de 15 minuts des de l'aparcament de Lluc)"
   },
   {
     "slug": "refugi-son-moragues",
@@ -245,7 +255,8 @@
     "acces_emergencia": "Pista forestal des de Valldemossa",
     "lat": 39.715,
     "lon": 2.628,
-    "descripcio": "Refugi d'alta muntanya al puig des Teix amb zona d'acampada."
+    "descripcio": "Refugi d'alta muntanya al puig des Teix amb zona d'acampada.",
+    "punt_origen": "Valldemossa (aparcament municipal Ma-1110 / pista forestal de Son Moragues)"
   },
   {
     "slug": "campament-la-victoria-alcudia",
@@ -269,7 +280,8 @@
     "acces_emergencia": "Carretera de la Victòria (Alcúdia)",
     "lat": 39.872,
     "lon": 3.17,
-    "descripcio": "Gran campament de joventut a la península de la Victòria d'Alcúdia."
+    "descripcio": "Gran campament de joventut a la península de la Victòria d'Alcúdia.",
+    "punt_origen": "Carretera de la Victòria km 5 (Alcúdia, accés directe per vehicle)"
   },
   {
     "slug": "ca-narabi-binissalem",
@@ -291,7 +303,8 @@
     "acces_emergencia": "Camí des de Binissalem",
     "lat": 39.6917,
     "lon": 2.8422,
-    "descripcio": "Terreny municipal a Binissalem utilitzat per a trobades de joventut i escoltisme."
+    "descripcio": "Terreny municipal a Binissalem utilitzat per a trobades de joventut i escoltisme.",
+    "punt_origen": "Estació de tren de Binissalem o camí rural de Ca n'Arabí"
   },
   {
     "slug": "short-de-son-serra",
@@ -314,7 +327,8 @@
     "acces_emergencia": "Son Serra de Marina",
     "lat": 39.732,
     "lon": 3.115,
-    "descripcio": "Terreny d'acampada privat a prop de la platja verge de Son Serra de Marina."
+    "descripcio": "Terreny d'acampada privat a prop de la platja verge de Son Serra de Marina.",
+    "punt_origen": "Son Serra de Marina (nucli urbà / accés per Ma-12)"
   },
   {
     "slug": "castell-d-alaro-hostatgeria",
@@ -337,7 +351,8 @@
     "acces_emergencia": "A peu o 4x4 d'emergència fins a es Verger",
     "lat": 39.7025,
     "lon": 2.7915,
-    "descripcio": "Refugi històric a la fortalesa roquera del Castell d'Alaró."
+    "descripcio": "Refugi històric a la fortalesa roquera del Castell d'Alaró.",
+    "punt_origen": "Plaça d'Alaró (a peu) o aparcament del Restaurant Es Verger (camí del Castell)"
   },
   {
     "slug": "solivaret-alaro",
@@ -359,7 +374,8 @@
     "acces_emergencia": "Carretera d'Orient Ma-2100",
     "lat": 39.712,
     "lon": 2.782,
-    "descripcio": "Instal·lació de colònies a la vall entre Alaró i Orient."
+    "descripcio": "Instal·lació de colònies a la vall entre Alaró i Orient.",
+    "punt_origen": "Carretera d'Alaró a Orient Ma-2100 km 3"
   },
   {
     "slug": "refugi-coll-baix-alcudia",
@@ -381,7 +397,8 @@
     "acces_emergencia": "Pista del Coll Baix d'Alcúdia",
     "lat": 39.865,
     "lon": 3.189,
-    "descripcio": "Refugi d'aixopluc a la península des Pinar d'Alcúdia."
+    "descripcio": "Refugi d'aixopluc a la península des Pinar d'Alcúdia.",
+    "punt_origen": "Carretera del Mal Pas (Alcúdia) / Pista forestal del Coll Baix"
   },
   {
     "slug": "santuari-de-cura-algaida",
@@ -404,7 +421,8 @@
     "acces_emergencia": "Carretera de Randa Ma-5010",
     "lat": 39.528,
     "lon": 2.926,
-    "descripcio": "Hostatgeria del Santuari de Cura al cim del Puig de Randa."
+    "descripcio": "Hostatgeria del Santuari de Cura al cim del Puig de Randa.",
+    "punt_origen": "Poble de Randa (carretera de pujada al Puig de Cura Ma-5018)"
   },
   {
     "slug": "caseta-dels-oguers-arta",
@@ -426,7 +444,8 @@
     "acces_emergencia": "A peu o vehicle de protecció civil des de s'Alqueria Vella",
     "lat": 39.742,
     "lon": 3.348,
-    "descripcio": "Refugi aïllat a la serra de Llevant."
+    "descripcio": "Refugi aïllat a la serra de Llevant.",
+    "punt_origen": "Centre de Recepció de s'Alqueria Vella (Parc Natural de Llevant, Artà)"
   },
   {
     "slug": "refugi-s-arenalet",
@@ -449,7 +468,8 @@
     "acces_emergencia": "A peu (2h30) o vehicle autoritzat",
     "lat": 39.7528,
     "lon": 3.3512,
-    "descripcio": "Un dels refugis marítims més emblemàtics de Mallorca."
+    "descripcio": "Un dels refugis marítims més emblemàtics de Mallorca.",
+    "punt_origen": "S'Alqueria Vella de Baix (Artà, sender de 2h30 a peu pel Camí dels Presos)"
   },
   {
     "slug": "casa-de-salzina-albarca",
@@ -471,7 +491,8 @@
     "acces_emergencia": "Pista forestal des de s'Alqueria Vella",
     "lat": 39.749,
     "lon": 3.339,
-    "descripcio": "Refugi rehabilitat a la finca d'Albarca."
+    "descripcio": "Refugi rehabilitat a la finca d'Albarca.",
+    "punt_origen": "S'Alqueria Vella de Baix (Parc Natural de Llevant, pista d'Albarca)"
   },
   {
     "slug": "binicanella-bunyola",
@@ -494,7 +515,8 @@
     "acces_emergencia": "Accés directe des de Bunyola",
     "lat": 39.695,
     "lon": 2.701,
-    "descripcio": "Casa de colònies històrica de l'escoltisme als peus de la Comuna de Bunyola."
+    "descripcio": "Casa de colònies històrica de l'escoltisme als peus de la Comuna de Bunyola.",
+    "punt_origen": "Nucli de Bunyola (carretera de Santa Maria Ma-2020 / entrada de Binicanella)"
   },
   {
     "slug": "finca-de-galatzo-refugi",
@@ -518,7 +540,8 @@
     "acces_emergencia": "Accés per carretera des d'Es Capdellà",
     "lat": 39.605,
     "lon": 2.462,
-    "descripcio": "Refugi de la Finca Pública de Galatzó a la Tramuntana sud."
+    "descripcio": "Refugi de la Finca Pública de Galatzó a la Tramuntana sud.",
+    "punt_origen": "Es Capdellà (Calvià, entrada principal de la Finca Pública de Galatzó)"
   },
   {
     "slug": "sant-francesc-d-assis-ses-salines",
@@ -541,7 +564,8 @@
     "acces_emergencia": "Accés urbà a la Colònia de Sant Jordi",
     "lat": 39.318,
     "lon": 3.001,
-    "descripcio": "Casa de colònies al sud de Mallorca per a trobades litorals."
+    "descripcio": "Casa de colònies al sud de Mallorca per a trobades litorals.",
+    "punt_origen": "Colònia de Sant Jordi (Carrer de Dofí / accés urbà)"
   },
   {
     "slug": "betlem-colonia-sant-pere",
@@ -563,7 +587,8 @@
     "acces_emergencia": "Carretera de Betlem",
     "lat": 39.755,
     "lon": 3.315,
-    "descripcio": "Instal·lació d'acampada a la pineda de Betlem davant la badia d me d'Alcúdia."
+    "descripcio": "Instal·lació d'acampada a la pineda de Betlem davant la badia d me d'Alcúdia.",
+    "punt_origen": "Colònia de Sant Pere (carretera de Betlem Ma-3333)"
   },
   {
     "slug": "sant-guillem-i-sant-antoni-betlem",
@@ -585,7 +610,8 @@
     "acces_emergencia": "Camí de l'Ermita de Betlem",
     "lat": 39.742,
     "lon": 3.318,
-    "descripcio": "Casa de colònies als peus de la serra d me de Betlem."
+    "descripcio": "Casa de colònies als peus de la serra d me de Betlem.",
+    "punt_origen": "Ermita de Betlem (aparcament de l'Ermita Ma-3333, Artà)"
   },
   {
     "slug": "refugi-can-boi",
@@ -609,7 +635,8 @@
     "acces_emergencia": "Accés vehicle des de Deià",
     "lat": 39.7491,
     "lon": 2.6483,
-    "descripcio": "Refugi rehabilitat al poble de Deià."
+    "descripcio": "Refugi rehabilitat al poble de Deià.",
+    "punt_origen": "Deià (carrer des Clot, nucli urbà accessible des de la parada de bus Ma-10)"
   },
   {
     "slug": "cases-de-binifaldo",
@@ -633,7 +660,8 @@
     "acces_emergencia": "Pista forestal des de la Ma-10",
     "lat": 39.8311,
     "lon": 2.8988,
-    "descripcio": "Refugi forestal al bell mig de l'alzinar de Binifaldó."
+    "descripcio": "Refugi forestal al bell mig de l'alzinar de Binifaldó.",
+    "punt_origen": "Coll de sa Batalla (Escorca, pista forestal de Binifaldó Ma-2140)"
   },
   {
     "slug": "refugi-cuber",
@@ -655,7 +683,8 @@
     "acces_emergencia": "Aparcament de Cúber Ma-10",
     "lat": 39.7821,
     "lon": 2.7915,
-    "descripcio": "Aixopluc d'alta muntanya a l'estany de Cúber."
+    "descripcio": "Aixopluc d'alta muntanya a l'estany de Cúber.",
+    "punt_origen": "Aparcament de l'Embassament de Cúber (carretera Ma-10 km 34, Escorca)"
   },
   {
     "slug": "son-talent-manacor",
@@ -677,7 +706,8 @@
     "acces_emergencia": "Camí des de Manacor",
     "lat": 39.578,
     "lon": 3.215,
-    "descripcio": "Finca pública municipal a Manacor per a activitats escoltes i juvenils."
+    "descripcio": "Finca pública municipal a Manacor per a activitats escoltes i juvenils.",
+    "punt_origen": "Manacor (camí rural de Son Talent, sortida nord)"
   },
   {
     "slug": "sa-murtera-manacor",
@@ -699,7 +729,8 @@
     "acces_emergencia": "Accés des de Manacor",
     "lat": 39.565,
     "lon": 3.228,
-    "descripcio": "Terreny municipal d'acampada a la comarca de Llevant."
+    "descripcio": "Terreny municipal d'acampada a la comarca de Llevant.",
+    "punt_origen": "Manacor (camí vell de Sant Llorenç / Sa Murtera)"
   },
   {
     "slug": "monestir-santa-llucia-mancor",
@@ -721,7 +752,8 @@
     "acces_emergencia": "Carretera de Santa Llúcia (Mancor)",
     "lat": 39.748,
     "lon": 2.871,
-    "descripcio": "Monestir i ermita a Mancor de la Vall als peus de la serra."
+    "descripcio": "Monestir i ermita a Mancor de la Vall als peus de la serra.",
+    "punt_origen": "Mancor de la Vall (pujada al turó de Santa Llúcia des del poble)"
   },
   {
     "slug": "puig-de-sant-miquel-montuiri-alberg",
@@ -743,7 +775,8 @@
     "acces_emergencia": "Camí des Puig de Sant Miquel (Montuïri)",
     "lat": 39.578,
     "lon": 2.985,
-    "descripcio": "Alberg i espai de lleure al Pla de Mallorca."
+    "descripcio": "Alberg i espai de lleure al Pla de Mallorca.",
+    "punt_origen": "Montuïri vila (camí asfaltat del Puig de Sant Miquel)"
   },
   {
     "slug": "son-real-refugi-ibanat",
@@ -766,7 +799,8 @@
     "acces_emergencia": "Entrada finca Son Real Ma-12",
     "lat": 39.751,
     "lon": 3.19,
-    "descripcio": "Refugi a la finca arqueològica i litoral de Son Real."
+    "descripcio": "Refugi a la finca arqueològica i litoral de Son Real.",
+    "punt_origen": "Centre d'Informació de Son Real (carretera Ma-12 km 17,7, Santa Margalida)"
   },
   {
     "slug": "puig-de-maria-santuari-pollenca",
@@ -789,7 +823,8 @@
     "acces_emergencia": "A peu des de Pollença (35 min)",
     "lat": 39.8735,
     "lon": 3.018,
-    "descripcio": "Refugi i hospederia al cim del Puig de Maria de Pollença."
+    "descripcio": "Refugi i hospederia al cim del Puig de Maria de Pollença.",
+    "punt_origen": "Entrada sud de Pollença (Ma-2200, inici del camí de ferradura del Puig de Maria)"
   },
   {
     "slug": "refugi-lavanor-pollenca",
@@ -811,7 +846,8 @@
     "acces_emergencia": "Pista de Ternelles (Pollença)",
     "lat": 39.891,
     "lon": 3.002,
-    "descripcio": "Refugi d'alta muntanya a Ternelles (Pollença)."
+    "descripcio": "Refugi d'alta muntanya a Ternelles (Pollença).",
+    "punt_origen": "Carretera de Pollença a Cala Sant Vicenç / Camí de Ternelles"
   },
   {
     "slug": "santuari-monti-sion-porreres",
@@ -834,7 +870,8 @@
     "acces_emergencia": "Carretera de Monti-Sion (Porreres)",
     "lat": 39.508,
     "lon": 3.031,
-    "descripcio": "Santuari i hostatgeria al Puig de Monti-Sion de Porreres."
+    "descripcio": "Santuari i hostatgeria al Puig de Monti-Sion de Porreres.",
+    "punt_origen": "Porreres (carrer de Monti-Sion / carretera Ma-5034)"
   },
   {
     "slug": "refugi-muleta",
@@ -858,7 +895,8 @@
     "acces_emergencia": "Accés per camí del far de Muleta",
     "lat": 39.7942,
     "lon": 2.6869,
-    "descripcio": "Refugi marítim del GR-221 al Cap Gros de Muleta."
+    "descripcio": "Refugi marítim del GR-221 al Cap Gros de Muleta.",
+    "punt_origen": "Port de Sóller (Platja d'en Repic / Camí del Far de Cap Gros)"
   },
   {
     "slug": "puig-dalanar-manacor",
@@ -880,7 +918,8 @@
     "acces_emergencia": "Carretera Manacor - Porto Cristo",
     "lat": 39.542,
     "lon": 3.291,
-    "descripcio": "Instal·lació municipal a prop de Porto Cristo."
+    "descripcio": "Instal·lació municipal a prop de Porto Cristo.",
+    "punt_origen": "Carretera de Manacor a Porto Cristo Ma-4020 km 4"
   },
   {
     "slug": "s-estanyol-llucmajor",
@@ -902,7 +941,8 @@
     "acces_emergencia": "s'Estanyol de Migjorn",
     "lat": 39.375,
     "lon": 2.915,
-    "descripcio": "Instal·lació de lleure litoral a s'Estanyol de Migjorn."
+    "descripcio": "Instal·lació de lleure litoral a s'Estanyol de Migjorn.",
+    "punt_origen": "Nucli mariner de s'Estanyol de Migjorn (Llucmajor)"
   },
   {
     "slug": "crestatx-sa-pobla",
@@ -925,7 +965,8 @@
     "acces_emergencia": "Carretera Sa Pobla - Pollença Ma-13",
     "lat": 39.805,
     "lon": 3.015,
-    "descripcio": "Terreny parroquial a l'alzinar de Crestatx."
+    "descripcio": "Terreny parroquial a l'alzinar de Crestatx.",
+    "punt_origen": "Carretera de sa Pobla a Pollença Ma-2200 km 4 (oratori de Crestatx)"
   },
   {
     "slug": "ses-fontanelles-sant-elm",
@@ -948,7 +989,8 @@
     "acces_emergencia": "Pista del Coll de sa Gramola",
     "lat": 39.608,
     "lon": 2.391,
-    "descripcio": "Refugi de muntanya a la primera etapa del GR-221."
+    "descripcio": "Refugi de muntanya a la primera etapa del GR-221.",
+    "punt_origen": "Coll de sa Gramola (carretera Ma-10 km 106, Andratx)"
   },
   {
     "slug": "sant-ramon-de-penyafort-soller",
@@ -971,7 +1013,8 @@
     "acces_emergencia": "Sóller vila",
     "lat": 39.768,
     "lon": 2.715,
-    "descripcio": "Casa de colònies tradicional a la Vall de Sóller."
+    "descripcio": "Casa de colònies tradicional a la Vall de Sóller.",
+    "punt_origen": "Sóller (carrer de Sant Ramon / centre urbà)"
   },
   {
     "slug": "cas-garriguer-comuna-bunyola",
@@ -995,7 +1038,8 @@
     "acces_emergencia": "Pista forestal asfaltada/terra des de Bunyola poble fins a Cas Garriguer",
     "lat": 39.7108,
     "lon": 2.7284,
-    "descripcio": "Refugi forestal rústic de l'Ajuntament de Bunyola situat a l'àrea recreativa de Cas Garriguer, en ple bosc de Sa Comuna."
+    "descripcio": "Refugi forestal rústic de l'Ajuntament de Bunyola situat a l'àrea recreativa de Cas Garriguer, en ple bosc de Sa Comuna.",
+    "punt_origen": "Poble de Bunyola (pista forestal de la Comuna de Bunyola / Cas Garriguer)"
   },
   {
     "slug": "cases-des-bosc-massanella",
@@ -1020,6 +1064,7 @@
     "acces_emergencia": "Camí de Mancor de la Vall a Caimari km 1,5, pista de la Canaleta i Coll de sa Línia",
     "lat": 39.757,
     "lon": 2.868,
-    "descripcio": "Refugi de muntanya tradicional a la finca privada de Massanella, amb cuina equipada, dutxes d'aigua calenta i accés directe al cim de Massanella."
+    "descripcio": "Refugi de muntanya tradicional a la finca privada de Massanella, amb cuina equipada, dutxes d'aigua calenta i accés directe al cim de Massanella.",
+    "punt_origen": "Mancor de la Vall (camí de Mancor a Caimari km 1,5, pista de la Finca de Massanella)"
   }
 ]
