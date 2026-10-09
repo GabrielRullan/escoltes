@@ -101,10 +101,11 @@ const { zones = [], totalRoutes = 0 } = Astro.props;
           class="w-full text-xs sm:text-sm px-3 py-2.5 rounded-xl border border-stone-300 bg-white focus:ring-2 focus:ring-[#1b4332] outline-hidden"
         >
           <option value="">⚜️ Totes les unitats</option>
-          <option value="ferreret">Ferrerets (6-8 anys)</option>
-          <option value="llop">Llops i Daines (8-11 anys)</option>
-          <option value="pioner">Pioners / Ràngers (11-14 anys)</option>
-          <option value="rutes i guies">Rutes i guies (17-19 anys)</option>
+          <option value="ferreret">🟠 Ferrerets (taronja, 6-8 anys)</option>
+          <option value="llop">🟡 Llops i Daines (groc, 8-11 anys)</option>
+          <option value="ranger">🔵 Ràngers i esplets (blau, 11-14 anys)</option>
+          <option value="pioner">🔴 Pioners i caravel·les (vermell, 14-17 anys)</option>
+          <option value="rutes">🟢 Rutes (i guies) (verd, 17-20 anys)</option>
         </select>
       </div>
 
@@ -360,7 +361,12 @@ const { zones = [], totalRoutes = 0 } = Astro.props;
         let matchUnit = true;
         if (u) {
           const uNorm = unitatsRaw.toLowerCase();
-          matchUnit = uNorm.includes(u);
+          if (u === 'ferreret') matchUnit = uNorm.includes('ferreret') || uNorm.includes('castor');
+          else if (u === 'llop') matchUnit = uNorm.includes('llop') || uNorm.includes('daina');
+          else if (u === 'ranger') matchUnit = uNorm.includes('ranger') || uNorm.includes('esplet');
+          else if (u === 'pioner') matchUnit = uNorm.includes('pioner') || uNorm.includes('caravel');
+          else if (u === 'rutes') matchUnit = uNorm.includes('rute') || uNorm.includes('guie') || uNorm.includes('rover');
+          else matchUnit = uNorm.includes(u);
         }
 
         // 3. Difficulty

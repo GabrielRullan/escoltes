@@ -10,10 +10,11 @@
     "dificultat": "Fàcil",
     "durada_estimada": "1h 30min",
     "apte_unitats": [
-      "Castors/Fures",
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes i guies"
+      "Ferrerets",
+      "Llops i Daines",
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Platja de ses Salines (inici/final, serveis i xiringuitos)",
@@ -80,8 +81,9 @@
     "dificultat": "Moderada",
     "durada_estimada": "1h 45min",
     "apte_unitats": [
-      "Pioners/Rangers",
-      "Rutes i guies"
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Cap punt al recorregut; imprescindible dur aigua des de Sant Josep"
@@ -146,8 +148,8 @@
     "dificultat": "Exigent",
     "durada_estimada": "4h 00min",
     "apte_unitats": [
-      "Pioners/Rangers",
-      "Rutes i guies"
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Sant Joan de Labritja (poble, inici)",
@@ -218,9 +220,9 @@
     "dificultat": "Moderada",
     "durada_estimada": "2h 30min",
     "apte_unitats": [
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes i guies"
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Portinatx (nucli urbà a l'inici i final)"
@@ -285,8 +287,9 @@
     "dificultat": "Moderada",
     "durada_estimada": "2h 15min",
     "apte_unitats": [
-      "Pioners/Rangers",
-      "Rutes i guies"
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Sant Mateu d'Albarca (poble, inici); nul al tram de costa"
@@ -351,10 +354,11 @@
     "dificultat": "Fàcil",
     "durada_estimada": "1h 45min",
     "apte_unitats": [
-      "Castors/Fures",
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes i guies"
+      "Ferrerets",
+      "Llops i Daines",
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Platges de Comte (serveis a l'inici) i Cala Bassa"
@@ -420,10 +424,11 @@
     "dificultat": "Fàcil",
     "durada_estimada": "1h 15min",
     "apte_unitats": [
-      "Castors/Fures",
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes i guies"
+      "Ferrerets",
+      "Llops i Daines",
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Port de Sant Miquel (platja, fonts públiques i botigues)"

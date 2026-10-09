@@ -233,19 +233,21 @@ const hasPrivateGate = (route.passos_finca_privada || []).some((p) => {
       <div class="flex flex-wrap items-center gap-1.5 mb-2">
         {route.apte_unitats && route.apte_unitats.length > 0 ? (
           route.apte_unitats.map((u) => {
-            const isFerrerets = u.toLowerCase().includes('ferreret');
+            const isFerrerets = u.toLowerCase().includes('ferreret') || u.toLowerCase().includes('castor');
             const isLlops = u.toLowerCase().includes('llop') || u.toLowerCase().includes('daina');
-            const isPioners = u.toLowerCase().includes('pioner') || u.toLowerCase().includes('ranger');
-            const isRovers = u.toLowerCase().includes('rover') || u.toLowerCase().includes('guies');
+            const isRangers = u.toLowerCase().includes('ranger') || u.toLowerCase().includes('esplet');
+            const isPioners = u.toLowerCase().includes('pioner') || u.toLowerCase().includes('caravel');
+            const isRutes = u.toLowerCase().includes('rute') || u.toLowerCase().includes('guie') || u.toLowerCase().includes('rover');
             
             let color = 'bg-stone-100 text-stone-700 border-stone-200';
-            if (isFerrerets) color = 'bg-orange-50 text-orange-800 border-orange-200';
-            else if (isLlops) color = 'bg-amber-50 text-amber-900 border-amber-200';
-            else if (isPioners) color = 'bg-blue-50 text-blue-900 border-blue-200';
-            else if (isRovers) color = 'bg-rose-50 text-rose-900 border-rose-200';
+            if (isFerrerets) color = 'bg-orange-100 text-orange-950 border-orange-300';
+            else if (isLlops) color = 'bg-yellow-100 text-yellow-950 border-yellow-300';
+            else if (isRangers) color = 'bg-blue-100 text-blue-950 border-blue-300';
+            else if (isPioners) color = 'bg-red-100 text-red-950 border-red-300';
+            else if (isRutes) color = 'bg-emerald-100 text-emerald-950 border-emerald-300';
 
             return (
-              <span class={`inline-flex items-center px-2 py-0.5 rounded-lg text-[11px] font-medium border ${color}`}>
+              <span class={`inline-flex items-center px-2 py-0.5 rounded-lg text-[11px] font-semibold border ${color}`}>
                 ⚜️ {u}
               </span>
             );

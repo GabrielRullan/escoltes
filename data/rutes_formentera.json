@@ -10,10 +10,11 @@
     "dificultat": "Fàcil",
     "durada_estimada": "1h 00min",
     "apte_unitats": [
-      "Castors/Fures",
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes i guies"
+      "Ferrerets",
+      "Llops i Daines",
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Port de la Savina (inici, fonts públiques i serveis)"
@@ -79,9 +80,9 @@
     "dificultat": "Moderada",
     "durada_estimada": "1h 30min",
     "apte_unitats": [
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes i guies"
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Es Caló de Sant Agustí (inici)",
@@ -148,10 +149,11 @@
     "dificultat": "Fàcil",
     "durada_estimada": "1h 15min",
     "apte_unitats": [
-      "Castors/Fures",
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes i guies"
+      "Ferrerets",
+      "Llops i Daines",
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Cap punt al recorregut; portar aigua des de Sant Francesc Xavier"

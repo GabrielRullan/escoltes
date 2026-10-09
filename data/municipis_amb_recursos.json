@@ -323,7 +323,7 @@
         "durada_estimada": "1h 45min"
       },
       {
-        "nom": "Tomb per la Finca Pública de Raixa",
+        "nom": "Volta per la Finca Pública de Raixa",
         "slug": "finca-publica-raixa",
         "dificultat": "Fàcil",
         "distancia_km": 3.0,
@@ -1073,7 +1073,7 @@
     "illa": "Mallorca",
     "rutes": [
       {
-        "nom": "Tomb pel Bosc del Castell de Bellver (Palma)",
+        "nom": "Passejada pel Bosc del Castell de Bellver (Palma)",
         "slug": "castell-de-bellver-bosc-palma",
         "dificultat": "Molt Fàcil",
         "distancia_km": 4.2,

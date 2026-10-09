@@ -10,9 +10,9 @@
     "dificultat": "Moderada",
     "durada_estimada": "3h 15min",
     "apte_unitats": [
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes"
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Port de Maó (inici)",
@@ -63,9 +63,9 @@
     "dificultat": "Moderada",
     "durada_estimada": "3h 00min",
     "apte_unitats": [
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes"
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Es Grau (inici)",
@@ -116,8 +116,9 @@
     "dificultat": "Moderada",
     "durada_estimada": "4h 15min",
     "apte_unitats": [
-      "Pioners/Rangers",
-      "Rutes"
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Arenal d'en Castell (final)",
@@ -168,9 +169,10 @@
     "dificultat": "Fàcil",
     "durada_estimada": "3h 00min",
     "apte_unitats": [
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes"
+      "Llops i Daines",
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Arenal d'en Castell (inici)",
@@ -221,9 +223,9 @@
     "dificultat": "Moderada",
     "durada_estimada": "3h 00min",
     "apte_unitats": [
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes"
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Cala Tirant (inici)",
@@ -273,8 +275,8 @@
     "dificultat": "Exigent",
     "durada_estimada": "3h 45min",
     "apte_unitats": [
-      "Pioners/Rangers",
-      "Rutes"
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Nul en tot el tram (100% verge)"
@@ -328,8 +330,8 @@
     "dificultat": "Exigent",
     "durada_estimada": "4h 00min",
     "apte_unitats": [
-      "Pioners/Rangers",
-      "Rutes"
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Nul en tot el tram (font de Cala Pilar no tractada)"
@@ -379,9 +381,11 @@
     "dificultat": "Fàcil",
     "durada_estimada": "1h 45min",
     "apte_unitats": [
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes"
+      "Ferrerets",
+      "Llops i Daines",
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Cala Morell (nucli urbà final)"
@@ -430,9 +434,9 @@
     "dificultat": "Moderada",
     "durada_estimada": "2h 30min",
     "apte_unitats": [
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes"
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Cala Morell (inici)",
@@ -482,9 +486,10 @@
     "dificultat": "Fàcil",
     "durada_estimada": "3h 00min",
     "apte_unitats": [
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes"
+      "Llops i Daines",
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Cala en Blanes",
@@ -534,9 +539,10 @@
     "dificultat": "Fàcil",
     "durada_estimada": "3h 30min",
     "apte_unitats": [
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes"
+      "Llops i Daines",
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Ciutadella (inici)",
@@ -587,9 +593,9 @@
     "dificultat": "Moderada",
     "durada_estimada": "3h 45min",
     "apte_unitats": [
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes"
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Cap d'Artrutx (inici)",
@@ -640,9 +646,10 @@
     "dificultat": "Fàcil",
     "durada_estimada": "2h 00min",
     "apte_unitats": [
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes"
+      "Llops i Daines",
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Macarella (estiu, serveis)",
@@ -692,8 +699,9 @@
     "dificultat": "Moderada",
     "durada_estimada": "3h 30min",
     "apte_unitats": [
-      "Pioners/Rangers",
-      "Rutes"
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Cala Galdana (inici)",
@@ -749,9 +757,10 @@
     "dificultat": "Fàcil",
     "durada_estimada": "1h 45min",
     "apte_unitats": [
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes"
+      "Llops i Daines",
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Santo Tomàs (inici)",
@@ -801,9 +810,9 @@
     "dificultat": "Moderada",
     "durada_estimada": "2h 30min",
     "apte_unitats": [
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes"
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Son Bou (inici)",
@@ -854,9 +863,9 @@
     "dificultat": "Moderada",
     "durada_estimada": "3h 30min",
     "apte_unitats": [
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes"
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Cala en Porter",
@@ -907,9 +916,10 @@
     "dificultat": "Fàcil",
     "durada_estimada": "2h 15min",
     "apte_unitats": [
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes"
+      "Llops i Daines",
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Binisafúller",
@@ -961,9 +971,10 @@
     "dificultat": "Fàcil",
     "durada_estimada": "2h 00min",
     "apte_unitats": [
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes"
+      "Llops i Daines",
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Punta Prima",
@@ -1015,9 +1026,11 @@
     "dificultat": "Fàcil",
     "durada_estimada": "1h 45min",
     "apte_unitats": [
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes"
+      "Ferrerets",
+      "Llops i Daines",
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Cala de Sant Esteve",
@@ -1068,9 +1081,10 @@
     "dificultat": "Fàcil",
     "durada_estimada": "1h 45min",
     "apte_unitats": [
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes"
+      "Llops i Daines",
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Cala Tirant",
@@ -1120,9 +1134,9 @@
     "dificultat": "Moderada",
     "durada_estimada": "2h 15min",
     "apte_unitats": [
-      "Llops/Daines",
-      "Pioners/Rangers",
-      "Rutes"
+      "Ràngers i esplets",
+      "Pioners i caravel·les",
+      "Rutes (i guies)"
     ],
     "punts_aigua": [
       "Ferreries",

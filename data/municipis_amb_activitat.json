@@ -259,7 +259,7 @@
       },
       {
         "slug": "finca-publica-raixa",
-        "nom": "Tomb per la Finca Pública de Raixa",
+        "nom": "Volta per la Finca Pública de Raixa",
         "distancia": 3.0
       },
       {
@@ -846,7 +846,7 @@
     "rutes": [
       {
         "slug": "castell-de-bellver-bosc-palma",
-        "nom": "Tomb pel Bosc del Castell de Bellver (Palma)",
+        "nom": "Passejada pel Bosc del Castell de Bellver (Palma)",
         "distancia": 4.2
       }
     ],
